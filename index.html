@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="आब्हार फाऊंडेशन - राजू आबा हारदे फाऊंडेशन. सामाजिक कार्य, शिक्षण आणि विकासासाठी समर्पित.">
+    <title>आब्हार फाऊंडेशन</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #4caf50;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background: #4caf50;
+            border-radius: 5px;
+        }
+        #langToggle {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .photo {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+    <script>
+        function toggleLanguage() {
+            const lang = document.documentElement.lang;
+            if (lang === "mr") {
+                document.documentElement.lang = "en";
+                document.getElementById("aboutTitle").innerText = "About Us";
+                document.getElementById("aboutContent").innerText = 
+                    "AabHar Foundation is dedicated to social work, education, and community development programs inspired by Raju Aaba Harde's vision.";
+                document.getElementById("fatherTitle").innerText = "Father's Achievements and Struggles";
+                document.getElementById("fatherContent").innerText = 
+                    "Raju Aaba Harde was a dedicated leader who worked tirelessly for community development, organized educational programs, and supported farmers.";
+                document.getElementById("activitiesTitle").innerText = "Our Activities";
+                document.getElementById("activitiesContent").innerHTML = 
+                    "<li>Community Development Programs</li>" +
+                    "<li>Educational Support for Underprivileged Children</li>" +
+                    "<li>Health and Wellness Initiatives</li>" +
+                    "<li>Agricultural Awareness and Training</li>";
+                document.getElementById("contactTitle").innerText = "Contact Us";
+            } else {
+                document.documentElement.lang = "mr";
+                document.getElementById("aboutTitle").innerText = "आमच्याविषयी";
+                document.getElementById("aboutContent").innerText = 
+                    "आब्हार फाऊंडेशन सामाजिक कार्य, शिक्षण आणि ग्रामीण विकासासाठी समर्पित आहे. राजू आबा हारदे यांच्या प्रेरणेने आम्ही पुढे जात आहोत.";
+                document.getElementById("fatherTitle").innerText = "वडिलांचे यश आणि संघर्ष";
+                document.getElementById("fatherContent").innerText = 
+                    "राजू आबा हारदे हे एक निस्वार्थी नेते होते, ज्यांनी समाजाच्या विकासासाठी अथक परिश्रम घेतले, शैक्षणिक कार्यक्रम आयोजित केले, आणि शेतकऱ्यांना मदत केली.";
+                document.getElementById("activitiesTitle").innerText = "आमच्या उपक्रम";
+                document.getElementById("activitiesContent").innerHTML = 
+                    "<li>समुदाय विकास कार्यक्रम</li>" +
+                    "<li>गरजू विद्यार्थ्यांना शैक्षणिक मदत</li>" +
+                    "<li>आरोग्य आणि कल्याण उपक्रम</li>" +
+                    "<li>शेतीविषयक जागृती आणि प्रशिक्षण</li>";
+                document.getElementById("contactTitle").innerText = "संपर्क";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>आब्हार फाऊंडेशन</h1>
+        <p>समाजासाठी समर्पित</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">आमच्याविषयी</a></li>
+            <li><a href="#father">वडिलांचे यश</a></li>
+            <li><a href="#activities">उपक्रम</a></li>
+            <li><a href="#contact">संपर्क</a></li>
+        </ul>
+        <button id="langToggle" onclick="toggleLanguage()">Switch to English</button>
+    </nav>
+    <div class="container">
+        <section id="about" class="section">
+            <h2 id="aboutTitle">आमच्याविषयी</h2>
+            <p id="aboutContent">
+                आब्हार फाऊंडेशन सामाजिक कार्य, शिक्षण आणि ग्रामीण विकासासाठी समर्पित आहे. राजू आबा हारदे यांच्या प्रेरणेने आम्ही पुढे जात आहोत.
+            </p>
+        </section>
+        <section id="father" class="section">
+            <h2 id="fatherTitle">वडिलांचे यश आणि संघर्ष</h2>
+            <p id="fatherContent">
+                राजू आबा हारडे हे एक निस्वार्थी नेते होते, ज्यांनी समाजाच्या विकासासाठी अथक परिश्रम घेतले, शैक्षणिक कार्यक्रम आयोजित केले, आणि शेतकऱ्यांना मदत केली.
+            </p>
+            <img src="your-father-photo.jpg" alt="Raju Aaba Harde" class="photo">
+        </section>
+        <section id="activities" class="section">
+            <h2 id="activitiesTitle">आमच्या उपक्रम</h2>
+            <ul id="activitiesContent">
+                <li>समुदाय विकास कार्यक्रम</li>
+                <li>गरजू विद्यार्थ्यांना शैक्षणिक मदत</li>
+                <li>आरोग्य आणि कल्याण उपक्रम</li>
+                <li>शेतीविषयक जागृती आणि प्रशिक्षण</li>
+            </ul>
+        </section>
+        <section id="contact" class="section">
+            <h2 id="contactTitle">संपर्क</h2>
+            <p>Email: <a href="mailto:info@aabharfoundation.org">info@aabharfoundation.org</a></p>
+            <p>Phone: +91-1234567890</p>
+            <p>Address: गल्लेबरगाव, महाराष्ट्र, भारत</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 आब्हार फाऊंडेशन. सर्व हक्क राखीव.</p>
+    </footer>
+</body>
+</html>
