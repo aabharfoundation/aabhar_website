@@ -3,195 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>आब्हार फाऊंडेशन - एक आशेचा वारसा</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>आभार - राजू आबा हारदे फाऊंडेशन</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
             background-color: #f9f9f9;
             color: #333;
         }
-        header {
-            position: relative;
-            background: url('header-image.jpg') no-repeat center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        header h1 {
-            font-size: 4rem;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        header p {
-            margin-top: 20px;
-            font-size: 1.5rem;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 10px;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 20px;
-        }
-        nav ul li a {
-            color: white;
+
+        a {
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
+            color: inherit;
         }
-        nav ul li a:hover {
-            color: #4caf50;
-        }
-        section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5rem;
+
+        h1, h2, h3, h4 {
             color: #333;
         }
-        .about-content, .project-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .about-content img, .project-card img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .about-content .text {
-            flex: 1;
-            padding: 20px;
-            text-align: justify;
-        }
-        .project-card {
-            flex: 1;
-            min-width: 300px;
-            max-width: 400px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
+
+        header {
+            background-image: url('https://via.placeholder.com/1920x700'); /* Placeholder image, replace with real one */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
             text-align: center;
         }
-        .timeline {
-            border-left: 4px solid #333;
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-        .timeline-item {
+
+        header h1 {
+            font-size: 60px;
             margin-bottom: 20px;
         }
-        footer {
-            background: #333;
+
+        header p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            background-color: #1e90ff;
             color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0078d4;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
             text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* About Section */
+        .about-section {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #ffffff;
+        }
+
+        .about-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            background-color: #f4f4f4;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .programs-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .programs-section .programs-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .programs-section .program-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            width: 30%;
+            margin-bottom: 30px;
+            border-radius: 10px;
             padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
-        footer a {
-            color: #4caf50;
-            text-decoration: none;
+
+        .programs-section .program-card:hover {
+            transform: translateY(-10px);
         }
-        footer a:hover {
-            text-decoration: underline;
+
+        .programs-section .program-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Donate Section */
+        .donate-section {
+            background-color: #1e90ff;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .donate-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .donate-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            margin-bottom: 20px;
+        }
+
+        footer .footer-links {
+            list-style-type: none;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-links li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        footer .footer-links li a {
+            color: white;
+            font-size: 18px;
+        }
+
+        footer .footer-links li a:hover {
+            color: #1e90ff;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- Header Section -->
     <header>
-        <div>
-            <h1>आब्हार फाऊंडेशन</h1>
-            <p>राजू आबा हारदे यांच्या स्वप्नांना पुढे नेणारे कार्य</p>
-        </div>
+        <h1>आभार - राजू आबा हारदे फाऊंडेशन</h1>
+        <p>समाजात सकारात्मक बदल घडविण्यासाठी एकत्र येऊन काम करूया!</p>
+        <a href="#donate" class="cta-button">दान करा</a>
     </header>
+
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about">आमच्याविषयी</a></li>
-            <li><a href="#projects">प्रकल्प</a></li>
-            <li><a href="#timeline">कार्यक्रम</a></li>
-            <li><a href="#blog">ब्लॉग</a></li>
+            <li><a href="#">मुख्यपृष्ठ</a></li>
+            <li><a href="#about">आमच्याबद्दल</a></li>
+            <li><a href="#programs">कार्यक्रम</a></li>
+            <li><a href="#donate">दान करा</a></li>
             <li><a href="#contact">संपर्क</a></li>
         </ul>
     </nav>
+
     <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">राजू आबा हारदे यांचा जीवन प्रवास</h2>
-        <div class="about-content">
-            <img src="about-image.jpg" alt="राजू आबा हारदे">
-            <div class="text">
-                <p>
-                    राजू आबा हारदे यांनी समाजसेवेच्या कार्यात नवा आदर्श घालून दिला. ग्रामीण भागातील शेती, शिक्षण आणि आरोग्यासाठी त्यांनी
-                    झोकून दिलेले प्रयत्न आजही प्रेरणादायक आहेत. आब्हार फाऊंडेशन त्यांचा हा वारसा पुढे नेत आहे.
-                </p>
+    <div id="about" class="about-section">
+        <h2>आभार फाऊंडेशनचे उद्दिष्ट</h2>
+        <p>आभार फाऊंडेशनचे उद्दिष्ट आहे समाजाच्या विविध गरजांनुसार मदत करणे, जसे की शाळा, आरोग्य सेवा, अन्न वितरण, आणि रोजगार निर्माण करणे.</p>
+    </div>
+
+    <!-- Programs Section -->
+    <div id="programs" class="programs-section">
+        <h2>आमचे कार्यक्रम</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <h3>शालेतील भोजन वितरण</h3>
+                <p>आम्ही शालेतील मुलांना पोषणयुक्त जेवण देत आहे.</p>
+            </div>
+            <div class="program-card">
+                <h3>आरोग्य तपासणी</h3>
+                <p>आम्ही वेळोवेळी ग्रामीण भागात आरोग्य तपासणी शिबिरे आयोजित करतो.</p>
+            </div>
+            <div class="program-card">
+                <h3>शिक्षण सहकार्य</h3>
+                <p>आम्ही गरजू विद्यार्थ्यांना शालेय साहित्य आणि शिक्षणातील सहाय्य देतो.</p>
             </div>
         </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">आमचे प्रकल्प</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="education.jpg" alt="शिक्षण">
-                <h3>शिक्षणासाठी प्रकल्प</h3>
-                <p>विद्यार्थ्यांना शिष्यवृत्ती आणि शैक्षणिक साहित्य पुरवणे.</p>
-            </div>
-            <div class="project-card">
-                <img src="healthcare.jpg" alt="आरोग्य सेवा">
-                <h3>आरोग्य शिबिरे</h3>
-                <p>ग्रामीण भागात मोफत आरोग्य तपासणी सेवा.</p>
-            </div>
-            <div class="project-card">
-                <img src="farming.jpg" alt="सेंद्रिय शेती">
-                <h3>सेंद्रिय शेती</h3>
-                <p>शेतकऱ्यांना आधुनिक शेतीचे तंत्रज्ञान देणे.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Timeline Section -->
-    <section id="timeline">
-        <h2 class="section-title">आमचा प्रवास</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>२०२०: फाऊंडेशनची स्थापना</h3>
-                <p>राजू आबा हारदे यांच्या कार्याला पुढे नेण्यासाठी फाऊंडेशन सुरू झाले.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>२०२१: शिष्यवृत्ती प्रकल्प</h3>
-                <p>विद्यार्थ्यांना शिष्यवृत्ती देण्याची सुरुवात.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
+    </div>
+
+    <!-- Donate Section -->
+    <div id="donate" class="donate-section">
+        <h2>आपला योगदान महत्त्वाचा आहे</h2>
+        <p>आपल्या दानामुळे आपल्याला एका चांगल्या समाजाची निर्मिती करण्यासाठी मदत होईल.</p>
+        <a href="#" class="cta-button">दान करा</a>
+    </div>
+
+    <!-- Footer Section -->
     <footer>
-        <p>© २०२४ आब्हार फाऊंडेशन | सर्व हक्क राखीव</p>
-        <p><a href="mailto:info@abhharfoundation.org">info@abhharfoundation.org</a></p>
+        <h3>आभार फाऊंडेशन</h3>
+        <p>संपर्क: 1234567890 | ईमेल: contact@aabharfoundation.org</p>
+        <ul class="footer-links">
+            <li><a href="#">गोपनीयता धोरण</a></li>
+            <li><a href="#">संपर्क</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <p>&copy; 2024 आभार - राजू आबा हारदे फाऊंडेशन</p>
     </footer>
+
 </body>
 </html>
