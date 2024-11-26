@@ -3,74 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="आभार - राजू आबा हारदे फाऊंडेशन - समाजसेवेसाठी एक प्रेरणादायी प्रवास.">
     <title>आभार फाऊंडेशन</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Animated Hero Section -->
-    <section id="hero">
-        <div class="hero-overlay">
-            <h1 data-aos="zoom-in" data-aos-duration="2000">आभार फाऊंडेशन</h1>
-            <p data-aos="fade-up" data-aos-delay="300">समाजासाठी सकारात्मक बदल</p>
-            <a href="#donate" class="cta-button" data-aos="fade-in" data-aos-delay="600">दान करा</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="title">आभार - राजू आबा हारदे फाऊंडेशन</h1>
+            <p class="tagline">समाजात सकारात्मक बदल घडविण्यासाठी एकत्र येऊन काम करूया!</p>
+            <a href="#about" class="cta-button">आमच्याबद्दल वाचा</a>
         </div>
-        <div class="parallax-bg"></div>
-    </section>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <ul>
-            <li><a href="#">मुख्यपृष्ठ</a></li>
-            <li><a href="#about">आमच्याबद्दल</a></li>
-            <li><a href="#programs">कार्यक्रम</a></li>
-            <li><a href="#donate">दान करा</a></li>
-            <li><a href="#contact">संपर्क</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about" class="section" data-aos="fade-up" data-aos-duration="1500">
-        <h2>आभार फाऊंडेशनचे उद्दिष्ट</h2>
-        <p>आम्ही समाजाला पुढे नेण्यासाठी शाळा, आरोग्य सेवा, अन्न वितरण, आणि रोजगार निर्माण यावर काम करतो.</p>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section">
-        <h2 data-aos="fade-up" data-aos-duration="1500">गॅलरी</h2>
-        <div class="image-grid">
-            <div class="image-card" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://source.unsplash.com/600x400/?community" alt="समाजकार्य">
-            </div>
-            <div class="image-card" data-aos="zoom-in" data-aos-delay="400">
-                <img src="https://source.unsplash.com/600x400/?healthcare" alt="आरोग्य सेवा">
-            </div>
-            <div class="image-card" data-aos="zoom-in" data-aos-delay="600">
-                <img src="https://source.unsplash.com/600x400/?education" alt="शिक्षण">
-            </div>
+        <div class="hero-image-container">
+            <img src="assets/images/hero-image.jpg" alt="राजू आबा हारदे" class="hero-image">
         </div>
     </section>
 
-    <!-- Donate Section -->
-    <section id="donate" class="section">
-        <h2 data-aos="fade-up" data-aos-duration="1500">आपला योगदान महत्त्वाचा आहे</h2>
-        <div class="donate-content" data-aos="fade-right" data-aos-delay="300">
-            <p>आपल्या मदतीमुळे आम्ही गरीब आणि गरजू लोकांना मदत करू शकतो.</p>
-            <a href="#" class="cta-button">दान करा</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 आभार फाऊंडेशन</p>
-    </footer>
-
-    <script>
-        AOS.init(); // Initialize AOS animations
-        gsap.to(".parallax-bg", {scrollTrigger: {trigger: "#hero", scrub: true}, y: 200});
-    </script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
