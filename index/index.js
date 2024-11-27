@@ -52,6 +52,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Life Story Auto Scroll Logic
+    const lifeStoryScroll = document.querySelector('.life-story-scroll');
+    let scrollAmount = 0;
+    const scrollSpeed = 1; // Adjust the speed as necessary
+
+    // Function to auto-scroll the life story blocks
+    function scrollLifeStory() {
+        if (scrollAmount >= lifeStoryScroll.scrollWidth - lifeStoryScroll.clientWidth) {
+            scrollAmount = 0; // Reset scroll when it reaches the end
+        } else {
+            scrollAmount += scrollSpeed; // Scroll by scrollSpeed
+        }
+        lifeStoryScroll.scrollLeft = scrollAmount; // Apply scroll position
+    }
+
+    // Set interval to auto scroll every 20 milliseconds
+    setInterval(scrollLifeStory, 20);
+
+});
+
+
     // =======================
     // Gallery Auto Scroll Logic
     // =======================
