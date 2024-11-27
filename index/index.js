@@ -51,5 +51,25 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = targetUrl;
         });
     });
-    
+
+    // =======================
+    // Gallery Auto Scroll Logic
+    // =======================
+    const galleryScroll = document.querySelector('.gallery-scroll');
+    let scrollAmount = 0;
+    const scrollSpeed = 1; // Adjust speed here
+
+    // Function to auto-scroll the gallery images
+    function scrollGallery() {
+        if (scrollAmount >= galleryScroll.scrollWidth - galleryScroll.clientWidth) {
+            scrollAmount = 0; // Reset scroll when it reaches the end
+        } else {
+            scrollAmount += scrollSpeed; // Scroll by scrollSpeed
+        }
+        galleryScroll.scrollLeft = scrollAmount; // Apply scroll position
+    }
+
+    // Set interval to auto scroll every 20 milliseconds
+    setInterval(scrollGallery, 20);
+
 });
