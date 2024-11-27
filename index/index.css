@@ -32,7 +32,7 @@
 /* Main Header */
 .main-header {
     position: relative;
-    height: 10vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,14 +95,14 @@
 .header-text {
     position: absolute;
     top: 40%;
-    left: 50%;
+    left:10%;
     transform: translateX(-50%);
     color: white;
     animation: fadeIn 3s ease-out;
 }
 
 .header-text .big-text {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     color: #FFD700;
