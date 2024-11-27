@@ -99,7 +99,7 @@ body {
     left: 0;
     transform: translateY(-50%); /* Center the text vertically */
     text-align: left; /* Align text to the left */
-    padding-left: 30px; /* Optional: Add some space from the left edge */
+    padding-left: 0px; /* Optional: Add some space from the left edge */
     z-index: 10; /* Ensure it stays above the video */
 }
 
