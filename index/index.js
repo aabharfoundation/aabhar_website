@@ -1,4 +1,3 @@
-// Wait for the DOM to load before executing the script
 document.addEventListener("DOMContentLoaded", function () {
 
     // Smooth Scroll for Navigation
@@ -70,27 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set interval to auto scroll every 20 milliseconds
     setInterval(scrollLifeStory, 20);
 
-});
-
-
     // =======================
-    // Gallery Auto Scroll Logic
+    // Our Project Auto Scroll Logic
     // =======================
-    const galleryScroll = document.querySelector('.gallery-scroll');
-    let scrollAmount = 0;
-    const scrollSpeed = 1; // Adjust speed here
+    const ourProjectScroll = document.querySelector('.our-project-scroll');  // Assuming class for the "Our Project" scroll container
+    let projectScrollAmount = 0;
+    const projectScrollSpeed = 1;  // Adjust speed for project scrolling
 
-    // Function to auto-scroll the gallery images
-    function scrollGallery() {
-        if (scrollAmount >= galleryScroll.scrollWidth - galleryScroll.clientWidth) {
-            scrollAmount = 0; // Reset scroll when it reaches the end
+    // Function to auto-scroll the "Our Project" blocks
+    function scrollOurProject() {
+        if (projectScrollAmount >= ourProjectScroll.scrollWidth - ourProjectScroll.clientWidth) {
+            projectScrollAmount = 0; // Reset scroll when it reaches the end
         } else {
-            scrollAmount += scrollSpeed; // Scroll by scrollSpeed
+            projectScrollAmount += projectScrollSpeed; // Scroll by projectScrollSpeed
         }
-        galleryScroll.scrollLeft = scrollAmount; // Apply scroll position
+        ourProjectScroll.scrollLeft = projectScrollAmount; // Apply scroll position
     }
 
     // Set interval to auto scroll every 20 milliseconds
-    setInterval(scrollGallery, 20);
+    setInterval(scrollOurProject, 20);
 
 });
