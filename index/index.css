@@ -7,7 +7,7 @@
 
 /* Top Bar with Wooden Texture */
 .top-bar {
-    background: url('index/images/wood-texture.jpg');
+    background: url('index/images/wooden-texture.jpg');
     background-size: cover;
     color: white;
     display: flex;
@@ -32,7 +32,7 @@
 /* Main Header */
 .main-header {
     position: relative;
-    height: 50vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
