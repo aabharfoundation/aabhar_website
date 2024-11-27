@@ -8,49 +8,29 @@ body {
 .hero-container {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh; /* 8 feet equivalent on screen */
     background-color: #1e1e2e;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
 }
 
-/* Foundation Name */
-.foundation-name {
-    position: absolute;
-    z-index: 10;
-    color: white;
-    text-align: center;
-}
-
-.foundation-name h1 {
-    font-size: 48px;
-    font-family: 'Arial', sans-serif;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    letter-spacing: 1.5px;
-}
-
-/* Scrolling Images */
+/* Scrolling Images - Top and Bottom */
 .image-scroller {
-    position: absolute;
-    top: 50%;
-    width: 50%;
-    height: 300px;
+    width: 100%;
+    height: 25%; /* Each scroller takes 3 feet = 25% */
     overflow: hidden;
     display: flex;
     align-items: center;
-    transform: translateY(-50%);
 }
 
-.image-scroller.left {
-    left: 0;
-    justify-content: flex-end;
+.image-scroller.top {
+    align-items: flex-start;
 }
 
-.image-scroller.right {
-    right: 0;
-    justify-content: flex-start;
+.image-scroller.bottom {
+    align-items: flex-end;
 }
 
 .scroll-images {
@@ -58,7 +38,7 @@ body {
     animation: scroll-left 15s linear infinite;
 }
 
-.image-scroller.right .scroll-images {
+.image-scroller.bottom .scroll-images {
     animation: scroll-right 15s linear infinite;
 }
 
@@ -68,6 +48,32 @@ body {
     margin: 0 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Foundation Name Section */
+.foundation-name {
+    position: relative;
+    z-index: 10;
+    height: 25%; /* Middle 2 feet = 25% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.foundation-name h1 {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1.5px;
+}
+
+.foundation-name p {
+    font-size: 20px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Keyframe Animations */
@@ -88,6 +94,7 @@ body {
         transform: translateX(100%);
     }
 }
+
 
 
 .hero {
