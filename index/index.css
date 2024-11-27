@@ -30,7 +30,7 @@ body, h1, button, a {
 /* Header */
 .main-header {
     position: relative;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -63,9 +63,9 @@ body, h1, button, a {
 /* Logo */
 .logo-container {
     position: absolute;
-    right: 5%;
-    top: 10%;
-    width: 8%;
+    right: 50%;
+    top: 50%;
+    width: 50%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
@@ -136,7 +136,7 @@ body, h1, button, a {
 
 /* Placeholder Sections */
 section {
-    height: 800px; /* Placeholder height */
+    height: 500px; /* Placeholder height */
     border: 1px solid #ddd;
     margin-top: 20px;
 }
