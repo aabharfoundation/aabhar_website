@@ -208,18 +208,44 @@ body {
     font-size: 1.1em;
     color: #7f8c8d;
 }
-
-/* Gallery Grid */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-top: 20px;
+/* Gallery Section Styling */
+#gallery {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.gallery-grid img {
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#gallery h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Container for Gallery */
+.gallery-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 10px 0;
+}
+
+/* Scrolling Gallery Row */
+.gallery-scroll {
+    display: flex;
+    gap: 15px; /* Adds space between the images */
+}
+
+.gallery-scroll img {
+    height: 200px; /* Set a consistent height for the images */
+    object-fit: cover; /* Ensures images maintain aspect ratio */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect to zoom images slightly */
+.gallery-scroll img:hover {
+    transform: scale(1.1);
 }
 
 /* News and Blogs */
