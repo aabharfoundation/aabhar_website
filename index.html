@@ -3,39 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>आब्हार - राजू आबा हारदे फाऊंडेशन</title>
-    <link rel="stylesheet" href="index/index.css">
+    <meta name="description" content="Aabhar - The Raju Aaba Harde Foundation">
+    <meta name="author" content="Raju Aaba Harde Foundation">
+    <title>Aabhar - The Raju Aaba Harde Foundation</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Top Bar with Social Media Links -->
+    <!-- Top Bar with Social Media Icons -->
     <div class="top-bar">
-        <a href="https://wa.me/yourphonenumber" target="_blank"><img src="index/images/whatsapp-logo.png" alt="WhatsApp"></a>
-        <a href="https://instagram.com/yourprofile" target="_blank"><img src="index/images/instagram-logo.png" alt="Instagram"></a>
-        <a href="https://twitter.com/yourprofile" target="_blank"><img src="index/images/x-logo.png" alt="X"></a>
-        <a href="https://facebook.com/yourprofile" target="_blank"><img src="index/images/facebook-logo.png" alt="Facebook"></a>
+        <a href="https://wa.me/your_number" target="_blank">
+            <img src="index/images/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank">
+            <img src="index/images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank">
+            <img src="index/images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.facebook.com/yourprofile" target="_blank">
+            <img src="index/images/facebook.png" alt="Facebook">
+        </a>
     </div>
 
-    <!-- Main Header with Video Background -->
+    <!-- Main Header Section -->
     <header class="main-header">
-       
-
+        <video autoplay muted loop class="background-video">
+            <source src="index/videos/your-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="fog-overlay"></div>
-
-        <!-- Header Content-->
         <div class="header-content">
+            <!-- Logo Section -->
             <div class="logo-container">
-                <img src="index/images/logo.png" alt="Trust Logo">
+                <img src="index/images/logo.png" alt="Aabhar Foundation Logo">
             </div>
 
+            <!-- Header Text Section -->
             <div class="header-text">
-                <h1 class="big-text">आब्हार</h1>
-                <p class="small-text">राजू आबा हारदे</p>
-                <h2 class="big-text">फाऊंडेशन</h2>
+                <div class="big-text">आब्हार</div>
+                <div class="small-text">राजू आबा हारदे</div>
+                <div class="big-text">फाऊंडेशन</div>
             </div>
         </div>
     </header>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar with Links -->
     <nav class="navigation">
         <button class="nav-button" onclick="scrollToSection('about')">About Us</button>
         <button class="nav-button" onclick="scrollToSection('life-story')">Life Story</button>
@@ -45,14 +57,87 @@
         <button class="nav-button" onclick="scrollToSection('contact')">Contact</button>
     </nav>
 
-    <!-- Placeholder Sections -->
-    <section id="about" class="section"></section>
-    <section id="life-story" class="section"></section>
-    <section id="projects" class="section"></section>
-    <section id="gallery" class="section"></section>
-    <section id="news" class="section"></section>
-    <section id="contact" class="section"></section>
+    <!-- Sections -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>This section provides information about the foundation, its mission, vision, and goals. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada.</p>
+        <div class="about-image">
+            <img src="index/images/about-image.jpg" alt="About Us Image">
+        </div>
+    </section>
 
-    <script src="index/index.js"></script>
+    <section id="life-story" class="section">
+        <h2>Life Story</h2>
+        <p>This section tells the life story of Rajoo Aaba Harde, his contributions, and the journey leading to the foundation's creation. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        <div class="life-story-image">
+            <img src="index/images/life-story-image.jpg" alt="Life Story Image">
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Our Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="index/images/project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>This project is about providing education to rural children.</p>
+            </div>
+            <div class="project-card">
+                <img src="index/images/project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>This project focuses on health and sanitation for villages.</p>
+            </div>
+            <div class="project-card">
+                <img src="index/images/project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>This project aims at empowering women in rural areas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <img src="index/images/gallery1.jpg" alt="Gallery Image 1">
+            <img src="index/images/gallery2.jpg" alt="Gallery Image 2">
+            <img src="index/images/gallery3.jpg" alt="Gallery Image 3">
+            <img src="index/images/gallery4.jpg" alt="Gallery Image 4">
+        </div>
+    </section>
+
+    <section id="news" class="section">
+        <h2>News & Blogs</h2>
+        <div class="news-blog-cards">
+            <div class="news-card">
+                <h3>New Initiatives by the Foundation</h3>
+                <p>Our foundation has launched new programs to support rural communities. Read more...</p>
+            </div>
+            <div class="news-card">
+                <h3>Celebrating Our Volunteers</h3>
+                <p>This blog highlights the dedication of our volunteers in making the world a better place. Read more...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form action="#">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Aabhar Foundation | All Rights Reserved</p>
+        <p>Developed by [Your Name or Your Agency]</p>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
