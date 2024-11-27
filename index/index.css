@@ -33,8 +33,7 @@ body, h1, button, a {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: left;
+    justify-content: flex-start;
     color: white;
     overflow: hidden;
 }
@@ -50,54 +49,66 @@ body, h1, button, a {
     z-index: -1;
 }
 
-/* Header Text */
-.header-text {
+/* Colorful Overlay */
+.overlay {
     position: absolute;
-    left: 5%;
-    z-index: 1;
-}
-
-.header-text .big-text {
-    font-size: 4rem;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.header-text .small-text {
-    font-size: 1.5rem;
-    font-family: 'Times New Roman', serif;
-    margin: 10px 0;
-    text-align: center;
-}
-
-.header-text .small-text hr {
-    width: 50%;
-    margin: 5px auto;
-    border: 1px solid white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 128, 0.5), rgba(255, 0, 255, 0.5));
+    z-index: 0;
 }
 
 /* Logo */
 .logo-container {
     position: absolute;
     right: 5%;
-    top: 5%;
-    transform: translateZ(0);
-    width: 10%;
+    top: 10%;
+    width: 8%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8);
+    background: radial-gradient(circle, white, rgba(255, 255, 255, 0.8));
+    transform: scale(1.1);
 }
 
 .logo-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translateZ(50px);
+}
+
+/* Header Text */
+.header-text {
+    position: relative;
+    margin-left: 5%;
+    z-index: 1;
+}
+
+.header-text .big-text {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #FFD700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-text .small-text {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.header-text .line {
+    width: 50%;
+    margin: 10px 0;
+    border: 1px solid white;
+    margin-left: 0;
 }
 
 /* Navigation */
@@ -105,7 +116,7 @@ body, h1, button, a {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: -50px;
+    margin-top: -30px;
 }
 
 .navigation button {
