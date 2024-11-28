@@ -68,7 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Set interval to auto scroll every 20 milliseconds
     setInterval(scrollLifeStory, 20);
+    let isScrolling = false;
 
+galleryScroll.addEventListener('touchstart', () => isScrolling = true);
+galleryScroll.addEventListener('touchend', () => isScrolling = false);
+
+setInterval(() => {
+    if (!isScrolling) {
+        scrollGallery();
+    }
+}, 20);
+ 
     // =======================
     // Our Project Auto Scroll Logic
     // =======================
