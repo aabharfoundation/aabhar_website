@@ -18,13 +18,19 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #3b5998;
-	/* Facebook color */
-	padding: 10px;
+	background-color: #f8f9fa;
+	padding: 10px 0;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	z-index: 1000;
+}
+
+.social-icon {
+    width: 30px;
+	height: 30px;
+	margin: 0 10px;
+	transition: transform 0.3s ease;
 }
 
 .top-bar a {
