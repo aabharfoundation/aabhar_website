@@ -1,102 +1,102 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Smooth Scroll for Navigation
-    const navButtons = document.querySelectorAll('.nav-button');
-    
-    navButtons.forEach(button => {
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-            const targetSectionId = this.getAttribute('data-target');
-            const targetSection = document.getElementById(targetSectionId);
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-    });
+   // Smooth Scroll for Navigation
+   const navButtons = document.querySelectorAll('.nav-button');
 
-    // Header Text Animations - Make sure the content is in place before animation
-    const headerTextBig = document.querySelector('.header-text .big-text');
-    const headerTextSmall = document.querySelector('.header-text .small-text');
+   navButtons.forEach(button => {
+      button.addEventListener('click', function (event) {
+         event.preventDefault();
+         const targetSectionId = this.getAttribute('data-target');
+         const targetSection = document.getElementById(targetSectionId);
+         targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+         });
+      });
+   });
 
-    // Trigger animation after the page loads
-    setTimeout(() => {
-        headerTextBig.style.animation = 'fadeIn 2s ease-out';
-        headerTextSmall.style.animation = 'slideIn 2s ease-out';
-    }, 100);
+   // Header Text Animations - Make sure the content is in place before animation
+   const headerTextBig = document.querySelector('.header-text .big-text');
+   const headerTextSmall = document.querySelector('.header-text .small-text');
 
-    // Add 3D animation to navigation buttons when hovered
-    const navItems = document.querySelectorAll('.nav-button');
+   // Trigger animation after the page loads
+   setTimeout(() => {
+      headerTextBig.style.animation = 'fadeIn 2s ease-out';
+      headerTextSmall.style.animation = 'slideIn 2s ease-out';
+   }, 100);
 
-    navItems.forEach(item => {
-        item.addEventListener('mouseenter', function () {
-            this.style.transform = 'scale(1.1) rotateY(15deg)';
-            this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.2)';
-        });
+   // Add 3D animation to navigation buttons when hovered
+   const navItems = document.querySelectorAll('.nav-button');
 
-        item.addEventListener('mouseleave', function () {
-            this.style.transform = 'scale(1) rotateY(0deg)';
-            this.style.boxShadow = 'none';
-        });
-    });
+   navItems.forEach(item => {
+      item.addEventListener('mouseenter', function () {
+         this.style.transform = 'scale(1.1) rotateY(15deg)';
+         this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.2)';
+      });
 
-    // Handle smooth scroll for the top navigation bar (optional)
-    const topBarLinks = document.querySelectorAll('.top-bar a');
-    
-    topBarLinks.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const targetUrl = this.href;
-            window.location.href = targetUrl;
-        });
-    });
+      item.addEventListener('mouseleave', function () {
+         this.style.transform = 'scale(1) rotateY(0deg)';
+         this.style.boxShadow = 'none';
+      });
+   });
 
-    // Life Story Auto Scroll Logic
-    const lifeStoryScroll = document.querySelector('.life-story-scroll');
-    let scrollAmount = 0;
-    const scrollSpeed = 1; // Adjust the speed as necessary
+   // Handle smooth scroll for the top navigation bar (optional)
+   const topBarLinks = document.querySelectorAll('.top-bar a');
 
-    // Function to auto-scroll the life story blocks
-    function scrollLifeStory() {
-        if (scrollAmount >= lifeStoryScroll.scrollWidth - lifeStoryScroll.clientWidth) {
-            scrollAmount = 0; // Reset scroll when it reaches the end
-        } else {
-            scrollAmount += scrollSpeed; // Scroll by scrollSpeed
-        }
-        lifeStoryScroll.scrollLeft = scrollAmount; // Apply scroll position
-    }
+   topBarLinks.forEach(link => {
+      link.addEventListener('click', function (event) {
+         event.preventDefault();
+         const targetUrl = this.href;
+         window.location.href = targetUrl;
+      });
+   });
 
-    // Set interval to auto scroll every 20 milliseconds
-    setInterval(scrollLifeStory, 20);
-    let isScrolling = false;
+   // Life Story Auto Scroll Logic
+   const lifeStoryScroll = document.querySelector('.life-story-scroll');
+   let scrollAmount = 0;
+   const scrollSpeed = 1; // Adjust the speed as necessary
 
-galleryScroll.addEventListener('touchstart', () => isScrolling = true);
-galleryScroll.addEventListener('touchend', () => isScrolling = false);
+   // Function to auto-scroll the life story blocks
+   function scrollLifeStory() {
+      if (scrollAmount >= lifeStoryScroll.scrollWidth - lifeStoryScroll.clientWidth) {
+         scrollAmount = 0; // Reset scroll when it reaches the end
+      } else {
+         scrollAmount += scrollSpeed; // Scroll by scrollSpeed
+      }
+      lifeStoryScroll.scrollLeft = scrollAmount; // Apply scroll position
+   }
 
-setInterval(() => {
-    if (!isScrolling) {
-        scrollGallery();
-    }
-}, 20);
- 
-    // =======================
-    // Our Project Auto Scroll Logic
-    // =======================
-    const ourProjectScroll = document.querySelector('.our-project-scroll');  // Assuming class for the "Our Project" scroll container
-    let projectScrollAmount = 0;
-    const projectScrollSpeed = 1;  // Adjust speed for project scrolling
+   // Set interval to auto scroll every 20 milliseconds
+   setInterval(scrollLifeStory, 20);
+   let isScrolling = false;
 
-    // Function to auto-scroll the "Our Project" blocks
-    function scrollOurProject() {
-        if (projectScrollAmount >= ourProjectScroll.scrollWidth - ourProjectScroll.clientWidth) {
-            projectScrollAmount = 0; // Reset scroll when it reaches the end
-        } else {
-            projectScrollAmount += projectScrollSpeed; // Scroll by projectScrollSpeed
-        }
-        ourProjectScroll.scrollLeft = projectScrollAmount; // Apply scroll position
-    }
+   galleryScroll.addEventListener('touchstart', () => isScrolling = true);
+   galleryScroll.addEventListener('touchend', () => isScrolling = false);
 
-    // Set interval to auto scroll every 20 milliseconds
-    setInterval(scrollOurProject, 20);
+   setInterval(() => {
+      if (!isScrolling) {
+         scrollGallery();
+      }
+   }, 20);
+
+   // =======================
+   // Our Project Auto Scroll Logic
+   // =======================
+   const ourProjectScroll = document.querySelector('.our-project-scroll'); // Assuming class for the "Our Project" scroll container
+   let projectScrollAmount = 0;
+   const projectScrollSpeed = 1; // Adjust speed for project scrolling
+
+   // Function to auto-scroll the "Our Project" blocks
+   function scrollOurProject() {
+      if (projectScrollAmount >= ourProjectScroll.scrollWidth - ourProjectScroll.clientWidth) {
+         projectScrollAmount = 0; // Reset scroll when it reaches the end
+      } else {
+         projectScrollAmount += projectScrollSpeed; // Scroll by projectScrollSpeed
+      }
+      ourProjectScroll.scrollLeft = projectScrollAmount; // Apply scroll position
+   }
+
+   // Set interval to auto scroll every 20 milliseconds
+   setInterval(scrollOurProject, 20);
 
 });
