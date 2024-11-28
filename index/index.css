@@ -13,28 +13,49 @@ body {
 	color: #333;
 }
 
-/* Top Bar with Social Media Icons */
+/* Social Media Icons */
+
+.social-icons {
+    position: fixed;
+    top: 20px; /* Adjust the top margin */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
 
 .social-icon {
-        width: 30px;
-	height: 30px;
-	margin: 0 10px;
-	align-items: center;
-	transition: transform 0.3s ease;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 10px;
 }
 
-.top-bar a {
-	margin: 0 15px;
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
 }
 
-.top-bar img {
-	width: 30px;
-	height: 30px;
-	transition: transform 0.3s ease;
+/* Hover effects */
+.social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.top-bar img:hover {
-	transform: scale(1.2);
+.social-icon:active {
+    transform: scale(1.1);
+}
+
+.social-icon:hover img {
+    filter: brightness(1.2);
 }
 
 /* Header Section */
