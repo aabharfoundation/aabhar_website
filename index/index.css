@@ -61,10 +61,10 @@ body {
 /* Home Section */
 .home-section {
   position: relative; /* Enable precise positioning of child elements */
-  top: 1vh; /* 1% from the top of the viewport */
+  top: 0vh; /* 1% from the top of the viewport */
   left: 2.5vw; /* 2.5% from the left of the viewport */
   width: 95vw; /* 95% of the viewport width */
-  height: 50vh; /* 50% of the viewport height */
+  height: 100vh; /* 50% of the viewport height */
   background-color: #000; /* Optional background for better visibility */
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center vertically */
@@ -76,7 +76,7 @@ body {
 /* Header Section */
 .main-headerr {
 	position: relative;
-	top: 1vh; /* 1% from the top of the viewport */
+	top: 0vh; /* 1% from the top of the viewport */
         left: 2.5vw; /* 2.5% from the left of the viewport */
         width: 95vw; /* 95% of the viewport width */
         height: 100vh; /* 100% of the viewport height */
@@ -91,10 +91,10 @@ body {
 
 .background-video {
 	position: absolute;
-	top: 1vh;
+	top: 0vh;
 	left: 2.5vw;
 	width: 95vw;
-	height: 98vh;
+	height: 100vh;
 	object-fit: cover;
 	z-index: 0;
 }
