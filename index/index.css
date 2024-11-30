@@ -516,8 +516,8 @@ footer p {
 
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
-	.section-homei {
-                height: 48vh; /* 100% of the viewport height */
+	.section-home {
+                height: 33vh; /* 100% of the viewport height */
 	}
 	.background-videos {
 		height: 50vh; /* 50% of the viewport height */
