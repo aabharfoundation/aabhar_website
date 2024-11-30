@@ -75,10 +75,10 @@ body {
 
 .background-video {
 	position: absolute;
-	top: 0vh;
+	top: 1vh;
 	left: 0vw;
 	width: 100vw;
-	height: 100vh;
+	height: 98vh;
 	object-fit: cover;
 	z-index: 0;
 }
@@ -517,8 +517,8 @@ footer p {
 
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
-	.main-headerr {
-                height: 50vh; /* 100% of the viewport height */
+	.section-home {
+                height: 48vh; /* 100% of the viewport height */
 	}
 	.background-video {
 		height: 50vh; /* 50% of the viewport height */
