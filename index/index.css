@@ -77,85 +77,6 @@ body {
   box-sizing: border-box; /* Include padding in width and height */
 }
 
-/* Style for the strip */
-.strip {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    width: 100%;
-    background-color: #ff6600; /* Orange color */
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 0px 0;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: popUp 2s forwards;
-}
-
-/* Animation for strip pop up */
-@keyframes popUp {
-    0% {
-        top: 0%;
-    }
-    0% {
-        top: 0;
-    }
-}
-
-/* Animation for 'आब्हार' to appear from behind */
-.behind-text {
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    transform: translateX(-10%);
-    font-size: 3rem;
-    font-family: 'Shantell Sans', sans-serif;
-    color: #4caf50; /* Green color */
-    opacity: 0;
-    animation: slideUp 2s 1.5s forwards; /* Delay to make it appear after the strip */
-}
-
-/* Animation for 'फाऊंडेशन' sliding down */
-.foundation {
-    position: absolute;
-    top: -15%;
-    left: 10%;
-    transform: translateX(-10%);
-    font-size: 3rem;
-    color: #2196f3; /* Blue color */
-    font-weight: 700;
-    opacity: 0;
-    animation: slideDown 2s 2s forwards; /* Delay to make it appear after the previous text */
-}
-
-/* Slide-up animation for behind-text */
-@keyframes slideUp {
-    50% {
-        top: 50%;
-        opacity: 0;
-    }
-    70% {
-        top: 30%;
-        opacity: 1;
-    }
-}
-
-/* Slide-down animation for 'फाऊंडेशन' */
-@keyframes slideDown {
-    50% {
-        top: 50%;
-        opacity: 0;
-    }
-    30% {
-        top: 70%;
-        opacity: 1;
-    }
-}
-
 .background-video {
 	position: absolute;
 	top: 0;
@@ -185,25 +106,39 @@ body {
 	transform: scale(1.1);
 }
 
-.header-text .big-text {
-	font-size: 3em;
-	font-weight: bold;
-	text-align: left;
-	color: #f39c12;
-	/* Gold color */
-	text-transform: uppercase;
-	animation: fadeIn 2s ease-out;
+.3d-box {
+    position: absolute;
+    top: 50%;
+    left: 16%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    perspective: 1000px;
+    width: 16%;
+    height: 50%;
+    transform-style: preserve-3d;
 }
 
-.header-text .small-text {
-	font-size: 1.5em;
-	color: #f39c12;
-	margin: 20px 0;
-	text-align: left;
-	font-style: italic;
-	text-decoration: underline;
-	text-transform: capitalize;
-	animation: slideIn 2s ease-out;
+.box-content {
+    transform: rotateY(20deg);
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .3d-box {
+        left: 50%;
+        width: 50%;
+        height: 40%;
+        transform: translateX(-50%) translateY(-50%);
+    }
 }
 
 /* Navigation Bar */
