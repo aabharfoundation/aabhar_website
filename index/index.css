@@ -516,10 +516,10 @@ footer p {
 
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
-	.section-home {
+	.section-homei {
                 height: 48vh; /* 100% of the viewport height */
 	}
-	.background-video {
+	.background-videos {
 		height: 50vh; /* 50% of the viewport height */
 	} 
 	.project-cards {
