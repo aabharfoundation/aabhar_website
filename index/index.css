@@ -519,8 +519,8 @@ footer p {
 	.section-home {
                 height: 33vh; /* 100% of the viewport height */
 	}
-	.background-videos {
-		height: 50vh; /* 50% of the viewport height */
+	.background-video {
+		height: 33vh; /* 50% of the viewport height */
 	} 
 	.project-cards {
 		flex-direction: column;
