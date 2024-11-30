@@ -16,7 +16,7 @@ body {
 /* Social Media Icons */
 .social-icons {
     position: fixed;
-    top: 100%; /* Vertically center the icons */
+    bottom: 0%; /* Vertically center the icons */
     right: 10px; /* Position it 20px from the right edge */
     transform: translateY(-90%); /* Adjust for vertical centering */
     display: flex;
