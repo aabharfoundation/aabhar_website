@@ -69,24 +69,8 @@ body {
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center vertically */
   justify-content: space-between; /* Space between logo and video */
-  padding: 10px;
+  padding: 0px;
   box-sizing: border-box; /* Include padding in width and height */
-}
-
-/* Header Section */
-.main-headerr {
-	position: relative;
-	top: 0vh; /* 1% from the top of the viewport */
-        left: 2.5vw; /* 2.5% from the left of the viewport */
-        width: 95vw; /* 95% of the viewport width */
-        height: 100vh; /* 100% of the viewport height */
-	/* Adjust as necessary */
-	background-color: #000;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
 }
 
 .background-video {
