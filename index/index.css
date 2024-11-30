@@ -74,8 +74,8 @@ body {
 
 .background-video {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 10vh;
+	left: 10vw;
 	width: 90vw;
 	height: 50vh;
 	object-fit: cover;
