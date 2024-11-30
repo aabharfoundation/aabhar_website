@@ -21,7 +21,7 @@ body {
     transform: translateY(-90%); /* Adjust for vertical centering */
     display: flex;
     flex-direction: column; /* Arrange the icons vertically */
-    gap: 15px; /* Space between icons */
+    gap: 15px; /* Space between ico*/
     z-index: 1000;
 }
 
