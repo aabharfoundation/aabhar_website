@@ -14,14 +14,14 @@ body {
 }
 
 /* Social Media Icons */
-
 .social-icons {
     position: fixed;
-    top: 20px; /* Adjust the top margin */
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%; /* Vertically center the icons */
+    right: 10px; /* Position it 20px from the right edge */
+    transform: translateY(-90%); /* Adjust for vertical centering */
     display: flex;
-    gap: 15px;
+    flex-direction: column; /* Arrange the icons vertically */
+    gap: 15px; /* Space between icons */
     z-index: 1000;
 }
 
