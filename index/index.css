@@ -82,14 +82,14 @@ body {
     position: absolute;
     top: -100%;
     left: 0;
-    width: 100%;
+    width: 20%;
     background-color: #ff6600; /* Orange color */
     color: white;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    padding: 20px 0;
-    z-index: 2;
+    padding: 0px 0;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,8 +109,8 @@ body {
 /* Animation for 'आब्हार' to appear from behind */
 .behind-text {
     position: absolute;
-    top: 100%;
-    left: 50%;
+    top: 15%;
+    left: 10%;
     transform: translateX(-50%);
     font-size: 3rem;
     font-family: 'Shantell Sans', sans-serif;
@@ -122,9 +122,9 @@ body {
 /* Animation for 'फाऊंडेशन' sliding down */
 .foundation {
     position: absolute;
-    top: -100%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: -15%;
+    left: 10%;
+    transform: translateX(-15%);
     font-size: 2.5rem;
     color: #2196f3; /* Blue color */
     font-weight: 700;
