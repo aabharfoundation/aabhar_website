@@ -74,10 +74,12 @@ body {
 }
 
 /* Header Section */
-.main-header {
+.main-headerr {
 	position: relative;
-	width: 100vw;
-	height: 100vh;
+	top: 1vh; /* 1% from the top of the viewport */
+  left: 2.5vw; /* 2.5% from the left of the viewport */
+  width: 95vw; /* 95% of the viewport width */
+  height: 50vh; /* 50% of the viewport height */
 	/* Adjust as necessary */
 	background-color: #000;
 	overflow: hidden;
