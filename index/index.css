@@ -82,7 +82,7 @@ body {
     position: absolute;
     top: 50%;
     left: 10%;
-    width: 30%;
+    width: 100%;
     background-color: #ff6600; /* Orange color */
     color: white;
     text-align: center;
@@ -134,12 +134,12 @@ body {
 
 /* Slide-up animation for behind-text */
 @keyframes slideUp {
-    0% {
-        top: 100%;
+    50% {
+        top: 50%;
         opacity: 0;
     }
-    100% {
-        top: 20%;
+    70% {
+        top: 30%;
         opacity: 1;
     }
 }
@@ -147,11 +147,11 @@ body {
 /* Slide-down animation for 'फाऊंडेशन' */
 @keyframes slideDown {
     50% {
-        top: -50%;
+        top: 50%;
         opacity: 0;
     }
-    50% {
-        top: 60%;
+    30% {
+        top: 70%;
         opacity: 1;
     }
 }
