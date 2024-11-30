@@ -120,6 +120,7 @@ body {
     width: 16%;
     height: 50%;
     transform-style: preserve-3d;
+    z-index: 3;
 }
 
 .box-content {
