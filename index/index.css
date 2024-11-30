@@ -61,24 +61,23 @@ body {
 /* Home Section */
 .home-section {
   position: relative; /* Enable precise positioning of child elements */
-  top: 0vh; /* 1% from the top of the viewport */
-  left: 2.5vw; /* 2.5% from the left of the viewport */
-  width: 95vw; /* 95% of the viewport width */
+  width: 100%; /* 95% of the viewport width */
   height: 100vh; /* 50% of the viewport height */
   background-color: #000; /* Optional background for better visibility */
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center vertically */
   justify-content: space-between; /* Space between logo and video */
   padding: 0px;
+  overflow: hidden;
   box-sizing: border-box; /* Include padding in width and height */
 }
 
 .background-video {
 	position: absolute;
-	top: 1vh;
-	left: 0vw;
-	width: 100vw;
-	height: 98vh;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	object-fit: contain;
 	z-index: 0;
 }
