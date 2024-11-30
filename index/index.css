@@ -80,9 +80,9 @@ body {
 /* Style for the strip */
 .strip {
     position: absolute;
-    top: -100%;
-    left: 0;
-    width: 20%;
+    top: 50%;
+    left: 10%;
+    width: 30%;
     background-color: #ff6600; /* Orange color */
     color: white;
     text-align: center;
@@ -99,9 +99,9 @@ body {
 /* Animation for strip pop up */
 @keyframes popUp {
     0% {
-        top: -100%;
+        top: 0%;
     }
-    100% {
+    0% {
         top: 0;
     }
 }
@@ -111,7 +111,7 @@ body {
     position: absolute;
     top: 15%;
     left: 10%;
-    transform: translateX(-50%);
+    transform: translateX(-10%);
     font-size: 3rem;
     font-family: 'Shantell Sans', sans-serif;
     color: #4caf50; /* Green color */
@@ -124,8 +124,8 @@ body {
     position: absolute;
     top: -15%;
     left: 10%;
-    transform: translateX(-15%);
-    font-size: 2.5rem;
+    transform: translateX(-10%);
+    font-size: 3rem;
     color: #2196f3; /* Blue color */
     font-weight: 700;
     opacity: 0;
@@ -146,12 +146,12 @@ body {
 
 /* Slide-down animation for 'फाऊंडेशन' */
 @keyframes slideDown {
-    0% {
-        top: -100%;
+    50% {
+        top: -50%;
         opacity: 0;
     }
-    100% {
-        top: 70%;
+    50% {
+        top: 60%;
         opacity: 1;
     }
 }
