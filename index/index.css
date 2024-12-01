@@ -101,6 +101,29 @@ body {
     transition: transform 0.3s ease;
 }
 /* Base Styles for Navigation */
+#nav-menu {
+  display: flex;
+}
+
+#nav-menu.responsive {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+}
+
+#nav-menu.responsive ul {
+  flex-direction: column;
+  text-align: center;
+}
+
+#nav-menu.responsive ul li {
+  margin: 10px 0;
+}
+
 nav {
   position: relative;
   display: flex;
