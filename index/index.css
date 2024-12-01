@@ -49,7 +49,6 @@ body {
     object-fit: cover;
 }
 
-/* Hover effects */
 .social-icon:hover {
     transform: scale(1.2);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -63,7 +62,6 @@ body {
     filter: brightness(1.2);
 }
 
-/* Home Section */
 .section-home {
   position: relative; /* Enable precise positioning of child elements */
   width: 100%; /* 95% of the viewport width */
@@ -104,23 +102,6 @@ body {
 
 .logo-container img:hover {
 	transform: scale(1.1);
-}
-
-.3d-box {
-    position: absolute;
-    top: 50%;
-    left: 16%;
-    transform: translateY(-50%) translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    perspective: 1000px;
-    width: 16%;
-    height: 50%;
-    transform-style: preserve-3d;
-    z-index: 3;
 }
 
 .box-content {
@@ -224,7 +205,7 @@ h1, h2, h3 {
 .project-overview {
 	flex: 0 0 auto;
 	/* Prevent items from shrinking or growing */
-	width: 300px;
+	width: 60vw;
 	/* Set a fixed width for project items */
 	scroll-snap-align: start;
 	/* Optional for scroll snapping */
@@ -271,7 +252,6 @@ h1, h2, h3 {
 /* Container for the Projects Scroll */
 .projects-scroll {
 	display: flex;
-	overflow-x: auto;
 	padding: 20px;
 	margin-top: 20px;
 	gap: 20px;
@@ -281,8 +261,7 @@ h1, h2, h3 {
 /* Individual Project Block */
 .project-block {
 	flex: 0 0 auto;
-	width: 250px;
-	/* Adjust as necessary */
+	width: 60vw;
 	background-color: #f4f4f4;
 	padding: 20px;
 	border-radius: 10px;
@@ -372,7 +351,6 @@ h1, h2, h3 {
 /* Container for the Life Story Scroll */
 .life-story-scroll {
 	display: flex;
-	overflow-x: auto;
 	padding: 20px;
 	margin-top: 20px;
 	gap: 20px;
@@ -452,51 +430,6 @@ h1, h2, h3 {
 	color: #7f8c8d;
 }
 
-/* Contact Form */
-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 30px;
-}
-
-form label {
-	font-size: 1.1em;
-	margin-bottom: 10px;
-	color: #2c3e50;
-}
-
-form input,
-form textarea {
-	width: 60%;
-	padding: 10px;
-	margin: 10px 0;
-	border: 2px solid #2c3e50;
-	border-radius: 5px;
-	font-size: 1.1em;
-	transition: border-color 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-	border-color: #f39c12;
-	outline: none;
-}
-
-form button {
-	padding: 12px 30px;
-	background-color: #e74c3c;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	font-size: 1.2em;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-}
-
-form button:hover {
-	background-color: #c0392b;
-}
 
 /* Footer */
 footer {
@@ -512,29 +445,6 @@ footer p {
 	margin: 5px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes slideIn {
-	0% {
-		transform: translateY(50px);
-		opacity: 0;
-	}
-
-	100% {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
 	.section-home {
@@ -544,8 +454,7 @@ footer p {
 		height: 33vh; /* 50% of the viewport height */
 	} 
 	.project-cards {
-		flex-direction: column;
-		align-items: center;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.gallery-grid {
@@ -553,11 +462,6 @@ footer p {
 	}
 
 	.news-blog-cards {
-		flex-direction: column;
-	}
-
-	form input,
-	form textarea {
-		width: 80%;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
