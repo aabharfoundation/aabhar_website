@@ -100,6 +100,88 @@ body {
     margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
+/* Base Styles for Navigation */
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+/* Hamburger Menu (Initially hidden on large screens) */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's visible over other content */
+}
+
+/* Active Styles when Menu is Visible */
+nav.responsive ul {
+  display: flex; /* Show the menu items */
+}
+
+/* Media Query for Devices Smaller than 768px */
+@media only screen and (max-width: 768px) {
+  /* Show the hamburger menu on smaller screens */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Hide the navigation links on smaller screens */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 50px; /* Adjust this if needed */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  /* Show the navigation links when the 'responsive' class is added to nav */
+  nav.responsive ul {
+    display: flex;
+  }
+
+  /* Style each menu item vertically */
+  nav ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  /* Adjust menu items for better mobile presentation */
+  nav ul li a {
+    padding: 15px 0;
+    font-size: 1.2rem;
+  }
+}
 
 .logo-container img:hover {
     transform: scale(1.1);
@@ -125,90 +207,6 @@ h1, h2, h3 {
 }
 
 /* General Navigation Styles */
-nav {
-    background-color: #333;
-    padding: 10px 20px;
-    font-family: Arial, sans-serif;
-    position: relative;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 8px 16px;
-    display: block;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
-    border-radius: 4px;
-}
-
-/* Hamburger Menu for Mobile */
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    font-size: 2rem;
-    color: white;
-    top: 10px;
-    right: 20px;
-    z-index: 2000;
-}
-
-.hamburger-menu.open {
-    display: block;
-}
-
-nav ul.responsive {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-nav ul.responsive li {
-    margin: 10px 0;
-}
-
-/* Media Query for Mobile Devices */
-@media only screen and (max-width: 768px) {
-    nav ul {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hamburger-menu {
-        display: 2rem;
-    }
-
-    nav ul.responsive {
-        display: block;
-    }
-
-    nav ul li a {
-        font-size: 1.2rem;
-    }
-}
 
 /* Section Styling */
 .section {
