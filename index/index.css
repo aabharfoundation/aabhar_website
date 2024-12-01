@@ -103,6 +103,9 @@ body {
     transition: transform 0.3s ease;
 }
 
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block; }
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
