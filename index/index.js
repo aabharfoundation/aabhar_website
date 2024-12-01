@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
+	function toggleMenu() {
+		var menu = document.getElementById("nav-menu");
+		menu.classList.toggle("responsive")
+	}
+
+
 	// Smooth scrolling functionality for multiple sections
 	const sections = {
 		lifeStoryScroll: document.querySelector('.life-story-scroll'),
