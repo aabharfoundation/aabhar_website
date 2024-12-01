@@ -99,6 +99,7 @@ body {
 .hamburger {
     display: block;
     cursor: pointer;
+    z-index: 3000;
 }
 
 .hamburger span {
@@ -107,6 +108,7 @@ body {
     width: 50px;
     margin: 10px;
     top: 50%;
+    z-index: 3001;
 }
 
 @media only screen and (max-width: 768px){
