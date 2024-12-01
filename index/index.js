@@ -2,18 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
    // Smooth Scroll for Navigation
    const navButtons = document.querySelectorAll('.nav-button');
-
-   navButtons.forEach(button => {
-      button.addEventListener('click', function (event) {
-         event.preventDefault();
-         const targetSectionId = this.getAttribute('data-target');
-         const targetSection = document.getElementById(targetSectionId);
-         targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-         });
-      });
-   });
+navButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default button behavior
+        const targetSectionId = this.getAttribute('data-target');
+        const targetSection = document.getElementById(targetSectionId);
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
 
    // Header Text Animations - Make sure the content is in place before animation
    const headerTextBig = document.querySelector('.header-text .big-text');
