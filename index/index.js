@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+	// Smooth scrolling for navigation buttons
 	const navButtons = document.querySelectorAll('.nav-button');
 	navButtons.forEach(button => {
 		button.addEventListener('click', function (event) {
@@ -10,34 +11,30 @@ document.addEventListener("DOMContentLoaded", function () {
 					behavior: 'smooth',
 					block: 'start'
 				});
-			}});
+			}
+		});
 	});
 
+	// Smooth scrolling functionality for multiple sections
+	const sections = {
+		lifeStoryScroll: document.querySelector('.life-story-scroll'),
+		galleryScroll: document.querySelector('.gallery-scroll'),
+		ourProjectScroll: document.querySelector('.our-project-scroll')
+	};
 
-lifeStoryScroll.addEventListener('touchstart', () => isScrolling = true);
-lifeStoryScroll.addEventListener('touchend', () => isScrolling = false);
+	Object.keys(sections).forEach(section => {
+		const element = sections[section];
+		if (element) {
+			let isScrolling = false;
 
-setInterval(() => {
-if (!isScrolling) {
-srollLifeStory();
-}
-}, 20);
+			element.addEventListener('touchstart', () => isScrolling = true);
+			element.addEventListener('touchend', () => isScrolling = false);
 
-galleryScroll.addEventListener('touchstart', () => isScrolling = true);
-galleryScroll.addEventListener('touchend', () => isScrolling = false);
-
-setInterval(() => {
-if (!isScrolling) {
-scrollGallery();
-}
-}, 20);
-
-ourProjectScroll.addEventListener('touchstart', () => isScrolling = true);
-ourProjectScroll.addEventListener('touchend', () => isScrolling = false);
-
-setInterval(() => {
-if (!isScrolling) {
-scrollOurProject();
-}
-}, 20);
+			setInterval(() => {
+				if (!isScrolling) {
+					element.scrollBy({ left: 1, behavior: 'smooth' });
+				}
+			}, 20);
+		}
+	});
 });
