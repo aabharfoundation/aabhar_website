@@ -185,7 +185,7 @@ nav ul.responsive li {
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     nav ul {
         display: none;
         width: 100%;
@@ -198,7 +198,7 @@ nav ul.responsive li {
     }
 
     .hamburger-menu {
-        display: block;
+        display: 2rem;
     }
 
     nav ul.responsive {
@@ -207,17 +207,6 @@ nav ul.responsive li {
 
     nav ul li a {
         font-size: 1.2rem;
-    }
-}
-
-/* Media Query for Smaller Devices */
-@media (max-width: 480px) {
-    nav ul li a {
-        font-size: 1rem;
-    }
-
-    .hamburger-menu {
-        font-size: 1.5rem;
     }
 }
 
