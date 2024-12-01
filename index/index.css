@@ -124,37 +124,97 @@ h1, h2, h3 {
     }
 }
 
-/* Navigation Bar */
-.navigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5vh;
-    width: 100vw;
-    background-color: #2c3e50;
+/* General Navigation Styles */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    z-index: 1000;
 }
 
-.nav-button {
-    background: linear-gradient(135deg, #f39c12, #e74c3c);
-    border: 2px solid #f39c12;
-    padding: 10px 19px;
-    margin: 0 10px;
-    font-size: 1em;
-    font-weight: bold;
-    color: #fff;
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+    display: none;
     cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 2rem;
+    color: white;
 }
 
-.nav-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+.hamburger-menu.open {
+    display: block;
+}
+
+nav ul.responsive {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul.responsive li {
+    margin: 10px 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    nav ul.responsive {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .hamburger-menu {
+        font-size: 1.5rem;
+    }
 }
 
 /* Section Styling */
