@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle the menu visibility for mobile view
   function toggleMenu() {
-    var menu = document.getElementById("nav-menu");
+    var menu = document.getElementById("nav");
     menu.classList.toggle("responsive"); // Toggle the 'responsive' class on the menu
   }
 
