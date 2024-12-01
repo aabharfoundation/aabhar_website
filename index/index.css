@@ -295,6 +295,7 @@ footer p {
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
     .section-home {
+        top: 10vh;
         height: 33vh;
     }
     .background-video {
