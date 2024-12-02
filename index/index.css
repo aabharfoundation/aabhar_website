@@ -97,7 +97,7 @@ body {
 }
 
 .hamburger {
-    display: none;
+    display: block;
     cursor: pointer;
     z-index: 3000;
 }
