@@ -78,8 +78,7 @@ body {
 }
 
 .nav-links {
-    list-style: none;
-    
+    list-style: none; 
     display: flex;
     margin: 0;
     padding: 0;
@@ -180,7 +179,7 @@ body {
 .section-home {
     position: relative;
     width: 100%;
-    Top:10vh;
+    top:10vh;
     height: 90vh;
     background-color: #000;
     display: flex;
