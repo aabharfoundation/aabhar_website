@@ -130,6 +130,7 @@ body {
 
     .hamburger {
         display: block;
+        z-index: 3000;
     }
 
     .nav-links.active {
