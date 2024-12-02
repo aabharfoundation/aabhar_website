@@ -1,20 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector('.hamburger1');
-    const navLinks = document.querySelector('.nav-links1');
-    const navItems = document.querySelectorAll('.nav-link1');
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-link');
     // Get references to the hamburger and navigation panel elements
-    const hamburger = document.getElementById('hamburger');
-    const navList = document.getElementById('navList');
-
-// When the hamburger is clicked, toggle the 'active' class to animate the icon and 'open' class to show the navigation menu
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');  // Toggles the 'active' class on the hamburger to switch between hamburger and 'X'
-  navList.classList.toggle('open');      // Toggles the 'open' class on the nav panel to slide it in/out
-});
-
     // Toggle the mobile menu
     hamburger.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        nav-links.classList.toggle('open');
+        
     });
 
     // Highlight the active navigation link on scroll or click
