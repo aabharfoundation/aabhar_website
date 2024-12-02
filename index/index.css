@@ -110,7 +110,7 @@ body {
 /* Hamburger Menu */
 .hamburger {
     display: none;
-    width: 100%
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
     width: 20px;
@@ -123,6 +123,16 @@ body {
     width: 20px;
     border-radius: 2px;
     transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Line 1 rotates diagonally */
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Line 2 disappears */
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Line 3 rotates diagonally */
 }
 
 .hamburger:hover span {
@@ -139,7 +149,7 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 40px;
+        top: 0;
         width: 30%;
         height: 100%;
         background-color: #0d47a1;
@@ -147,6 +157,8 @@ body {
         padding: 10px 0;
         border-radius: 0 0 10px 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
     }
 
     .nav-links.active {
