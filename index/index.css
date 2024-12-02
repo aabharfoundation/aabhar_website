@@ -133,6 +133,7 @@ body {
 @media only screen and (max-width: 768px) {
     .hamburger {
         display: flex;
+        right: 0;
     }
 
     .nav-links {
