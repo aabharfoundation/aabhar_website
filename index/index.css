@@ -79,6 +79,7 @@ body {
 
 .nav-links {
     list-style: none;
+    right: 0;
     display: flex;
     margin: 0;
     padding: 0;
