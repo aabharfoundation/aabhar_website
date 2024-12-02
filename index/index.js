@@ -19,6 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    function toggleMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Toggle the active class on both hamburger and nav-links
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');}
+
+
     function updateActiveNav() {
         let scrollPosition = window.scrollY + 100; // Offset for fixed navbar
         navItems.forEach((link) => {
