@@ -110,6 +110,7 @@ body {
 /* Hamburger Menu */
 .hamburger {
     display: none;
+    right: 0;
     flex-direction: column;
     justify-content: space-between;
     width: 25px;
@@ -119,6 +120,7 @@ body {
 
 .hamburger span {
     background-color: white;
+    right: 0;
     height: 3px;
     width: 100%;
     border-radius: 2px;
