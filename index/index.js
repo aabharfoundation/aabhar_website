@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Toggle the mobile menu
     hamburger.addEventListener('click', function () {
         hamburger.classList.tonggle('active');
-        nav-links.classList.toggle('active');
+        nav-links.classList.toggle('open');
         
     });
 
