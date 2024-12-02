@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get references to the hamburger and navigation panel elements
     // Toggle the mobile menu
     hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('active');
-        nav-links.classList.toggle('open');
+        hamburger.classList.tonggle('active');
+        nav-links.classList.toggle('active');
         
     });
 
