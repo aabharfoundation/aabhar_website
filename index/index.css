@@ -126,7 +126,7 @@ body {
 }
 
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(3px; /* Line 1 rotates diagonally */
+    transform: rotate(45deg) translate(3px); /* Line 1 rotates diagonally */
 }
 .hamburger.active span:nth-child(2) {
     opacity: 0; /* Line 2 disappears */
