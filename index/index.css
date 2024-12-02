@@ -67,7 +67,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 40px;
+    width: 100%;
     background: linear-gradient(90deg, #0d47a1, #42a5f5); /* Gradient Background */
     z-index: 2000;
     display: flex;
