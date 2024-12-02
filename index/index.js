@@ -1,43 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-link');
-    // Get references to the hamburger and navigation panel elements
-    // Toggle the mobile menu
+    const hamburger = document.querySelector('.hamburger'); // Select the hamburger icon
+    const navLinks = document.querySelector('.nav-links'); // Select the navigation links container
+    const navItems = document.querySelectorAll('.nav-links li a'); // Select all the navigation links
+    
+    // Toggle the mobile menu when the hamburger is clicked
     hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        
+        hamburger.classList.toggle('active'); // Toggle the 'active' class on the hamburger (for transforming to 'X')
+        navLinks.classList.toggle('active'); // Toggle the 'active' class on nav-links (for sliding in the menu)
     });
 
-    // Highlight the active navigation link on scroll or click
-    window.addEventListener('scroll', updateActiveNav);
+    // Highlight the active navigation link on click
     navItems.forEach((item) => {
         item.addEventListener('click', function () {
-            navItems.forEach(link => link.classList.remove('active'));
-            item.classList.add('active');
+            navItems.forEach(link => link.classList.remove('active')); // Remove 'active' class from all links
+            item.classList.add('active'); // Add 'active' class to the clicked link
         });
     });
 
-    function toggleMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    // Toggle the active class on both hamburger and nav-links
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');}
-
+    // Highlight the active navigation link based on scroll position
+    window.addEventListener('scroll', updateActiveNav);
 
     function updateActiveNav() {
         let scrollPosition = window.scrollY + 100; // Offset for fixed navbar
         navItems.forEach((link) => {
-            const section = document.querySelector(link.getAttribute('href'));
+            const section = document.querySelector(link.getAttribute('href')); // Get section linked to the navigation item
             if (
-                section.offsetTop <= scrollPosition &&
+                section.offsetTop <= scrollPosition && // If the section is in view
                 section.offsetTop + section.offsetHeight > scrollPosition
             ) {
-                navItems.forEach(link => link.classList.remove('active'));
-                link.classList.add('active');
+                navItems.forEach(link => link.classList.remove('active')); // Remove 'active' class from all links
+                link.classList.add('active'); // Add 'active' class to the current section's link
             }
         });
     }
