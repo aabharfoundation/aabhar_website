@@ -98,6 +98,8 @@ body {
 
 .hamburger {
     display: block;
+    height: 50%;
+    width: 50%;
     cursor: pointer;
     z-index: 3000;
 }
