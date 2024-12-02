@@ -72,7 +72,7 @@ body {
     z-index: 2000;
     display: flex;
     justify-content: space-between;
-    align-items: centre;
+    align-items: center;
     padding: 15px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
 }
@@ -147,15 +147,15 @@ body {
     }
 
     .nav-links {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         position: fixed;
-        left: -100%;
+        left: 0;
         width: 50%;
         height: 100%;
         background-color: #0d47a1;
-        text-align: centre;
+        text-align: center;
         padding: 10px 0;
         border-radius: 0 0 10px 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
