@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Toggle the mobile menu when the hamburger is clicked
     hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('active'); // Toggle the 'active' class on the hamburger (for transforming to 'X')
-        navLinks.classList.toggle('active'); // Toggle the 'active' class on nav-links (for sliding in the menu)
+        navLinks.classList.toggle('active');
+        hamburger1.classList.toggle('active'); // Toggle the 'active' class on the hamburger (for transforming to 'X')
+         // Toggle the 'active' class on nav-links (for sliding in the menu)
     });
 
     // Highlight the active navigation link on click
