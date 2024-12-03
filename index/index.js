@@ -1,4 +1,3 @@
-I have the css as you mentioned please change the js accordingly again, sharing you existing file. The activeness of section name is not required, only the line animation is required.
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector('.hamburger'); // Select the hamburger icon
     const navList = document.querySelector('.nav-links'); // Select the navigation links container
