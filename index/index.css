@@ -109,11 +109,6 @@ body {
     color: #ffeb3b;
 }
 
-.nav-links li a.active{
-    background-color: #ffeb3b;
-    color: #333;
-}
-
 .nav-links a.active .underline {
     width: 100%; /* Expands the line fully when active */
 }
@@ -130,7 +125,7 @@ body {
     width: 0;
     height: 2px;
     background-color: #f39c12; /* Yellow color for line */
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-inut;
     transform: translateX(-50%); /* Centers the line initially */
 }
 
