@@ -251,7 +251,7 @@ body {
 /* Container for Content */
 .container {
     width: 80%; /* Container width is 80% of the screen */
-    margin: 0 auto; /* Centers the container */
+    margin: 20px auto; /* Centers the container */
 }
 
 /* Section Title Styling */
@@ -260,7 +260,7 @@ body {
     color: #2e3a59; /* Dark blue color */
     text-align: center; /* Centers the text */
     margin-bottom: 20px; /* Adds space below the title */
-    opacity: 1; /* Initially hides the section */
+    opacity: 0; /* Initially hides the section */
     animation: fadeIn 2s forwards 0.5s; /* Fade-in with delay */
 }
 
@@ -269,7 +269,7 @@ body {
     color: #777; /* Light grey color for the text */
     text-align: center; /* Centers the text */
     line-height: 1.6; /* Adjusts line height for readability */
-    opacity: 1; /* Initially hides the section */
+    opacity: 0; /* Initially hides the section */
     animation: fadeIn 2s forwards 1s; /* Fade-in with delay */
 }
 
@@ -277,8 +277,8 @@ body {
 .content {
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Aligns items vertically in the center */
-    margin-top: 40px; /* Adds space above the content */
-    opacity: 1; /* Initially hides the content */
+    margin-top: 80px; /* Adds space above the content */
+    opacity: 0; /* Initially hides the content */
 }
 
 /* Image Styling */
