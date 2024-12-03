@@ -184,6 +184,7 @@ body {
     background-color: #ffffff; /* White background for the section */
     padding: 60px 20px;
     margin: 20px 0;
+    margin-bottom: 50px;
     color: #333; /* Sets text color to dark grey */
     opacity: 1; /* Initially hides the section */
     animation: fadeIn 2s forwards; /* Applies fade-in effect */
@@ -240,6 +241,7 @@ body {
     background-color: #ffffff; /* White background for the section */
     padding: 60px 20px;
     margin: 20px 0;
+    margin-top: 50px;
     color: #333; /* Sets text color to dark grey */
     opacity: 1; /* Initially hides the section */
     animation: fadeIn 2s forwards; /* Applies fade-in effect */
