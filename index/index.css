@@ -153,9 +153,10 @@ body {
         left: 0;
         top : 5%;
         width: 50%;
-        height: 30%;
+        height: 60%;
         background-color: #0d47a1;
         text-align: center;
+        justify-content: space-between;
         padding: 15px 0;
         border-radius: 0 0 5px 5px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
