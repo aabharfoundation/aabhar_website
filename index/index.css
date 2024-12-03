@@ -163,7 +163,7 @@ body {
     }
     
     .nav-links.active {
-        transform: translateX(0); /* Move the nav-links into view from the left */
+        transform: translateX(30%,10%); /* Move the nav-links into view from the left */
     } 
    
     .nav-links li {
