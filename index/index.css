@@ -180,6 +180,7 @@ body {
 
 /* Section Home */
 .section-home {
+    position: relative;
     top: 20%;
     margin: 20px 0;
     background-color: #ffffff;
@@ -229,6 +230,7 @@ body {
 
 /* About Us Section */
 .section-about {
+    position: relative;
     background-color: #ffffff; /* White background for the section */
     padding: 60px 20px;
     margin: 20px 0;
