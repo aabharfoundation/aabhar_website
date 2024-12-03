@@ -297,6 +297,7 @@ body {
 
 /* Mission Section Styling */
 .mission {
+    display: flex;
     background-color: #ffffff; /* Light grey background */
     padding: 30px; /* Adds padding inside the box */
     margin-top: 50px; /* Adds top margin */
