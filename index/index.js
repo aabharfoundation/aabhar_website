@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger
-        = document.querySelector('.hamburger'); // Select the hamburger icon
+    const hamburger = document.querySelector('.hamburger'); // Select the hamburger icon
     const navList = document.querySelector('.nav-links'); // Select the navigation links container
     const navItems = document.querySelectorAll('.nav-links li a'); // Select all the navigation links
     
