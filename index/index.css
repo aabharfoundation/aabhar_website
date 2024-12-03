@@ -180,7 +180,6 @@ body {
 
 /* Section Home */
 .section-home {
-    position: relative;
     width: 100%;
     top:10vh;
     height: 90vh;
@@ -189,7 +188,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0px;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
