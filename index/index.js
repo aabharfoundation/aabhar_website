@@ -22,17 +22,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // Highlight the active navigation link based on scroll position
     window.addEventListener('scroll', updateActiveNav);
 
-    function updateActiveNav() {
-        let scrollPosition = window.scrollY + 100; // Offset for fixed navbar
-        navItems.forEach((link) => {
-            const section = document.querySelector(link.getAttribute('href')); // Get section linked to the navigation item
-            if (
-                section.offsetTop <= scrollPosition && // If the section is in view
-                section.offsetTop + section.offsetHeight > scrollPosition
-            ) {
-                navItems.forEach(link => link.classList.remove('active')); // Remove 'active' class from all links
-                link.classList.add('active'); // Add 'active' class to the current section's link
-            }
-        });
-    }
+function updateActiveNav() {
+    let scrollPosition = window.scrollY + 100; // Offset for fixed navbar
+    let viewportHeight = window.innerHeight; // Height of the visible part of the window
+    navItems.forEach((link) => {
+        const section = document.querySelector(link.getAttribute('href')); // Get section linked to the navigation item
+        
+        // Get the middle point of the section
+        let sectionMiddle = section.offsetTop + section.offsetHeight / 2;
+        
+        // Check if the middle of the section is within the viewport
+        if (
+            sectionMiddle >= scrollPosition && // Section's middle is past the scroll position
+            sectionMiddle <= scrollPosition + viewportHeight // Section's middle is within the viewport height
+        ) {
+            navItems.forEach(link => {
+                link.classList.remove('active'); // Remove 'active' class from all links
+                link.querySelector('.underline').style.width = '0'; // Reset the underline width
+            });
+
+            link.classList.add('active'); // Add 'active' class to the current section's link
+            link.querySelector('.underline').style.width = '100%'; // Expand the underline
+        }
+    });
+}
 });
