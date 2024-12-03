@@ -139,10 +139,6 @@ body {
     background-color: #ffeb3b;
 }
 
-.nav-links.active {
-        transform: translateX(30%,10%); /* Move the nav-links into view from the left */
-} 
-
 /* Mobile Navigation */
 @media only screen and (max-width: 768px) {
     .hamburger {
@@ -162,12 +158,12 @@ body {
         padding: 10px 0;
         border-radius: 0 0 10px 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transform: translateX(-20%);
+        transform: translateX(-50%);
         transition: transform 0.3s ease;
     }
     
     .nav-links.active {
-        transform: translateX(30%,10%); /* Move the nav-links into view from the left */
+        transform: translateX(50%); /* Move the nav-links into view from the left */
     } 
    
     .nav-links li {
