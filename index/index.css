@@ -243,8 +243,6 @@ body {
     margin: 20px 0;
     margin-top: 50px;
     color: #333; /* Sets text color to dark grey */
-    opacity: 1; /* Initially hides the section */
-    
 }
 
 /* Container for Content */
@@ -315,6 +313,7 @@ body {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
     opacity: 0; /* Initially hides the section */
+    justify-content: space-between;
     animation: fadeIn 2s forwards 3s; /* Fade-in with delay */
 }
 
