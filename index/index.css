@@ -184,7 +184,7 @@ body {
     background-color: #ffffff; /* White background for the section */
     padding: 50px 0; /* Adds top and bottom padding */
     color: #333; /* Sets text color to dark grey */
-    opacity: 0; /* Initially hides the section */
+    opacity: 1; /* Initially hides the section */
     animation: fadeIn 2s forwards; /* Applies fade-in effect */
     position: relative; /* Ensures the video is properly layered */
 }
@@ -197,7 +197,7 @@ body {
     width: 100%; /* Sets the video to take full width of the section */
     height: 100%; /* Sets the video to take full height of the section */
     object-fit: contain; /* Ensures the video is resized to fit inside the section while preserving its aspect ratio */
-    z-index: 0; /* Ensures the video stays at the back of the content */
+    z-index: 10; /* Ensures the video stays at the back of the content */
 }
 
 /* Box content */
@@ -207,13 +207,13 @@ body {
     left: 0; /* Aligns the content to the left of the section */
     padding-left: 30px; /* Adds some left padding for spacing */
     transform: translateY(-50%); /* Adjusts vertical position to be centered */
-    z-index: 1; /* Ensures the text is on top of the video */
+    z-index: 15; /* Ensures the text is on top of the video */
 }
 
 /* Adjustments for larger screens (Desktop) */
 @media (min-width: 768px) {
     .section-home {
-        height: auto; /* Keeps the height normal for desktop screens */
+        height: 100vh; /* Keeps the height normal for desktop screens */
     }
     .box-content h1, .box-content h2, .box-content h3 {
         font-size: 3rem; /* Adjusts the font size for large screens */
