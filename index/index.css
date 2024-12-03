@@ -109,7 +109,7 @@ body {
 
 /* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: block;
     height: 30px;
     flex-direction: column;
     justify-content: space-between;
@@ -156,7 +156,7 @@ body {
         height: 30%;
         background-color: #0d47a1;
         text-align: center;
-        padding: 10px 0;
+        padding: 15px 0;
         border-radius: 0 0 5px 5px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transform: translateX(-100%);
@@ -168,11 +168,11 @@ body {
     } 
    
     .nav-links li {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 
     .nav-links li a {
-        padding: 10px 10px;
+        padding: 15px 15px;
     }
 }
 
