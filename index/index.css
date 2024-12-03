@@ -203,6 +203,185 @@ body {
     z-index: 0;
 }
 
+/* About Us Section */
+.about-us {
+    background-color: #ffffff; /* White background for the section */
+    padding: 50px 0; /* Adds top and bottom padding */
+    color: #333; /* Sets text color to dark grey */
+    opacity: 0; /* Initially hides the section */
+    animation: fadeIn 2s forwards; /* Applies fade-in effect */
+}
+
+/* Container for Content */
+.container {
+    width: 80%; /* Container width is 80% of the screen */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Section Title Styling */
+.section-title h2 {
+    font-size: 36px; /* Sets the font size for section title */
+    color: #2e3a59; /* Dark blue color */
+    text-align: center; /* Centers the text */
+    margin-bottom: 20px; /* Adds space below the title */
+    opacity: 0; /* Initially hides the section */
+    animation: fadeIn 2s forwards 0.5s; /* Fade-in with delay */
+}
+
+.section-title p {
+    font-size: 18px; /* Sets font size for description text */
+    color: #777; /* Light grey color for the text */
+    text-align: center; /* Centers the text */
+    line-height: 1.6; /* Adjusts line height for readability */
+    opacity: 0; /* Initially hides the section */
+    animation: fadeIn 2s forwards 1s; /* Fade-in with delay */
+}
+
+/* Flexbox Layout for Image and Text */
+.content {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Aligns items vertically in the center */
+    margin-top: 40px; /* Adds space above the content */
+    opacity: 0; /* Initially hides the content */
+    animation: fadeIn 2s forwards 1.5s; /* Fade-in with delay */
+}
+
+/* Image Styling */
+.image {
+    flex: 1; /* Takes up 1/3 of the container */
+    margin-right: 20px; /* Adds space to the right of the image */
+    transform: translateY(20px); /* Initially moves the image down */
+    animation: slideIn 1s ease-out forwards 2s; /* Slide-in animation */
+}
+
+.image img {
+    width: 100%; /* Makes the image take the full width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Text Styling */
+.text {
+    flex: 2; /* Takes up 2/3 of the container */
+    transform: translateY(20px); /* Initially moves the text down */
+    animation: slideIn 1s ease-out forwards 2.5s; /* Slide-in animation */
+}
+
+.text p {
+    font-size: 18px; /* Sets font size for text */
+    line-height: 1.8; /* Increases line height for readability */
+    color: #555; /* Dark grey color for the text */
+}
+
+/* Mission Section Styling */
+.mission {
+    background-color: #f1f1f1; /* Light grey background */
+    padding: 30px; /* Adds padding inside the box */
+    margin-top: 50px; /* Adds top margin */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    opacity: 0; /* Initially hides the section */
+    animation: fadeIn 2s forwards 3s; /* Fade-in with delay */
+}
+
+.mission h3 {
+    font-size: 24px; /* Sets font size for mission heading */
+    color: #2e3a59; /* Dark blue color */
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.mission ul {
+    list-style-type: none; /* Removes default list style */
+    padding: 0; /* Removes padding */
+}
+
+.mission li {
+    font-size: 18px; /* Sets font size for list items */
+    color: #333; /* Dark grey color */
+    margin-bottom: 10px; /* Adds space below each list item */
+}
+
+/* Legacy Section Styling */
+.legacy {
+    margin-top: 50px; /* Adds top margin */
+    text-align: center; /* Centers the text */
+    opacity: 0; /* Initially hides the section */
+    animation: fadeIn 2s forwards 3.5s; /* Fade-in with delay */
+}
+
+.legacy h3 {
+    font-size: 24px; /* Sets font size for legacy heading */
+    color: #2e3a59; /* Dark blue color */
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.legacy p {
+    font-size: 18px; /* Sets font size for legacy text */
+    color: #555; /* Dark grey color */
+    line-height: 1.8; /* Increases line height for readability */
+}
+
+.legacy strong {
+    font-size: 20px; /* Larger font size for strong text */
+    color: #2e3a59; /* Dark blue color */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Starts with 0 opacity */
+    }
+    to {
+        opacity: 1; /* Ends with full opacity */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px); /* Starts below the original position */
+        opacity: 0; /* Starts hidden */
+    }
+    to {
+        transform: translateY(0); /* Ends at the original position */
+        opacity: 1; /* Ends fully visible */
+    }
+}
+
+/* Hover animation for the image */
+.image:hover img {
+    transform: scale(1.05); /* Zooms in the image slightly */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Responsive Design for Mobile */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%; /* Makes the container 95% of screen width on mobile */
+    }
+
+    .content {
+        flex-direction: column; /* Stacks image and text vertically */
+        text-align: center; /* Centers the text */
+    }
+
+    .image {
+        margin-right: 0; /* Removes right margin */
+        margin-bottom: 20px; /* Adds bottom margin to space out elements */
+    }
+
+    .section-title h2 {
+        font-size: 28px; /* Reduces font size for small screens */
+    }
+
+    .section-title p,
+    .text p,
+    .mission li,
+    .legacy p {
+        font-size: 16px; /* Reduces font size for better readability on mobile */
+    }
+}
+
+
 /* Section Styling */
 .section {
     padding: 60px 20px;
