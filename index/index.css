@@ -234,6 +234,7 @@ body {
 
 /* About Us Section */
 .about-us {
+    positon: relative;
     background-color: #ffffff; /* White background for the section */
     padding: 50px 0; /* Adds top and bottom padding */
     color: #333; /* Sets text color to dark grey */
@@ -413,6 +414,7 @@ body {
 
 /* Section Styling */
 .section {
+    position: relative;
     padding: 60px 20px;
     background-color: #ffffff;
     margin: 20px 0;
