@@ -15,14 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Highlight the active navigation link on click
     navItems.forEach((item) => {
         item.addEventListener('click', function () {
-            navItems.forEach(link => {
-                link.classList.remove('active'); // Remove 'active' class from all links
-                link.querySelector('.underline').style.width = '0'; // Reset the underline width
-            });
-            link.classList.add('active'); // Add 'active' class to the current section's link
-            link.querySelector('.underline').style.width = '100%'; // Expand the underline
-            navItems1.forEach(link => link.classList.remove('active')); // Remove 'active' class from all links
-            item1.classList.add('active'); // Add 'active' class to the clicked link
+            navItems.forEach(link => link.classList.remove('active')); // Remove 'active' class from all links
+            link.querySelector('.underline').style.width = '100%'; // Add 'active' class to the clicked link
         });
     });
 
