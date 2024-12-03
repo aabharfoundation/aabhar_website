@@ -185,12 +185,11 @@ body {
     color: #333;
     opacity: 0;
     animation: fadeIn 2s forwards;
-    min-height: 100vh; /* Ensures the section covers the full viewport */
+    height: 100vh; /* Ensures the section covers the full viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; /* Aligns text to the left */
-    position: relative;
 }
 
 /* Background video */
@@ -211,18 +210,8 @@ body {
     left: 0; /* Aligns the content to the left of the section */
     padding-left: 20px; /* Adds some left padding for spacing */
     align-items: flex-start;
-    transform: translateY(-50%); /* Adjusts vertical position to be centered */
+    justify-content: space-between;
     z-index: 15; /* Ensures the text is on top of the video */
-}
-
-/* Adjustments for larger screens (Desktop) */
-@media (min-width: 768px) {
-    .section-home {
-        height: 100vh; /* Keeps the height normal for desktop screens */
-    }
-    .box-content h1, .box-content h2, .box-content h3 {
-        font-size: 2rem; /* Adjusts the font size for large screens */
-    }
 }
 
 /* Adjustments for smaller screens (Mobile) */
@@ -240,7 +229,6 @@ body {
 
 /* About Us Section */
 .about-us {
-    positon: relative;
     background-color: #ffffff; /* White background for the section */
     padding: 60px 20px;
     margin: 20px 0;
@@ -251,7 +239,6 @@ body {
 /* Container for Content */
 .container {
     width: 80%; /* Container width is 80% of the screen */
-    margin: 20px auto; /* Centers the container */
 }
 
 /* Section Title Styling */
@@ -277,7 +264,7 @@ body {
 .content {
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Aligns items vertically in the center */
-    margin-top: 80px; /* Adds space above the content */
+    margin-top: 40px; /* Adds space above the content */
     opacity: 0; /* Initially hides the content */
 }
 
@@ -310,13 +297,12 @@ body {
 
 /* Mission Section Styling */
 .mission {
-    background-color: #f1f1f1; /* Light grey background */
+    background-color: #ffffff; /* Light grey background */
     padding: 30px; /* Adds padding inside the box */
     margin-top: 50px; /* Adds top margin */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
     opacity: 0; /* Initially hides the section */
-    justify-content: space-between;
     animation: fadeIn 2s forwards 3s; /* Fade-in with delay */
 }
 
