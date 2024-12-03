@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamBurger = document.querySelector('.hamburger'); // Select the hamburger icon
+    const hamburger
+        = document.querySelector('.hamburger'); // Select the hamburger icon
     const navList = document.querySelector('.nav-links'); // Select the navigation links container
     const navItems = document.querySelectorAll('.nav-links li a'); // Select all the navigation links
     
     // Toggle the mobile menu when the hamburger is clicked
     hamburger.addEventListener('click', function () {
-        hamBurger.classList.toggle('active');
+        hamburger.classList.toggle('active');
         navList.classList.toggle('active');
          // Toggle the 'active' class on the hamburger (for transforming to 'X')
          // Toggle the 'active' class on nav-links (for sliding in the menu)
