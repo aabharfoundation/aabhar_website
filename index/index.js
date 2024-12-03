@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Add 'active' class to the clicked link
-        item.classList.add('active'); // Add 'active' class to the current section's link
-        item.querySelector('.underline').style.width = '100%'; // Expand the underline
+        link.classList.add('active'); // Add 'active' class to the current section's link
+        link.querySelector('.underline').style.width = '100%'; // Expand the underline
     });
 });
 
