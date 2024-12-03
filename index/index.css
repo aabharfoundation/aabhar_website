@@ -20,8 +20,8 @@ body {
 
 /* Social Media Icons */
 .social-icons {
-    position: absolute;
-    bottom: 0%;
+    position: fixed;
+    bottom: 0;
     right: 10px;
     transform: translateY(-90%);
     display: flex;
@@ -180,7 +180,7 @@ body {
 
 /* Section Home */
 .section-home {
-    top: 15%;
+    top: 20%;
     background-color: #ffffff;
     padding: 30px 0; /* Adjust padding based on content */
     color: #333;
@@ -188,8 +188,6 @@ body {
     animation: fadeIn 2s forwards;
     height: 100vh; /* Ensures the section covers the full viewport */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: flex-start; /* Aligns text to the left */
 }
 
@@ -272,7 +270,7 @@ body {
 /* Image Styling */
 .image {
     flex: 1; /* Takes up 1/3 of the container */
-    margin-right: 20px; /* Adds space to the right of the image */
+    margin-right: 30px; /* Adds space to the right of the image */
     transform: translateY(20px); /* Initially moves the image down */
     animation: slideIn 1s ease-out forwards 2s; /* Slide-in animation */
 }
@@ -322,7 +320,7 @@ body {
 .mission li {
     font-size: 18px; /* Sets font size for list items */
     color: #333; /* Dark grey color */
-    margin-bottom: 10px; /* Adds space below each list item */
+    margin: 15px 0;
 }
 
 /* Legacy Section Styling */
