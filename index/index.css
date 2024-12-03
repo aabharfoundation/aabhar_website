@@ -182,7 +182,8 @@ body {
 .section-home {
     height: 100vh;
     background-color: #ffffff; /* White background for the section */
-    padding: 50px 0; /* Adds top and bottom padding */
+    padding: 60px 20px;
+    margin: 20px 0;
     color: #333; /* Sets text color to dark grey */
     opacity: 1; /* Initially hides the section */
     animation: fadeIn 2s forwards; /* Applies fade-in effect */
@@ -237,7 +238,8 @@ body {
 .about-us {
     positon: relative;
     background-color: #ffffff; /* White background for the section */
-    padding: 50px 0; /* Adds top and bottom padding */
+    padding: 60px 20px;
+    margin: 20px 0;
     color: #333; /* Sets text color to dark grey */
     opacity: 1; /* Initially hides the section */
     animation: fadeIn 2s forwards; /* Applies fade-in effect */
