@@ -181,6 +181,7 @@ body {
 /* Section Home */
 .section-home {
     top: 20%;
+    margin: 20px 0;
     background-color: #ffffff;
     padding: 30px 0; /* Adjust padding based on content */
     color: #333;
@@ -395,14 +396,14 @@ body {
     }
 
     .section-title h2 {
-        font-size: 28px; /* Reduces font size for small screens */
+        font-size: 20px; /* Reduces font size for small screens */
     }
 
     .section-title p,
     .text p,
     .mission li,
     .legacy p {
-        font-size: 16px; /* Reduces font size for better readability on mobile */
+        font-size: 10px; /* Reduces font size for better readability on mobile */
     }
 }
 
