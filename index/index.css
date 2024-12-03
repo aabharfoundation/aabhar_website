@@ -207,7 +207,7 @@ body {
     position: absolute; /* Positions the content within the section */
     top: 50%; /* Centers the content vertically */
     left: 0; /* Aligns the content to the left of the section */
-    padding-left: 30px; /* Adds some left padding for spacing */
+    padding-left: 20px; /* Adds some left padding for spacing */
     transform: translateY(-50%); /* Adjusts vertical position to be centered */
     z-index: 15; /* Ensures the text is on top of the video */
 }
@@ -218,7 +218,7 @@ body {
         height: 100vh; /* Keeps the height normal for desktop screens */
     }
     .box-content h1, .box-content h2, .box-content h3 {
-        font-size: 3rem; /* Adjusts the font size for large screens */
+        font-size: 2rem; /* Adjusts the font size for large screens */
     }
 }
 
@@ -228,10 +228,10 @@ body {
         height: 50vh; /* Sets the section height to 50% of the viewport height on mobile */
     }
     .box-content {
-        padding-left: 20px; /* Reduces the left padding on mobile for better spacing */
+        padding-left: 10px; /* Reduces the left padding on mobile for better spacing */
     }
     .box-content h1, .box-content h2, .box-content h3 {
-        font-size: 2rem; /* Adjusts the font size for mobile screens */
+        font-size: 1rem; /* Adjusts the font size for mobile screens */
     }
 }
 
@@ -244,7 +244,7 @@ body {
     margin-top: 50px;
     color: #333; /* Sets text color to dark grey */
     opacity: 1; /* Initially hides the section */
-    animation: fadeIn 2s forwards; /* Applies fade-in effect */
+    
 }
 
 /* Container for Content */
@@ -278,7 +278,6 @@ body {
     align-items: center; /* Aligns items vertically in the center */
     margin-top: 40px; /* Adds space above the content */
     opacity: 1; /* Initially hides the content */
-    animation: fadeIn 2s forwards 1.5s; /* Fade-in with delay */
 }
 
 /* Image Styling */
@@ -390,6 +389,9 @@ body {
 
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
+    .about-us {
+        margin-top: 80px;
+    }
     .container {
         width: 95%; /* Makes the container 95% of screen width on mobile */
     }
