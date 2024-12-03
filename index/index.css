@@ -180,12 +180,11 @@ body {
 
 /* Section Home */
 .section-home {
-    width: 100%;
-    top:10vh;
-    height: 90vh;
-    background-color: #000;
-    display: flex;
-    box-sizing: border-box;
+    background-color: #ffffff; /* White background for the section */
+    padding: 50px 0; /* Adds top and bottom padding */
+    color: #333; /* Sets text color to dark grey */
+    opacity: 0; /* Initially hides the section */
+    animation: fadeIn 2s forwards; /* Applies fade-in effect */
 }
 
 .background-video {
