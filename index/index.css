@@ -151,7 +151,7 @@ body {
         justify-content: center;
         position: fixed;
         left: 0;
-        top : 10%;
+        top : 5%;
         width: 50%;
         height: 30%;
         background-color: #0d47a1;
@@ -164,7 +164,7 @@ body {
     }
     
     .nav-links.active {
-        transform: translateX(5%); /* Move the nav-links into view from the left */
+        transform: translateX(0); /* Move the nav-links into view from the left */
     } 
    
     .nav-links li {
