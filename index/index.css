@@ -125,8 +125,8 @@ body {
     width: 0;
     height: 2px;
     background-color: #f39c12; /* Yellow color for line */
-    transition: all 0.3s ease-inut;
-    transform: translateX(-50%); /* Centers the line initially */
+    transition: width 0.5s ease-in-out; /* Slower transition for width */
+    transform: translateX(-50%);
 }
 
 /* Hamburger Menu */
