@@ -285,7 +285,6 @@ body {
 /* Flexbox Layout for Image and Text */
 .content {
     display: flex; /* Use flexbox for alignment */
-    opacity: 0; /* Initially hides the content */
 }
 
 /* Image Styling */
