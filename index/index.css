@@ -254,7 +254,7 @@ body {
     background-color: #ffffff; /* White background for the section */
     padding: 60px 20px;
     margin: 20px 0;
-    margin-top: 50px;
+    margin-top: 60px;
     color: #333; /* Sets text color to dark grey */
 }
 
@@ -401,7 +401,7 @@ body {
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
     .about-us {
-        margin-top: 120px;
+        margin-top: 200px;
     }
     .container {
         width: 95%; /* Makes the container 95% of screen width on mobile */
