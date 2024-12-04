@@ -250,7 +250,7 @@ body {
 
 /* About Us Section */
 .section-about {
-    top: 10%;
+    top: 50%;
     position: relative;
     background-color: #ffffff; /* White background for the section */
     color: #333; /* Sets text color to dark grey */
