@@ -250,6 +250,7 @@ body {
 
 /* About Us Section */
 .section-about {
+    top : 20%;
     margin: 90px 0;
     position: relative;
     background-color: #ffffff; /* White background for the section */
