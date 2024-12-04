@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector('.hamburger'); // Select the hamburger icon
-    const navList = document.querySelector('.nav-links'); // Select the navigation links container
-    const navItems = document.querySelectorAll('.nav-links li a'); // Select all navigation links
-    
-    // Toggle the mobile menu when the hamburger is clicked
+    const hamburger = document.querySelector('.hamburger'); // Hamburger icon
+    const navList = document.querySelector('.nav-links'); // Navigation links container
+    const navItems = document.querySelectorAll('.nav-links li a'); // All navigation links
+
+    // Toggle the mobile menu on hamburger click
     hamburger.addEventListener('click', function () {
         hamburger.classList.toggle('active');
         navList.classList.toggle('active');
@@ -12,42 +12,39 @@ document.addEventListener("DOMContentLoaded", function () {
     // Highlight the active navigation link on click
     navItems.forEach((item) => {
         item.addEventListener('click', function () {
+            // Remove 'active' from all links and reset underlines
             navItems.forEach(link => {
-                link.classList.remove('active'); // Remove 'active' class from all links
-                link.querySelector('.underline').style.width = '0'; // Reset the underline width
+                link.classList.remove('active');
+                link.querySelector('.underline').style.width = '0';
             });
 
-            this.classList.add('active'); // Add 'active' class to the clicked link
-            this.querySelector('.underline').style.width = '100%'; // Expand the underline
+            // Add 'active' to the clicked link
+            this.classList.add('active');
+            this.querySelector('.underline').style.width = '100%'; // Underline animation
         });
     });
 
-    // Highlight the active navigation link based on scroll position
-    window.addEventListener('scroll', updateActiveNav);
+    // Highlight the active link based on scroll position
+    window.addEventListener('scroll', function () {
+        let scrollPosition = window.scrollY; // Current scroll position
 
-    function updateActiveNav() {
-        const viewportHeight = window.innerHeight; // Get the viewport height
-        const scrollPosition = window.scrollY; // Current scroll position
+        navItems.forEach((link) => {
+            const section = document.querySelector(link.getAttribute('href')); // Section linked to the navigation link
+            const sectionTop = section.offsetTop; // Top of the section
+            const sectionBottom = sectionTop + section.offsetHeight; // Bottom of the section
 
-        navItems.forEach((link, index) => {
-            const section = document.querySelector(link.getAttribute('href')); // Linked section
-            const sectionTop = section.offsetTop; // Section's top offset
-            const sectionHeight = section.offsetHeight; // Section's height
-            const sectionBottom = sectionTop + sectionHeight; // Section's bottom position
-
-            // Check if the current section is in the viewport
-            if (
-                scrollPosition >= sectionTop - viewportHeight / 2 && // Section top is in view
-                scrollPosition < sectionBottom - viewportHeight / 2 // Section bottom is not completely out of view
-            ) {
+            // Check if the scroll position is within the section's range
+            if (scrollPosition >= sectionTop - 50 && scrollPosition < sectionBottom - 50) {
+                // Remove 'active' from all links and reset underlines
                 navItems.forEach(link => {
-                    link.classList.remove('active'); // Remove 'active' from all links
-                    link.querySelector('.underline').style.width = '0'; // Reset underline
+                    link.classList.remove('active');
+                    link.querySelector('.underline').style.width = '0';
                 });
 
-                link.classList.add('active'); // Activate the current section's link
-                link.querySelector('.underline').style.width = '100%'; // Expand underline
+                // Add 'active' to the current section's link
+                link.classList.add('active');
+                link.querySelector('.underline').style.width = '100%';
             }
         });
-    }
+    });
 });
