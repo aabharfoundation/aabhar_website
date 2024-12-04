@@ -1,29 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector('.hamburger'); // Hamburger icon
     const navList = document.querySelector('.nav-links'); // Navigation links container
-    const navItems = document.querySelectorAll('.nav-links li a'); // All navigation links
-    const navbarHeight = document.querySelector('.navbar').offsetHeight; // Navbar height
+    const navItems = document.querySelectorAll('.nav-links li a'); // All nav links
+    const sections = Array.from(navItems).map(link => document.querySelector(link.getAttribute('href'))); // Sections
+    const navbar = document.querySelector('.navbar'); // Navbar
+    const navbarHeight = navbar.offsetHeight; // Navbar height
 
-    // Toggle the mobile menu on hamburger click
+    // Toggle mobile menu when hamburger is clicked
     hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('active');
-        navList.classList.toggle('active');
+        hamburger.classList.toggle('active'); // Toggle hamburger icon to 'X'
+        navList.classList.toggle('active'); // Show/hide nav links
     });
 
-    // Smooth scroll to section and offset for navbar
-    navItems.forEach((item) => {
-        item.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            const targetId = this.getAttribute('href'); // Get target section ID
-            const targetSection = document.querySelector(targetId); // Get the section element
+    // Close mobile menu when a nav link is clicked
+    navItems.forEach(link => {
+        link.addEventListener('click', function () {
+            hamburger.classList.remove('active'); // Reset hamburger icon
+            navList.classList.remove('active'); // Hide nav menu on click
+        });
+    });
 
-            // Scroll to the section, offset by navbar height
+    // Function to highlight the active nav link based on scroll position
+    function updateActiveNav() {
+        const scrollPosition = window.scrollY + navbarHeight; // Adjusted scroll position
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                navItems.forEach(link => {
+                    link.classList.remove('active'); // Reset all links
+                    link.querySelector('.underline').style.width = '0'; // Reset underline
+                });
+
+                // Highlight the active link
+                navItems[index].classList.add('active');
+                navItems[index].querySelector('.underline').style.width = '100%';
+            }
+        });
+    }
+
+    // Scroll to section with offset adjustment on link click
+    navItems.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            const targetSection = document.querySelector(this.getAttribute('href'));
+            const targetPosition = targetSection.offsetTop - navbarHeight;
+
             window.scrollTo({
-                top: targetSection.offsetTop - navbarHeight, 
-                behavior: 'smooth', // Smooth scrolling
+                top: targetPosition,
+                behavior: 'smooth'
             });
 
-            // Update active link styles
+            // Update active link immediately on click
             navItems.forEach(link => {
                 link.classList.remove('active');
                 link.querySelector('.underline').style.width = '0';
@@ -32,4 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.querySelector('.underline').style.width = '100%';
         });
     });
+
+    // Update active link on scroll
+    window.addEventListener('scroll', updateActiveNav);
 });
