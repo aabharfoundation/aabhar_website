@@ -106,7 +106,6 @@ body {
 
 .nav-links li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #ffeb3b;
 }
 
 .nav-links a.active .underline {
@@ -250,7 +249,7 @@ body {
 
 /* About Us Section */
 .section-about {
-    margin: 20px 0;
+    margin: 40px 0;
     position: relative;
     background-color: #ffffff; /* White background for the section */
     color: #333; /* Sets text color to dark grey */
