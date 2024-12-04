@@ -251,7 +251,8 @@ body {
 
 /* About Us Section */
 .section-about {
-    margin: 60px 0; /* Adds margin for spacing above and below */
+    margin: 100px 0; /* Adds margin for spacing above and below */
+    padding: 30px 0;
     position: relative; /* Enables child elements to be positioned relative to this section */
     background-color: #ffffff; /* White background for the section */
     color: #333; /* Dark grey color for the text */
@@ -328,9 +329,9 @@ body {
 }
 
 .mission h3 {
-    font-size: 24px; /* Sets font size for the heading */
+    font-size: 18px; /* Sets font size for the heading */
     color: #2e3a59; /* Dark blue color for the heading */
-    margin-bottom: 10px; /* Adds space below the heading */
+    margin-bottom: 5px; /* Adds space below the heading */
 }
 
 .mission ul {
@@ -340,9 +341,9 @@ body {
 }
 
 .mission li {
-    font-size: 18px; /* Sets font size for list items */
+    font-size: 15px; /* Sets font size for list items */
     color: #333; /* Dark grey color */
-    margin: 15px 0; /* Adds space between list items */
+    margin: 5px 0; /* Adds space between list items */
 }
 
 /* Legacy Section Styling */
@@ -400,7 +401,7 @@ body {
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
     .about-us {
-        margin-top: 10%; /* Removes top margin on mobile */
+        margin-top: 60px 0;; /* Removes top margin on mobile */
     }
     .container {
         width: 95%; /* Makes the container 95% of screen width */
@@ -413,7 +414,7 @@ body {
 
     .image {
         margin-right: 0; /* Removes right margin on mobile */
-        margin-bottom: 20px; /* Adds bottom margin for spacing */
+        margin-bottom: 10px; /* Adds bottom margin for spacing */
     }
 
     .section-title h2 {
@@ -434,7 +435,7 @@ body {
     }
 
     .about-us .box-content {
-        padding: 10px; /* Reduces padding */
+        padding: 20px; /* Reduces padding */
     }
 }
 
@@ -442,7 +443,7 @@ body {
 /* Section Styling */
 .section {
     position: relative; /* Allows child elements to be positioned absolutely */
-    padding: 60px 20px; /* Adds padding inside the section */
+    padding: 40px 10px; /* Adds padding inside the section */
     background-color: #ffffff; /* Sets the background color to white */
     margin: 10px 0; /* Adds vertical spacing between sections */
     border-radius: 10px; /* Rounds the corners of the section */
