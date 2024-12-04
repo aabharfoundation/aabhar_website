@@ -29,27 +29,43 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', updateActiveNav);
 
     function updateActiveNav() {
-    let scrollPosition = window.scrollY + 100; // Offset for fixed navbar
-    let viewportHeight = window.innerHeight; // Height of the visible part of the window
-    navItems.forEach((link) => {
-        const section = document.querySelector(link.getAttribute('href')); // Get section linked to the navigation item
-        
-        // Get the middle point of the section
-        let sectionMiddle = section.offsetTop + section.offsetHeight / 2;
-        
-        // Check if the middle of the section is within the viewport
+    const viewportHeight = window.innerHeight; // Get the viewport height
+    const scrollPosition = window.scrollY; // Current vertical scroll position
+
+    navItems.forEach((link, index) => {
+        const section = document.querySelector(link.getAttribute('href')); // Get the linked section
+        const nextSection = index < navItems.length - 1 
+                            ? document.querySelector(navItems[index + 1].getAttribute('href')) 
+                            : null; // Get the next section if it exists
+
+        const sectionTop = section.offsetTop; // Top position of the current section
+        const nextSectionTop = nextSection ? nextSection.offsetTop : Infinity; // Top position of the next section (or infinity if no next section)
+
+        // Check if the next section's top is above 50% of the viewport height
         if (
-            sectionMiddle >= scrollPosition && // Section's middle is past the scroll position
-            sectionMiddle <= scrollPosition + viewportHeight // Section's middle is within the viewport height
+            scrollPosition >= sectionTop + section.offsetHeight || // Current section is out of the viewport
+            (nextSection && scrollPosition + viewportHeight / 2 >= nextSectionTop) // Next section top is above 50% of the viewport
         ) {
             navItems.forEach(link => {
-                link.classList.remove('active'); // Remove 'active' class from all links
-                link.querySelector('.underline').style.width = '0'; // Reset the underline width
+                link.classList.remove('active'); // Reset active class
+                link.querySelector('.underline').style.width = '0'; // Reset underline
             });
 
-            link.classList.add('active'); // Add 'active' class to the current section's link
+            if (nextSection) {
+                // Activate the next section's link
+                navItems[index + 1].classList.add('active');
+                navItems[index + 1].querySelector('.underline').style.width = '100%';
+            }
+        } else if (scrollPosition >= sectionTop) {
+            // Activate the current section's link if the scroll is within its range
+            navItems.forEach(link => {
+                link.classList.remove('active'); // Reset active class
+                link.querySelector('.underline').style.width = '0'; // Reset underline
+            });
+
+            link.classList.add('active'); // Activate the current section
             link.querySelector('.underline').style.width = '100%'; // Expand the underline
         }
     });
-}
+    }
 });
