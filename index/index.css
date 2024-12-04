@@ -302,6 +302,7 @@ body {
     width: 50%; /* Makes the image take the full width */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    z-index : 10;
 }
 
 /* Text Styling */
@@ -310,6 +311,7 @@ body {
     flex: 2; /* Takes up 2/3 of the container */
     transform: translateY(20px); /* Initially moves the text down */
     animation: slideIn 1s ease-out forwards 2.5s; /* Slide-in animation */
+    z-index : 9;
 }
 
 .text p {
