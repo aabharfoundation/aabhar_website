@@ -443,7 +443,7 @@ body {
     position: relative; /* Allows child elements to be positioned absolutely */
     padding: 60px 20px; /* Adds padding inside the section */
     background-color: #ffffff; /* Sets the background color to white */
-    margin: 20px 0; /* Adds vertical spacing between sections */
+    margin: 10px 0; /* Adds vertical spacing between sections */
     border-radius: 10px; /* Rounds the corners of the section */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
     transition: transform 0.3s ease; /* Smoothly animates transformations */
