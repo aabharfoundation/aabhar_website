@@ -203,6 +203,7 @@ body {
 .section-home {
     position: relative; /* Allows absolute positioning of child elements */
     top: 10%; /* Positions the section slightly from the top */
+    bottom: 10%;
     background-color: #ffffff; /* Sets the background color to white */
     padding: 30px 0; /* Adjust padding for vertical spacing */
     color: #333; /* Sets the text color to dark grey */
