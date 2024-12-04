@@ -250,7 +250,7 @@ body {
 
 /* About Us Section */
 .section-about {
-    margin: 40px 0; /* Adds margin for spacing above and below */
+    margin: 60px 0; /* Adds margin for spacing above and below */
     position: relative; /* Enables child elements to be positioned relative to this section */
     background-color: #ffffff; /* White background for the section */
     color: #333; /* Dark grey color for the text */
