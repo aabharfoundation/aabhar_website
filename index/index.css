@@ -250,11 +250,9 @@ body {
 
 /* About Us Section */
 .section-about {
+    top: 10%;
     position: relative;
     background-color: #ffffff; /* White background for the section */
-    padding: 60px 20px;
-    margin: 20px 0;
-    margin-top: 60px;
     color: #333; /* Sets text color to dark grey */
 }
 
