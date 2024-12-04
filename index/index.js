@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Check if the next section's top is above 50% of the viewport height
         if (
-            scrollPosition >= sectionTop + section.offsetHeight && // Current section is out of the viewport
-            (nextSection && scrollPosition + viewportHeight / 2 >= nextSectionTop) // Next section top is above 50% of the viewport
+            scrollPosition >= sectionTop + section.offsetHeight || // Current section is out of the viewport
+            (nextSection && scrollPosition + viewportHeight / 3 >= nextSectionTop) // Next section top is above 50% of the viewport
         ) {
             navItems.forEach(link => {
                 link.classList.remove('active'); // Reset active class
