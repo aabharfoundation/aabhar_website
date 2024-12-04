@@ -285,8 +285,6 @@ body {
 /* Flexbox Layout for Image and Text */
 .content {
     display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Aligns items vertically in the center */
-    margin-top: 40px; /* Adds space above the content */
     opacity: 0; /* Initially hides the content */
 }
 
