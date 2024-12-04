@@ -399,7 +399,7 @@ body {
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
     .about-us {
-        margin-top: 200px;
+        margin-top: 0;
     }
     .container {
         width: 95%; /* Makes the container 95% of screen width on mobile */
