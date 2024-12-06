@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>Description of the lifestory ${i}</p>
                 <p class="story">Here is the detailed story of lifestory ${i}.</p>
                 <img src="image${i}.jpg" alt="Lifestory ${i}">
-                <a href="lifestory.html#lifestory${i}" class="read-more">Read More</a>
+                <a href="story/lifestory.html#lifestory${i}" class="read-more">Read More</a>
             `;
             lifestoryContainer.appendChild(div);
         }
