@@ -251,7 +251,6 @@ body {
 
 /* About Us Section */
 .section-about {
-    margin-top: 60px; /* Adds margin for spacing above and below */
     padding: 30px 0;
     position: relative; /* Enables child elements to be positioned relative to this section */
     background-color: #ffffff; /* White background for the section */
@@ -400,8 +399,8 @@ body {
 
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
-    .about-us {
-        margin-top: 60px 0;; /* Removes top margin on mobile */
+    .section-about {
+        margin-top: 80px; /* Removes top margin on mobile */
     }
     .container {
         width: 95%; /* Makes the container 95% of screen width */
