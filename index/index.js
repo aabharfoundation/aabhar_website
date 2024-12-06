@@ -1,28 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector('.hamburger'); // Hamburger icon
-    const navList = document.querySelector('.nav-links'); // Navigation links container
-    const navItems = document.querySelectorAll('.nav-links li a'); // All nav links
-    const sections = Array.from(navItems).map(link => document.querySelector(link.getAttribute('href'))); // Sections
-    const navbar = document.querySelector('.navbar'); // Navbar
-    const navbarHeight = navbar.offsetHeight; // Navbar height
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links li a');
+    const sections = Array.from(navItems).map(link => document.querySelector(link.getAttribute('href')));
+    const navbar = document.querySelector('.navbar');
+    const navbarHeight = navbar.offsetHeight;
 
     // Toggle mobile menu when hamburger is clicked
     hamburger.addEventListener('click', function () {
-        hamburger.classList.toggle('active'); // Toggle hamburger icon to 'X'
-        navList.classList.toggle('active'); // Show/hide nav links
+        hamburger.classList.toggle('active');
+        navList.classList.toggle('active');
     });
 
     // Close mobile menu when a nav link is clicked
     navItems.forEach(link => {
         link.addEventListener('click', function () {
-            hamburger.classList.remove('active'); // Reset hamburger icon
-            navList.classList.remove('active'); // Hide nav menu on click
+            hamburger.classList.remove('active');
+            navList.classList.remove('active');
         });
     });
 
-    // Function to highlight the active nav link based on scroll position
     function updateActiveNav() {
-        const scrollPosition = window.scrollY + navbarHeight; // Adjusted scroll position
+        const scrollPosition = window.scrollY + navbarHeight;
 
         sections.forEach((section, index) => {
             const sectionTop = section.offsetTop;
@@ -30,21 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 navItems.forEach(link => {
-                    link.classList.remove('active'); // Reset all links
-                    link.querySelector('.underline').style.width = '0'; // Reset underline
+                    link.classList.remove('active');
+                    link.querySelector('.underline').style.width = '0';
                 });
-
-                // Highlight the active link
                 navItems[index].classList.add('active');
                 navItems[index].querySelector('.underline').style.width = '100%';
             }
         });
     }
 
-    // Scroll to section with offset adjustment on link click
     navItems.forEach(link => {
         link.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent default link behavior
+            e.preventDefault();
             const targetSection = document.querySelector(this.getAttribute('href'));
             const targetPosition = targetSection.offsetTop - navbarHeight;
 
@@ -53,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 behavior: 'smooth'
             });
 
-            // Update active link immediately on click
             navItems.forEach(link => {
                 link.classList.remove('active');
                 link.querySelector('.underline').style.width = '0';
@@ -63,14 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Update active link on scroll
     window.addEventListener('scroll', updateActiveNav);
 
-    // Functionality to dynamically load lifestory sections
     function loadLifestorySections() {
         const lifestoryContainer = document.querySelector('.lifestory-scroll');
 
-        // Fetch or hardcode content for the first 10 lifestory sections
         for (let i = 1; i <= 10; i++) {
             const div = document.createElement('div');
             div.classList.add('container');
@@ -85,11 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Functionality to dynamically load news sections
     function loadNewsSections() {
         const newsContainer = document.querySelector('.news-scroll');
 
-        // Fetch or hardcode content for the first 10 news sections
         for (let i = 1; i <= 10; i++) {
             const div = document.createElement('div');
             div.classList.add('container');
@@ -104,55 +94,48 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Load lifestory and news sections after DOM is ready
     loadLifestorySections();
     loadNewsSections();
 
-    
-    let autoScrollInterval; // To store the auto-scroll interval
-    let isUserInteracting = false; // Track user interaction
-
-    // Get the scroller elements for lifestory and news
     const lifestoryScroller = document.querySelector('.lifestory-scroll');
     const newsScroller = document.querySelector('.news-scroll');
 
-    // Function to start auto-scroll
-    function startAutoScroll(scroller) {
-        autoScrollInterval = setInterval(() => {
-            if (!isUserInteracting) {
-                scroller.scrollLeft += 2; // Auto-scroll horizontally by 2px
-            }
-        }, 20); // Adjust the speed with this interval (lower = faster)
+    function setupLoopScrolling(scroller) {
+        const scrollerContent = scroller.innerHTML;
+        scroller.innerHTML += scrollerContent; // Duplicate content for seamless loop
+
+        let autoScrollInterval;
+        let isUserInteracting = false;
+
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                if (!isUserInteracting) {
+                    scroller.scrollLeft += 2;
+                    // Reset scroll position for seamless loop
+                    if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
+                        scroller.scrollLeft = 0;
+                    }
+                }
+            }, 20);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        scroller.addEventListener('mousedown', () => (isUserInteracting = true));
+        scroller.addEventListener('mouseup', () => (isUserInteracting = false));
+        scroller.addEventListener('mouseleave', () => (isUserInteracting = false));
+        scroller.addEventListener('wheel', () => (isUserInteracting = true));
+        scroller.addEventListener('touchstart', () => (isUserInteracting = true));
+        scroller.addEventListener('touchend', () => (isUserInteracting = false));
+
+        window.addEventListener('blur', stopAutoScroll);
+        window.addEventListener('focus', startAutoScroll);
+
+        startAutoScroll();
     }
 
-    // Function to stop auto-scroll
-    function stopAutoScroll() {
-        clearInterval(autoScrollInterval);
-    }
-
-    // Detect user interaction and pause auto-scroll
-    function addUserInteractionListeners(scroller) {
-        scroller.addEventListener('mousedown', () => (isUserInteracting = true)); // User starts interaction
-        scroller.addEventListener('mouseup', () => (isUserInteracting = false)); // User stops interaction
-        scroller.addEventListener('mouseleave', () => (isUserInteracting = false)); // Mouse leaves scroller
-        scroller.addEventListener('wheel', () => (isUserInteracting = true)); // Mouse wheel interaction
-        scroller.addEventListener('touchstart', () => (isUserInteracting = true)); // Touch start (mobile)
-        scroller.addEventListener('touchend', () => (isUserInteracting = false)); // Touch end (mobile)
-    }
-
-    // Initialize auto-scroll for both scrollers
-    startAutoScroll(lifestoryScroller);
-    startAutoScroll(newsScroller);
-
-    // Add interaction listeners to pause/resume auto-scroll
-    addUserInteractionListeners(lifestoryScroller);
-    addUserInteractionListeners(newsScroller);
-
-    // Stop auto-scroll when switching tabs or minimizing
-    window.addEventListener('blur', stopAutoScroll);
-    window.addEventListener('focus', () => {
-        startAutoScroll(lifestoryScroller);
-        startAutoScroll(newsScroller);
-    });
-
+    setupLoopScrolling(lifestoryScroller);
+    setupLoopScrolling(newsScroller);
 });
