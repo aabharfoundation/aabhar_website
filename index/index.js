@@ -112,6 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let autoScrollInterval; // To store the auto-scroll interval
     let isUserInteracting = false; // Track user interaction
 
+    // Get the scroller elements for lifestory and news
+    const lifestoryScroller = document.querySelector('.lifestory-scroll');
+    const newsScroller = document.querySelector('.news-scroll');
+
     // Function to start auto-scroll
     function startAutoScroll(scroller) {
         autoScrollInterval = setInterval(() => {
