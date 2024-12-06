@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const lifestoryScroller = document.querySelector('.lifestory-scroll');
     const newsScroller = document.querySelector('.news-scroll');
 
-    function setupLoopScrolling(scroller) {
+    function setupBackAndForthScrolling(scroller) {
         const scrollerContent = scroller.innerHTML;
         scroller.innerHTML += scrollerContent; // Duplicate content for seamless loop
 
@@ -111,12 +111,12 @@ document.addEventListener("DOMContentLoaded", function () {
             autoScrollInterval = setInterval(() => {
                 if (!isUserInteracting) {
                     scroller.scrollLeft += 2;
-                    // Reset scroll position for seamless loop
+                    // Back and forth scroll logic
                     if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
                         scroller.scrollLeft = 0;
                     }
                 }
-            }, 20);
+            }, 20); // Adjust interval for speed
         }
 
         function stopAutoScroll() {
@@ -136,6 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
         startAutoScroll();
     }
 
-    setupLoopScrolling(lifestoryScroller);
-    setupLoopScrolling(newsScroller);
+    setupBackAndForthScrolling(lifestoryScroller);
+    setupBackAndForthScrolling(newsScroller);
 });
