@@ -65,4 +65,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Update active link on scroll
     window.addEventListener('scroll', updateActiveNav);
+
+    // Functionality to dynamically load lifestory sections
+    function loadLifestorySections() {
+        const lifestoryContainer = document.querySelector('.lifestory-scroll');
+
+        // Fetch or hardcode content for the first 10 lifestory sections
+        for (let i = 1; i <= 10; i++) {
+            const div = document.createElement('div');
+            div.classList.add('container');
+            div.innerHTML = `
+                <h2>Lifestory ${i}</h2>
+                <p>Description of the lifestory ${i}</p>
+                <p class="story">Here is the detailed story of lifestory ${i}.</p>
+                <img src="image${i}.jpg" alt="Lifestory ${i}">
+            `;
+            lifestoryContainer.appendChild(div);
+        }
+    }
+
+    // Functionality to dynamically load news sections
+    function loadNewsSections() {
+        const newsContainer = document.querySelector('.news-scroll');
+
+        // Fetch or hardcode content for the first 10 news sections
+        for (let i = 1; i <= 10; i++) {
+            const div = document.createElement('div');
+            div.classList.add('container');
+            div.innerHTML = `
+                <h2>News ${i}</h2>
+                <p>Description of the news ${i}</p>
+                <p class="news">Here is the detailed news article ${i}.</p>
+                <img src="news${i}.jpg" alt="News ${i}">
+            `;
+            newsContainer.appendChild(div);
+        }
+    }
+
+    // Load lifestory and news sections after DOM is ready
+    loadLifestorySections();
+    loadNewsSections();
 });
