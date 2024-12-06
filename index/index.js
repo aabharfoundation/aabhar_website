@@ -106,14 +106,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let autoScrollInterval;
         let isUserInteracting = false;
+        let scrollDirection = 1; // 1 for forward, -1 for backward
 
         function startAutoScroll() {
             autoScrollInterval = setInterval(() => {
                 if (!isUserInteracting) {
-                    scroller.scrollLeft += 2;
-                    // Back and forth scroll logic
-                    if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
-                        scroller.scrollLeft = 0;
+                    scroller.scrollLeft += 2 * scrollDirection;
+
+                    // If the scroll reaches the end, change direction
+                    if (scroller.scrollLeft >= scroller.scrollWidth - scroller.offsetWidth || scroller.scrollLeft <= 0) {
+                        scrollDirection *= -1; // Reverse direction
                     }
                 }
             }, 20); // Adjust interval for speed
