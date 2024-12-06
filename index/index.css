@@ -68,7 +68,7 @@ body {
     top: 0; /* Positions the navbar at the top */
     left: 0; /* Positions the navbar to the left edge */
     width: 100%; /* Makes the navbar span the entire width of the page */
-    height: 10%; /* Sets the height of the navbar */
+    height: 100px; /* Sets the height of the navbar */
     background: linear-gradient(90deg, #0d47a1, #42a5f5); /* Gradient background from blue to light blue */
     z-index: 2000; /* Ensures navbar stays on top of other content */
     display: flex; /* Uses flexbox to align items in a row */
@@ -202,10 +202,8 @@ body {
 /* Section Home */
 .section-home {
     position: relative; /* Allows absolute positioning of child elements */
-    top: 10%; /* Positions the section slightly from the top */
-    bottom: 10%;
+    margin-top: 100px; /* Positions the section slightly from the top */
     background-color: #ffffff; /* Sets the background color to white */
-    padding: 30px 0; /* Adjust padding for vertical spacing */
     color: #333; /* Sets the text color to dark grey */
     opacity: 0; /* Starts with no visibility */
     animation: fadeIn 2s forwards; /* Applies a fade-in animation */
@@ -251,6 +249,7 @@ body {
 
 /* About Us Section */
 .section-about {
+    margin-top: 20px;
     padding: 30px 0;
     position: relative; /* Enables child elements to be positioned relative to this section */
     background-color: #ffffff; /* White background for the section */
@@ -400,7 +399,7 @@ body {
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
     .section-about {
-        margin-top: 80px; /* Removes top margin on mobile */
+        margin-top: 90px; /* Removes top margin on mobile */
     }
     .container {
         width: 95%; /* Makes the container 95% of screen width */
