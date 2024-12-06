@@ -107,4 +107,48 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load lifestory and news sections after DOM is ready
     loadLifestorySections();
     loadNewsSections();
+
+    
+    let autoScrollInterval; // To store the auto-scroll interval
+    let isUserInteracting = false; // Track user interaction
+
+    // Function to start auto-scroll
+    function startAutoScroll(scroller) {
+        autoScrollInterval = setInterval(() => {
+            if (!isUserInteracting) {
+                scroller.scrollLeft += 2; // Auto-scroll horizontally by 2px
+            }
+        }, 20); // Adjust the speed with this interval (lower = faster)
+    }
+
+    // Function to stop auto-scroll
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    // Detect user interaction and pause auto-scroll
+    function addUserInteractionListeners(scroller) {
+        scroller.addEventListener('mousedown', () => (isUserInteracting = true)); // User starts interaction
+        scroller.addEventListener('mouseup', () => (isUserInteracting = false)); // User stops interaction
+        scroller.addEventListener('mouseleave', () => (isUserInteracting = false)); // Mouse leaves scroller
+        scroller.addEventListener('wheel', () => (isUserInteracting = true)); // Mouse wheel interaction
+        scroller.addEventListener('touchstart', () => (isUserInteracting = true)); // Touch start (mobile)
+        scroller.addEventListener('touchend', () => (isUserInteracting = false)); // Touch end (mobile)
+    }
+
+    // Initialize auto-scroll for both scrollers
+    startAutoScroll(lifestoryScroller);
+    startAutoScroll(newsScroller);
+
+    // Add interaction listeners to pause/resume auto-scroll
+    addUserInteractionListeners(lifestoryScroller);
+    addUserInteractionListeners(newsScroller);
+
+    // Stop auto-scroll when switching tabs or minimizing
+    window.addEventListener('blur', stopAutoScroll);
+    window.addEventListener('focus', () => {
+        startAutoScroll(lifestoryScroller);
+        startAutoScroll(newsScroller);
+    });
+
 });
