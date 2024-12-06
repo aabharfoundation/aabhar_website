@@ -251,7 +251,7 @@ body {
 
 /* About Us Section */
 .section-about {
-    margin: 100px 0; /* Adds margin for spacing above and below */
+    margin: 30px 0; /* Adds margin for spacing above and below */
     padding: 30px 0;
     position: relative; /* Enables child elements to be positioned relative to this section */
     background-color: #ffffff; /* White background for the section */
