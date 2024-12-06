@@ -101,10 +101,46 @@ document.addEventListener("DOMContentLoaded", function () {
     const newsScroller = document.querySelector('.news-scroll');
 
     function setupLoopScrolling(scroller) {
+        let autoScrollInterval;
         let isUserInteracting = false;
         const scrollSpeed = 2; // Speed of scroll
         const resetThreshold = 10; // Pixels before reset
-        let lastScrollPos = 0; // Last scroll position for smoother transition
+
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                if (!isUserInteracting) {
+                    scroller.scrollLeft += scrollSpeed;
+
+                    // Check if we've reached the end and reset scroll smoothly
+                    if (scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth - resetThreshold) {
+                        // Reset to the beginning smoothly
+                        scroller.scrollLeft = 0;
+                    }
+                }
+            }, 20);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        scroller.addEventListener('mousedown', () => (isUserInteracting = true));
+        scroller.addEventListener('mouseup', () => (isUserInteracting = false));
+        scroller.addEventListener('mouseleave', () => (isUserInteracting = false));
+        scroller.addEventListener('wheel', () => (isUserInteracting = true));
+        scroller.addEventListener('touchstart', () => (isUserInteracting = true));
+        scroller.addEventListener('touchend', () => (isUserInteracting = false));
+
+        window.addEventListener('blur', stopAutoScroll);
+        window.addEventListener('focus', startAutoScroll);
+
+        startAutoScroll();
+    }
+
+    setupLoopScrolling(lifestoryScroller);
+    setupLoopScrolling(newsScroller);
+});
+
 
         function smoothScroll() {
             if (!isUserInteracting) {
