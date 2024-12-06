@@ -101,47 +101,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const newsScroller = document.querySelector('.news-scroll');
 
     function setupLoopScrolling(scroller) {
+        const scrollerContent = scroller.innerHTML;
+        scroller.innerHTML += scrollerContent; // Duplicate content for seamless loop
+
+        let autoScrollInterval;
         let isUserInteracting = false;
-        const scrollSpeed = 2; // Speed of scroll
-        const resetThreshold = 10; // Pixels before reset
-        let lastScrollPos = 0; // Last scroll position for smoother transition
 
-        function smoothScroll() {
-            if (!isUserInteracting) {
-                const scrollPos = scroller.scrollLeft;
-
-                if (scrollPos >= scroller.scrollWidth - scroller.clientWidth - resetThreshold) {
-                    // Smoothly reset back to the start
-                    scroller.scrollLeft = 0;
-                } else {
-                    // Scroll by scrollSpeed smoothly
-                    scroller.scrollLeft += scrollSpeed;
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                if (!isUserInteracting) {
+                    scroller.scrollLeft += 2;
+                    // Reset scroll position for seamless loop
+                    if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
+                        scroller.scrollLeft = 0;
+                    }
                 }
-
-                lastScrollPos = scrollPos;
-            }
-
-            // Use requestAnimationFrame for continuous smooth scrolling
-            requestAnimationFrame(smoothScroll);
+            }, 20);
         }
 
         function stopAutoScroll() {
-            isUserInteracting = true; // Pause auto-scroll on interaction
+            clearInterval(autoScrollInterval);
         }
 
-        function startAutoScroll() {
-            isUserInteracting = false; // Resume auto-scroll after interaction ends
-        }
+        scroller.addEventListener('mousedown', () => (isUserInteracting = true));
+        scroller.addEventListener('mouseup', () => (isUserInteracting = false));
+        scroller.addEventListener('mouseleave', () => (isUserInteracting = false));
+        scroller.addEventListener('wheel', () => (isUserInteracting = true));
+        scroller.addEventListener('touchstart', () => (isUserInteracting = true));
+        scroller.addEventListener('touchend', () => (isUserInteracting = false));
 
-        scroller.addEventListener('mousedown', stopAutoScroll);
-        scroller.addEventListener('mouseup', startAutoScroll);
-        scroller.addEventListener('mouseleave', startAutoScroll);
-        scroller.addEventListener('wheel', stopAutoScroll);
-        scroller.addEventListener('touchstart', stopAutoScroll);
-        scroller.addEventListener('touchend', startAutoScroll);
+        window.addEventListener('blur', stopAutoScroll);
+        window.addEventListener('focus', startAutoScroll);
 
-        // Start smooth scroll when ready
-        smoothScroll();
+        startAutoScroll();
     }
 
     setupLoopScrolling(lifestoryScroller);
