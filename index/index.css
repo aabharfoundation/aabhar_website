@@ -250,7 +250,7 @@ body {
 /* About Us Section */
 .section-about {
     margin-top: 20px;
-    padding: 30px 0;
+    padding: 5px 0;
     position: relative; /* Enables child elements to be positioned relative to this section */
     background-color: #ffffff; /* White background for the section */
     color: #333; /* Dark grey color for the text */
@@ -259,7 +259,7 @@ body {
 /* Container for Content */
 .container {
     padding-top: 20px; /* Adds space at the top of the container */
-    width: 80%; /* Sets the container width to 80% of the parent */
+    width: 90%; /* Sets the container width to 80% of the parent */
 }
 
 /* Section Title Styling */
