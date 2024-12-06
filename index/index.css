@@ -202,7 +202,7 @@ body {
 /* Section Home */
 .section-home {
     position: relative; /* Allows absolute positioning of child elements */
-    margin-top: 100px; /* Positions the section slightly from the top */
+    margin-top: 40px; /* Positions the section slightly from the top */
     background-color: #ffffff; /* Sets the background color to white */
     color: #333; /* Sets the text color to dark grey */
     opacity: 0; /* Starts with no visibility */
