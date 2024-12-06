@@ -237,7 +237,7 @@ body {
 @media (max-width: 767px) {
     .section-home {
         height: 50vh; /* Reduces the height of the section on smaller screens */
-        margin-top: 30px; /* Positions the section slightly from the top */ 
+        margin-top: 20px; /* Positions the section slightly from the top */ 
     }
     .box-content {
         padding-left: 10px; /* Reduces the left padding on mobile */
