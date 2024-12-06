@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>Description of the lifestory ${i}</p>
                 <p class="story">Here is the detailed story of lifestory ${i}.</p>
                 <img src="image${i}.jpg" alt="Lifestory ${i}">
+                <a href="lifestory.html#lifestory${i}" class="read-more">Read More</a>
             `;
             lifestoryContainer.appendChild(div);
         }
@@ -97,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>Description of the news ${i}</p>
                 <p class="news">Here is the detailed news article ${i}.</p>
                 <img src="news${i}.jpg" alt="News ${i}">
+                <a href="news.html#news${i}" class="read-more">Read More</a>
             `;
             newsContainer.appendChild(div);
         }
