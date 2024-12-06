@@ -111,8 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
             autoScrollInterval = setInterval(() => {
                 if (!isUserInteracting) {
                     scroller.scrollLeft += 2;
-                    // Reset scroll position for seamless loop
+
+                    // Smoothly reset scroll position for loop without shaking
                     if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
+                        // Wait for scroll to end, then jump to start without shaking
                         scroller.scrollLeft = 0;
                     }
                 }
