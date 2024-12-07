@@ -335,6 +335,7 @@ body {
 }
 
 .mission ul {
+    display: flex;
     list-style-type: none; /* Removes the default list style */
     padding: 0; /* Removes padding */
     text-align: start; /* Aligns list items to the left */
