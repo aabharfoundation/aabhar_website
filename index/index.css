@@ -261,6 +261,7 @@ body {
 .container {
     padding-top: 20px; /* Adds space at the top of the container */
     width: 90%; /* Sets the container width to 80% of the parent */
+    align-items: center;
 }
 
 /* Section Title Styling */
@@ -403,7 +404,7 @@ body {
         margin-top: 90px; /* Removes top margin on mobile */
     }
     .container {
-        width: 95%; /* Makes the container 95% of screen width */
+        width: 100%; /* Makes the container 95% of screen width */
     }
 
     .content {
