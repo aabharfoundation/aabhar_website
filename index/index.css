@@ -320,6 +320,7 @@ body {
 
 /* Mission Section Styling */
 .mission {
+    Width: 80vw;
     background-color: #ffffff; /* Light grey background */
     border-radius: 10px; /* Rounds the corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow around the box */
