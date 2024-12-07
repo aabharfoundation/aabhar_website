@@ -338,6 +338,7 @@ body {
     padding: 0; /* Removes padding */
     margin: 0; /* Removes default margin */
     text-align: start; /* Aligns list items to the left */
+    gap: 10px;
 }
 
 .mission li {
