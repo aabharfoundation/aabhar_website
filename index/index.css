@@ -334,17 +334,15 @@ body {
 }
 
 .mission ul {
-    list-style-type: none; /* Removes the default list style */
-    padding: 0; /* Removes padding */
-    margin: 0; /* Removes default margin */
-    text-align: start; /* Aligns list items to the left */
-    gap: 10px;
+  list-style-type: disc; /* Adds bullets */
+  margin: 0; /* Removes default margins */
+  padding: 0; /* Removes default padding */
 }
 
 .mission li {
-    font-size: 15px; /* Sets font size for list items */
-    color: #333; /* Dark grey color */
-    margin: 5px 0; /* Adds spacing between list items */
+  margin-bottom: 10px; /* Adds spacing between list items */
+  padding: 5px; /* Optional: Adds padding inside each item */
+  display: block; /* Ensures items stack vertically */
 }
 
 /* Legacy Section Styling */
