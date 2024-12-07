@@ -321,7 +321,6 @@ body {
 /* Mission Section Styling */
 .mission {
     background-color: #ffffff; /* Light grey background */
-    padding: 10px; /* Adds padding inside the mission box */
     border-radius: 10px; /* Rounds the corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow around the box */
     opacity: 0; /* Starts hidden */
