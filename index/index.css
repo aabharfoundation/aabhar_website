@@ -335,7 +335,6 @@ body {
 }
 
 .mission ul {
-    display: flex;
     flex-direction: column;
     list-style-type: none; /* Removes the default list style */
     padding: 0; /* Removes padding */
