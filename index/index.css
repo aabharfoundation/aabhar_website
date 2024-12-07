@@ -251,6 +251,7 @@ body {
 .section-about {
     margin-top: 20px;
     padding: 5px 0;
+    align-items: center;
     position: relative; /* Enables child elements to be positioned relative to this section */
     background-color: #ffffff; /* White background for the section */
     color: #333; /* Dark grey color for the text */
