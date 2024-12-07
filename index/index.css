@@ -336,15 +336,16 @@ body {
 
 .mission ul {
     display: flex;
+    flex-direction: column;
     list-style-type: none; /* Removes the default list style */
     padding: 0; /* Removes padding */
     text-align: start; /* Aligns list items to the left */
+    gap: 10px:
 }
 
 .mission li {
     font-size: 15px; /* Sets font size for list items */
     color: #333; /* Dark grey color */
-    margin: 5px 0; /* Adds space between list items */
 }
 
 /* Legacy Section Styling */
