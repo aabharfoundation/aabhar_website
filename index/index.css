@@ -250,7 +250,7 @@ body {
 /* About Us Section */
 .section-about {
     margin-top: 20px;
-    padding: 5px 0;
+    padding: 10px;
     align-items: center;
     position: relative; /* Enables child elements to be positioned relative to this section */
     background-color: #ffffff; /* White background for the section */
@@ -260,7 +260,7 @@ body {
 /* Container for Content */
 .container {
     padding-top: 20px; /* Adds space at the top of the container */
-    width: 90%; /* Sets the container width to 80% of the parent */
+    width: 100%; /* Sets the container width to 80% of the parent */
     align-items: center;
 }
 
