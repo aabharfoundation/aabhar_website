@@ -39,7 +39,7 @@ body {
 }
 
 .logo-container {
-    height: 60px; /* Adjust based on your navbar height */
+    height: 80px; /* Adjust based on your navbar height */
     width: auto;  /* Keep width dynamic */
     display: flex;
     align-items: center;
