@@ -22,7 +22,7 @@ body {
 
 .back-button {
     height: 60px;
-    font-size: 10px;           /* Adjust the font size */
+    font-size: 13px;           /* Adjust the font size */
     line-height: 1;          /* Space between lines */
     color: #333;               /* Text color */
     text-decoration: none;     /* Remove underline */
