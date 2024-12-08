@@ -35,12 +35,14 @@ body {
 }
 
 .logo-container {
+    height: 60px; /* Adjust based on your navbar height */
+    width: auto;  /* Keep width dynamic */
     display: flex;
     align-items: center;
 }
 
 .logo {
-    height: 30px;
-    max-width: 40px;
+    max-height: 100%; /* Constrain the height */
+    max-width: 100%;  /* Constrain the width */
+    object-fit: contain; /* Ensures the whole logo fits */
 }
-
