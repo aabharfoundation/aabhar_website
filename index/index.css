@@ -171,7 +171,7 @@ body {
         justify-content: center; /* Centers the links vertically */
         position: fixed; /* Fixes the navigation to the screen */
         left: 0; /* Positions the nav at the left edge */
-        top : 10%; /* Positions the nav below the navbar */
+        top : 15%; /* Positions the nav below the navbar */
         width: 50%; /* Sets the width of the nav to 50% */
         height: 50%; /* Sets the height of the nav */
         background-color: #0d47a1; /* Sets background color to blue */
