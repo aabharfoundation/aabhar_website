@@ -30,8 +30,18 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.back-button:hover {
-    background-color: #555;
+.back-button {
+    writing-mode: vertical-rl; /* Text flows vertically from right to left */
+    text-orientation: mixed;  /* Ensures characters are upright */
+    font-size: 16px;          /* Adjust size as needed */
+    padding: 10px;            /* Add spacing around the button */
+    text-align: center;       /* Center-align the text */
+    background-color: #f0f0f0; /* Optional: Add a background color */
+    border: 1px solid #ccc;   /* Optional: Add a border */
+    color: #333;              /* Adjust text color */
+    text-decoration: none;    /* Remove underline */
+    display: inline-block;    /* Ensure proper alignment */
+    border-radius: 5px;       /* Optional: Add rounded corners */
 }
 
 .logo-container {
