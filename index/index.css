@@ -257,20 +257,31 @@ body {
 
 /* Style for the buttons */
 .navbutton {
-  width: 150px;
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 15px 30px;
   font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* White text */
+  background-color: #000; /* Black button */
   border: none;
-  border-radius: 5px;
-  background-color: #007bff; /* Button color */
-  color: white;
-  text-decoration: none; /* Removes underline */
-  cursor: pointer;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px #444; /* Creates the 3D effect */
   text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* Smooth animations */
 }
 
 .navbutton:hover {
-  background-color: #0056b3; /* Hover effect */
+  background-color: #333; /* Darker gray on hover */
+  box-shadow: 0 2px #222; /* Reduces shadow for pressed effect */
+  transform: translateY(2px); /* Simulates button being pressed */
+}
+
+.navbutton:active {
+  background-color: #555; /* Lighter gray when clicked */
+  box-shadow: 0 1px #111; /* Deeply pressed shadow */
+  transform: translateY(4px); /* Moves button further down */
 }
 
 /* Adjustments for smaller screens (Mobile) */
