@@ -245,6 +245,33 @@ body {
     z-index: 15; /* Places the content above the background video */
 }
 
+.navbar p {
+  position: fixed; /* Fixes the buttons at the bottom of the screen */
+  bottom: 20px; /* Adjust vertical spacing from the bottom */
+  left: 50%; /* Center alignment horizontally */
+  transform: translateX(-50%); /* Perfect horizontal centering */
+  display: flex; /* Ensures buttons align neatly */
+  gap: 10px; /* Adds space between the buttons */
+  z-index: 1000; /* Ensures the buttons are above other content */
+}
+
+/* Style for the buttons */
+.navbutton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Button color */
+  color: white;
+  text-decoration: none; /* Removes underline */
+  cursor: pointer;
+  text-align: center;
+}
+
+.navbutton:hover {
+  background-color: #0056b3; /* Hover effect */
+}
+
 /* Adjustments for smaller screens (Mobile) */
 @media (max-width: 767px) {
     .section-home {
