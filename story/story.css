@@ -54,6 +54,9 @@ body {
 
 
 /* Section Styling */
+.scroll-margin {
+    scroll-margin-top: 80px;
+}
 .section-lifestory {
     padding: 20px;
     border-bottom: 1px solid #ddd;
