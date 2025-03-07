@@ -69,7 +69,7 @@ body {
     left: 0; /* Positions the navbar to the left edge */
     width: 100%; /* Makes the navbar span the entire width of the page */
     height: 100px; /* Sets the height of the navbar */
-    background: linear-gradient(90deg, #0d47a1, #42a5f5); /* Gradient background from blue to light blue */
+    background: linear-gradient(90deg, #424242, #000000); /* Gradient background from blue to light blue */
     z-index: 2000; /* Ensures navbar stays on top of other content */
     display: flex; /* Uses flexbox to align items in a row */
     justify-content: space-between; /* Distributes space between navbar items */
