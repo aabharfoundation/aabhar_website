@@ -322,8 +322,9 @@ body {
 
 /* Aaba Image Section */
 .aaba-image-section {
+    width: 10vw;
     flex: 1;
-    max-width: 30%; /* Limits image width for balance */
+    max-width: 10%; /* Limits image width for balance */
 }
 
 .image img {
