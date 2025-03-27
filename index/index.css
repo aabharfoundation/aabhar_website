@@ -311,20 +311,23 @@ body {
 /* Container for Content */
 .container {
     padding-top: 20px;
+    position: relative;
+    right: 30px;
     display: flex; /* Set to flexbox layout */
-    width: 100%; /* Full width of the section */
+    width: 75vw; /* Full width of the section */
 }
 
 /* Section Title Styling */
 .section-title {
     flex: 0 0 75%; /* Take up 3/4 of the width */
     padding-left: 20px; /* Adds padding on the left */
+    text-align: right;
 }
 
 .section-title h2 {
     font-size: 36px;
     color: #2e3a59;
-    text-align: left; /* Align the title to the left */
+    text-align: right; /* Align the title to the left */
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeIn 2s forwards 0.5s;
@@ -333,7 +336,7 @@ body {
 .section-title p {
     font-size: 18px;
     color: #777;
-    text-align: left;
+    text-align: right;
     line-height: 1.6;
     opacity: 0;
     animation: fadeIn 2s forwards 1s;
@@ -342,7 +345,7 @@ body {
 /* Flexbox Layout for Image and Text */
 .content {
     display: flex;
-    width: 100%;
+    width: 75vw;
 }
 
 /* Image Styling */
@@ -376,7 +379,7 @@ body {
 
 /* Mission Section Styling */
 .mission {
-    width: 100%;
+    width: 75vw;
     position: relative;
     background-color: #ffffff;
     border-radius: 10px;
