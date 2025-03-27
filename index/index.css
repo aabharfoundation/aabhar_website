@@ -314,14 +314,12 @@ body {
     width: 100%;
     margin: 0 auto;
     display: flex; /* Make the container a flexbox */
-    align-items: stretch; /* Ensures the child elements stretch vertically */
 }
 
 /* Aaba Image Section */
 .aaba-image-section {
     flex: 0 0 25%; /* Takes up 1/4 of the container */
     padding-right: 10px; /* Adds spacing between image and text */
-    width: 25vw;
 }
 
 .image img {
