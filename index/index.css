@@ -303,7 +303,6 @@ body {
 .section-about {
     margin-top: 20px;
     padding: 10px;
-    position: space-between;
     background-color: #ffffff;
     color: #333;
 }
@@ -322,8 +321,7 @@ body {
 .aaba-image-section {
     flex: 0 0 25%; /* Takes up 1/4 of the container */
     padding-right: 10px; /* Adds spacing between image and text */
-    position: absolute;
-    left: 25vw;
+    width: 25vw;
 }
 
 .image img {
