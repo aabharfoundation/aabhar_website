@@ -313,7 +313,6 @@ body {
     padding-top: 20px;
     position: relative;
     left: 30vw;
-    display: space-between; /* Set to flexbox layout */
     width: 75vw; /* Full width of the section */
 }
 
@@ -344,7 +343,7 @@ body {
 
 /* Flexbox Layout for Image and Text */
 .content {
-    display: space-between;
+    display: flex;
     width: 75vw;
     position: relative;
     left: 30vw;
