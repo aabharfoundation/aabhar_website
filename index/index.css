@@ -303,7 +303,7 @@ body {
 .section-about {
     margin-top: 20px;
     padding: 10px;
-    position: relative;
+    position: space-between;
     background-color: #ffffff;
     color: #333;
 }
