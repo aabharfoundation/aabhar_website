@@ -310,14 +310,12 @@ body {
 /* Container for Content */
 .container {
     padding-top: 20px;
-    max-width: 1200px;
+    max-width: 1500px;
     width: 100vw;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    align-items: center; /* Aligns image and text properly */
     justify-content: space-between; /* Ensures proper spacing */
-    gap: 20px; /* Adds spacing between image and text */
+    gap: 5px; /* Adds spacing between image and text */
 }
 
 /* Aaba Image Section */
