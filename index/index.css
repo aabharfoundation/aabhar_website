@@ -312,8 +312,8 @@ body {
 .container {
     padding-top: 20px;
     position: relative;
-    right: 30px;
-    display: flex; /* Set to flexbox layout */
+    left: 30vw;
+    display: space-between; /* Set to flexbox layout */
     width: 75vw; /* Full width of the section */
 }
 
@@ -344,8 +344,10 @@ body {
 
 /* Flexbox Layout for Image and Text */
 .content {
-    display: flex;
+    display: space-between;
     width: 75vw;
+    position: relative;
+    left: 30vw;
 }
 
 /* Image Styling */
@@ -370,6 +372,7 @@ body {
 /* Text Styling */
 .text {
     color: #555;
+    text-align : right;
     flex: 1; /* Takes the remaining space */
     transform: translateY(20px);
     animation: slideIn 1s ease-out forwards 2.5s;
@@ -381,6 +384,7 @@ body {
 .mission {
     width: 75vw;
     position: relative;
+    left: 30vw;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -464,7 +468,7 @@ body {
     }
 
     .container {
-        width: 95%;
+        width: 75vw;
         padding: 0 15px;
         flex-direction: column; /* Stack the image and text vertically on mobile */
     }
