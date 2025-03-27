@@ -329,7 +329,7 @@ body {
 .section-title p {
     font-size: 18px; /* Sets the font size for the description text */
     color: #777; /* Light grey color for the description */
-    text-align: center; /* Centers the text */
+    text-align: left; /* Centers the text */
     line-height: 1.6; /* Increases line height for readability */
     opacity: 0; /* Starts hidden */
     animation: fadeIn 2s forwards 1s; /* Fades in with a longer delay */
@@ -373,6 +373,7 @@ body {
 /* Mission Section Styling */
 .mission {
     Width: 80vw;
+    position: relative;
     background-color: #ffffff; /* Light grey background */
     border-radius: 10px; /* Rounds the corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow around the box */
