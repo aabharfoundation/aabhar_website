@@ -311,18 +311,20 @@ body {
 /* Container for Content */
 .container {
     padding-top: 20px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex; /* Make the container a flexbox */
-    align-items: stretch; /* Ensures the child elements stretch vertically */
+    display: flex; /* Set to flexbox layout */
+    width: 100%; /* Full width of the section */
 }
 
 /* Section Title Styling */
+.section-title {
+    flex: 0 0 75%; /* Take up 3/4 of the width */
+    padding-left: 20px; /* Adds padding on the left */
+}
+
 .section-title h2 {
     font-size: 36px;
     color: #2e3a59;
-    text-align: center;
+    text-align: left; /* Align the title to the left */
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeIn 2s forwards 0.5s;
@@ -495,6 +497,7 @@ body {
         font-size: 18px;
     }
 }
+
 
 /* Section for Lifestory */
 .section-lifestory {
