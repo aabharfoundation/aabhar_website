@@ -299,179 +299,187 @@ body {
     }
 }
 
-/* About Us Section */
+/* Section About Styling */
 .section-about {
     margin-top: 20px;
     padding: 10px;
-    align-items: center;
-    position: relative; /* Enables child elements to be positioned relative to this section */
-    background-color: #ffffff; /* White background for the section */
-    color: #333; /* Dark grey color for the text */
+    position: relative;
+    background-color: #ffffff;
+    color: #333;
 }
 
 /* Container for Content */
 .container {
-    padding-top: 20px; /* Adds space at the top of the container */
-    width: 70%; /* Sets the container width to 80% of the parent */
-    align-items: left;
+    padding-top: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex; /* Make the container a flexbox */
+    align-items: stretch; /* Ensures the child elements stretch vertically */
 }
 
 /* Section Title Styling */
 .section-title h2 {
-    font-size: 36px; /* Sets the font size for the section title */
-    color: #2e3a59; /* Dark blue color for the title */
-    text-align: center; /* Centers the title */
-    margin-bottom: 20px; /* Adds space below the title */
-    opacity: 0; /* Starts hidden */
-    animation: fadeIn 2s forwards 0.5s; /* Fades in with a slight delay */
+    font-size: 36px;
+    color: #2e3a59;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 0.5s;
 }
 
 .section-title p {
-    font-size: 18px; /* Sets the font size for the description text */
-    color: #777; /* Light grey color for the description */
-    text-align: left; /* Centers the text */
-    line-height: 1.6; /* Increases line height for readability */
-    opacity: 0; /* Starts hidden */
-    animation: fadeIn 2s forwards 1s; /* Fades in with a longer delay */
+    font-size: 18px;
+    color: #777;
+    text-align: left;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
 }
 
 /* Flexbox Layout for Image and Text */
 .content {
-    display: flex; /* Uses flexbox for alignment of text and image */
+    display: flex;
+    width: 100%;
 }
 
 /* Image Styling */
 .image {
-    flex: 1; /* Takes up 1/3 of the container's width */
-    margin-right: 5px; /* Adds space to the right of the image */
-    transform: translateY(20px); /* Moves the image down initially */
-    animation: slideIn 1s ease-out forwards 2s; /* Applies a slide-in effect */
+    flex: 0 0 25%; /* Takes 1/4 of the width */
+    height: 100%; /* Takes the full height of the section */
+    transform: translateY(20px);
+    animation: slideIn 1s ease-out forwards 2s;
+    max-width: 25%; /* Restricts the max width to 25% of the container */
+    display: block;
+    margin-right: 10px; /* Adds space to the right of the image */
 }
 
 .image img {
-    width: 50%; /* Makes the image 50% of the container's width */
-    border-radius: 10px; /* Rounds the corners of the image */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-    z-index: 10; /* Places the image above other elements */
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 /* Text Styling */
 .text {
-    color: #555; /* Dark grey color for the text */
-    flex: 2; /* Takes up 2/3 of the container's width */
-    transform: translateY(20px); /* Moves the text down initially */
-    animation: slideIn 1s ease-out forwards 2.5s; /* Applies a slide-in effect with a delay */
-    z-index: 9; /* Places the text below the image */
-}
-
-.text p {
-    font-size: 18px; /* Sets the font size for the text */
-    line-height: 1.8; /* Increases line height for readability */
-    color: #555; /* Dark grey color for the text */
+    color: #555;
+    flex: 1; /* Takes the remaining space */
+    transform: translateY(20px);
+    animation: slideIn 1s ease-out forwards 2.5s;
+    z-index: 9;
+    padding-left: 20px; /* Adds some padding for spacing between image and text */
 }
 
 /* Mission Section Styling */
 .mission {
-    Width: 80vw;
+    width: 100%;
     position: relative;
-    background-color: #ffffff; /* Light grey background */
-    border-radius: 10px; /* Rounds the corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow around the box */
-    opacity: 0; /* Starts hidden */
-    animation: fadeIn 2s forwards 3s; /* Fades in with delay */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 2s forwards 3s;
 }
 
 .mission h3 {
-    font-size: 18px; /* Sets font size for the heading */
-    color: #2e3a59; /* Dark blue color for the heading */
-    margin-bottom: 5px; /* Adds space below the heading */
+    font-size: 18px;
+    color: #2e3a59;
+    margin-bottom: 5px;
 }
 
 .mission ul {
-  list-style-type: disc; /* Adds bullets */
-  margin: 0; /* Removes default margins */
-  padding: 0; /* Removes default padding */
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
 }
 
 .mission li {
-  margin-bottom: 10px; /* Adds spacing between list items */
-  padding: 5px; /* Optional: Adds padding inside each item */
-  display: block; /* Ensures items stack vertically */
+    margin-bottom: 10px;
+    display: block;
 }
 
 /* Legacy Section Styling */
 .legacy {
-    margin-top: 50px; /* Adds top margin */
-    text-align: center; /* Centers the text */
-    opacity: 0; /* Starts hidden */
-    animation: fadeIn 2s forwards 3.5s; /* Fades in with delay */
+    margin-top: 50px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards 3.5s;
 }
 
 .legacy h3 {
-    font-size: 24px; /* Sets font size for the heading */
-    color: #2e3a59; /* Dark blue color for the heading */
-    margin-bottom: 20px; /* Adds space below the heading */
+    font-size: 24px;
+    color: #2e3a59;
+    margin-bottom: 20px;
 }
 
 .legacy p {
-    font-size: 18px; /* Sets font size for the text */
-    color: #555; /* Dark grey color */
-    line-height: 1.8; /* Increases line height for readability */
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
 }
 
 .legacy strong {
-    font-size: 20px; /* Larger font size for strong text */
-    color: #2e3a59; /* Dark blue color */
+    font-size: 20px;
+    color: #2e3a59;
 }
 
 /* Animations */
 @keyframes fadeIn {
     from {
-        opacity: 0; /* Starts with no opacity */
+        opacity: 0;
     }
     to {
-        opacity: 1; /* Ends with full opacity */
+        opacity: 1;
     }
 }
 
 @keyframes slideIn {
     from {
-        transform: translateY(30px); /* Starts from below */
-        opacity: 0; /* Starts hidden */
+        transform: translateY(30px);
+        opacity: 0;
     }
     to {
-        transform: translateY(0); /* Ends at the original position */
-        opacity: 1; /* Ends fully visible */
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 /* Hover animation for the image */
 .image:hover img {
-    transform: scale(1.05); /* Slightly zooms in the image */
-    transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
     .section-about {
-        margin-top: 90px; /* Removes top margin on mobile */
+        margin-top: 90px;
     }
+
     .container {
-        width: 100%; /* Makes the container 95% of screen width */
+        width: 95%;
+        padding: 0 15px;
+        flex-direction: column; /* Stack the image and text vertically on mobile */
     }
 
     .content {
-        flex-direction: column; /* Stacks image and text vertically */
-        text-align: center; /* Centers the text */
+        flex-direction: column; /* Stack content vertically on mobile */
     }
 
     .image {
-        margin-right: 0; /* Removes right margin on mobile */
-        margin-bottom: 10px; /* Adds bottom margin for spacing */
+        flex: 0 0 100%; /* Make the image full width on mobile */
+        margin-right: 0; /* Remove margin on mobile */
+        margin-bottom: 15px; /* Add bottom margin for spacing */
+    }
+
+    .text {
+        flex: 1; /* Ensures the text takes the full width */
     }
 
     .section-title h2 {
-        font-size: 20px; /* Reduces font size for smaller screens */
+        font-size: 28px;
     }
 
     .section-title p,
@@ -479,16 +487,12 @@ body {
     .text p,
     .mission li,
     .legacy p {
-        font-size: 10px; /* Reduces font size for better readability */
+        font-size: 16px;
     }
 
     .mission h3,
     .legacy h3 {
-        font-size: 14px; /* Reduces font size of headers */
-    }
-
-    .about-us .box-content {
-        padding: 20px; /* Reduces padding */
+        font-size: 18px;
     }
 }
 
