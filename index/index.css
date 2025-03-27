@@ -312,8 +312,8 @@ body {
 /* Container for Content */
 .container {
     padding-top: 20px; /* Adds space at the top of the container */
-    width: 100%; /* Sets the container width to 80% of the parent */
-    align-items: center;
+    width: 70%; /* Sets the container width to 80% of the parent */
+    align-items: left;
 }
 
 /* Section Title Styling */
