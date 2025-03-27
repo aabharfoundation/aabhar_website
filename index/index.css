@@ -320,7 +320,7 @@ body {
 
 /* Aaba Image Section */
 .aaba-image-section {
-    width: 10vw;
+    width: 25vw;
     flex: 1;
     max-width: 10%; /* Limits image width for balance */
 }
