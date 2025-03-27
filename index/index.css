@@ -312,7 +312,7 @@ body {
 .container {
     padding-top: 20px;
     display: flex; /* Set to flexbox layout */
-    width: 100%; /* Full width of the section */
+    width: 50vw; /* Full width of the section */
 }
 
 /* Section Title Styling */
@@ -342,7 +342,7 @@ body {
 /* Flexbox Layout for Image and Text */
 .content {
     display: flex;
-    width: 100%;
+    width: 50vw;
 }
 
 /* Image Styling */
@@ -376,7 +376,7 @@ body {
 
 /* Mission Section Styling */
 .mission {
-    width: 100%;
+    width: 50vw;
     position: relative;
     background-color: #ffffff;
     border-radius: 10px;
@@ -461,7 +461,7 @@ body {
     }
 
     .container {
-        width: 95%;
+        width: 50vw;
         padding: 0 15px;
         flex-direction: column; /* Stack the image and text vertically on mobile */
     }
@@ -556,7 +556,7 @@ body {
 
 /* Image Styling */
 .container img {
-    width: 100%;
+    width: 50vw;
     height: auto;
     border-radius: 10px;
 }
