@@ -311,21 +311,20 @@ body {
 /* Container for Content */
 .container {
     padding-top: 20px;
-    position: relative;
-    width: 75vw; /* Full width of the section */
+    display: flex; /* Set to flexbox layout */
+    width: 100%; /* Full width of the section */
 }
 
 /* Section Title Styling */
 .section-title {
     flex: 0 0 75%; /* Take up 3/4 of the width */
     padding-left: 20px; /* Adds padding on the left */
-    text-align: right;
 }
 
 .section-title h2 {
     font-size: 36px;
     color: #2e3a59;
-    text-align: right; /* Align the title to the left */
+    text-align: left; /* Align the title to the left */
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeIn 2s forwards 0.5s;
@@ -334,7 +333,7 @@ body {
 .section-title p {
     font-size: 18px;
     color: #777;
-    text-align: right;
+    text-align: left;
     line-height: 1.6;
     opacity: 0;
     animation: fadeIn 2s forwards 1s;
@@ -343,9 +342,7 @@ body {
 /* Flexbox Layout for Image and Text */
 .content {
     display: flex;
-    width: 75vw;
-    position: relative;
-    left: 30vw;
+    width: 100%;
 }
 
 /* Image Styling */
@@ -370,7 +367,6 @@ body {
 /* Text Styling */
 .text {
     color: #555;
-    text-align : right;
     flex: 1; /* Takes the remaining space */
     transform: translateY(20px);
     animation: slideIn 1s ease-out forwards 2.5s;
@@ -380,7 +376,7 @@ body {
 
 /* Mission Section Styling */
 .mission {
-    width: 75vw;
+    width: 100%;
     position: relative;
     background-color: #ffffff;
     border-radius: 10px;
@@ -465,7 +461,7 @@ body {
     }
 
     .container {
-        width: 75vw;
+        width: 95%;
         padding: 0 15px;
         flex-direction: column; /* Stack the image and text vertically on mobile */
     }
@@ -501,7 +497,6 @@ body {
         font-size: 18px;
     }
 }
-
 
 /* Section for Lifestory */
 .section-lifestory {
