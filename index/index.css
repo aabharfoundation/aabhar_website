@@ -311,20 +311,37 @@ body {
 /* Container for Content */
 .container {
     padding-top: 20px;
-    display: flex; /* Set to flexbox layout */
-    width: 50vw; /* Full width of the section */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex; /* Make the container a flexbox */
+    align-items: stretch; /* Ensures the child elements stretch vertically */
+}
+
+/* Aaba Image Section */
+.aaba-image-section {
+    flex: 0 0 25%; /* Takes up 1/4 of the container */
+    padding-right: 10px; /* Adds spacing between image and text */
+}
+
+.image img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Section */
+.text-section {
+    flex: 0 0 75%; /* Takes up the remaining 3/4 of the container */
+    padding-left: 10px; /* Adds padding between image and text */
 }
 
 /* Section Title Styling */
-.section-title {
-    flex: 0 0 75%; /* Take up 3/4 of the width */
-    padding-left: 20px; /* Adds padding on the left */
-}
-
 .section-title h2 {
     font-size: 36px;
     color: #2e3a59;
-    text-align: left; /* Align the title to the left */
+    text-align: left; /* Aligns title to the left */
     margin-bottom: 20px;
     opacity: 0;
     animation: fadeIn 2s forwards 0.5s;
@@ -339,44 +356,9 @@ body {
     animation: fadeIn 2s forwards 1s;
 }
 
-/* Flexbox Layout for Image and Text */
-.content {
-    display: flex;
-    width: 50vw;
-}
-
-/* Image Styling */
-.image {
-    flex: 0 0 25%; /* Takes 1/4 of the width */
-    height: 100%; /* Takes the full height of the section */
-    transform: translateY(20px);
-    animation: slideIn 1s ease-out forwards 2s;
-    max-width: 25%; /* Restricts the max width to 25% of the container */
-    display: block;
-    margin-right: 10px; /* Adds space to the right of the image */
-}
-
-.image img {
-    width: 100%; /* Makes the image fill the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-}
-
-/* Text Styling */
-.text {
-    color: #555;
-    flex: 1; /* Takes the remaining space */
-    transform: translateY(20px);
-    animation: slideIn 1s ease-out forwards 2.5s;
-    z-index: 9;
-    padding-left: 20px; /* Adds some padding for spacing between image and text */
-}
-
 /* Mission Section Styling */
 .mission {
-    width: 50vw;
+    width: 100%;
     position: relative;
     background-color: #ffffff;
     border-radius: 10px;
@@ -461,23 +443,18 @@ body {
     }
 
     .container {
-        width: 50vw;
-        padding: 0 15px;
-        flex-direction: column; /* Stack the image and text vertically on mobile */
+        flex-direction: column; /* Stack image and text vertically on mobile */
     }
 
-    .content {
-        flex-direction: column; /* Stack content vertically on mobile */
+    .aaba-image-section {
+        flex: 0 0 100%; /* Image takes full width on mobile */
+        padding-right: 0; /* Remove right padding on mobile */
+        margin-bottom: 15px; /* Add margin at the bottom for spacing */
     }
 
-    .image {
-        flex: 0 0 100%; /* Make the image full width on mobile */
-        margin-right: 0; /* Remove margin on mobile */
-        margin-bottom: 15px; /* Add bottom margin for spacing */
-    }
-
-    .text {
-        flex: 1; /* Ensures the text takes the full width */
+    .text-section {
+        flex: 0 0 100%; /* Text takes full width on mobile */
+        padding-left: 0; /* Remove left padding on mobile */
     }
 
     .section-title h2 {
@@ -497,6 +474,7 @@ body {
         font-size: 18px;
     }
 }
+
 
 /* Section for Lifestory */
 .section-lifestory {
