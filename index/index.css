@@ -299,165 +299,62 @@ body {
     }
 }
 
-/* Section About Styling */
-.section-about {
-    margin-top: 20px;
-    padding: 10px;
+/* About Section Styling */
+.about-section {
+    padding: 40px 0;
     background-color: #ffffff;
+}
+
+/* Container to Hold Image & Text */
+.container {
+    display: flex; /* Side-by-side layout */
+    align-items: center; /* Align text & image */
+    justify-content: space-between; /* Space between elements */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Image Styling */
+.aaba-image-section {
+    flex: 1; /* Image takes 1/3 of space */
+    max-width: 30%; /* Adjust width */
+}
+
+.aaba-image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.text-section {
+    flex: 2; /* Text takes more space */
+    max-width: 65%;
+}
+
+h2, h3 {
     color: #333;
 }
 
-/* Container for Content */
-.container {
-    padding-top: 20px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex; /* Make the container a flexbox */
-    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
-}
-
-/* Aaba Image Section */
-.aaba-image-section {
-    flex: 0 0 25%; /* Takes up 1/4 of the container */
-    padding-right: 15px; /* Adds spacing between image and text */
-}
-
-.image img {
-    width: 100%; /* Ensures image takes full width */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover animation for the image */
-.image:hover img {
-    transform: scale(1.05);
-}
-
-/* Text Section */
-.text-section {
-    flex: 0 0 75%; /* Takes up the remaining 3/4 of the container */
-    padding-left: 15px; /* Adds padding between image and text */
-}
-
-/* Section Title Styling */
-.section-title h2 {
-    font-size: 36px;
-    color: #2e3a59;
-    text-align: left; /* Aligns title to the left */
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeIn 2s forwards 0.5s;
-}
-
-.section-title p {
-    font-size: 18px;
-    color: #777;
-    text-align: left;
-    line-height: 1.6;
-    opacity: 0;
-    animation: fadeIn 2s forwards 1s;
-}
-
-/* Mission Section Styling */
-.mission {
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    opacity: 0;
-    animation: fadeIn 2s forwards 3s;
-}
-
-.mission h3 {
-    font-size: 20px;
-    color: #2e3a59;
-    margin-bottom: 10px;
-}
-
-.mission ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.mission li {
-    margin-bottom: 10px;
-    font-size: 17px;
-}
-
-/* Legacy Section Styling */
-.legacy {
-    margin-top: 50px;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 2s forwards 3.5s;
-}
-
-.legacy h3 {
-    font-size: 24px;
-    color: #2e3a59;
-    margin-bottom: 20px;
-}
-
-.legacy p {
-    font-size: 18px;
+p, ul {
     color: #555;
-    line-height: 1.8;
-}
-
-.legacy strong {
-    font-size: 20px;
-    color: #2e3a59;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* Responsive Design for Mobile */
-@media only screen and (max-width: 768px) {
-    .section-about {
-        margin-top: 80px;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack on mobile */
     }
 
-    .container {
-        flex-direction: column; /* Stack image and text vertically on mobile */
+    .aaba-image-section, .text-section {
+        max-width: 100%; /* Full width */
+        text-align: center;
     }
 
     .aaba-image-section {
-        flex: 0 0 100%; /* Image takes full width on mobile */
-        padding-right: 0; /* Remove right padding on mobile */
-        margin-bottom: 20px; /* Add margin at the bottom for spacing */
-    }
-
-    .text-section {
-        flex: 0 0 100%; /* Text takes full width on mobile */
-        padding-left: 0; /* Remove left padding on mobile */
-    }
-
-    .section-title h2 {
-        font-size: 28px;
-    }
-
-    .section-title p,
-    .text-section p,
-    .mission li,
-    .legacy p {
-        font-size: 16px;
-    }
-
-    .mission h3,
-    .legacy h3 {
-        font-size: 18px;
+        margin-bottom: 20px; /* Space below image */
     }
 }
 
