@@ -311,27 +311,35 @@ body {
 .container {
     padding-top: 20px;
     max-width: 1200px;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     display: flex; /* Make the container a flexbox */
+    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
 }
 
 /* Aaba Image Section */
 .aaba-image-section {
-    flex: 0 0 25vw; /* Takes up 1/4 of the container */
-    padding-right: 10px; /* Adds spacing between image and text */
+    flex: 0 0 25%; /* Takes up 1/4 of the container */
+    padding-right: 15px; /* Adds spacing between image and text */
 }
 
 .image img {
+    width: 100%; /* Ensures image takes full width */
     height: auto; /* Maintains aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover animation for the image */
+.image:hover img {
+    transform: scale(1.05);
 }
 
 /* Text Section */
 .text-section {
-    flex: 0 0 75vw; /* Takes up the remaining 3/4 of the container */
-    padding-left: 10px; /* Adds padding between image and text */
+    flex: 0 0 75%; /* Takes up the remaining 3/4 of the container */
+    padding-left: 15px; /* Adds padding between image and text */
 }
 
 /* Section Title Styling */
@@ -356,29 +364,28 @@ body {
 /* Mission Section Styling */
 .mission {
     width: 100%;
-    position: relative;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     opacity: 0;
     animation: fadeIn 2s forwards 3s;
 }
 
 .mission h3 {
-    font-size: 18px;
+    font-size: 20px;
     color: #2e3a59;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .mission ul {
     list-style-type: disc;
-    margin: 0;
-    padding: 0;
+    margin-left: 20px;
 }
 
 .mission li {
     margin-bottom: 10px;
-    display: block;
+    font-size: 17px;
 }
 
 /* Legacy Section Styling */
@@ -416,27 +423,10 @@ body {
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Hover animation for the image */
-.image:hover img {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-}
-
 /* Responsive Design for Mobile */
 @media only screen and (max-width: 768px) {
     .section-about {
-        margin-top: 90px;
+        margin-top: 80px;
     }
 
     .container {
@@ -446,7 +436,7 @@ body {
     .aaba-image-section {
         flex: 0 0 100%; /* Image takes full width on mobile */
         padding-right: 0; /* Remove right padding on mobile */
-        margin-bottom: 15px; /* Add margin at the bottom for spacing */
+        margin-bottom: 20px; /* Add margin at the bottom for spacing */
     }
 
     .text-section {
@@ -459,8 +449,7 @@ body {
     }
 
     .section-title p,
-    .text,
-    .text p,
+    .text-section p,
     .mission li,
     .legacy p {
         font-size: 16px;
