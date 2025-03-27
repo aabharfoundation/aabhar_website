@@ -305,6 +305,8 @@ body {
     padding: 10px;
     background-color: #ffffff;
     color: #333;
+    height: 100vh;
+    
 }
 
 /* Container for Content */
