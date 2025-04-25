@@ -190,8 +190,8 @@
 
    <script>
   const leftBtn = document.querySelector('.left-btn');
-const rightBtn = document.querySelector('.right-btn');
-const scroller = document.querySelector('.auto-scroll-wrapper');
+  const rightBtn = document.querySelector('.right-btn');
+  const scroller = document.querySelector('.auto-scroll-wrapper');
 
   // Clone the content once for loop illusion
   const originalContent = scroller.innerHTML;
@@ -225,8 +225,9 @@ const scroller = document.querySelector('.auto-scroll-wrapper');
     scroller.scrollLeft += 300;
   });
 
-  scrollLoop();
+  scrollStories(); // ✅ fixed function call
 </script>
+
 
 
     <!-- Our Projects Section -->
