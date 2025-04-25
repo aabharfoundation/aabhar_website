@@ -492,7 +492,25 @@ body {
     overflow: hidden;
 }
 /* Container styling */
+.auto-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+}
 
+.auto-scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 /* Scrollable wrapper */
 .lifestory-scroll {
   display: flex;
