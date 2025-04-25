@@ -326,24 +326,32 @@ body {
     text-align: center;
     margin: 25px 0;
 }
-/* Aaba Image Section */
 .aaba-image-section {
     width: 25vw;
-    flex: 1;
     max-width: 100vh;
+    flex: 1;
 }
 
-.image img {
-    max-width: 100%; /* Ensures image scales properly */
-    height: auto;
-    object-fit: contain;
+/* New crop container */
+.image-crop {
+    height: 50vh;          /* Crop height: adjust as needed */
+    overflow: hidden;      /* Hide overflow */
+    position: relative;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image stays full-size inside the crop box */
+.image-crop img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;     /* Fill container and crop */
+    display: block;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hover animation for the image */
-.image:hover img {
+/* Hover effect */
+.image-crop:hover img {
     transform: scale(1.05);
 }
 
