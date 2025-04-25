@@ -181,17 +181,23 @@
   </div>
 </div>
 
-    <script>
+   <script>
   const scroller = document.querySelector('.lifestory-scroll');
 
+  // Duplicate cards once to create loop illusion
+  const originalContent = scroller.innerHTML;
+  scroller.innerHTML += originalContent;
+
   let autoScroll = true;
-  let scrollSpeed = 1;
+  const scrollSpeed = 1;
 
   function scrollStories() {
     if (autoScroll) {
       scroller.scrollLeft += scrollSpeed;
-      if (scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth) {
-        scroller.scrollLeft = 0; // reset to start
+
+      // Seamless loop: reset without flash
+      if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
+        scroller.scrollLeft = 0;
       }
     }
     requestAnimationFrame(scrollStories);
@@ -202,6 +208,7 @@
 
   scrollStories();
 </script>
+
 
     <!-- Our Projects Section -->
     <section id="our-projects" class="section">
