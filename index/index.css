@@ -328,7 +328,7 @@ body {
 }
 .aaba-image-section {
     width: 25vw;
-    max-width: 50%;
+    max-width: 100vh;
     flex: 1;
 }
 
@@ -343,9 +343,6 @@ body {
 
 /* Image stays full-size inside the crop box */
 .image-crop img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;     /* Fill container and crop */
     display: block;
     transition: transform 0.3s ease-in-out;
 }
@@ -535,8 +532,7 @@ body {
 
 /* Image Styling */
 .container img {
-    width: 50vw;
-    height: auto;
+    height: 100vh;
     border-radius: 10px;
 }
 
