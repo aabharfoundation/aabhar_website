@@ -577,7 +577,7 @@ body {
 }
 
 /* Style for images inside containers */
-.scroller .lifestory-container .thoughts-container img {
+.scroller .lifestory-container .thoughts-container img  {
     width: 100%; /* Make images responsive */
     border-radius: 5px; /* Match the container's border radius */
     margin-bottom: 10px; /* Add spacing below the image */
