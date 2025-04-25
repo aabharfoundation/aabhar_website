@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for (let i = 1; i <= 10; i++) {
             const div = document.createElement('div');
-            div.classList.add('container');
+            div.classList.add('lifestory-container');
             div.innerHTML = `
                 <h2>Lifestory ${i}</h2>
                 <p>Description of the lifestory ${i}</p>
@@ -77,18 +77,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function loadNewsSections() {
+    function loadThoughtsSections() {
         const newsContainer = document.querySelector('.news-scroll');
 
         for (let i = 1; i <= 10; i++) {
             const div = document.createElement('div');
-            div.classList.add('container');
+            div.classList.add('thoughts-container');
             div.innerHTML = `
-                <h2>News ${i}</h2>
+                <h2>Thoughts ${i}</h2>
                 <p>Description of the news ${i}</p>
-                <p class="news">Here is the detailed news article ${i}.</p>
-                <img src="news${i}.jpg" alt="News ${i}">
-                <a href="newsblogs/news.html#news${i}" class="read-more">Read More</a>
+                <p class="thoughts">Here is the detailed news article ${i}.</p>
+                <img src="thoughts${i}.jpg" alt="Thoughts ${i}">
+                <a href="thoughts/thoughts.html#news${i}" class="read-more">Read More</a>
             `;
             newsContainer.appendChild(div);
         }
