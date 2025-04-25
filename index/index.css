@@ -500,7 +500,8 @@ body {
 .auto-scroll-track {
   display: flex;
   width: max-content;
-  animation: scroll-left 40s linear infinite;
+  animation: scroll-left 60s linear infinite;
+  gap: 1rem;
 }
 
 @keyframes scroll-left {
