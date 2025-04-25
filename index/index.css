@@ -493,25 +493,16 @@ body {
 }
 /* Container styling */
 .auto-scroll-wrapper {
-  overflow: hidden;
-  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
 }
 
 .auto-scroll-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 60s linear infinite;
-  gap: 1rem;
+  display: inline-flex;
 }
 
-@keyframes scroll-left {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
+
 /* Scrollable wrapper */
 .lifestory-scroll {
   display: flex;
@@ -526,8 +517,10 @@ body {
 }
 
 /* Individual story card */
+
 .story-card {
   min-width: 250px;
+  margin-right: 1rem;
   background-color: white;
   border-radius: 0.75rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
