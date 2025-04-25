@@ -483,41 +483,30 @@ body {
 }
 /* Section for Lifestory */
 .section-lifestory {
-    margin-top: 120vh;
-    margin: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  margin-top: 120vh;
+  margin: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 }
-/* Container styling */
+
+/* Wrapper for scrolling area */
 .auto-scroll-wrapper {
   overflow-x: auto;
   white-space: nowrap;
   scroll-behavior: smooth;
+  padding-bottom: 1rem;
 }
 
+/* Flex container for story cards */
 .auto-scroll-track {
   display: inline-flex;
 }
 
-
-/* Scrollable wrapper */
-.lifestory-scroll {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 1rem;
-}
-
-.lifestory-scroll::-webkit-scrollbar {
-  display: none;
-}
-
 /* Individual story card */
-
 .story-card {
   width: 33vw;
   height: 83vh;
@@ -545,7 +534,6 @@ body {
 }
 
 .story-card p {
-  text-wrap-mode: wrap;
   font-size: 0.875rem;
   color: #4B5563;
   margin-bottom: 0.5rem;
@@ -560,6 +548,34 @@ body {
 
 .story-card a:hover {
   text-decoration: underline;
+}
+
+/* Arrows */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2rem;
+  padding: 0.25rem 0.75rem;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 0.5rem;
+}
+
+.left-btn {
+  left: 0.5rem;
+}
+
+.right-btn {
+  right: 0.5rem;
+}
+
+/* Hide scrollbar */
+.auto-scroll-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 /* Section for News */
