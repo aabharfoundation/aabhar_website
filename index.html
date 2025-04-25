@@ -214,16 +214,16 @@
   scroller.addEventListener('mouseenter', () => autoScroll = false);
   scroller.addEventListener('mouseleave', () => autoScroll = true);
 
-  // Manual arrow scrolling
-  document.querySelector('.left-btn').addEventListener('click', () => {
+  // Manual buttons
+  leftBtn.addEventListener('click', () => {
     scroller.scrollLeft -= 300;
   });
 
-  document.querySelector('.right-btn').addEventListener('click', () => {
+  rightBtn.addEventListener('click', () => {
     scroller.scrollLeft += 300;
   });
 
-  scrollStories();
+  scrollLoop();
 </script>
 
 
