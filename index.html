@@ -92,12 +92,16 @@
         </div>
     </section>
 
-    <!-- Life Story Section -->
-    <div id="life-story" class="section-lifestory">
+      <!-- Life Story Section -->
+<div id="life-story" class="section-lifestory">
   <h2 class="text-3xl font-bold mb-4">Life Stories</h2>
-  <div class="auto-scroll-wrapper">
-  <div class="auto-scroll-track">
 
+  <div class="scroll-container" style="position: relative;">
+    <button class="scroll-btn left-btn">&#8592;</button>
+
+    <div class="auto-scroll-wrapper">
+      <div class="auto-scroll-track" id="storyScroller">
+      
      <!-- Story Card 1 -->
     <div class="story-card">
       <img src="story/BgMainlogo.png" alt="Story 1">
@@ -182,13 +186,16 @@
       <a href="story/lifestory.html#lifestory10">Read More →</a>
     </div>
   </div>
+    </div>
+
+    <button class="scroll-btn right-btn">&#8594;</button>
   </div>
 </div>
 
    <script>
-  const scroller = document.querySelector('.lifestory-scroll');
+  const scroller = document.getElementById('storyScroller');
 
-  // Duplicate cards once to create loop illusion
+  // Clone the content once for loop illusion
   const originalContent = scroller.innerHTML;
   scroller.innerHTML += originalContent;
 
@@ -199,7 +206,7 @@
     if (autoScroll) {
       scroller.scrollLeft += scrollSpeed;
 
-      // Seamless loop: reset without flash
+      // Reset to start when halfway (original content end)
       if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
         scroller.scrollLeft = 0;
       }
@@ -207,8 +214,18 @@
     requestAnimationFrame(scrollStories);
   }
 
+  // Pause scroll on mouse hover
   scroller.addEventListener('mouseenter', () => autoScroll = false);
   scroller.addEventListener('mouseleave', () => autoScroll = true);
+
+  // Manual arrow scrolling
+  document.querySelector('.left-btn').addEventListener('click', () => {
+    scroller.scrollLeft -= 300;
+  });
+
+  document.querySelector('.right-btn').addEventListener('click', () => {
+    scroller.scrollLeft += 300;
+  });
 
   scrollStories();
 </script>
