@@ -330,7 +330,7 @@ body {
 .aaba-image-section {
     width: 25vw;
     flex: 1;
-    max-width: 100%;
+    max-width: 100vh;
 }
 
 .image img {
