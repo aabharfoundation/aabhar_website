@@ -60,23 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', updateActiveNav);
 
-    function loadLifestorySections() {
-        const lifestoryContainer = document.querySelector('.lifestory-scroll');
-
-        for (let i = 1; i <= 10; i++) {
-            const div = document.createElement('div');
-            div.classList.add('lifestory-container');
-            div.innerHTML = `
-                <h2>Lifestory ${i}</h2>
-                <p>Description of the lifestory ${i}</p>
-                <p class="story">Here is the detailed story of lifestory ${i}.</p>
-                <img src="image${i}.jpg" alt="Lifestory ${i}">
-                <a href="story/lifestory.html#lifestory${i}" class="read-more">Read More</a>
-            `;
-            lifestoryContainer.appendChild(div);
-        }
-    }
-
     function loadThoughtsSections() {
         const newsContainer = document.querySelector('.news-scroll');
 
