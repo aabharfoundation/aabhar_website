@@ -3,7 +3,7 @@
 
 /* Basic Reset */
 * {
-    margin: 0; /* Removes default margin */
+    margin: 0; /* Removes default margin */ 
     padding: 0; /* Removes default padding */
     box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
