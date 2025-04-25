@@ -193,18 +193,18 @@
   const rightBtn = document.querySelector('.right-btn');
   const scroller = document.querySelector('.auto-scroll-wrapper');
 
-  // Clone the content once for loop illusion
   const originalContent = scroller.innerHTML;
   scroller.innerHTML += originalContent;
 
   let autoScroll = true;
-  const scrollSpeed = 1;
+  let scrollSpeed = 1;
+  let userInteracted = false;
+  let interactionTimeout;
 
   function scrollStories() {
-    if (autoScroll) {
+    if (autoScroll && !userInteracted) {
       scroller.scrollLeft += scrollSpeed;
 
-      // Reset to start when halfway (original content end)
       if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
         scroller.scrollLeft = 0;
       }
@@ -212,21 +212,33 @@
     requestAnimationFrame(scrollStories);
   }
 
-  // Pause scroll on mouse hover
+  function pauseAutoScrollTemporarily() {
+    userInteracted = true;
+    clearTimeout(interactionTimeout);
+    interactionTimeout = setTimeout(() => {
+      userInteracted = false;
+    }, 4000); // Resume auto-scroll after 4 seconds
+  }
+
+  // Mouse drag or hover
   scroller.addEventListener('mouseenter', () => autoScroll = false);
   scroller.addEventListener('mouseleave', () => autoScroll = true);
+  scroller.addEventListener('scroll', pauseAutoScrollTemporarily);
 
-  // Manual buttons
+  // Buttons
   leftBtn.addEventListener('click', () => {
     scroller.scrollLeft -= 300;
+    pauseAutoScrollTemporarily();
   });
 
   rightBtn.addEventListener('click', () => {
     scroller.scrollLeft += 300;
+    pauseAutoScrollTemporarily();
   });
 
-  scrollStories(); // ✅ fixed function call
+  scrollStories();
 </script>
+
 
 
 
