@@ -482,6 +482,7 @@ body {
 }
 /* Section for Lifestory */
 .section-lifestory {
+    margin-top: 120vh;
     margin: 20px;
     padding: 10px;
     background-color: #fff;
