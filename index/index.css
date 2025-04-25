@@ -520,6 +520,7 @@ body {
 
 .story-card {
   width: 33vw;
+  height: 83vh;
   min-width: 250px;
   margin-right: 1rem;
   background-color: white;
@@ -544,6 +545,7 @@ body {
 }
 
 .story-card p {
+  text-wrap-mode: wrap;
   font-size: 0.875rem;
   color: #4B5563;
   margin-bottom: 0.5rem;
