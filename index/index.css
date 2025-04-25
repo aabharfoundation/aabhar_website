@@ -334,7 +334,7 @@ body {
 
 /* New crop container */
 .image-crop {
-    height: 50vh;          /* Crop height: adjust as needed */
+    height: 100vh;          /* Crop height: adjust as needed */
     overflow: hidden;      /* Hide overflow */
     position: relative;
     border-radius: 10px;
