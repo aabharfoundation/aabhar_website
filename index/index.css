@@ -329,6 +329,8 @@ body {
 .aaba-image-section {
     width: 20vw;
     max-width: 100vh;
+    height: 100vh;
+    overflow: hidden;
     flex: 1;
 }
 
