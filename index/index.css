@@ -256,7 +256,8 @@ body {
 
 /* Make a perfect circular wrapper */
 .home-logo {
-    width: 30vw;
+    left: 3vw;
+    width: 35vw;
     height: 83vh;
     overflow: hidden;
 }
