@@ -278,20 +278,6 @@ body {
     position: relative;
 }
 
-
-/* Glow animation */
-@keyframes glowPulse {
-    0% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7),
-                    0 4px 15px rgba(0, 0, 0, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 35px rgba(255, 255, 255, 1),
-                    0 4px 20px rgba(0, 0, 0, 0.6);
-    }
-}
-
-
 .navbar p {
   position: fixed; /* Fixes the buttons at the bottom of the screen */
   bottom: 20px; /* Adjust vertical spacing from the bottom */
