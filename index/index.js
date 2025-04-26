@@ -66,4 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     window.addEventListener('scroll', updateActiveNav);
+
+    // ====== Manual Scroll Buttons for Auto-Scroll Wrapper ======
+    const leftBtn = document.querySelector('.left-btn');
+    const rightBtn = document.querySelector('.right-btn');
+    const scroller = document.querySelector('.auto-scroll-wrapper');
+
+    if (leftBtn && rightBtn && scroller) {
+        leftBtn.addEventListener('click', () => {
+            scroller.scrollLeft -= 300;
+        });
+
+        rightBtn.addEventListener('click', () => {
+            scroller.scrollLeft += 300;
+        });
+    }
 });
