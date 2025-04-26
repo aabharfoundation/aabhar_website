@@ -527,9 +527,9 @@ body {
         font-size: 18px;
     }
 }
+
 /* Section for Lifestory */
 .section-lifestory {
-  margin-top: 120vh;
   margin: 20px;
   padding: 10px;
   background-color: #fff;
@@ -624,114 +624,10 @@ body {
   display: none;
 }
 
-/* Section for News */
-.section-thoughts {
-    margin: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+.auto-scroll-wrapper {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
 }
-
-/* Container inside section */
-.lifestory-container .thoughts-container {
-    padding: 20px;
-    margin-bottom: 10px;
-    background-color: #eaeaea;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Title Styling */
-.lifestory-container .thoughts-container h2 {
-    font-size: 24px;
-    color: #333;
-}
-
-/* Description Styling */
-.lifestory-container .thoughts-container p {
-    font-size: 16px;
-    color: #666;
-    text-align: center;
-    margin: 10px 0;
-}
-
-/* Story/News Styling */
-.lifestory-container .story, .thoughts-container .thoughts {
-    font-size: 14px;
-    color: #444;
-    text-align: justify;
-    margin: 10px 0;
-    max-height: 120px;
-    overflow: hidden;
-}
-
-/* Image Styling */
-.lifestory-container img {
-    height: 100vh;
-    border-radius: 10px;
-}
-
-/* Scrolling functionality */
-.section-lifestory, .section-thoughts {
-    max-height: 800px; /* Set height for scrolling container */
-    overflow-y: scroll; /* Enable vertical scroll */
-}
-
-.lifestory-container .thoughts-container{
-    flex-shrink: 0;
-    min-height: 200px; /* Set a minimum height for each section */
-}
-
-/* Hover effect for each container */
-.lifestory-container .thoughts-container:hover {
-    background-color: #d9d9d9;
-    cursor: pointer;
-}
-
-/* Style for the horizontal scroller container */
-.scroller {
-    display: flex; /* Change from block to flex for horizontal layout */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Disable vertical scrolling */
-    white-space: nowrap; /* Prevent wrapping to the next line */
-    scroll-behavior: smooth; /* Smooth scrolling for better UX */
-    padding: 10px; /* Add some padding */
-    gap: 20px; /* Add spacing between items */
-}
-
-/* Style for individual containers inside the scroller */
-.scroller .lifestory-container .thoughts-container {
-    flex: 0 0 auto; /* Prevent containers from shrinking or growing */
-    width: 300px; /* Set a fixed width for each item */
-    background: #f9f9f9; /* Add a light background */
-    border: 1px solid #ddd; /* Add a border */
-    border-radius: 5px; /* Slightly rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 10px; /* Add padding inside each item */
-    text-align: center; /* Center text alignment */
-}
-
-/* Style for images inside containers */
-.scroller .lifestory-container .thoughts-container img  {
-    width: 100%; /* Make images responsive */
-    border-radius: 5px; /* Match the container's border radius */
-    margin-bottom: 10px; /* Add spacing below the image */
-}
-
-/* Optional: Hide scrollbar for a cleaner look */
-.scroller::-webkit-scrollbar {
-    display: none;
-}
-
-.scroller {
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none; /* Firefox */
-}
-
 
 /* Section Styling */
 .section {
@@ -945,6 +841,108 @@ body {
     transform: translateY(-5px); /* Moves the button slightly upward */
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Adds a shadow for hover effect */
 }
+
+/* Section for Thoughts */
+.section-thoughts {
+  margin: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Wrapper for scrolling area */
+.auto-scroll-wrapper-thoughts {
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+/* Flex container for thought cards */
+.auto-scroll-track-thoughts {
+  display: inline-flex;
+}
+
+/* Individual thought card */
+.thought-card {
+  width: 33vw;
+  height: 83vh;
+  min-width: 250px;
+  margin-right: 1rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.thought-card img {
+  width: 20vw;
+  height: 20vh;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.thought-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.thought-card p {
+  font-size: 0.875rem;
+  color: #4B5563;
+  margin-bottom: 0.5rem;
+}
+
+.thought-card a {
+  font-size: 0.875rem;
+  color: #2563EB;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.thought-card a:hover {
+  text-decoration: underline;
+}
+
+/* Arrows */
+.scroll-btn-thoughts {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2rem;
+  padding: 0.25rem 0.75rem;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 0.5rem;
+}
+
+.left-btn-thoughts {
+  left: 0.5rem;
+}
+
+.right-btn-thoughts {
+  right: 0.5rem;
+}
+
+/* Hide scrollbar */
+.auto-scroll-wrapper-thoughts::-webkit-scrollbar {
+  display: none;
+}
+
+.auto-scroll-wrapper-thoughts {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
 
 /* Footer */
 footer {
