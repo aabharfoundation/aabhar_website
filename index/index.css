@@ -803,7 +803,7 @@ body {
 }
 
 /* Flex container for story cards */
-.auto-scroll-track-thoughts {
+#thoughtsScroller {
   display: inline-flex;
 }
 
@@ -851,7 +851,7 @@ body {
   text-decoration: underline;
 }
 /* Arrows */
-.scroll-btn-thoughts {
+.scroll-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
