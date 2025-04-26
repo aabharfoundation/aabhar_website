@@ -391,7 +391,7 @@ body {
 /* Text Section */
 .text-section {
     position: relative;
-    top: 13vh;
+    top: -50px;
     flex: 2;
     padding-left: 10px;
     text-align: left;
