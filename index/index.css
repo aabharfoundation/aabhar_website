@@ -794,6 +794,19 @@ body {
   position: relative;
 }
 
+/* Wrapper for scrolling area */
+.auto-scroll-wrapper-thoughts {
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+/* Flex container for story cards */
+.auto-scroll-track-thoughts {
+  display: inline-flex;
+}
+
 /* Individual thought card */
 .thought-card {
   width: 33vw;
@@ -837,7 +850,38 @@ body {
 .thought-card a:hover {
   text-decoration: underline;
 }
+/* Arrows */
+.scroll-btn-thoughts {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2rem;
+  padding: 0.25rem 0.75rem;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 0.5rem;
+}
 
+.left-btn-thoughts {
+  left: 0.5rem;
+}
+
+.right-btn-thoughts {
+  right: 0.5rem;
+}
+
+/* Hide scrollbar */
+.auto-scroll-wrapper-thoughts::-webkit-scrollbar {
+  display: none;
+}
+
+.auto-scroll-wrapper-thoughts {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
 
 
 /* Footer */
