@@ -20,121 +20,181 @@ body {
 
 /* Floating Social Media Icons */
 .social-icons {
-    position: fixed; /* Keep icons fixed while scrolling */
-    bottom: 0; /* Attach at the bottom */
-    right: 10px; /* 10px from right edge */
-    transform: translateY(-90%); /* Move slightly upward */
-    display: flex; /* Flexbox for vertical arrangement */
-    flex-direction: column; /* Stack icons vertically */
-    gap: 15px; /* Space between each icon */
-    z-index: 1000; /* Keep icons above other elements */
-    padding: 10px; /* Small padding around icons */
+    position: fixed; /* Fixes the position of social icons to the bottom right */
+    bottom: 0; /* Positions the icons at the bottom of the page */
+    right: 10px; /* Positions the icons 10px from the right */
+    transform: translateY(-90%); /* Initially hides the icons outside the view */
+    display: flex; /* Uses flexbox to arrange icons vertically */
+    flex-direction: column; /* Aligns icons in a column */
+    gap: 15px; /* Adds 15px space between icons */
+    z-index: 1000; /* Ensures social icons are on top */
 }
 
 .social-icon {
-    display: flex; /* Use flex to perfectly center the img */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    width: 50px; /* Icon container width */
-    height: 50px; /* Icon container height */
-    background-color: #fff; /* White background for icons */
-    border-radius: 50%; /* Perfect circle */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-    overflow: hidden; /* Clip image inside the circle */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
-    cursor: pointer; /* Show pointer cursor on hover */
+    display: block; /* Makes each icon block level */
+    width: 50px; /* Sets the width of each icon */
+    height: 50px; /* Sets the height of each icon */
+    background-color: #fff; /* Sets a white background for icons */
+    border-radius: 50%; /* Makes icons round */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the icons */
+    overflow: hidden; /* Ensures the icon image does not overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth transition for hover effects */
+    text-align: center; /* Centers icon image within the circle */
+    padding: 10px; /* Adds padding inside the icon */
 }
 
 .social-icon img {
-    width: 30px; /* Image width */
-    height: 30px; /* Image height */
-    object-fit: cover; /* No image distortion */
+    width: 30px; /* Sets image width inside the icon */
+    height: 30px; /* Sets image height inside the icon */
+    object-fit: cover; /* Ensures the image covers the icon area without distortion */
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Zoom in slightly */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: scale(1.2); /* Enlarges icon on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increases shadow size on hover */
 }
 
 .social-icon:active {
-    transform: scale(1.1); /* Light shrink on click */
+    transform: scale(1.1); /* Slightly shrinks the icon when clicked */
 }
 
 .social-icon:hover img {
-    filter: brightness(1.2); /* Brighten the icon image on hover */
-} 
+    filter: brightness(1.2); /* Brightens the image on hover */
+}
 
 /* Navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(90deg, #424242, #000000); /* Dark gradient background */
-    z-index: 2000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* Removed top-bottom padding for better vertical alignment */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixes the navbar to the top of the screen */
+    top: 0; /* Positions the navbar at the top */
+    left: 0; /* Positions the navbar to the left edge */
+    width: 100%; /* Makes the navbar span the entire width of the page */
+    height: 100px; /* Sets the height of the navbar */
+    background: linear-gradient(90deg, #424242, #000000); /* Gradient background from blue to light blue */
+    z-index: 2000; /* Ensures navbar stays on top of other content */
+    display: flex; /* Uses flexbox to align items in a row */
+    justify-content: space-between; /* Distributes space between navbar items */
+    align-items: center; /* Centers items vertically */
+    padding: 15px 20px; /* Adds padding around navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow to navbar */
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* cleaner way instead of margin */
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Removes list styling */
+    display: flex; /* Aligns navbar links in a row */
+    margin: 0; /* Removes margin */
+    padding: 0; /* Removes padding */
 }
 
 .nav-links li {
-    position: relative;
+    position: relative; /* Allows positioning of underline within the list item */
+    display: inline-block; /* Makes list items inline */
+    margin: 0 10px; /* Adds horizontal spacing between links */
 }
 
 .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
+    color: white; /* Sets link text color to white */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 16px; /* Sets font size for links */
+    padding: 8px 15px; /* Adds padding inside the link */
+    border-radius: 5px; /* Rounds the corners of the link */
+    transition: all 0.3s ease; /* Adds smooth transition for hover effects */
+    font-weight: bold; /* Makes the link text bold */
+    display: inline-block; /* Makes the link an inline block */
+    position: relative; /* Allows positioning of the underline */
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Adds a background color on hover */
+}
+
+.nav-links a.active .underline {
+    width: 100%; /* Expands the underline fully when link is active */
+}
+
+.nav-links li.active a .underline {
+    width: 100%; /* Keeps the underline expanded when link is active */
+}
+
+.underline {
+    content: ''; /* Creates a new element for the underline */
+    position: absolute; /* Positions the underline within the link */
+    bottom: 0; /* Aligns the underline to the bottom of the link */
+    left: 50%; /* Centers the underline horizontally */
+    width: 0; /* Initially sets the underline width to 0 */
+    height: 2px; /* Sets the height of the underline */
+    background-color: #f39c12; /* Sets the underline color to yellow */
+    transition: width 0.5s ease-in-out; /* Smooth transition for width expansion */
+    transform: translateX(-50%); /* Centers the underline horizontally */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hides the hamburger menu by default */
+    height: 30px; /* Sets the height of the hamburger */
+    flex-direction: column; /* Arranges the lines of the hamburger vertically */
+    justify-content: space-between; /* Distributes space between the lines */
+    width: 30px; /* Sets the width of the hamburger */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.hamburger span {
+    background-color: white; /* Sets the color of hamburger lines to white */
+    height: 5px; /* Sets the height of each line */
+    width: 30px; /* Sets the width of each line */
+    border-radius: 2px; /* Rounds the corners of the lines */
+    transition: all 0.3s ease; /* Smooth transition for animations */
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translate(0,12.5px) rotate(45deg); /* Rotates the first line to form an "X" */
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hides the second line */
+}
+.hamburger.active span:nth-child(3) {
+    transform: translate(0,-12.5px) rotate(-45deg); /* Rotates the third line to form an "X" */
+}
+
+.hamburger:hover span {
+    background-color: #ffeb3b; /* Changes the line color to yellow on hover */
+}
 
 /* Navbar Mobile Navigation */
 @media only screen and (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: flex; /* Displays hamburger menu on small screens */
     }
 
     .nav-links {
-        position: fixed;
-        top: 100px; /* Exactly below navbar (100px height from earlier) */
-        left: 0;
-        width: 50%;
-        height: 50vh; /* Use viewport height units for better consistency */
-        background-color: #0d47a1;
-        flex-direction: column;
-        align-items: center; /* Center links horizontally */
-        justify-content: space-evenly; /* Evenly distribute links vertically */
-        padding: 20px 0;
-        border-radius: 0 0 5px 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 1500; /* Just below navbar but above other content */
+        display: flex; /* Uses flexbox for nav links */
+        flex-direction: column; /* Stacks the links vertically */
+        justify-content: center; /* Centers the links vertically */
+        position: fixed; /* Fixes the navigation to the screen */
+        left: 0; /* Positions the nav at the left edge */
+        top : 12.5%; /* Positions the nav below the navbar */
+        width: 50%; /* Sets the width of the nav to 50% */
+        height: 50%; /* Sets the height of the nav */
+        background-color: #0d47a1; /* Sets background color to blue */
+        text-align: center; /* Centers the text */
+        justify-content: space-between; /* Adds space between the links */
+        padding: 15px 0; /* Adds padding inside the nav */
+        border-radius: 0 0 5px 5px; /* Rounds the bottom corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+        transform: translateX(-100%); /* Hides the nav off-screen */
+        transition: transform 0.3s ease; /* Adds smooth transition when opening */
     }
-
+    
     .nav-links.active {
-        transform: translateX(0);
+        transform: translateX(0); /* Shows the nav when active */
     }
 
     .nav-links li {
-        margin: 0; /* No extra margin needed when using justify-content: space-evenly */
+        margin: 10px 0; /* Adds vertical spacing between the links */
     }
 
     .nav-links li a {
-        font-size: 20px;
-        padding: 10px 20px;
+        font-size: 20px; /* Increases font size for mobile */
+        padding: 10px 15px; /* Adds padding to each link */
     }
 }
 
@@ -153,15 +213,29 @@ body {
 }
 
 /* Section Home Layout */
+
+/* Section Home */
 .section-home {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #ffffff;
-    overflow: hidden;
+    position: relative; /* Allows absolute positioning of child elements */
+    top: 15vh;
+    background-color: #ffffff; /* Sets the background color to white */
+    color: #333; /* Sets the text color to dark grey */
+    opacity: 0; /* Starts with no visibility */
+    animation: fadeIn 2s forwards; /* Applies a fade-in animation */
+    height: 85vh; /* Makes the section take up the full viewport height */
+    display: flex; /* Uses flexbox for layout */
+    align-items: flex-start; /* Aligns items to the top of the section */
+}
+
+/* Background video */
+.background-video {
+    position: absolute; /* Positions the video absolutely within the parent section */
+    top: 0; /* Aligns the video to the top of the section */
+    left: 0; /* Aligns the video to the left of the section */
+    width: 100%; /* Makes the video span the full width of the section */
+    height: 100%; /* Makes the video span the full height of the section */
+    object-fit: contain; /* Ensures the video is resized while maintaining its aspect ratio */
+    z-index: 10; /* Keeps the video behind the text and content */
 }
 
 /* Circle Logo */
@@ -188,24 +262,6 @@ body {
         inset 0 0 20px rgba(0, 123, 255, 0.5); /* Inner glow */
     transform: rotateY(0deg) rotateX(0deg);
     animation: rotateLogo 10s infinite linear, glowPulse 2s infinite alternate;
-}
-
-/* Video Container */
-.video-container {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 75vw;
-    height: 83vh;
-    overflow: hidden;
-    z-index: 10; /* Behind the logo */
-}
-
-/* Background Video */
-.background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* Keyframes for rotating logo */
