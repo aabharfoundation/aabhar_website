@@ -873,7 +873,7 @@ footer {
 }
 
 footer p {
-    margin: 5px; /* Adds vertical margin for paragraph spacing */
+    margin: 30px; /* Adds vertical margin for paragraph spacing */
 }
 
 /* Mobile Responsiveness */
