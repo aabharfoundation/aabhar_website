@@ -326,8 +326,13 @@ body {
 
 /* Section About Styling */
 .section-about {
-    margin-top: 17vh;
+    margin: 20px;
     padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
     background-color: #ffffff;
     color: #333;
     height: 83vh;
@@ -384,6 +389,8 @@ body {
 
 /* Text Section */
 .text-section {
+    position: relative;
+    top: 20vh;
     flex: 2;
     padding-left: 10px;
     text-align: left;
@@ -391,7 +398,7 @@ body {
 
 /* Section Title Styling */
 .section-title h2 {
-    font-size: 36px;
+    font-size: 20px;
     color: #2e3a59;
     margin-bottom: 40px;
     opacity: 0;
@@ -399,7 +406,7 @@ body {
 }
 
 .section-title p {
-    font-size: 18px;
+    font-size: 15px;
     color: #777;
     line-height: 1.6;
     opacity: 0;
@@ -418,18 +425,20 @@ body {
 }
 
 .mission h3 {
-    font-size: 20px;
+    font-size: 15px;
     color: #2e3a59;
     margin-bottom: 40px;
 }
 
 .mission ul {
+    font-size: 10px;
     list-style-type: disc;
     margin: 0;
     padding-left: 20px;
 }
 
 .mission li {
+    font-size: 10px;
     margin-bottom: 40px;
 }
 
@@ -442,19 +451,19 @@ body {
 }
 
 .legacy h3 {
-    font-size: 24px;
+    font-size: 15px;
     color: #2e3a59;
     margin-bottom: 20px;
 }
 
 .legacy p {
-    font-size: 18px;
+    font-size: 10px;
     color: #555;
     line-height: 1.8;
 }
 
 .legacy strong {
-    font-size: 20px;
+    font-size: 10px;
     color: #2e3a59;
 }
 
