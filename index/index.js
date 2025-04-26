@@ -67,18 +67,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', updateActiveNav);
 
-    // ====== Manual Scroll Buttons for Auto-Scroll Wrapper ======
-    const leftBtn = document.querySelector('.left-btn');
-    const rightBtn = document.querySelector('.right-btn');
-    const scroller = document.querySelector('.auto-scroll-wrapper');
+    // ====== Reusable Scroll Buttons Setup ======
+    function setupScrollButtons(leftSelector, rightSelector, wrapperSelector) {
+        const leftButton = document.querySelector(leftSelector);
+        const rightButton = document.querySelector(rightSelector);
+        const wrapper = document.querySelector(wrapperSelector);
 
-    if (leftBtn && rightBtn && scroller) {
-        leftBtn.addEventListener('click', () => {
-            scroller.scrollLeft -= 300;
-        });
+        if (leftButton && rightButton && wrapper) {
+            leftButton.addEventListener('click', () => {
+                wrapper.scrollLeft -= 300;
+            });
 
-        rightBtn.addEventListener('click', () => {
-            scroller.scrollLeft += 300;
-        });
+            rightButton.addEventListener('click', () => {
+                wrapper.scrollLeft += 300;
+            });
+        }
     }
+
+    // Setup scroll buttons for LifeStory Section
+    setupScrollButtons('.left-btn', '.right-btn', '.auto-scroll-wrapper');
+
+    // Setup scroll buttons for Thoughts Section
+    setupScrollButtons('.left-btn-thoughts', '.right-btn-thoughts', '.auto-scroll-wrapper-thoughts');
 });
