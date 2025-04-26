@@ -326,7 +326,7 @@ body {
 
 /* Section About Styling */
 .section-about {
-    margin: 20px;
+    margin-top: 17vh;
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
@@ -352,10 +352,11 @@ body {
     overflow: hidden;
 }
 .about-container p {
-    font-size: 16px;
+    font-size: 10px;
     color: #666;
     text-align: center;
     margin: 25px 0;
+    line-height: 1.6;
 }
 .aaba-image-section {
     width: 20vw;
@@ -390,7 +391,7 @@ body {
 /* Text Section */
 .text-section {
     position: relative;
-    top: 20vh;
+    top: 13vh;
     flex: 2;
     padding-left: 10px;
     text-align: left;
@@ -406,7 +407,7 @@ body {
 }
 
 .section-title p {
-    font-size: 15px;
+    font-size: 13px;
     color: #777;
     line-height: 1.6;
     opacity: 0;
@@ -415,6 +416,7 @@ body {
 
 /* Mission Section Styling */
 .mission {
+    height: 25vh;
     width: 100%;
     background-color: #ffffff;
     border-radius: 10px;
@@ -425,21 +427,21 @@ body {
 }
 
 .mission h3 {
-    font-size: 15px;
+    font-size: 13px;
     color: #2e3a59;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
 }
 
 .mission ul {
     font-size: 10px;
     list-style-type: disc;
     margin: 0;
-    padding-left: 20px;
+    padding-left: 16px;
 }
 
 .mission li {
     font-size: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
 }
 
 /* Legacy Section Styling */
