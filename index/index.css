@@ -21,7 +21,7 @@ body {
 /* Floating Social Media Icons */
 .social-icons {
     position: fixed; /* Fixes the position of social icons to the bottom right */
-    bottom: 0; /* Positions the icons at the bottom of the page */
+    bottom: 15vh; /* Positions the icons at the bottom of the page */
     right: 10px; /* Positions the icons 10px from the right */
     transform: translateY(-90%); /* Initially hides the icons outside the view */
     display: flex; /* Uses flexbox to arrange icons vertically */
@@ -32,8 +32,8 @@ body {
 
 .social-icon {
     display: block; /* Makes each icon block level */
-    width: 50px; /* Sets the width of each icon */
-    height: 50px; /* Sets the height of each icon */
+    width: 60px; /* Sets the width of each icon */
+    height: 60px; /* Sets the height of each icon */
     background-color: #fff; /* Sets a white background for icons */
     border-radius: 50%; /* Makes icons round */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the icons */
@@ -44,8 +44,8 @@ body {
 }
 
 .social-icon img {
-    width: 30px; /* Sets image width inside the icon */
-    height: 30px; /* Sets image height inside the icon */
+    width: 40px; /* Sets image width inside the icon */
+    height: 40px; /* Sets image height inside the icon */
     object-fit: cover; /* Ensures the image covers the icon area without distortion */
 }
 
@@ -357,21 +357,8 @@ body {
     height: 83vh;
     
 }
-
-.container {
-    height: 83vh;
-    margin-bottom: 10px;
-    background-color: #eaeaea;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
     
-
-/* Container for Content */
+/* Container for About */
 .about-container {
     height: 83vh;
     margin-bottom: 10px;
@@ -511,7 +498,7 @@ body {
         margin-top: 90px;
     }
 
-    .container {
+    .about-container {
         flex-direction: row;
         align-items: center;
         text-align: center;
