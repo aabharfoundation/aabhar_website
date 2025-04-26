@@ -250,9 +250,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent; /* or a light background if needed */
+    background: transparent;
     position: relative;
 }
+
+/* Make a perfect circular wrapper */
+.home-logo {
+    width: 83vh;
+    height: 83vh;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
+                0 4px 20px rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    object-fit: contain; /* ⭐ CHANGED */
+    animation: glowPulse 2s infinite alternate;
+}
+
 
 /* Video side */
 .video-container {
@@ -262,19 +277,6 @@ body {
     position: relative;
 }
 
-/* Logo styles */
-.home-logo {
-    width: auto;
-    height: 83vh; /* Fixed height you asked */
-    max-width: 100%; /* make sure it doesn't overflow width */
-    border-radius: 50%;
-    border: 5px solid #ffffff;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
-                0 4px 20px rgba(0, 0, 0, 0.6);
-    background-color: rgba(0, 0, 0, 0.1); /* optional */
-    object-fit: cover;
-    animation: glowPulse 2s infinite alternate;
-}
 
 /* Glow animation */
 @keyframes glowPulse {
