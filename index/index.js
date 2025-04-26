@@ -6,34 +6,41 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar.offsetHeight;
 
-    // Toggle mobile menu when hamburger is clicked
-    hamburger.addEventListener('click', function () {
+    // Toggle mobile menu
+    hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navList.classList.toggle('active');
     });
 
-    // Close mobile menu when a nav link is clicked
+    // Close mobile menu on nav link click
     navItems.forEach(link => {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navList.classList.remove('active');
         });
     });
 
+    function clearActiveStates() {
+        navItems.forEach(link => {
+            link.classList.remove('active');
+            const underline = link.querySelector('.underline');
+            if (underline) underline.style.width = '0';
+        });
+    }
+
     function updateActiveNav() {
         const scrollPosition = window.scrollY + navbarHeight;
 
         sections.forEach((section, index) => {
+            if (!section) return;
             const sectionTop = section.offsetTop;
             const sectionBottom = sectionTop + section.offsetHeight;
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                navItems.forEach(link => {
-                    link.classList.remove('active');
-                    link.querySelector('.underline').style.width = '0';
-                });
+                clearActiveStates();
                 navItems[index].classList.add('active');
-                navItems[index].querySelector('.underline').style.width = '100%';
+                const underline = navItems[index].querySelector('.underline');
+                if (underline) underline.style.width = '100%';
             }
         });
     }
@@ -42,6 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetSection = document.querySelector(this.getAttribute('href'));
+            if (!targetSection) return;
+
             const targetPosition = targetSection.offsetTop - navbarHeight;
 
             window.scrollTo({
@@ -49,16 +58,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 behavior: 'smooth'
             });
 
-            navItems.forEach(link => {
-                link.classList.remove('active');
-                link.querySelector('.underline').style.width = '0';
-            });
+            clearActiveStates();
             this.classList.add('active');
-            this.querySelector('.underline').style.width = '100%';
+            const underline = this.querySelector('.underline');
+            if (underline) underline.style.width = '100%';
         });
     });
 
     window.addEventListener('scroll', updateActiveNav);
+});
 
     function loadThoughtsSections() {
         const newsContainer = document.querySelector('.news-scroll');
