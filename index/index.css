@@ -1,20 +1,21 @@
-/* Importing Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Shantell+Sans&display=swap');
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Shantell+Sans&display=swap'); /* Importing Google Fonts for Roboto and Shantell Sans */
 
 /* Basic Reset */
 * {
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default paddings */
-    box-sizing: border-box; /* Include padding and border in element's dimensions */
+    margin: 0; /* Removes default margin */ 
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
 
-/* Body Setup */
+/* Body Setup  */
 body {
-    background: linear-gradient(135deg, #000000, #1a1a1a, #333333); /* Smooth gradient background */
-    line-height: 1; /* Standardize line height for better readability */
-    color: #ffffff; /* Set primary text color to white */
-    font-family: 'Roboto', sans-serif; /* Set default font */
-    overflow-x: hidden; /* Prevent unwanted horizontal scrolling */
+    background: linear-gradient(135deg, #000000, #1a1a1a, #333333); /* Background with a gradient from black to dark grey */
+    line-height: 0; /* Removes default line-height */
+    color: white; /* Sets text color to white */
+    margin: 0; /* Removes default body margin */
+    padding: 0; /* Removes default body padding */
+    font-family: 'Roboto', sans-serif; /* Sets the font family to Roboto */
 }
 
 /* Floating Social Media Icons */
