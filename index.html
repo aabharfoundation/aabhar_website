@@ -333,69 +333,6 @@
     <button class="scroll-btn right-btn">&#8594;</button>
 </div>
 
-  <script>
-  const leftBtn = document.querySelector('.left-btn');
-  const rightBtn = document.querySelector('.right-btn');
-  const scroller = document.querySelector('.auto-scroll-wrapper');
-
-  const originalContent = scroller.innerHTML;
-  scroller.innerHTML += originalContent;
-
-  let autoScroll = true;
-  let scrollSpeed = 1;
-  let userInteracted = false;
-  let interactionTimeout;
-
-  function scrollStories() {
-    if (autoScroll && !userInteracted) {
-      scroller.scrollLeft += scrollSpeed;
-
-      if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
-        scroller.scrollLeft = 0;
-      }
-    }
-    requestAnimationFrame(scrollStories);
-  }
-
-  function scrollThoughts() {
-    if (autoScroll && !userInteracted) {
-      scroller.scrollLeft += scrollSpeed;
-
-      if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
-        scroller.scrollLeft = 0;
-      }
-    }
-    requestAnimationFrame(scrollThoughts);
-  }
-
-  function pauseAutoScrollTemporarily() {
-    userInteracted = true;
-    clearTimeout(interactionTimeout);
-    interactionTimeout = setTimeout(() => {
-      userInteracted = false;
-    }, 4000); // Resume auto-scroll after 4 seconds
-  }
-
-  // Mouse drag or hover
-  scroller.addEventListener('mouseenter', () => autoScroll = false);
-  scroller.addEventListener('mouseleave', () => autoScroll = true);
-  scroller.addEventListener('scroll', pauseAutoScrollTemporarily);
-
-  // Buttons
-  leftBtn.addEventListener('click', () => {
-    scroller.scrollLeft -= 300;
-    pauseAutoScrollTemporarily();
-  });
-
-  rightBtn.addEventListener('click', () => {
-    scroller.scrollLeft += 300;
-    pauseAutoScrollTemporarily();
-  });
-
-  scrollStories();
-  scrollThoughts();
-</script>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Aabhar Foundation | All Rights Reserved</p>
