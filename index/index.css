@@ -166,8 +166,8 @@ body {
 /* Circle Logo */
 .circle-logo {
     position: relative;
-    width: 30%;
-    height: 30%;
+    width: 30vw;
+    height: 83;
     margin-left: 2%;
     z-index: 20;
     display: flex;
