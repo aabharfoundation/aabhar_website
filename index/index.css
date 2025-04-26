@@ -254,6 +254,9 @@ body {
     z-index: 10;
 }
 
+.home-logo {
+    left: 5vw;
+
 /* Video side */
 .video-container {
     width: 75vw;
