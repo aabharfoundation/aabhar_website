@@ -630,7 +630,7 @@ body {
 }
 
 /* Scrolling functionality */
-.section-lifestory, .section-news {
+.section-lifestory, .section-thoughts {
     max-height: 800px; /* Set height for scrolling container */
     overflow-y: scroll; /* Enable vertical scroll */
 }
