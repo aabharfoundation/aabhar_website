@@ -254,8 +254,12 @@ body {
     z-index: 10;
 }
 
+/* Make a perfect circular wrapper */
 .home-logo {
-    left: 5vw;
+    width: 30vw;
+    height: 83vh;
+    overflow: hidden;
+}
 
 /* Video side */
 .video-container {
