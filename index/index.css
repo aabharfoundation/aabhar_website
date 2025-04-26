@@ -251,7 +251,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 5;
+    z-index: 10;
 }
 
 /* Make a perfect circular wrapper */
