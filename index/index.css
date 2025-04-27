@@ -518,7 +518,7 @@ body {
 
 /* Section for Lifestory */
 .section-lifestory {
-  margin: 20px;
+  margin-top: 10px;
   padding: 10px;
   background-color: #fff;
   border-radius: 10px;
@@ -529,6 +529,8 @@ body {
 
 /* Wrapper for scrolling area */
 .auto-scroll-wrapper {
+  margin-left: 30px;
+  margin-right: 30px; 
   overflow-x: auto;
   line-height: 1.5;
   white-space: normal;
@@ -592,7 +594,7 @@ body {
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.9);
   border: none;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 0.25rem 0.75rem;
   z-index: 10;
   cursor: pointer;
