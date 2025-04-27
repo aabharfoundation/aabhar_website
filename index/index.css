@@ -530,6 +530,7 @@ body {
 /* Wrapper for scrolling area */
 .auto-scroll-wrapper {
   overflow-x: auto;
+  line-height: 1.5;
   white-space: nowrap;
   scroll-behavior: smooth;
   padding-bottom: 1rem;
@@ -788,6 +789,7 @@ body {
   white-space: nowrap;
   scroll-behavior: smooth;
   padding-bottom: 1rem;
+  line-height: 1;
 }
 
 /* Flex container for story cards */
