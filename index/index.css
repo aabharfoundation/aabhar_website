@@ -21,7 +21,7 @@ body {
 /* Floating Social Media Icons */
 .social-icons {
     position: fixed; /* Fixes the position of social icons to the bottom right */
-    bottom: 15vh; /* Positions the icons at the bottom of the page */
+    bottom: 7vh; /* Positions the icons at the bottom of the page */
     right: 10px; /* Positions the icons 10px from the right */
     transform: translateY(-90%); /* Initially hides the icons outside the view */
     display: flex; /* Uses flexbox to arrange icons vertically */
@@ -528,17 +528,17 @@ body {
 }
 
 .section-lifestory h2 {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: black; 
+  text-align: center;
+  margin-top: 15px;
 }
 
 /* Wrapper for scrolling area */
 .auto-scroll-wrapper {
-  margin-top: 50px; 
-  margin-left: 30px;
-  margin-right: 30px; 
+  margin: 30px;
   overflow-x: auto;
   line-height: 1.5;
   white-space: normal;
