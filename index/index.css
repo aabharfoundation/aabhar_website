@@ -1,6 +1,6 @@
 /* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Shantell+Sans&display=swap'); /* Importing Google Fonts for Roboto and Shantell Sans */
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap');
 /* Basic Reset */
 * {
     margin: 0; /* Removes default margin */ 
@@ -324,160 +324,253 @@ body {
     }
 }
 
-/* Fonts and General Styling */
-body {
-    font-family: 'Poppins', sans-serif; /* Modern and elegant */
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Updated About Section */
+/* Section About Styling */
 .section-about {
-    background: linear-gradient(to bottom right, #ffffff, #f2f6fa);
-    transition: background 0.3s ease-in-out;
-}
-
-/* Title Heading Animation */
-.section-title h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: #2e3a59;
-    margin-bottom: 20px;
+    margin-top: 17vh;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     position: relative;
+    color: #333;
+    height: 83vh;
 }
 
-.section-title h2::after {
-    content: "";
-    width: 60px;
-    height: 3px;
-    background: #ff914d;
-    display: block;
-    margin-top: 8px;
-    border-radius: 5px;
+/* Container for About */
+.about-container {
+    height: 83vh;
+    margin-bottom: 10px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-/* Section Description */
-.section-title p {
-    font-size: 14px;
+.about-container p {
+    font-size: 10px;
     color: #666;
-    line-height: 1.7;
-    font-weight: 400;
-    opacity: 0;
-    animation: fadeInUp 1s ease forwards 1s;
-}
-
-/* Text Section Enhancements */
-.text-section p {
-    font-size: 13px;
-    line-height: 1.8;
-    color: #444;
-}
-
-/* Strong Text Color */
-.text-section strong {
-    color: #2e3a59;
-}
-
-/* Mission Section */
-.mission {
-    background: #ffffff;
-    border-left: 5px solid #ff914d;
-    padding: 25px 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-}
-
-.mission h3 {
-    font-size: 15px;
-    color: #2e3a59;
-    margin-bottom: 16px;
-    font-weight: 600;
-}
-
-.mission ul {
-    padding-left: 18px;
-}
-
-.mission li {
-    font-size: 13px;
-    color: #555;
-    margin-bottom: 10px;
+    text-align: center;
+    margin: 15px 0;
     line-height: 1.6;
+}
+
+.aaba-image-section {
+    width: 20vw;
+    max-width: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* New crop container */
+.image-crop {
+    height: 100vh;
+    overflow: hidden;
     position: relative;
-}
-
-/* Legacy Section Styling */
-.legacy {
-    margin-top: 30px;
-    padding: 20px;
     border-radius: 10px;
-    background-color: #fdfdfd;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-.legacy h3 {
-    font-size: 17px;
-    font-weight: 600;
-    color: #2e3a59;
-    margin-bottom: 12px;
+.image-crop:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.legacy p {
-    font-size: 13px;
-    line-height: 1.7;
-    color: #444;
-    margin-bottom: 10px;
-}
-
-.legacy strong {
-    color: #ff914d;
-}
-
-/* Hover Zoom for Image */
+/* Image stays full-size inside the crop box */
 .image-crop img {
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    width: 20vw;
+    max-width: 100vh;
+    display: block;
+    transition: transform 0.3s ease-in-out;
 }
 
 .image-crop:hover img {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Fancy Fade-In Animations */
-.fade-in {
+/* Text Section */
+.text-section {
+    position: relative;
+    top: -50px;
+    flex: 2;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 10px;
+}
+
+/* Section Title Styling */
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #2e3a59;
+    margin-bottom: 20px;
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
+    animation: fadeInUp 2s forwards 0.5s;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    border-bottom: 3px solid #ff914d;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.section-title h2:hover {
+    color: #ff914d;
+}
+
+.section-title p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 2s forwards 1s;
+}
+
+/* Mission Section Styling */
+.mission {
+    height: 17vh;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInUp 2s forwards 3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover {
+    background-color: #fdfdfd;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.mission h3 {
+    font-size: 13px;
+    color: #2e3a59;
+    margin-bottom: 16px;
+}
+
+.mission ul {
+    font-size: 10px;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.mission li {
+    font-size: 10px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.mission li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ff914d;
+    font-weight: bold;
+}
+
+/* Legacy Section Styling */
+.legacy {
+    margin-top: 3vh;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 2s forwards 3.5s;
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.legacy h3 {
+    font-size: 15px;
+    color: #2e3a59;
+    margin-bottom: 15px;
+}
+
+.legacy p {
+    font-size: 10px;
+    color: #555;
+    line-height: 1;
+    animation: fadeInUp 1.5s ease-in-out both;
+}
+
+.legacy strong {
+    font-size: 10px;
+    color: #2e3a59;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Responsive Font Scaling */
-@media (max-width: 768px) {
-    .section-title h2 {
-        font-size: 22px;
+/* Responsive Design for Mobile */
+@media only screen and (max-width: 768px) {
+    .section-about {
+        margin-top: 90px;
     }
 
-    .section-title p,
-    .text-section p,
-    .mission li,
-    .legacy p {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aaba-image-section {
+        max-width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .image-crop img {
+        width: 90%;
+    }
+
+    .text-section {
+        width: 100%;
+        padding-left: 0;
         font-size: 14px;
     }
 
-    .legacy h3,
-    .mission h3 {
+    .section-title h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .section-title p,
+    .mission li,
+    .legacy p {
         font-size: 16px;
     }
+
+    .mission h3,
+    .legacy h3 {
+        font-size: 18px;
+    }
 }
+
 
 
 /* Section for Lifestory */
