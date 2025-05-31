@@ -337,14 +337,6 @@ body {
     height: 83vh;
 }
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap');
-
-body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-}
-
 /* Section About Styling */
 .section-about {
     margin-top: 17vh;
@@ -372,7 +364,7 @@ body {
 }
 
 .about-container p {
-    font-size: 14px;
+    font-size: 16px; /* was 14px */
     color: #666;
     text-align: center;
     margin: 15px 0;
@@ -400,7 +392,6 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Image stays full-size inside the crop box */
 .image-crop img {
     width: 20vw;
     max-width: 100vh;
@@ -419,13 +410,13 @@ body {
     flex: 2;
     padding-left: 10px;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px; /* was 14px */
 }
 
 /* Section Title Styling */
 .section-title h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-size: 28px; /* was 24px */
     color: #2e3a59;
     margin-bottom: 20px;
     opacity: 0;
@@ -443,7 +434,7 @@ body {
 }
 
 .section-title p {
-    font-size: 16px;
+    font-size: 18px; /* was 16px */
     color: #777;
     line-height: 1.6;
     opacity: 0;
@@ -469,20 +460,20 @@ body {
 }
 
 .mission h3 {
-    font-size: 18px;
+    font-size: 20px; /* was 18px */
     color: #2e3a59;
     margin-bottom: 16px;
 }
 
 .mission ul {
-    font-size: 14px;
+    font-size: 16px; /* was 14px */
     list-style: none;
     margin: 0;
     padding-left: 0;
 }
 
 .mission li {
-    font-size: 14px;
+    font-size: 16px; /* was 14px */
     margin-bottom: 16px;
     position: relative;
     padding-left: 24px;
@@ -509,20 +500,20 @@ body {
 }
 
 .legacy h3 {
-    font-size: 18px;
+    font-size: 20px; /* was 18px */
     color: #2e3a59;
     margin-bottom: 15px;
 }
 
 .legacy p {
-    font-size: 14px;
+    font-size: 16px; /* was 14px */
     color: #555;
     line-height: 1.5;
     animation: fadeInUp 1.5s ease-in-out both;
 }
 
 .legacy strong {
-    font-size: 14px;
+    font-size: 16px; /* was 14px */
     color: #2e3a59;
 }
 
@@ -571,27 +562,25 @@ body {
     .text-section {
         width: 100%;
         padding-left: 0;
-        font-size: 16px;
+        font-size: 18px; /* was 16px */
     }
 
     .section-title h2 {
-        font-size: 26px;
+        font-size: 30px; /* was 26px */
         margin-bottom: 12px;
     }
 
     .section-title p,
     .mission li,
     .legacy p {
-        font-size: 16px;
+        font-size: 18px; /* was 16px */
     }
 
     .mission h3,
     .legacy h3 {
-        font-size: 20px;
+        font-size: 22px; /* was 20px */
     }
 }
-
-
 
 /* Section for Lifestory */
 .section-lifestory {
