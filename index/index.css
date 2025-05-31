@@ -337,6 +337,27 @@ body {
     height: 83vh;
 }
 
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+/* Section About Styling */
+.section-about {
+    margin-top: 17vh;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    color: #333;
+    height: 83vh;
+}
+
 /* Container for About */
 .about-container {
     height: 83vh;
@@ -351,7 +372,7 @@ body {
 }
 
 .about-container p {
-    font-size: 10px;
+    font-size: 14px;
     color: #666;
     text-align: center;
     margin: 15px 0;
@@ -398,13 +419,13 @@ body {
     flex: 2;
     padding-left: 10px;
     text-align: left;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 /* Section Title Styling */
 .section-title h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 24px;
     color: #2e3a59;
     margin-bottom: 20px;
     opacity: 0;
@@ -422,7 +443,7 @@ body {
 }
 
 .section-title p {
-    font-size: 13px;
+    font-size: 16px;
     color: #777;
     line-height: 1.6;
     opacity: 0;
@@ -448,23 +469,23 @@ body {
 }
 
 .mission h3 {
-    font-size: 13px;
+    font-size: 18px;
     color: #2e3a59;
     margin-bottom: 16px;
 }
 
 .mission ul {
-    font-size: 10px;
+    font-size: 14px;
     list-style: none;
     margin: 0;
     padding-left: 0;
 }
 
 .mission li {
-    font-size: 10px;
+    font-size: 14px;
     margin-bottom: 16px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 .mission li::before {
@@ -488,20 +509,20 @@ body {
 }
 
 .legacy h3 {
-    font-size: 15px;
+    font-size: 18px;
     color: #2e3a59;
     margin-bottom: 15px;
 }
 
 .legacy p {
-    font-size: 10px;
+    font-size: 14px;
     color: #555;
-    line-height: 1;
+    line-height: 1.5;
     animation: fadeInUp 1.5s ease-in-out both;
 }
 
 .legacy strong {
-    font-size: 10px;
+    font-size: 14px;
     color: #2e3a59;
 }
 
@@ -550,12 +571,11 @@ body {
     .text-section {
         width: 100%;
         padding-left: 0;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .section-title h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 24px;
+        font-size: 26px;
         margin-bottom: 12px;
     }
 
@@ -567,7 +587,7 @@ body {
 
     .mission h3,
     .legacy h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
