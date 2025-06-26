@@ -63,14 +63,13 @@ body {
 }
 
 @media only screen (max-width:768px) {
-
 .social-icon: {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
 }
 social-icon img {
-    width: 20px;
-    height: 20px;
+    width: 7px;
+    height: 7px;
 }
 .social-icons {
     right: 5px; /* Positions the icons 10px from the right */
