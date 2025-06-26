@@ -1,4 +1,4 @@
-/* Importing fonts */
+I/* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Shantell+Sans&display=swap'); /* Importing Google Fonts for Roboto and Shantell Sans */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap');
 /* Basic Reset */
@@ -61,6 +61,23 @@ body {
 .social-icon:hover img {
     filter: brightness(1.2); /* Brightens the image on hover */
 }
+
+@media only screen (max-width:768px) {
+
+.social-icon: {
+    width: 30px;
+    height: 30px;
+}
+social-icon img {
+    width: 20px;
+    height: 20px;
+}
+.social-icons {
+    right: 5px; /* Positions the icons 10px from the right */
+    gap: 7px; /* Adds 15px space between icons */
+} 
+
+} 
 
 /* Navbar */
 .navbar {
