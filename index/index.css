@@ -63,7 +63,7 @@ body {
 }
 
 @media only screen (max-width:768px) {
-.social-icon: {
+.social-icon {
     width: 10px;
     height: 10px;
 }
