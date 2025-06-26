@@ -177,6 +177,9 @@ social-icon img {
 
 /* Navbar Mobile Navigation */
 @media only screen and (max-width: 768px) {
+   .navbar {
+       height: 50px;
+   } 
     .hamburger {
         display: flex; /* Displays hamburger menu on small screens */
     }
