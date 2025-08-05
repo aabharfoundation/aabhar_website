@@ -615,7 +615,7 @@ body {
     color: #2c3e50; /* Dark blue color for the heading */
     margin-bottom: 20px; /* Adds space below the heading */
     font-weight: bold; /* Makes the heading text bold */
-    z
+    
 }
 
 .section p {
@@ -1112,6 +1112,7 @@ body {
 /* Make a perfect circular wrapper */
 .home-logo {
     display: none; /* Hide the logo on smaller screens */
+}
 
 /* Video side */
 .video-container {
@@ -1482,7 +1483,7 @@ body {
     color: #2c3e50; /* Dark blue color for the heading */
     margin-bottom: 20px; /* Adds space below the heading */
     font-weight: bold; /* Makes the heading text bold */
-    z
+    
 }
 
 .section p {
