@@ -1,82 +1,214 @@
-/* General Body Styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+@media only screen and (min-width: 768px) {
+
+    /* General Body Styling */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0f0f0f;
+        color: #333;
+        margin-bottom: 5vh;
+    }
+
+    /* Navbar Styling*/
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #0d47a1, #42a5f5);
+        /* Gradient background from blue to light blue */
+        padding: 10px 20px;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .back-button {
+        height: 60px;
+        font-size: 13px;
+        /* Adjust the font size */
+        line-height: 1;
+        /* Space between lines */
+        color: #333;
+        /* Text color */
+        text-decoration: none;
+        /* Remove underline */
+        display: inline-block;
+        /* Align properly */
+        text-align: center;
+        /* Center-align text */
+        padding: 10px;
+        /* Add some padding */
+        background-color: #f0f0f0;
+        /* Optional: Button background */
+        border: 1px solid #ccc;
+        /* Optional: Border */
+        border-radius: 5px;
+        /* Optional: Rounded corners */
+        width: 50px;
+        /* Fixed width for vertical layout */
+    }
+
+    .back-button:hover {
+        background-color: #555;
+    }
+
+    .logo-container {
+        height: 80px;
+        /* Adjust based on your navbar height */
+        width: auto;
+        /* Keep width dynamic */
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        max-height: 100%;
+        /* Constrain the height */
+        max-width: 100%;
+        /* Constrain the width */
+        object-fit: contain;
+        /* Ensures the whole logo fits */
+    }
+
+
+    /* Section Styling */
+    .section-lifestory {
+        scroll-margin-top: 80px;
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        margin: 10px;
+    }
+
+    .section-lifestory h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .section-lifestory p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .section-lifestory img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
 }
 
-/* Navbar Styling*/
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(90deg, #0d47a1, #42a5f5); /* Gradient background from blue to light blue */
-    padding: 10px 20px;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
+@media only screen and (max-width: 768px) {
 
-.back-button {
-    height: 60px;
-    font-size: 13px;           /* Adjust the font size */
-    line-height: 1;          /* Space between lines */
-    color: #333;               /* Text color */
-    text-decoration: none;     /* Remove underline */
-    display: inline-block;     /* Align properly */
-    text-align: center;        /* Center-align text */
-    padding: 10px;             /* Add some padding */
-    background-color: #f0f0f0; /* Optional: Button background */
-    border: 1px solid #ccc;    /* Optional: Border */
-    border-radius: 5px;        /* Optional: Rounded corners */
-    width: 50px;               /* Fixed width for vertical layout */
-}
+    /* General Body Styling */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: beige;
+        color: #333;
+        margin-bottom: 5vh;
+    }
 
-.back-button:hover {
-    background-color: #555;
-}
+    /* Navbar Styling*/
+    .navbar {
+        display: flex;
+        height: 7vh;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #424242, #000000);
+        /* Gradient background from blue to light blue */
+        padding: 10px 20px;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
 
-.logo-container {
-    height: 80px; /* Adjust based on your navbar height */
-    width: auto;  /* Keep width dynamic */
-    display: flex;
-    align-items: center;
-}
+    .navbar h2 {
+        font-size: 16px;
+    }
 
-.logo {
-    max-height: 100%; /* Constrain the height */
-    max-width: 100%;  /* Constrain the width */
-    object-fit: contain; /* Ensures the whole logo fits */
-}
+    .back-button {
+        height: 10px;
+        font-size: 8px;
+        /* Adjust the font size */
+        line-height: 1;
+        /* Space between lines */
+        color: #333;
+        /* Text color */
+        text-decoration: none;
+        /* Remove underline */
+        display: inline-block;
+        /* Align properly */
+        text-align: center;
+        /* Center-align text */
+        padding: 5px;
+        /* Add some padding */
+        background-color: #f0f0f0;
+        /* Optional: Button background */
+        border: 1px solid #ccc;
+        /* Optional: Border */
+        border-radius: 5px;
+        /* Optional: Rounded corners */
+        width: 20px;
+        /* Fixed width for vertical layout */
+    }
+
+    .back-button:hover {
+        background-color: #555;
+    }
+
+    .logo-container {
+        height: 10vh;
+        /* Adjust based on your navbar height */
+        width: auto;
+        /* Keep width dynamic */
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        max-height: 100%;
+        /* Constrain the height */
+        max-width: 100%;
+        /* Constrain the width */
+        object-fit: contain;
+        /* Ensures the whole logo fits */
+    }
 
 
-/* Section Styling */
-.section-lifestory {
-    scroll-margin-top: 80px;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-    background-color: #fff;
-}
+    /* Section Styling */
+    .section-lifestory {
+        scroll-margin-top: 80px;
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        margin: 10px;
+    }
 
-.section-lifestory h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
+    .section-lifestory h2 {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 10px;
+    }
 
-.section-lifestory p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-}
+    .section-lifestory p {
+        font-size: 12px;
+        line-height: 1.6;
+        color: #555;
+    }
 
-.section-lifestory img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    .section-lifestory img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
 }
