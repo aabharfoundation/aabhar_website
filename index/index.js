@@ -75,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (leftButton && rightButton && wrapper) {
             leftButton.addEventListener('click', () => {
-                wrapper.scrollLeft -= 300;
+                wrapper.scrollLeft -= 240;
             });
 
             rightButton.addEventListener('click', () => {
-                wrapper.scrollLeft += 300;
+                wrapper.scrollLeft += 240;
             });
         }
     }
