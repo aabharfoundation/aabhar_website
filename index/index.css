@@ -1439,7 +1439,7 @@
         display: flex;
         gap: 10px;
         z-index: 1000;
-        margin-top: 180vh;
+        margin-top: 170vh;
         text-align: center !important;
     }
 
@@ -2109,7 +2109,7 @@
     footer {
         background-color: #34495e;
         /* Sets the footer background color to dark blue-grey */
-        height: 27vh;
+        height: 10vh;
         color: #fff;
         /* Sets the text color to white */
         padding: 20px;
