@@ -1510,7 +1510,7 @@
     }
 
     .about-container p {
-        font-size: 8px;
+        font-size: 10px;
         /* was 14px */
         color: #666;
         margin: 10px 0;
@@ -1546,14 +1546,14 @@
     .text-section {
         position: absolute;
         top: 2vh;
-        font-size: 8px;
+        font-size: 10px;
         /* was 14px */
     }
 
     /* Section Title Styling */
     .section-title h2 {
         font-family: 'Playfair Display', serif;
-        font-size: 14px;
+        font-size: 16px;
         opacity: 0;
         animation: fadeInUp 2s forwards 0.5s;
         transition: color 0.3s ease;
@@ -1565,7 +1565,7 @@
     }
 
     .section-title p {
-        font-size: 9px;
+        font-size: 12px;
         /* was 16px */
         color: #777;
         line-height: 1.6;
@@ -1592,13 +1592,13 @@
     }
 
     .mission h3 {
-        font-size: 10px;
+        font-size: 12px;
         /* was 18px */
         color: #2e3a59;
     }
 
     .mission p {
-        font-size: 8px;
+        font-size: 10px;
         /* was 18px */
         color: #2e3a59;
         margin-bottom: 20px;
@@ -1606,7 +1606,7 @@
 
 
     .mission ul {
-        font-size: 8px;
+        font-size: 10px;
         /* was 14px */
         list-style: none;
         margin-top: 20px;
@@ -1614,7 +1614,7 @@
     }
 
     .mission li {
-        font-size: 8px;
+        font-size: 10px;
         /* was 14px */
         margin-bottom: 16px;
         position: relative;
@@ -1636,20 +1636,20 @@
     }
 
     .legacy h3 {
-        font-size: 10px;
+        font-size: 12px;
         /* was 18px */
         color: #2e3a59;
     }
 
     .legacy p {
-        font-size: 8px;
+        font-size: 10px;
         /* was 14px */
         color: #555;
         animation: fadeInUp 1.5s ease-in-out both;
     }
 
     .legacy strong {
-        font-size: 8px;
+        font-size: 10px;
         /* was 14px */
         color: #2e3a59;
     }
@@ -1689,7 +1689,7 @@
     }
 
     .section-lifestory h2 {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         margin-bottom: 0.5rem;
         color: white;
@@ -1734,7 +1734,7 @@
     }
 
     .story-card h3 {
-        font-size: 10px;
+        font-size: 12px;
         font-weight: 600;
         margin-bottom: 0.5rem;
         color: black;
