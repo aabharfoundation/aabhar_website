@@ -13,22 +13,55 @@
     /* Ensures padding and border are included in element's total width and height */
 }
 
+/* Theme variables: NGO-friendly palette (teal primary, warm accent, soft neutrals) */
+:root {
+    --teal-700: #0f766e; /* primary */
+    --teal-900: #064e45; /* dark */
+    --accent: #ff7a18; /* warm accent for highlights */
+    --bg-page: #f6fbf9; /* very light greenish background */
+    --card-bg: #ffffff; /* cards / section background */
+    --text-primary: #09202a; /* dark heading/text */
+    --muted: #6b7280; /* muted text */
+    --heading-color: #083344;
+}
+
+/* About section background image (50% opacity) */
+.section-about {
+    position: relative; /* ensure pseudo-element positions relative to this */
+    overflow: hidden; /* clip the pseudo-element to section bounds */
+}
+
+.section-about::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background-image: url('../about/about_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* 50% opacity as requested */
+    z-index: 0; /* behind content */
+    pointer-events: none; /* let clicks pass through */
+}
+
+/* Ensure content sits above the background image */
+.section-about > *,
+.section-about .about-container {
+    position: relative;
+    z-index: 1;
+}
+
 @media only screen and (min-width: 768px) {
 
     /* Body Setup  */
     body {
-        background: linear-gradient(135deg, #000000, #1a1a1a, #333333);
-        /* Background with a gradient from black to dark grey */
-        line-height: 0;
-        /* Removes default line-height */
-        color: white;
-        /* Sets text color to white */
+    background: linear-gradient(135deg, var(--bg-page), var(--card-bg));
+        /* soft page background */
+        line-height: 1.4;
+        color: var(--text-primary);
         margin: 0;
-        /* Removes default body margin */
         padding: 0;
-        /* Removes default body padding */
-        font-family: 'Roboto', sans-serif;
-        /* Sets the font family to Roboto */
+        font-family: 'Poppins', 'Roboto', sans-serif;
     }
 
     /* Floating Social Media Icons */
@@ -58,7 +91,7 @@
         /* Sets the width of each icon */
         height: 60px;
         /* Sets the height of each icon */
-        background-color: #fff;
+    background-color: var(--card-bg);
         /* Sets a white background for icons */
         border-radius: 50%;
         /* Makes icons round */
@@ -112,8 +145,8 @@
         /* Makes the navbar span the entire width of the page */
         height: 100px;
         /* Sets the height of the navbar */
-        background: linear-gradient(90deg, #424242, #000000);
-        /* Gradient background from blue to light blue */
+    background: linear-gradient(90deg, var(--teal-700), var(--teal-900));
+    /* teal gradient */
         z-index: 2000;
         /* Ensures navbar stays on top of other content */
         display: flex;
@@ -278,9 +311,9 @@
         position: relative;
         /* Allows absolute positioning of child elements */
         top: 15vh;
-        background-color: #ffffff;
+    background-color: var(--card-bg);
         /* Sets the background color to white */
-        color: #333;
+    color: var(--text-primary);
         /* Sets the text color to dark grey */
         opacity: 0;
         /* Starts with no visibility */
@@ -349,8 +382,8 @@
     .navbar p {
         position: fixed;
         /* Fixes the buttons at the bottom of the screen */
-        bottom: 20px;
-        /* Adjust vertical spacing from the bottom */
+        bottom: 12px;
+        /* Minimal margin from bottom */
         left: 50%;
         /* Center alignment horizontally */
         transform: translateX(-50%);
@@ -359,7 +392,7 @@
         /* Ensures buttons align neatly */
         gap: 10px;
         /* Adds space between the buttons */
-        z-index: 1000;
+        z-index: 3000;
         /* Ensures the buttons are above other content */
     }
 
@@ -370,7 +403,7 @@
         padding: 15px 30px;
         font-size: 16px;
         font-weight: bold;
-        color: #fff;
+    color: #fff;
         /* White text */
         background-color: #000;
         /* Black button */
@@ -387,7 +420,7 @@
     }
 
     .navbutton:hover {
-        background-color: #333;
+    background-color: var(--text-primary);
         /* Darker gray on hover */
         box-shadow: 0 2px #222;
         /* Reduces shadow for pressed effect */
@@ -408,12 +441,12 @@
     .section-about {
         margin-top: 17vh;
         padding: 10px;
-        background-color: #fff;
+    background-color: var(--card-bg);
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: visible;
         position: relative;
-        color: #333;
+    color: var(--text-primary);
         height: auto;
     }
 
@@ -421,12 +454,12 @@
     .section-about {
         margin-top: 17vh;
         padding: 10px;
-        background-color: #fff;
+    background-color: var(--card-bg);
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: visible;
         position: relative;
-        color: #333;
+    color: var(--text-primary);
         height: auto;
     }
 
@@ -508,14 +541,14 @@
         /* Applies a fade-in-up animation */
         letter-spacing: 0.5px;
         font-weight: 600;
-        border-bottom: 3px solid #ff914d;
+    border-bottom: 3px solid var(--accent);
         display: inline-block;
         padding-bottom: 4px;
         transition: color 0.3s ease;
     }
 
     .section-title h2:hover {
-        color: #ff914d;
+        color: var(--accent);
     }
 
     .section-title p {
@@ -531,7 +564,7 @@
     .mission {
         height: 17vh;
         width: 100%;
-        background-color: #ffffff;
+    background-color: var(--card-bg);
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
@@ -573,7 +606,7 @@
         content: "✔";
         position: absolute;
         left: 0;
-        color: #ff914d;
+        color: var(--accent);
         font-weight: bold;
     }
 
@@ -583,7 +616,7 @@
         text-align: center;
         opacity: 0;
         animation: fadeInUp 2s forwards 3.5s;
-        background: #fafafa;
+    background: var(--card-bg);
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
@@ -637,7 +670,7 @@
     .section-lifestory {
         margin-top: 10px;
         padding: 10px;
-        background-color: #fff;
+    background-color: var(--card-bg);
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
@@ -810,13 +843,37 @@
     #our-projects {
         text-align: center;
         padding: 40px 20px;
-        background: #f9f9f9;
+        background: var(--bg-page);
     }
+
+/* Projects background image (same neutral texture) */
+#our-projects {
+    position: relative;
+    overflow: hidden;
+}
+
+#our-projects::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../thoughts/thoughts_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#our-projects > * {
+    position: relative;
+    z-index: 1;
+}
 
     #our-projects h2 {
         font-size: 2rem;
         margin-bottom: 30px;
-        color: #333;
+    color: var(--text-primary);
     }
 
     .projects-row {
@@ -845,7 +902,7 @@
         width: 100%;
         height: 200px;
         object-fit: cover;
-        border-bottom: 2px solid #eee;
+    border-bottom: 2px solid rgba(0,0,0,0.06);
     }
 
     .project-item h3 {
@@ -861,8 +918,8 @@
     .project-info-button .btn {
         display: inline-block;
         padding: 12px 25px;
-        background: #0077cc;
-        color: #fff;
+    background: var(--teal-700);
+    color: #fff;
         font-size: 1rem;
         border-radius: 8px;
         text-decoration: none;
@@ -870,7 +927,7 @@
     }
 
     .project-info-button .btn:hover {
-        background: #005fa3;
+        background: var(--teal-900);
     }
 
     /* Gallery Section Styling */
@@ -889,10 +946,35 @@
         /* Centers the text */
     }
 
+/* Gallery background image (use thoughts background as a neutral texture) */
+#gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+#gallery::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../thoughts/thoughts_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#gallery > *,
+#gallery .gallery-buttons {
+    position: relative;
+    z-index: 1;
+}
+
     #gallery h2 {
         font-size: 2rem;
         /* Sets the heading font size */
-        color: #333;
+    color: var(--text-primary);
         /* Dark grey color for the heading */
         margin-bottom: 15px;
         /* Adds space below the heading */
@@ -971,7 +1053,7 @@
         margin: 20px;
         padding: 10px;
         background-color: #fff;
-        border-radius: 10px;
+        /*border-radius: 10px;*/
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         position: relative;
@@ -1093,12 +1175,61 @@
     }
 }
 
+/* Thoughts section background image (50% opacity) */
+.section-thoughts {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-thoughts::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../thoughts/thoughts_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.section-thoughts > *,
+.section-thoughts .thought-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Story section background using the same thoughts background */
+.section-lifestory {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-lifestory::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../thoughts/thoughts_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.section-lifestory > * {
+    position: relative;
+    z-index: 1;
+}
+
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
 
     /* Body Setup  */
     body {
-        background: linear-gradient(135deg, #000000, #1a1a1a, #333333);
+        /*background: linear-gradient(135deg, #000000, #1a1a1a, #333333);/*
         /* Background with a gradient from black to dark grey */
         line-height: 0;
         /* Removes default line-height */
@@ -1193,7 +1324,7 @@
         /* Makes the navbar span the entire width of the page */
         height: 70px;
         /* Sets the height of the navbar */
-        background: linear-gradient(90deg, #424242, #000000);
+    background: linear-gradient(90deg, var(--teal-700), var(--teal-900));
         /* Gradient background from blue to light blue */
         z-index: 2000;
         /* Ensures navbar stays on top of other content */
@@ -1220,7 +1351,7 @@
         /* Positions the nav at the left edge */
         top: 9.5vh;
         /* Positions the nav below the navbar */
-        background: linear-gradient(180deg, #424242, #000000);
+    background: linear-gradient(180deg, var(--teal-700), var(--teal-900));
         width: 40vw;
         /* Sets the width of the nav to 50% */
         height: 35vh;
@@ -1271,6 +1402,29 @@
     .nav-links li a:hover {
         background-color: rgba(255, 255, 255, 0.2);
         /* Adds a background color on hover */
+    }
+
+    /* Mobile tweaks for background images to improve crop and contrast */
+    .section-about::before,
+    .section-thoughts::before,
+    #gallery::before,
+    #our-projects::before {
+        background-position: center top;
+        background-size: cover;
+        opacity: 0.55; /* slightly higher on mobile for readability */
+    }
+
+    /* Optionally add a subtle overlay on small screens for better contrast */
+    .section-about::after,
+    .section-thoughts::after,
+    #gallery::after,
+    #our-projects::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        /*background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.08));*/
+        z-index: 0.5; /* sits between image (0) and content (1) */
+        pointer-events: none;
     }
 
     .nav-links a.active .underline {
@@ -1437,13 +1591,15 @@
     }
 
     .navbar p {
-        position: absolute;
+        /* Keep the nav button group fixed to the bottom of the viewport on mobile */
+        position: fixed;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
         gap: 10px;
-        z-index: 1000;
-        margin-top: 170vh;
+        z-index: 3000;
+        margin: 0;
+        bottom: 8px; /* minimal margin from bottom */
         text-align: center !important;
     }
 
@@ -1454,14 +1610,14 @@
         padding: 15px 30px;
         font-size: 16px;
         font-weight: bold;
-        color: #fff;
-        /* White text */
-        background-color: #000;
-        /* Black button */
+    color: #fff;
+    /* White text */
+    background-color: var(--teal-900);
+    /* Primary teal button */
         border: none;
         border-radius: 8px;
         /* Rounded corners */
-        box-shadow: 0 4px #444;
+    box-shadow: 0 4px rgba(6, 78, 69, 0.6);
         /* Creates the 3D effect */
         text-align: center;
         text-decoration: none;
@@ -1471,21 +1627,17 @@
     }
 
     .navbutton:hover {
-        background-color: #333;
-        /* Darker gray on hover */
-        box-shadow: 0 2px #222;
-        /* Reduces shadow for pressed effect */
+        background-color: var(--teal-700);
+        /* Slightly lighter teal on hover */
+        box-shadow: 0 2px rgba(6, 78, 69, 0.4);
         transform: translateY(2px);
-        /* Simulates button being pressed */
     }
 
     .navbutton:active {
-        background-color: #555;
-        /* Lighter gray when clicked */
-        box-shadow: 0 1px #111;
-        /* Deeply pressed shadow */
+        background-color: var(--teal-900);
+        /* pressed state */
+        box-shadow: 0 1px rgba(6, 78, 69, 0.5);
         transform: translateY(4px);
-        /* Moves button further down */
     }
 
 
@@ -1494,7 +1646,7 @@
         /* place right under fixed navbar (navbar height is 70px on mobile) */
         margin-top: calc(70px + 8px);
         background-color: #fff;
-        border-radius: 10px;
+        /*border-radius: 10px;*/
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: visible;
         position: relative;
@@ -1507,7 +1659,7 @@
         /* allow container to grow with content */
         height: auto;
         margin-bottom: 10px;
-        border-radius: 10px;
+        /*border-radius: 10px;*/
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -1695,7 +1847,7 @@
         margin-top: 10px;
         padding: 10px;
         /*background-color: #fff;*/
-        border-radius: 10px;
+        /*border-radius: 10px;*/
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         position: relative;
@@ -1729,7 +1881,7 @@
     /* Individual story card */
     .story-card {
         width: 33vw;
-        height: 65vh;
+        height: auto;
         min-width: 64vw;
         margin-right: 10px;
         background-color: white;
@@ -1810,11 +1962,11 @@
         /* Allows child elements to be positioned absolutely */
         padding: 40px 10px;
         /* Adds padding inside the section */
-        background-color: #ffffff;
+        /*background-color: #ffffff;*/
         /* Sets the background color to white */
-        margin: 10px 0;
+        /*margin: 10px 0;*/
         /* Adds vertical spacing between sections */
-        border-radius: 10px;
+        /*border-radius: 10px;*/
         /* Rounds the corners of the section */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         /* Adds a soft shadow for depth */
@@ -1860,11 +2012,35 @@
         /* Adds a shadow for depth */
     }
 
+    /* Projects background image (same neutral texture) */
+#our-projects {
+    position: relative;
+    overflow: hidden;
+}
+
+#our-projects::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../thoughts/thoughts_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#our-projects > * {
+    position: relative;
+    z-index: 1;
+}
+
     /* Our Project Section */
     #our-projects {
         text-align: center;
         padding: 20px 10px;
-        background: #f9f9f9;
+        /*background: #f9f9f9;*/
     }
 
     #our-projects h2 {
@@ -1929,7 +2105,7 @@
 
     /* Gallery Section Styling */
     #gallery {
-        background-color: #fff;
+        /*background-color: #fff;
         /* Sets the background color to white */
         padding: 20px;
         /* Adds padding inside the gallery section */
@@ -1965,12 +2141,14 @@
 
     .gallery-button {
         text-align: center;
+        height: 20vh;
         /* Centers button content */
         flex: 1;
         /* Allows buttons to grow or shrink */
         max-width: 300px;
         /* Limits the button width */
         border: 2px solid #ddd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         /* Adds a light grey border */
         border-radius: 10px;
         /* Rounds the button corners */
@@ -2020,10 +2198,10 @@
 
     /* Section for Thoughts */
     .section-thoughts {
-        margin-top: 10px;
+        /*margin-top: 10px;
         padding: 10px;
         /*background-color: #fff;*/
-        border-radius: 10px;
+        /*border-radius: 10px;*/
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         position: relative;
@@ -2139,5 +2317,89 @@
         font-size: 10px;
         margin-bottom: 1rem;
         /* Adds vertical margin for paragraph spacing */
+    }
+}
+
+/* Theme overrides - apply palette consistently across site */
+/* These rules intentionally come after the main stylesheet so they override legacy hard-coded colors */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color) !important;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Body text */
+body, p, li, span, label {
+    color: #cb9e41 !important;
+}
+
+/* Links */
+a {
+    color: var(--teal-700);
+}
+
+.nav-links li a {
+    color: #ffffff; /* keep nav text readable on dark navbar */
+}
+
+.underline {
+    background-color: var(--accent) !important;
+}
+
+/* Buttons */
+.navbutton, .project-info-button .btn, .gallery-button a p, .project-info-button .btn {
+    background: var(--teal-900) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 6px rgba(2,6,23,0.06) !important;
+}
+.navbutton:hover, .project-info-button .btn:hover {
+    background: var(--teal-700) !important;
+}
+
+/* Section / Card backgrounds */
+.section, .section-about, .mission, .legacy, .story-card, .gallery-button, .project-item {
+    /*background: var(--card-bg) !important;*/
+    color: var(--text-primary) !important;
+}
+
+/* Mission list accent */
+.mission li::before {
+    color: var(--accent) !important;
+}
+
+/* Footer */
+footer {
+    background: var(--teal-900) !important;
+    color: #fff !important;
+}
+
+/* Muted text */
+.muted, .section p, .about-container p {
+    color: var(--muted) !important;
+}
+
+/* Small utility: subtle borders */
+hr, .project-item, .gallery-button, .project-item img {
+    border-color: rgba(6,30,24,0.06) !important;
+}
+
+/* Accent for interactive controls */
+.scroll-btn, .scroll-btn:hover {
+    background: rgba(255,255,255,0.9);
+    color: var(--teal-900);
+}
+
+/* Ensure color of pseudo-elements and small accents */
+::selection {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Responsive refinement: slightly reduce card shadows for mobile */
+@media (max-width: 768px) {
+    .section, .project-item, .story-card {
+        box-shadow: 0 2px 6px rgba(2,6,23,0.04) !important;
     }
 }
