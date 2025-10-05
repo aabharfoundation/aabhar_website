@@ -94,11 +94,6 @@
 
 @media only screen and (min-width: 768px) {
 
-    /* --------------------------------------------------
-       MIN-WIDTH / Desktop-specific rules
-       Unique styles that apply when viewport >= 768px
-       -------------------------------------------------- */
-
     /* Body Setup  */
     body {
         background: linear-gradient(135deg, var(--bg-page), var(--card-bg));
@@ -1274,11 +1269,6 @@
 
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
-
-    /* --------------------------------------------------
-       MAX-WIDTH / Mobile-specific rules
-       Unique styles that apply when viewport <= 768px
-       -------------------------------------------------- */
 
     /* Body Setup  */
     body {
