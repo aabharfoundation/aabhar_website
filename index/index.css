@@ -15,47 +15,93 @@
 
 /* Theme variables: NGO-friendly palette (teal primary, warm accent, soft neutrals) */
 :root {
-    --teal-700: #0f766e; /* primary */
-    --teal-900: #064e45; /* dark */
-    --accent: #ff7a18; /* warm accent for highlights */
-    --bg-page: #f6fbf9; /* very light greenish background */
-    --card-bg: #ffffff; /* cards / section background */
-    --text-primary: #09202a; /* dark heading/text */
-    --muted: #6b7280; /* muted text */
+    --teal-700: #0f766e;
+    /* primary */
+    --teal-900: #064e45;
+    /* dark */
+    --accent: #ff7a18;
+    /* warm accent for highlights */
+    --bg-page: #f6fbf9;
+    /* very light greenish background */
+    --card-bg: #ffffff;
+    /* cards / section background */
+    --text-primary: #09202a;
+    /* dark heading/text */
+    --muted: #6b7280;
+    /* muted text */
     --heading-color: #083344;
+    /* Common layout tokens */
+    --section-gap: 12px; /* used by flex/grid containers inside sections */
+    --section-bar-color: var(--teal-700);
+    --section-bar-height: 6px;
 }
 
 /* About section background image (50% opacity) */
 .section-about {
-    position: relative; /* ensure pseudo-element positions relative to this */
-    overflow: hidden; /* clip the pseudo-element to section bounds */
+    position: relative;
+    /* ensure pseudo-element positions relative to this */
+    overflow: hidden;
+    /* clip the pseudo-element to section bounds */
 }
 
 .section-about::before {
     content: "";
     position: absolute;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    inset: 0;
+    /* top-level background image for About section */
     background-image: url('../about/about_background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5; /* 50% opacity as requested */
-    z-index: 0; /* behind content */
-    pointer-events: none; /* let clicks pass through */
+    opacity: 0.5;
+    /* 50% opacity as requested */
+    z-index: 0;
+    /* behind content */
+    pointer-events: none;
+    /* let clicks pass through */
 }
 
 /* Ensure content sits above the background image */
-.section-about > *,
+.section-about>*,
 .section-about .about-container {
     position: relative;
     z-index: 1;
 }
 
+/* --------------------------------------------------
+   COMMON (applies to all viewport sizes)
+   Put global section/layout rules here so min/max blocks
+   can override only what's necessary.
+   -------------------------------------------------- */
+
+/* Global top bar for sections (visual separator) */
+.section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: var(--section-bar-height);
+    background: var(--section-bar-color);
+    z-index: 2; /* above section backgrounds (z-index:0) */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    pointer-events: none;
+}
+
+/* Common spacing token applied to section internals */
+.section, .section > .container { gap: var(--section-gap); }
+
 @media only screen and (min-width: 768px) {
+
+    /* --------------------------------------------------
+       MIN-WIDTH / Desktop-specific rules
+       Unique styles that apply when viewport >= 768px
+       -------------------------------------------------- */
 
     /* Body Setup  */
     body {
-    background: linear-gradient(135deg, var(--bg-page), var(--card-bg));
+        background: linear-gradient(135deg, var(--bg-page), var(--card-bg));
         /* soft page background */
         line-height: 1.4;
         color: var(--text-primary);
@@ -91,7 +137,7 @@
         /* Sets the width of each icon */
         height: 60px;
         /* Sets the height of each icon */
-    background-color: var(--card-bg);
+        background-color: var(--card-bg);
         /* Sets a white background for icons */
         border-radius: 50%;
         /* Makes icons round */
@@ -145,8 +191,8 @@
         /* Makes the navbar span the entire width of the page */
         height: 100px;
         /* Sets the height of the navbar */
-    background: linear-gradient(90deg, var(--teal-700), var(--teal-900));
-    /* teal gradient */
+        background: linear-gradient(90deg, var(--teal-700), var(--teal-900));
+        /* teal gradient */
         z-index: 2000;
         /* Ensures navbar stays on top of other content */
         display: flex;
@@ -311,9 +357,9 @@
         position: relative;
         /* Allows absolute positioning of child elements */
         top: 15vh;
-    background-color: var(--card-bg);
+        background-color: var(--card-bg);
         /* Sets the background color to white */
-    color: var(--text-primary);
+        color: var(--text-primary);
         /* Sets the text color to dark grey */
         opacity: 0;
         /* Starts with no visibility */
@@ -403,7 +449,7 @@
         padding: 15px 30px;
         font-size: 16px;
         font-weight: bold;
-    color: #fff;
+        color: #fff;
         /* White text */
         background-color: #000;
         /* Black button */
@@ -420,7 +466,7 @@
     }
 
     .navbutton:hover {
-    background-color: var(--text-primary);
+        background-color: var(--text-primary);
         /* Darker gray on hover */
         box-shadow: 0 2px #222;
         /* Reduces shadow for pressed effect */
@@ -441,12 +487,12 @@
     .section-about {
         margin-top: 17vh;
         padding: 10px;
-    background-color: var(--card-bg);
+        background-color: var(--card-bg);
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: visible;
         position: relative;
-    color: var(--text-primary);
+        color: var(--text-primary);
         height: auto;
     }
 
@@ -454,12 +500,12 @@
     .section-about {
         margin-top: 17vh;
         padding: 10px;
-    background-color: var(--card-bg);
+        background-color: var(--card-bg);
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: visible;
         position: relative;
-    color: var(--text-primary);
+        color: var(--text-primary);
         height: auto;
     }
 
@@ -541,7 +587,7 @@
         /* Applies a fade-in-up animation */
         letter-spacing: 0.5px;
         font-weight: 600;
-    border-bottom: 3px solid var(--accent);
+        border-bottom: 3px solid var(--accent);
         display: inline-block;
         padding-bottom: 4px;
         transition: color 0.3s ease;
@@ -564,7 +610,7 @@
     .mission {
         height: 17vh;
         width: 100%;
-    background-color: var(--card-bg);
+        background-color: var(--card-bg);
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
@@ -591,13 +637,15 @@
         list-style: none;
         margin: 0;
         padding-left: 0;
-        line-height: 1.6; /* improve vertical spacing */
+        line-height: 1.6;
+        /* improve vertical spacing */
     }
 
     .mission li {
         font-size: 16px;
         /* was 14px */
-        margin-bottom: 18px; /* a bit more breathing room */
+        margin-bottom: 18px;
+        /* a bit more breathing room */
         position: relative;
         padding-left: 24px;
     }
@@ -616,7 +664,7 @@
         text-align: center;
         opacity: 0;
         animation: fadeInUp 2s forwards 3.5s;
-    background: var(--card-bg);
+        background: var(--card-bg);
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
@@ -670,7 +718,7 @@
     .section-lifestory {
         margin-top: 10px;
         padding: 10px;
-    background-color: var(--card-bg);
+        background-color: var(--card-bg);
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
@@ -846,34 +894,34 @@
         background: var(--bg-page);
     }
 
-/* Projects background image (same neutral texture) */
-#our-projects {
-    position: relative;
-    overflow: hidden;
-}
+    /* Projects background image (same neutral texture) */
+    #our-projects {
+        position: relative;
+        overflow: hidden;
+    }
 
-#our-projects::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('../thoughts/thoughts_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    z-index: 0;
-    pointer-events: none;
-}
+    #our-projects::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('../thoughts/thoughts_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: 0;
+        pointer-events: none;
+    }
 
-#our-projects > * {
-    position: relative;
-    z-index: 1;
-}
+    #our-projects>* {
+        position: relative;
+        z-index: 1;
+    }
 
     #our-projects h2 {
         font-size: 2rem;
         margin-bottom: 30px;
-    color: var(--text-primary);
+        color: var(--text-primary);
     }
 
     .projects-row {
@@ -902,7 +950,7 @@
         width: 100%;
         height: 200px;
         object-fit: cover;
-    border-bottom: 2px solid rgba(0,0,0,0.06);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.06);
     }
 
     .project-item h3 {
@@ -918,8 +966,8 @@
     .project-info-button .btn {
         display: inline-block;
         padding: 12px 25px;
-    background: var(--teal-700);
-    color: #fff;
+        background: var(--teal-700);
+        color: #fff;
         font-size: 1rem;
         border-radius: 8px;
         text-decoration: none;
@@ -946,35 +994,35 @@
         /* Centers the text */
     }
 
-/* Gallery background image (use thoughts background as a neutral texture) */
-#gallery {
-    position: relative;
-    overflow: hidden;
-}
+    /* Gallery background image (use thoughts background as a neutral texture) */
+    #gallery {
+        position: relative;
+        overflow: hidden;
+    }
 
-#gallery::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('../thoughts/thoughts_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    z-index: 0;
-    pointer-events: none;
-}
+    #gallery::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('../thoughts/thoughts_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: 0;
+        pointer-events: none;
+    }
 
-#gallery > *,
-#gallery .gallery-buttons {
-    position: relative;
-    z-index: 1;
-}
+    #gallery>*,
+    #gallery .gallery-buttons {
+        position: relative;
+        z-index: 1;
+    }
 
     #gallery h2 {
         font-size: 2rem;
         /* Sets the heading font size */
-    color: var(--text-primary);
+        color: var(--text-primary);
         /* Dark grey color for the heading */
         margin-bottom: 15px;
         /* Adds space below the heading */
@@ -1194,7 +1242,7 @@
     pointer-events: none;
 }
 
-.section-thoughts > *,
+.section-thoughts>*,
 .section-thoughts .thought-card {
     position: relative;
     z-index: 1;
@@ -1219,13 +1267,18 @@
     pointer-events: none;
 }
 
-.section-lifestory > * {
+.section-lifestory>* {
     position: relative;
     z-index: 1;
 }
 
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
+
+    /* --------------------------------------------------
+       MAX-WIDTH / Mobile-specific rules
+       Unique styles that apply when viewport <= 768px
+       -------------------------------------------------- */
 
     /* Body Setup  */
     body {
@@ -1247,7 +1300,7 @@
     .social-icons {
         position: fixed;
         /* Fixes the position of social icons to the bottom right */
-        top: 27vh;
+        top: 30vh;
         /* Positions the icons at the bottom of the page */
         right: 5px;
         /* Positions the icons 10px from the right */
@@ -1266,9 +1319,9 @@
     .social-icon {
         display: block;
         /* Makes each icon block level */
-        width: 30px;
+        width: 35px;
         /* Sets the width of each icon */
-        height: 30px;
+        height: 35px;
         /* Sets the height of each icon */
         background-color: #fff;
         /* Sets a white background for icons */
@@ -1287,9 +1340,9 @@
     }
 
     .social-icon img {
-        width: 20px;
+        width: 25px;
         /* Sets image width inside the icon */
-        height: 20px;
+        height: 25px;
         /* Sets image height inside the icon */
         object-fit: cover;
         /* Ensures the image covers the icon area without distortion */
@@ -1324,7 +1377,7 @@
         /* Makes the navbar span the entire width of the page */
         height: 70px;
         /* Sets the height of the navbar */
-    background: linear-gradient(90deg, var(--teal-700), var(--teal-900));
+        background: linear-gradient(90deg, var(--teal-700), var(--teal-900));
         /* Gradient background from blue to light blue */
         z-index: 2000;
         /* Ensures navbar stays on top of other content */
@@ -1351,7 +1404,7 @@
         /* Positions the nav at the left edge */
         top: 9.5vh;
         /* Positions the nav below the navbar */
-    background: linear-gradient(180deg, var(--teal-700), var(--teal-900));
+        background: linear-gradient(180deg, var(--teal-700), var(--teal-900));
         width: 40vw;
         /* Sets the width of the nav to 50% */
         height: 35vh;
@@ -1411,7 +1464,8 @@
     #our-projects::before {
         background-position: center top;
         background-size: cover;
-        opacity: 0.55; /* slightly higher on mobile for readability */
+        opacity: 0.4;
+        /* slightly higher on mobile for readability */
     }
 
     /* Optionally add a subtle overlay on small screens for better contrast */
@@ -1423,7 +1477,8 @@
         position: absolute;
         inset: 0;
         /*background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.08));*/
-        z-index: 0.5; /* sits between image (0) and content (1) */
+        z-index: 0.5;
+        /* sits between image (0) and content (1) */
         pointer-events: none;
     }
 
@@ -1599,7 +1654,8 @@
         gap: 10px;
         z-index: 3000;
         margin: 0;
-        bottom: 8px; /* minimal margin from bottom */
+        bottom: 8px;
+        /* minimal margin from bottom */
         text-align: center !important;
     }
 
@@ -1610,14 +1666,14 @@
         padding: 15px 30px;
         font-size: 16px;
         font-weight: bold;
-    color: #fff;
-    /* White text */
-    background-color: var(--teal-900);
-    /* Primary teal button */
+        color: #fff;
+        /* White text */
+        background-color: var(--teal-900);
+        /* Primary teal button */
         border: none;
         border-radius: 8px;
         /* Rounded corners */
-    box-shadow: 0 4px rgba(6, 78, 69, 0.6);
+        box-shadow: 0 4px rgba(6, 78, 69, 0.6);
         /* Creates the 3D effect */
         text-align: center;
         text-decoration: none;
@@ -1774,13 +1830,15 @@
         list-style: none;
         margin-top: 20px;
         padding-left: 0;
-        line-height: 1.2; /* ensure lines don't collide on small screens */
+        line-height: 1.2;
+        /* ensure lines don't collide on small screens */
     }
 
     .mission li {
         font-size: 10px;
         /* was 14px */
-        margin-bottom: 14px; /* slightly reduced on small screens but still spaced */
+        margin-bottom: 14px;
+        /* slightly reduced on small screens but still spaced */
         position: relative;
         padding-left: 24px;
     }
@@ -2013,28 +2071,28 @@
     }
 
     /* Projects background image (same neutral texture) */
-#our-projects {
-    position: relative;
-    overflow: hidden;
-}
+    #our-projects {
+        position: relative;
+        overflow: hidden;
+    }
 
-#our-projects::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('../thoughts/thoughts_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    z-index: 0;
-    pointer-events: none;
-}
+    #our-projects::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('../thoughts/thoughts_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: 0;
+        pointer-events: none;
+    }
 
-#our-projects > * {
-    position: relative;
-    z-index: 1;
-}
+    #our-projects>* {
+        position: relative;
+        z-index: 1;
+    }
 
     /* Our Project Section */
     #our-projects {
@@ -2299,18 +2357,12 @@
     /* Footer */
     footer {
         background-color: #34495e;
-        /* Sets the footer background color to dark blue-grey */
-        height: 10vh;
+        height: 18vh;
         color: #fff;
-        /* Sets the text color to white */
         padding: 20px;
-        /* Adds padding inside the footer */
         text-align: center;
-        /* Centers the footer text */
-        margin-top: 10px;
-        /* Adds space above the footer */
+        /* margin-top: 10px; */
         font-size: 14px;
-        /* Sets the footer font size */
     }
 
     footer p {
@@ -2324,13 +2376,22 @@
 /* These rules intentionally come after the main stylesheet so they override legacy hard-coded colors */
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--heading-color) !important;
     font-family: 'Playfair Display', serif;
 }
 
 /* Body text */
-body, p, li, span, label {
+body,
+p,
+li,
+span,
+label {
     color: #cb9e41 !important;
 }
 
@@ -2340,7 +2401,8 @@ a {
 }
 
 .nav-links li a {
-    color: #ffffff; /* keep nav text readable on dark navbar */
+    color: #ffffff;
+    /* keep nav text readable on dark navbar */
 }
 
 .underline {
@@ -2348,18 +2410,29 @@ a {
 }
 
 /* Buttons */
-.navbutton, .project-info-button .btn, .gallery-button a p, .project-info-button .btn {
+.navbutton,
+.project-info-button .btn,
+.gallery-button a p,
+.project-info-button .btn {
     background: var(--teal-900) !important;
     color: #ffffff !important;
     border: none !important;
-    box-shadow: 0 6px rgba(2,6,23,0.06) !important;
+    box-shadow: 0 6px rgba(2, 6, 23, 0.06) !important;
 }
-.navbutton:hover, .project-info-button .btn:hover {
+
+.navbutton:hover,
+.project-info-button .btn:hover {
     background: var(--teal-700) !important;
 }
 
 /* Section / Card backgrounds */
-.section, .section-about, .mission, .legacy, .story-card, .gallery-button, .project-item {
+.section,
+.section-about,
+.mission,
+.legacy,
+.story-card,
+.gallery-button,
+.project-item {
     /*background: var(--card-bg) !important;*/
     color: var(--text-primary) !important;
 }
@@ -2376,18 +2449,24 @@ footer {
 }
 
 /* Muted text */
-.muted, .section p, .about-container p {
+.muted,
+.section p,
+.about-container p {
     color: var(--muted) !important;
 }
 
 /* Small utility: subtle borders */
-hr, .project-item, .gallery-button, .project-item img {
-    border-color: rgba(6,30,24,0.06) !important;
+hr,
+.project-item,
+.gallery-button,
+.project-item img {
+    border-color: rgba(6, 30, 24, 0.06) !important;
 }
 
 /* Accent for interactive controls */
-.scroll-btn, .scroll-btn:hover {
-    background: rgba(255,255,255,0.9);
+.scroll-btn,
+.scroll-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
     color: var(--teal-900);
 }
 
@@ -2399,7 +2478,10 @@ hr, .project-item, .gallery-button, .project-item img {
 
 /* Responsive refinement: slightly reduce card shadows for mobile */
 @media (max-width: 768px) {
-    .section, .project-item, .story-card {
-        box-shadow: 0 2px 6px rgba(2,6,23,0.04) !important;
+
+    .section,
+    .project-item,
+    .story-card {
+        box-shadow: 0 2px 6px rgba(2, 6, 23, 0.04) !important;
     }
 }

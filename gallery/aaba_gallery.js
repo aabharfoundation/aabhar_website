@@ -57,4 +57,3 @@ document.addEventListener('DOMContentLoaded', function(){
         if(e.target === lightbox) closeLB();
     });
 });
-
