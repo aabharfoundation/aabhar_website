@@ -976,8 +976,6 @@
     #gallery {
         background-color: #fff;
         /* Sets the background color to white */
-        padding: 20px;
-        /* Adds padding inside the gallery section */
         margin: 20px;
         /* Adds margin outside the gallery */
         border-radius: 8px;
@@ -1093,7 +1091,6 @@
     /* Section for Thoughts */
     .section-thoughts {
         margin: 20px;
-        padding: 10px;
         background-color: #fff;
         /*border-radius: 10px;*/
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -2152,9 +2149,6 @@
 
     /* Gallery Section Styling */
     #gallery {
-        /*background-color: #fff;
-        /* Sets the background color to white */
-        padding: 20px;
         /* Adds padding inside the gallery section */
         border-radius: 8px;
         /* Rounds the corners */
