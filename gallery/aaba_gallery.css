@@ -6,7 +6,7 @@ body { font-family: 'Poppins', sans-serif; background: var(--bg-page); }
 .navbar { display:flex; align-items:center; justify-content:space-between; padding:12px 18px; background: linear-gradient(90deg, var(--teal-700), var(--teal-900)); color: #fff; }
 .navbar .back-button{ color:#fff; text-decoration:none; font-weight:600; }
 .navbar h2{ margin:0; font-size:1.2rem; }
-.logo { height:40px; }
+.logo { height:7vh; }
 
 .gallery-page { padding: 6rem 1rem 3rem; }
 .section { max-width:1200px; margin: 0 auto; background: var(--card-bg); border-radius:10px; padding:20px; box-shadow:0 6px 18px rgba(0,0,0,0.08); position:relative; }
@@ -31,6 +31,24 @@ body { font-family: 'Poppins', sans-serif; background: var(--bg-page); }
     .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     .gallery-grid img{ height:120px; }
     .gallery-page { padding-top:5.5rem; }
+
+    .logo-container {
+        height: 10vh;
+        /* Adjust based on your navbar height */
+        width: auto;
+        /* Keep width dynamic */
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        max-height: 100%;
+        /* Constrain the height */
+        max-width: 100%;
+        /* Constrain the width */
+        object-fit: contain;
+        /* Ensures the whole logo fits */
+    }
 }
 
 @media (min-width:769px){

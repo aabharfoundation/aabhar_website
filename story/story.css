@@ -180,6 +180,7 @@
         /* Constrain the width */
         object-fit: contain;
         /* Ensures the whole logo fits */
+        height: 7vh;
     }
 
 
