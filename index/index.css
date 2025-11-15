@@ -1267,7 +1267,7 @@
     body {
         /*background: linear-gradient(135deg, #000000, #1a1a1a, #333333);/*
         /* Background with a gradient from black to dark grey */
-        line-height: 0;
+        /*line-height: 0;
         /* Removes default line-height */
         color: white;
         /* Sets text color to white */
