@@ -1,0 +1,309 @@
+/*
+  index1.css – UX/UI improvements for aabhar_website
+  Mobile-first, accessible, modern look & feel
+  Author: Copilot (GPT-4.1)
+  --------------------------------------------------
+  - All variables, breakpoints, and key classes documented below
+  - See CHANGELOG-UX.md for summary
+*/
+
+:root {
+  /* Color palette */
+  --primary: #7b2e2e; /* maroon */
+  --accent: #e9b949; /* gold/yellow accent */
+  --muted: #f5f5f7; /* light bg */
+  --bg: #fff;
+  --text: #222;
+  --text-muted: #666;
+  --card-bg: #fff;
+  --card-shadow1: 0 6px 18px rgba(50,50,93,0.08);
+  --card-shadow2: 0 2px 6px rgba(0,0,0,0.04);
+  --radius: 12px;
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  /* Font sizes */
+  --fs-base: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 28px;
+  --fs-sm: 14px;
+}
+
+html {
+  font-size: var(--fs-base);
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--muted);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--muted);
+  min-height: 100vh;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  color: var(--primary);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  line-height: 1.2;
+}
+h1 {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+h2 {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+p, .card-desc {
+  max-width: 60ch;
+  color: var(--text);
+  font-size: var(--fs-base);
+}
+
+/* Header/Nav improvements */
+.ux-header, header, nav {
+  background: var(--primary);
+  color: #fff;
+  padding: var(--space-3) var(--space-2);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--card-shadow1), var(--card-shadow2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ux-header a, nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+.ux-header a:hover, nav a:hover, .ux-header a:focus, nav a:focus {
+  background: var(--accent);
+  color: var(--primary);
+  outline: 2px solid var(--accent);
+}
+
+/* Card improvements */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow1), var(--card-shadow2);
+  padding: var(--space-4) var(--space-3);
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover, .card:focus-within {
+  box-shadow: 0 12px 32px rgba(50,50,93,0.13), 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px) scale(1.01);
+}
+.card-header {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--primary);
+}
+.card-desc {
+  color: var(--text-muted);
+  margin-bottom: var(--space-3);
+}
+.card-footer {
+  margin-top: var(--space-3);
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.card-bottom {
+  margin-top: auto;
+  /* WHY: Ensures footer/gallery/video stays pinned to card bottom */
+}
+
+/* Badge/Tag improvements */
+.badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0 var(--space-2);
+  margin-right: var(--space-2);
+  margin-bottom: var(--space-1);
+  letter-spacing: 0.03em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+/* Button improvements */
+.g-btn, .video-btn, .ux-btn {
+  display: inline-block;
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  margin: var(--space-2) 0;
+  cursor: pointer;
+  box-shadow: var(--card-shadow2);
+  transition: background 0.2s, transform 0.15s;
+  text-align: center;
+  outline: none;
+  position: relative;
+}
+.g-btn:hover, .video-btn:hover, .ux-btn:hover,
+.g-btn:focus, .video-btn:focus, .ux-btn:focus {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-1px) scale(1.02);
+  outline: 2px solid var(--accent);
+}
+.g-btn:active, .video-btn:active, .ux-btn:active {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(0.98);
+}
+/* Video button with play icon */
+.video-btn::before {
+  content: '\25B6'; /* Unicode play symbol */
+  display: inline-block;
+  margin-right: var(--space-2);
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Gallery improvements */
+.gallery-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: var(--space-3);
+  padding-bottom: var(--space-2);
+}
+.gallery {
+  display: flex;
+  gap: var(--space-3);
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+.gallery img {
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow2);
+  width: 80vw;
+  max-width: 320px;
+  height: auto;
+  object-fit: cover;
+  scroll-snap-align: start;
+  background: var(--muted);
+  transition: box-shadow 0.2s;
+}
+.gallery img:focus {
+  outline: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--accent);
+}
+
+/* Responsive: Desktop (≥768px) */
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+  .card {
+    flex-direction: column;
+    max-width: 420px;
+    margin: var(--space-4) auto;
+  }
+  .gallery-wrap, .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+  }
+  .gallery img {
+    width: 100%;
+    max-width: 100%;
+    min-height: 180px;
+  }
+  .video-btn, .g-btn, .ux-btn {
+    width: auto;
+    min-width: 160px;
+    display: inline-block;
+  }
+  .card-footer {
+    justify-content: flex-end;
+  }
+}
+
+/* Accessibility: focus styles */
+a, button, .g-btn, .video-btn, .ux-btn, .badge {
+  outline: none;
+}
+a:focus-visible, button:focus-visible, .g-btn:focus-visible, .video-btn:focus-visible, .ux-btn:focus-visible, .badge:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Accessibility: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important; /* WHY: Respect user motion preferences */
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Example: Card component (see docs)
+.card {
+  ...
+}
+.card-header {
+  ...
+}
+.card-desc {
+  ...
+}
+.card-footer {
+  ...
+}
+.card-bottom {
+  ...
+}
+*/
+
+/* Example: Gallery (see docs)
+.gallery-wrap, .gallery {
+  ...
+}
+.gallery img {
+  ...
+}
+*/
+
+/* Example: Video button (see docs)
+.video-btn {
+  ...
+}
+*/
+
+/* Example: Responsive breakpoints
+@media (max-width: 768px) { ... }
+@media (min-width: 768px) { ... }
+*/
