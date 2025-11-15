@@ -1,4 +1,4 @@
-.root{
+:root{
       --photo-width: 20%;
       --gap: 16px;
       --bg-odd: #ffffff;
@@ -11,7 +11,7 @@
     }
 
     /* page layout */
-    .body{
+    body{
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       margin: 0;
       background: #eee;
@@ -27,7 +27,7 @@
       padding: 0 16px;
     }
 
-    .h1.page-title{
+    h1.page-title{
       margin: 8px 0 20px;
       font-size: 1.6rem;
       color: var(--accent);
