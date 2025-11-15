@@ -184,33 +184,44 @@
     }
 
     .back-button {
-        height: 60px;
-        font-size: 13px;
-        /* Adjust the font size */
-        line-height: 1;
-        /* Space between lines */
-        color: #333;
-        /* Text color */
-        text-decoration: none;
-        /* Remove underline */
-        display: inline-block;
-        /* Align properly */
-        text-align: center;
-        /* Center-align text */
-        padding: 10px;
-        /* Add some padding */
-        background-color: #f0f0f0;
-        /* Optional: Button background */
-        border: 1px solid #ccc;
-        /* Optional: Border */
-        border-radius: 5px;
-        /* Optional: Rounded corners */
-        width: 50px;
-        /* Fixed width for vertical layout */
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px 10px 30px; /* room for the arrow triangle */
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1;
+      border: none;
+      border-radius: 6px;
+      min-height: 44px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06);
     }
 
-    .back-button:hover {
-        background-color: #555;
+    /* left-pointing triangle that forms the arrow shape */
+    .back-button::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+      border-right: 18px solid var(--accent);
+    }
+
+    /* make the triangle match hover state as well */
+    .back-button:hover{
+      background: #234e7a; /* slightly darker */
+      color: #fff;
+    }
+
+    .back-button:hover::before{
+      border-right-color: #234e7a;
     }
 
     .logo-container {
