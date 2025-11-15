@@ -39,7 +39,14 @@ body{
   transform-origin:center;
   position:relative;
   overflow:hidden;
+  display: flex;
+  flex-direction: column;
 }
+
+.card-bottom {
+  margin-top: auto; /* Pushes this section to the bottom */
+}
+
 .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(16,24,40,0.12)}
 
 .card-header{display:flex;align-items:start;justify-content:space-between;gap:1rem}
