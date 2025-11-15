@@ -22,7 +22,6 @@
     }
 
     .wrap{
-      max-width: var(--max-width);
       margin: 28px auto;
       padding: 0 16px;
       display: grid;
