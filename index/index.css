@@ -976,8 +976,6 @@
     #gallery {
         background-color: #fff;
         /* Sets the background color to white */
-        margin: 20px;
-        /* Adds margin outside the gallery */
         border-radius: 8px;
         /* Rounds the corners */
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -1090,7 +1088,6 @@
 
     /* Section for Thoughts */
     .section-thoughts {
-        margin: 20px;
         background-color: #fff;
         /*border-radius: 10px;*/
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
