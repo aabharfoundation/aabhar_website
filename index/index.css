@@ -33,7 +33,6 @@
     /* Common layout tokens */
     --section-gap: 12px; /* used by flex/grid containers inside sections */
     --section-bar-color: var(--teal-700);
-    --section-bar-height: 6px;
 }
 
 /* About section background image (50% opacity) */
