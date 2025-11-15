@@ -54,7 +54,7 @@
 
     .photo{
       flex: 0 0 var(--photo-width);
-      min-width: 160px; /* prevents photo from collapsing on large-resizable containers */
+      min-width: 260px; /* prevents photo from collapsing on large-resizable containers */
       max-width: 260px;
       position: relative;
       background: #ddd;
