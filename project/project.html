@@ -1,16 +1,138 @@
-<!DOCTYPE html>
-<html lang="mr">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects - Rajoo Aaba Harde Foundation</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aabhar – The Raju Aaba Harde Foundation — Social Work Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="site-title">Aabhar – The Raju Aaba Harde Foundation</h1>
+        <p class="tagline">Social Work, Rural Development & Education Support</p>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container main-content">
+    <section class="controls">
+      <div class="search-wrap">
+        <label for="search" class="visually-hidden">Search programs</label>
+        <input id="search" type="search" placeholder="Search by title, location or category…" />
+      </div>
+    </section>
+
+    <!-- Static cards: Edit or duplicate these blocks to add more programs. -->
     <section id="cards" class="cards-grid" aria-live="polite">
-  <!-- Cards are rendered here by project.js -->
-</section>
+      <article class="card" data-title="school bag distribution to village children" data-location="galle borgaon, sambhajinagar" data-category="education">
+        <div class="card-header">
+          <div>
+            <h3>School Bag Distribution to Village Children</h3>
+            <div class="meta">Galle Borgaon, Sambhajinagar • <span class="date">Dec 5, 2024</span></div>
+          </div>
+          <div>
+            <span class="badge">Education</span>
+          </div>
+        </div>
+        <p class="card-desc">Distributed school bags, stationery kits and awareness sessions for children in rural villages.</p>
+        <div class="gallery-wrap">
+          <div class="gallery-controls">
+            <button class="g-btn prev" aria-label="Previous images">◀</button>
+            <button class="g-btn next" aria-label="Next images">▶</button>
+          </div>
+          <div class="gallery" tabindex="0">
+            <img src="https://via.placeholder.com/360x240?text=School+1" alt="School photo 1">
+            <img src="https://via.placeholder.com/360x240?text=School+2" alt="School photo 2">
+            <img src="https://via.placeholder.com/360x240?text=School+3" alt="School photo 3">
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="date">Dec 5, 2024</div>
+        </div>
+      </article>
 
+      <article class="card" data-title="tree plantation drive" data-location="pune" data-category="environment">
+        <div class="card-header">
+          <div>
+            <h3>Tree Plantation Drive</h3>
+            <div class="meta">Pune • <span class="date">Jan 20, 2025</span></div>
+          </div>
+          <div>
+            <span class="badge">Environment</span>
+          </div>
+        </div>
+        <p class="card-desc">Community tree planting to boost green cover and environmental awareness.</p>
+        <div class="gallery-wrap">
+          <div class="gallery-controls">
+            <button class="g-btn prev" aria-label="Previous images">◀</button>
+            <button class="g-btn next" aria-label="Next images">▶</button>
+          </div>
+          <div class="gallery" tabindex="0">
+            <img src="https://via.placeholder.com/360x240?text=Tree+1" alt="Tree photo 1">
+            <img src="https://via.placeholder.com/360x240?text=Tree+2" alt="Tree photo 2">
+            <img src="https://via.placeholder.com/360x240?text=Tree+3" alt="Tree photo 3">
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="date">Jan 20, 2025</div>
+        </div>
+      </article>
+
+      <article class="card" data-title="health check-up camp" data-location="khadki village" data-category="health">
+        <div class="card-header">
+          <div>
+            <h3>Health Check-up Camp</h3>
+            <div class="meta">Khadki Village • <span class="date">Mar 14, 2025</span></div>
+          </div>
+          <div>
+            <span class="badge">Health</span>
+          </div>
+        </div>
+        <p class="card-desc">Free medical check-ups, basic medicines and referral support for villagers.</p>
+        <div class="gallery-wrap">
+          <div class="gallery-controls">
+            <button class="g-btn prev" aria-label="Previous images">◀</button>
+            <button class="g-btn next" aria-label="Next images">▶</button>
+          </div>
+          <div class="gallery" tabindex="0">
+            <img src="https://via.placeholder.com/360x240?text=Health+1" alt="Health photo 1">
+            <img src="https://via.placeholder.com/360x240?text=Health+2" alt="Health photo 2">
+            <img src="https://via.placeholder.com/360x240?text=Health+3" alt="Health photo 3">
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="date">Mar 14, 2025</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Aabhar – The Raju Aaba Harde Foundation</strong>
+        <div>contact@aabhar.org</div>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">🔗 Facebook</a>
+        <a href="#" aria-label="Twitter">🔗 Twitter</a>
+        <a href="#" aria-label="Instagram">🔗 Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="project.js" defer></script>
 </body>
 </html>

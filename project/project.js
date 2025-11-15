@@ -1,158 +1,72 @@
 /* project/project.js
-   Dynamic rendering and simple filtering for the Social Work Portfolio.
+   Behavior-only JS: filtering, gallery controls, reveal animations.
 
-   - Modify the `programs` array below to add or update cards.
-   - Each program object supports: title, description, location, date, category, images (array of URLs).
+   Notes:
+   - Cards are now static HTML in `project.html`. To add a program, duplicate an
+     `<article class="card">` block and update `data-*` attributes and content.
+   - Each card should have: `data-title`, `data-location`, `data-category` for filtering.
 */
 
-const programs = [
-  {
-    id: 1,
-    title: 'School Bag Distribution to Village Children',
-    description: 'Distributed school bags, stationery kits and awareness sessions for children in rural villages.',
-    location: 'Galle Borgaon, Sambhajinagar',
-    date: '2024-12-05',
-    category: 'Education',
-    images: [
-      'https://via.placeholder.com/360x240?text=School+1',
-      'https://via.placeholder.com/360x240?text=School+2',
-      'https://via.placeholder.com/360x240?text=School+3',
-      'https://via.placeholder.com/360x240?text=School+4'
-    ]
-  },
-  {
-    id: 2,
-    title: 'Tree Plantation Drive',
-    description: 'Community tree planting to boost green cover and environmental awareness.',
-    location: 'Pune',
-    date: '2025-01-20',
-    category: 'Environment',
-    images: [
-      'https://via.placeholder.com/360x240?text=Tree+1',
-      'https://via.placeholder.com/360x240?text=Tree+2',
-      'https://via.placeholder.com/360x240?text=Tree+3'
-    ]
-  },
-  {
-    id: 3,
-    title: 'Health Check-up Camp',
-    description: 'Free medical check-ups, basic medicines and referral support for villagers.',
-    location: 'Khadki Village',
-    date: '2025-03-14',
-    category: 'Health',
-    images: [
-      'https://via.placeholder.com/360x240?text=Health+1',
-      'https://via.placeholder.com/360x240?text=Health+2',
-      'https://via.placeholder.com/360x240?text=Health+3',
-      'https://via.placeholder.com/360x240?text=Health+4',
-      'https://via.placeholder.com/360x240?text=Health+5'
-    ]
-  }
-];
-
-// Utilities
+// Small helpers
 const $ = (sel, ctx=document) => ctx.querySelector(sel);
-const $$ = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
+const $$ = (sel, ctx=document) => Array.from((ctx || document).querySelectorAll(sel));
 
-function formatDate(d){
-  try{
-    const dt = new Date(d);
-    return dt.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' });
-  }catch(e){return d}
-}
+function normalize(v){ return (v||'').toString().trim().toLowerCase(); }
 
-// Create a single card element
-function createCard(program){
-  const card = document.createElement('article');
-  card.className = 'card';
-  card.setAttribute('data-title', program.title.toLowerCase());
-  card.setAttribute('data-location', program.location.toLowerCase());
-  card.setAttribute('data-category', program.category.toLowerCase());
-
-  card.innerHTML = `
-    <div class="card-header">
-      <div>
-        <h3>${program.title}</h3>
-        <div class="meta">${program.location} • <span class="date">${formatDate(program.date)}</span></div>
-      </div>
-      <div>
-        <span class="badge">${program.category}</span>
-      </div>
-    </div>
-    <p class="card-desc">${program.description}</p>
-    <div class="gallery-wrap">
-      <div class="gallery-controls">
-        <button class="g-btn prev" aria-label="Previous images">◀</button>
-        <button class="g-btn next" aria-label="Next images">▶</button>
-      </div>
-      <div class="gallery" tabindex="0">
-        ${program.images.map(src => `<img src="${src}" alt="${program.title} photo">`).join('')}
-      </div>
-    </div>
-    <div class="card-footer">
-      <div class="date">${formatDate(program.date)}</div>
-    </div>
-  `;
-
-  // Add handlers for prev/next
-  const gallery = card.querySelector('.gallery');
-  const prev = card.querySelector('.prev');
-  const next = card.querySelector('.next');
-
-  prev.addEventListener('click', () => { gallery.scrollBy({ left: -200, behavior: 'smooth' }); });
-  next.addEventListener('click', () => { gallery.scrollBy({ left: 200, behavior: 'smooth' }); });
-
-  return card;
-}
-
-// Render cards to container
-function renderCards(list){
-  const container = $('#cards');
-  container.innerHTML = '';
-  const frag = document.createDocumentFragment();
-  list.forEach((p, i) => {
-    const c = createCard(p);
-    frag.appendChild(c);
-    // staggered reveal
-    setTimeout(()=> c.classList.add('show'), 80 * i);
-  });
-  container.appendChild(frag);
-}
-
-// Simple filter by search text
+// Filter visible cards by search query (title/location/category/visible text)
 function filterCards(query){
-  const q = query.trim().toLowerCase();
-  const container = $('#cards');
+  const q = normalize(query);
+  const cards = $$('.card');
   if(!q){
-    // show all
-    renderCards(programs);
+    cards.forEach(c => { c.style.display = ''; });
     return;
   }
-  const filtered = programs.filter(p => {
-    return [p.title, p.location, p.category, p.description].join(' ').toLowerCase().includes(q);
+
+  cards.forEach(card => {
+    const title = normalize(card.dataset.title || card.querySelector('h3')?.textContent);
+    const location = normalize(card.dataset.location || '');
+    const category = normalize(card.dataset.category || '');
+    const text = normalize(card.textContent || '');
+    const visible = title.includes(q) || location.includes(q) || category.includes(q) || text.includes(q);
+    card.style.display = visible ? '' : 'none';
   });
-  renderCards(filtered);
 }
 
-// Init
+// Wire gallery prev/next buttons for each card
+function wireGalleries(){
+  $$('.card').forEach(card => {
+    const gallery = card.querySelector('.gallery');
+    if(!gallery) return;
+    const prev = card.querySelector('.prev');
+    const next = card.querySelector('.next');
+    const step = Math.round(gallery.clientWidth * 0.6) || 220;
+
+    if(prev) prev.addEventListener('click', () => gallery.scrollBy({ left: -step, behavior: 'smooth' }));
+    if(next) next.addEventListener('click', () => gallery.scrollBy({ left: step, behavior: 'smooth' }));
+
+    // Allow left/right keys when gallery is focused
+    gallery.addEventListener('keydown', (ev) => {
+      if(ev.key === 'ArrowRight') { gallery.scrollBy({ left: 120, behavior: 'smooth' }); }
+      if(ev.key === 'ArrowLeft') { gallery.scrollBy({ left: -120, behavior: 'smooth' }); }
+    });
+  });
+}
+
+// Staggered reveal
+function revealCards(){
+  const cards = $$('.card');
+  cards.forEach((c,i) => setTimeout(()=> c.classList.add('show'), 70 * i));
+}
+
 function init(){
-  renderCards(programs);
-
   const search = $('#search');
-  let timer = null;
-  search.addEventListener('input', (e) => {
-    clearTimeout(timer);
-    timer = setTimeout(()=> filterCards(e.target.value), 160);
-  });
+  if(search){
+    let t = null;
+    search.addEventListener('input', (e) => { clearTimeout(t); t = setTimeout(()=> filterCards(e.target.value), 140); });
+  }
 
-  // Improve keyboard horizontal scrolling inside galleries
-  document.addEventListener('keydown', (ev) => {
-    const active = document.activeElement;
-    if(active && active.classList && active.classList.contains('gallery')){
-      if(ev.key === 'ArrowRight') { active.scrollBy({left:120, behavior:'smooth'}); }
-      if(ev.key === 'ArrowLeft') { active.scrollBy({left:-120, behavior:'smooth'}); }
-    }
-  });
+  wireGalleries();
+  revealCards();
 }
 
 document.addEventListener('DOMContentLoaded', init);
