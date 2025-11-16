@@ -2462,6 +2462,6 @@ hr,
     .section,
     .project-item,
     .story-card {
-        box-shadow: 0 2px 6px rgba(2, 6, 23, 0.04) !important;
+        /*box-shadow: 0 2px 6px rgba(2, 6, 23, 0.04) !important;*/
     }
 }
