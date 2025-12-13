@@ -1388,7 +1388,7 @@
         top: 70px;
         /* Positions the nav below the navbar (use navbar height) */
         background: linear-gradient(180deg, var(--teal-700), var(--teal-900));
-        width: clamp(240px, 60vw, 380px);
+        width: clamp(180px, 40vw, 280px);
         /* Responsive width: min 240px, up to 60vw, max 380px */
         max-height: 60vh;
         /* Limit height and allow scrolling when many links */
