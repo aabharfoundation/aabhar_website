@@ -779,7 +779,7 @@
     }
 
     .story-desc {
-        display: none;
+        display: block;
     }
 
     .story-card p {
@@ -797,6 +797,11 @@
 
     .story-card a:hover {
         text-decoration: underline;
+    }
+
+    /* Hide this specific story description on viewports >= 768px */
+    @media (min-width: 768px) {
+        .story-desc { display: none; }
     }
 
     /* Arrows */
