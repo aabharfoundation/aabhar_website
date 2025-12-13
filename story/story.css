@@ -213,3 +213,218 @@
         border-radius: 5px;
     }
 }
+
+
+/* new story*/
+
+
+/* project/project.css — improved responsive styles for Social Work Portfolio */
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2b6cb0;
+  --max-width:1100px;
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(16,24,40,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+.main-content{padding:1.25rem 0}
+.controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.search-wrap{flex:1}
+.search-wrap input[type=search]{width:100%;padding:0.6rem 0.9rem;border:1px solid rgba(15,23,42,0.06);border-radius:10px;background:#fff}
+
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:1rem;
+  box-shadow:var(--shadow);
+  transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s;
+  border:1px solid rgba(15,23,42,0.03);
+  transform-origin:center;
+  position:relative;
+  overflow:hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-bottom {
+  margin-top: auto; /* Pushes this section to the bottom */
+}
+
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(16,24,40,0.12)}
+
+.card-header{display:flex;align-items:start;justify-content:space-between;gap:1rem}
+.card h3{margin:0;font-size:1.05rem}
+.meta{color:var(--muted);font-size:0.85rem;margin-top:0.35rem}
+
+.badge{display:inline-block;padding:0.28rem 0.6rem;background:linear-gradient(90deg,#e6f0ff,#f0fafb);color:var(--accent);border-radius:999px;font-weight:600;font-size:0.78rem}
+
+.card-desc{margin:0.6rem 0 0.9rem;color:#334155}
+
+/* Video button inside cards */
+.video-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.6rem;
+  width:100%;
+  padding:0.64rem 0.9rem;
+  margin:0.6rem 0 0.6rem;
+  background:#7a0f0f; /* deep maroon */
+  color:#fff;
+  text-decoration:none;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(122,15,15,0.12);
+  font-weight:600;
+  transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+.video-btn:hover{transform:translateY(-2px);background:#610b0b;box-shadow:0 14px 30px rgba(97,11,11,0.14)}
+.video-btn:focus{outline:3px solid rgba(122,15,15,0.18);outline-offset:2px}
+.video-btn .video-icon{font-size:1.05rem;line-height:1}
+
+
+.gallery-wrap{display:flex;align-items:center;gap:0.75rem}
+.gallery{
+  display:flex;overflow-x:auto;gap:0.6rem;padding-bottom:6px;padding-top:4px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+  scrollbar-width: thin; /* Firefox */
+}
+.gallery img{height:72px;border-radius:8px;flex:0 0 auto;object-fit:cover;border:1px solid rgba(15,23,42,0.04)}
+.gallery::-webkit-scrollbar{height:8px}
+.gallery::-webkit-scrollbar-thumb{background:rgba(15,23,42,0.06);border-radius:8px}
+
+/* Keep scrollbar subtle on large screens but still usable */
+@media(min-width:900px){
+  .gallery::-webkit-scrollbar{height:6px}
+  .gallery::-webkit-scrollbar-thumb{background:rgba(15,23,42,0.04)}
+}
+
+.gallery-controls{display:flex;flex-direction:column;gap:0.45rem}
+.g-btn{background:rgba(15,23,42,0.04);border:0;padding:6px 8px;border-radius:8px;cursor:pointer}
+.g-btn:hover{background:rgba(15,23,42,0.08)}
+.g-btn:focus{outline:2px solid rgba(43,108,176,0.15);outline-offset:2px}
+
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:0.8rem}
+.date{color:var(--muted);font-size:0.86rem}
+
+.site-footer{border-top:1px solid rgba(15,23,42,0.04);padding:1rem 0;margin-top:2rem;background:transparent}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.socials a{color:var(--muted);text-decoration:none;margin-left:0.6rem}
+
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+/* load animation */
+.card{opacity:0;transform:translateY(12px)}
+.card.show{opacity:1;transform:translateY(0);transition:opacity .45s ease, transform .45s cubic-bezier(.2,.9,.2,1)}
+
+/* Accessible focus for images */
+.gallery img:focus{outline:3px solid rgba(43,108,176,0.12);outline-offset:3px}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .nav ul{gap:0.5rem}
+  .gallery img{height:64px}
+  .gallery-wrap{gap:0.5rem}
+  .gallery-controls{flex-direction:row}
+  .g-btn{padding:8px}
+}
+
+@media (max-width:420px){
+  .card{padding:0.75rem}
+  .site-title{font-size:1rem}
+}
+
+/* Utility small tweaks */
+a{color:inherit}
+
+/* Ensure gallery doesn't break layout when many images */
+.gallery img{min-width:120px}
+
+/* Navbar Styling*/
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #0d47a1, #42a5f5);
+        /* Gradient background from blue to light blue */
+        padding: 10px 20px;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .back-button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px 10px 30px; /* room for the arrow triangle */
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1;
+      border: none;
+      border-radius: 6px;
+      min-height: 44px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+    }
+
+    /* left-pointing triangle that forms the arrow shape */
+    .back-button::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+      border-right: 18px solid var(--accent);
+    }
+
+    /* make the triangle match hover state as well */
+    .back-button:hover{
+      background: #234e7a; /* slightly darker */
+      color: #fff;
+    }
+
+    .back-button:hover::before{
+      border-right-color: #234e7a;
+    }
+
+    .logo-container {
+        height: 80px;
+        /* Adjust based on your navbar height */
+        width: auto;
+        /* Keep width dynamic */
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        max-height: 100%;
+        /* Constrain the height */
+        max-width: 100%;
+        /* Constrain the width */
+        object-fit: contain;
+        /* Ensures the whole logo fits */
+    }
