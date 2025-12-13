@@ -1,20 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Document language set to Marathi for primary indexing; English discoverability handled in title/meta and JSON-LD -->
+<html lang="mr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="AabHar Foundation - Raju Aaba Harde Memorial Trust. Founded by Ajay Harde to continue the legacy and values of Raju Aaba Harde.">
-  <meta name="author" content="Ajay Harde">
-  <title>AabHar Foundation - Raju Aaba Harde Memorial Trust</title>
+  <!-- Bilingual title: Marathi-first, English second for multilingual SEO and AI visibility -->
+  <title>राजू आबा हारदे मेमोरियल ट्रस्ट — आभार फाऊंडेशन (Raju Aaba Harde Memorial Trust — Aabhar Foundation)</title>
+  <!-- Bilingual meta description (Marathi first, English second) for better MR/EN discovery -->
+  <meta name="description" content="राजू आबा हारदे मेमोरियल ट्रस्ट (आभार फाऊंडेशन) ची माहिती — वारसा, प्रकल्प, जीवनकथा आणि समर्थनाची माहिती. | Raju Aaba Harde Memorial Trust (Aabhar Foundation): legacy, projects, life story and ways to support.">
+  <meta name="author" content="अजय राजू हारदे (Ajay Raju Harde)">
+  <!-- Canonical helps AI and search engines pick a preferred URL -->
+  <link rel="canonical" href="https://aabharfoundation.org/">
   <link rel="stylesheet" href="index/index.css">
+  <!-- JSON-LD structured data includes Marathi name and English alternateName for bilingual machine understanding -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "NonprofitOrganization",
+        "name": "राजू आबा हारदे मेमोरियल ट्रस्ट",
+        "alternateName": "Raju Aaba Harde Memorial Trust",
+        "additionalName": "आभार फाऊंडेशन",
+        "url": "https://aabharfoundation.org/",
+        "logo": "https://aabharfoundation.org/story/BgMainlogo.png",
+        "founder": {
+          "@type": "Person",
+          "name": "अजय राजू हारदे",
+          "alternateName": "Ajay Raju Harde"
+        }
+      },
+      {
+        "@type": "Person", 
+        "name": "राजू आबा हारदे",
+        "alternateName": "Raju Aaba Harde",
+        "description": "कर्मयोगी शेतकरी आणि समाजसेवक — ज्यांच्या जीवनकार्यामुळे हा ट्रस्ट स्थापन झाला.",
+        "sameAs": []
+      }
+    ]
+  }
+  </script>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap"
     rel="stylesheet">
 </head>
 
 <body>
+  <!-- Single H1 in Marathi only: primary page/topic heading for humans and machines -->
+  <!-- H1 remains Marathi; transliterations appear elsewhere only for the three specified names -->
+  <header role="banner" aria-label="राजू आबा हारदे मेमोरियल ट्रस्ट">
+    <h1>राजू आबा हारदे मेमोरियल ट्रस्ट — आभार फाऊंडेशन: वारसा, प्रकल्प व जीवनकथा</h1>
+  </header>
+
   <!-- Floating Social Icons -->
   <div class="social-icons">
     <a href="https://wa.me/9420402712" target="_blank" id="WhatsApp" aria-label="WhatsApp">
@@ -34,7 +72,8 @@
   <!-- Navbar -->
   <div class="navbar">
     <div class="mainlogo-container">
-      <img src="story/BgMainlogo.png" alt="Logo" class="mainlogo">
+      <!-- Bilingual alt: Marathi first, English transliteration in parentheses -->
+      <img src="story/BgMainlogo.png" alt="राजू आबा हारदे मेमोरियल ट्रस्ट (Raju Aaba Harde Memorial Trust)" class="mainlogo">
     </div>
     <div class="hamburger">
       <span></span><span></span><span></span>
@@ -59,7 +98,7 @@
   <section id="home" class="section-home">
     <div class="home-container">
       <div class="logo-container">
-        <img src="story/BgMainlogo.png" alt="Logo" class="home-logo">
+        <img src="story/BgMainlogo.png" alt="राजू आबा हारदे मेमोरियल ट्रस्ट (Raju Aaba Harde Memorial Trust)" class="home-logo">
       </div>
       <video autoplay muted loop class="background-video">
         <source src="index/videos/background.mp4" type="video/mp4">
@@ -73,13 +112,15 @@
     <div class="about-container">
       <div class="aaba-image-section">
         <div class="image-crop">
-          <img src="about/aaba_standing.png" alt="राजू आबा हारदे">
+          <!-- Alt bilingual: Marathi first, English transliteration in parentheses for the key person -->
+          <img src="about/aaba_standing.png" alt="राजू आबा हारदे (Raju Aaba Harde)">
         </div>
       </div>
       <div class="text-section">
         <div class="section-title">
           <h2 class="fade-in">आमच्या विषयी</h2>
-          <p class="fade-in">"आभार फाऊंडेशन – राजू आबा हारदे मेमोरियल ट्रस्ट" ही संस्था एका सामान्य शेतकऱ्याच्या
+          <!-- Transliteration parentheses used ONLY for the three specified names: Aabhar Foundation, Raju Aaba Harde, Ajay Raju Harde -->
+          <p class="fade-in">"आभार फाऊंडेशन (Aabhar Foundation) – राजू आबा हारदे (Raju Aaba Harde) मेमोरियल ट्रस्ट" ही संस्था एका सामान्य शेतकऱ्याच्या
             असामान्य जीवनकार्याने प्रेरित आहे. कर्मयोगी स्व. श्री. राजू आबा हारदे यांनी केवळ स्वतःसाठी नव्हे, तर
             समाजासाठी, ग्रामीण भागाच्या उन्नतीसाठी आणि भावी पिढ्यांसाठी संपूर्ण आयुष्य झोकून दिलं.
             त्यांची दूरदृष्टी, कष्टांची तयारी, आणि माणुसकीची गहिरं जाण हीच या फाऊंडेशनची प्रेरणास्थानं आहेत. ही संस्था
@@ -97,7 +138,7 @@
         </div>
         <div class="mission fade-in">
           <h3>आमची प्रेरणा:</h3>
-          <p><strong>कर्मयोगी स्व. श्री. राजू आबा हारदे</strong> हे एक दूरदृष्टी असलेले शेतकरी होते — जेव्हा बहुतेकजण
+          <p><strong>कर्मयोगी स्व. श्री. राजू आबा हारदे (Raju Aaba Harde)</strong> हे एक दूरदृष्टी असलेले शेतकरी होते — जेव्हा बहुतेकजण
             स्वतःपुरते विचार करत होते, तेव्हा त्यांनी संपूर्ण गावासाठी विचार केला. त्यांनी शेतीमध्ये आधुनिकतेचा आग्रह
             धरला, शिक्षणाची गोडी लावली, आणि गरिबांना मदत करत सामाजिक भान जपले.
             त्यांच्या कृतींमधून एक विचारधारा उभी राहिली — "आपलं यश तेव्हाच अर्थपूर्ण, जेव्हा ते दुसऱ्यांना उभं करतं."
@@ -236,13 +277,13 @@
     <!-- Top Row (3 images) -->
     <div class="projects-row">
       <div class="project-item">
-        <img src="Upimage1.jpg" alt="Education Project">
+        <img src="Upimage1.jpg" alt="शिक्षण प्रकल्प — आभार फाऊंडेशन (Education project — Aabhar Foundation)">
       </div>
       <div class="project-item">
-        <img src="Upimage2.jpg" alt="Rural Project">
+        <img src="Upimage2.jpg" alt="ग्रामीण विकास प्रकल्प — आभार फाऊंडेशन (Rural development project — Aabhar Foundation)">
       </div>
       <div class="project-item">
-        <img src="Upimage3.jpg" alt="Farming Project">
+        <img src="Upimage3.jpg" alt="कृषी प्रकल्प — आभार फाऊंडेशन (Farming project — Aabhar Foundation)">
       </div>
     </div>
     <div class="project-info-button">
@@ -251,13 +292,13 @@
     </div>
     <div class="projects-row">
       <div class="project-item">
-        <img src="Upimage4.jpg" alt="Other Project">
+        <img src="Upimage4.jpg" alt="समुदाय प्रकल्प — आभार फाऊंडेशन (Community project — Aabhar Foundation)">
       </div>
       <div class="project-item">
-        <img src="Upimage5.jpg" alt="Memory Project">
+        <img src="Upimage5.jpg" alt="स्मरणीय / मेमोरियल प्रकल्प — आभार फाऊंडेशन (Memorial project — Aabhar Foundation)">
       </div>
       <div class="project-item">
-        <img src="Upimage6.jpg" alt="Community Project">
+        <img src="Upimage6.jpg" alt="समुदाय विकास प्रकल्प — आभार फाऊंडेशन (Community development — Aabhar Foundation)">
       </div>
     </div>
   </section>
@@ -268,14 +309,14 @@
     <div class="gallery-buttons">
       <div class="gallery-button">
         <h3>प्रकल्पाचे फोटो</h3>
-        <a href="gallery/gallery.html">
-          <img src="Gallery_Project_img.png" alt="Project Photos">
+        <a href="gallery/gallery.html" title="प्रकल्प फोटो — आभार फाऊंडेशन">
+          <img src="Gallery_Project_img.png" alt="प्रकल्प फोटो — आभार फाऊंडेशन (Project photos — Aabhar Foundation)">
         </a>
       </div>
       <div class="gallery-button">
         <h3>आबांचे फोटो</h3>
-        <a href="gallery/aaba_gallery.html">
-          <img src="Gallery_Aaba_img.png" alt="Aaba's Photos">
+        <a href="gallery/aaba_gallery.html" title="आबांचे फोटो — राजू आबा हारदे">
+          <img src="Gallery_Aaba_img.png" alt="राजू आबा हारदे — आभार फाऊंडेशन फोटो गॅलरी (Raju Aaba Harde — Aabhar Foundation photo gallery)">
         </a>
       </div>
     </div>
@@ -321,8 +362,7 @@
           <img src="thoughts/thoughts_bhumare.jpg" alt="Thought 2">
           <h3>मा. श्री. संदीपान भुमरे (खासदार, छ. संभाजीनगर)</h3>
           <p>राजू आबा हे माझ्याकडे अनेकदा शेतकऱ्यांच्या समस्यांसाठी येत असत. विशेषतः शेतमालाला बाजारभाव मिळावा,
-            शेतमालाच्या किमती वाढवाव्यात अशी त्यांची मागणी नेहमी ठाम असे. त्यांच्या सूचनांमुळे मला विधानपरिषदेत
-            शेतकऱ्यांचे मुद्दे प्रभावीपणे मांडता आले.</p>
+            शेतमालाच्या किमती वाढवाव्यात अशी त्यांची मागणी नेहमी ठाम असे.</p>
           <p>त्यांच्या जीवनातील निस्वार्थीपणा आणि जिद्द नेहमीच प्रेरणादायी होती. आबांच्या दुःखद निधनानंतर मी त्यांच्या
             घरी जाऊन कुटुंबीयांची भेट घेतली, सांत्वन दिले आणि पोलीस आयुक्तांना या प्रकरणाचा कसून तपास करण्याचे निर्देश
             दिले, कारण हा अत्यंत संवेदनशील, उच्चभ्रू आणि चर्चेचा विषय होता.</p>

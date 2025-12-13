@@ -1,22 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Primary document language set to Marathi for Marathi-first ranking -->
+<html lang="mr">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AABA Gallery</title>
-    <link rel="stylesheet" href="aaba_gallery.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Bilingual title: Marathi first (visible to users/search), English second for EN discovery and AI -->
+        <title>आबांचे फोटो — आभार फाऊंडेशन (Aabhar Foundation) — राजू आबा हारदे (Raju Aaba Harde)</title>
+        <!-- Bilingual meta description: Marathi first, English second. Keeps visible content Marathi but helps EN discovery. -->
+        <meta name="description" content="आबांचे फोटो आणि आठवणी — आभार फाऊंडेशन (Aabhar Foundation) आणि राजू आबा हारदे (Raju Aaba Harde) यांचा वारसा. | Photo memories — Aabhar Foundation and Raju Aaba Harde's legacy.">
+        <!-- Canonical to help search engines and AI choose preferred URL -->
+        <link rel="canonical" href="https://aabharfoundation.org/gallery/aaba_gallery.html">
+        <link rel="stylesheet" href="aaba_gallery.css">
+
+        <!-- JSON-LD: NonprofitOrganization + Person with Marathi and English alternateName for bilingual machine understanding -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "NonprofitOrganization",
+                    "name": "आभार फाऊंडेशन",
+                    "alternateName": "Aabhar Foundation",
+                    "url": "https://aabharfoundation.org/",
+                    "logo": "https://aabharfoundation.org/story/BgMainlogo.png",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "अजय राजू हारदे",
+                        "alternateName": "Ajay Raju Harde"
+                    }
+                },
+                {
+                    "@type": "Person",
+                    "name": "राजू आबा हारदे",
+                    "alternateName": "Raju Aaba Harde",
+                    "description": "कृषीमार्गदर्शक व समाजसेवक — ज्यांच्या स्मरणार्थ हा ट्रस्ट आणि गॅलरी आहे."
+                }
+            ]
+        }
+        </script>
+
 </head>
 
 <body>
     <nav class="navbar">
-        <a href="../index.html" class="back-button">⬅मागे</a>
+        <a href="../index.html" class="back-button" title="पृष्ठावर परत जा">⬅मागे</a>
+        <!-- Keep only one H1 on the page (Marathi only) as required; keep this H2 for navigation context -->
         <h2>गॅलरी</h2>
         <div class="logo-container">
-            <img src="../story/BgMainlogo.png" alt="Logo" class="logo">
+            <!-- Bilingual alt: Marathi first, English transliteration only appears in parentheses for the organization/person names -->
+            <img src="../story/BgMainlogo.png" alt="आभार फाऊंडेशन (Aabhar Foundation) — राजू आबा हारदे (Raju Aaba Harde)" class="logo">
         </div>
         
     </nav>
+    <!-- Page H1: Marathi only (per requirement). Describes the page topic clearly for humans and machines. -->
+    <header class="gallery-header" aria-label="आबांचे फोटो">
+        <h1>आबांचे फोटो व आठवणी</h1>
+        <!-- Small Marathi intro that includes the allowed transliterations in parentheses for the three specified names -->
+        <p class="vis-intro">हे फोटो आभार फाऊंडेशन (Aabhar Foundation) आणि राजू आबा हारदे (Raju Aaba Harde) यांच्या आठवणी आणि कार्याचे दस्तऐवजीकरण करतात. स्थापनेचा संदर्भ: अजय राजू हारदे (Ajay Raju Harde).</p>
+    </header>
 
     <main class="gallery-page">
         <section id="gallery" class="section">
@@ -24,17 +66,18 @@
                 <h2>आठवणी</h2>
 
                 <div class="gallery-grid" id="galleryGrid">
-                    <!-- Thumbnails (copied from original gallery) -->
-                    <figure><img src="../image1.jpg" alt="image1"></figure>
-                    <figure><img src="../Upimage1.jpg" alt="Upimage1"></figure>
-                    <figure><img src="../Upimage2.jpg" alt="Upimage2"></figure>
-                    <figure><img src="../Upimage3.jpg" alt="Upimage3"></figure>
-                    <figure><img src="../Upimage4.jpg" alt="Upimage4"></figure>
-                    <figure><img src="../Upimage5.jpg" alt="Upimage5"></figure>
-                    <figure><img src="../DownImage2.jpg" alt="DownImage2"></figure>
-                    <figure><img src="../DownImage3.jpg" alt="DownImage3"></figure>
-                    <figure><img src="../DownImage4.jpg" alt="DownImage4"></figure>
-                    <figure><img src="../DownImage5.jpg" alt="DownImage5"></figure>
+                    <!-- Thumbnails: alt attributes are Marathi-first, then English in parentheses to aid English discovery and AI.
+                         We keep visible captions/headings in Marathi only. -->
+                    <figure><img src="../image1.jpg" alt="आठवणी फोटो — आभार फाऊंडेशन (Photo memory — Aabhar Foundation)"></figure>
+                    <figure><img src="../Upimage1.jpg" alt="आठवणी फोटो — आभार फाऊंडेशन (Photo memory — Aabhar Foundation)"></figure>
+                    <figure><img src="../Upimage2.jpg" alt="गट फोटो — आभार फाऊंडेशन (Group photo — Aabhar Foundation)"></figure>
+                    <figure><img src="../Upimage3.jpg" alt="शेती उपक्रम — आभार फाऊंडेशन (Farming activity — Aabhar Foundation)"></figure>
+                    <figure><img src="../Upimage4.jpg" alt="प्रकल्प स्मरण — आभार फाऊंडेशन (Project memory — Aabhar Foundation)"></figure>
+                    <figure><img src="../Upimage5.jpg" alt="समुदाय कार्यक्रम — आभार फाऊंडेशन (Community event — Aabhar Foundation)"></figure>
+                    <figure><img src="../DownImage2.jpg" alt="आठवणी फोटो — राजू आबा हारदे (Photo memory — Raju Aaba Harde)"></figure>
+                    <figure><img src="../DownImage3.jpg" alt="कुटुंब आठवणी — आभार फाऊंडेशन (Family memory — Aabhar Foundation)"></figure>
+                    <figure><img src="../DownImage4.jpg" alt="घटनास्थळी छायाचित्र — आभार फाऊंडेशन (Event photo — Aabhar Foundation)"></figure>
+                    <figure><img src="../DownImage5.jpg" alt="स्मरणीय फोटो — आभार फाऊंडेशन (Memorial photo — Aabhar Foundation)"></figure>
                 </div>
             </div>
         </section>
