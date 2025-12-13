@@ -1007,6 +1007,7 @@
     }
 
     #gallery h2 {
+        position: relative;
         font-size: 2rem;
         /* Sets the heading font size */
         color: var(--text-primary);
