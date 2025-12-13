@@ -212,5 +212,5 @@ a{color:inherit}
 
 /* Large-screen: double the card minimum size (from 280px -> 560px) */
 @media (min-width:1200px){
-  .cards-grid{grid-template-columns:repeat(auto-fit,minmax(400px,1fr));}
+  .cards-grid{grid-template-columns:repeat(auto-fit,minmax(560px,1fr));}
 }
