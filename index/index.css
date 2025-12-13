@@ -1385,27 +1385,31 @@
         /* Fixes the navigation to the screen */
         left: 0;
         /* Positions the nav at the left edge */
-        top: 9.5vh;
-        /* Positions the nav below the navbar */
+        top: 70px;
+        /* Positions the nav below the navbar (use navbar height) */
         background: linear-gradient(180deg, var(--teal-700), var(--teal-900));
-        width: 40vw;
-        /* Sets the width of the nav to 50% */
-        height: 35vh;
-        /* Sets the height of the nav */
-        text-align: center;
-        /* Centers the text */
-        padding: 15px 0;
+        width: clamp(240px, 60vw, 380px);
+        /* Responsive width: min 240px, up to 60vw, max 380px */
+        max-height: 60vh;
+        /* Limit height and allow scrolling when many links */
+        height: auto;
+        text-align: left;
+        /* Left-align mobile links for better readability */
+        padding: 12px 14px;
         /* Adds padding inside the nav */
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 0 8px 8px;
         /* Rounds the bottom corners */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
         /* Adds subtle shadow */
         transform: translateX(-100%);
         /* Hides the nav off-screen */
-        transition: transform 0.3s ease;
-        /* Adds smooth transition when opening */
-        gap: 20px;
-        /* Adds space between links */
+        transition: transform 0.28s ease;
+        /* Smooth transition when opening */
+        gap: 8px;
+        /* Vertical gap between links */
+        overflow-y: auto;
+        /* Allow scrolling when content exceeds max-height */
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-links li a {
@@ -1425,8 +1429,8 @@
         /* Makes the link an inline block */
         position: relative;
         /* Allows positioning of the underline */
-        font-size: 10px;
-        /* Increases font size for mobile */
+        font-size: clamp(14px, 3.5vw, 18px);
+        /* Responsive font size (mobile-friendly, scales with viewport) */
 
     }
 
