@@ -163,24 +163,36 @@
       }
     }
 
-    /* Very narrow screens: stack vertically to prevent cramped layout */
+    /* Very narrow screens: keep photo and info side-by-side but use smaller photo width
+       to avoid wrapping while preserving readability */
     @media (max-width: 420px){
       .member{
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 8px;
+        align-items: flex-start;
       }
       .photo{
+        flex: 0 0 30%;
+        min-width: 80px;
+        max-width: 36%;
+        height: auto;
+      }
+      .photo img{
         width: 100%;
-        flex: 0 0 auto;
-        min-width: 0;
-        max-width: 100%;
+        height: auto;
+      }
+      .info{
+        padding: 10px;
       }
       .details{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 8px;
       }
       .details dt{
-        display:block;
-        margin-top: 8px;
+        font-size: 0.82rem;
+      }
+      .details dd{
+        font-size: 0.92rem;
       }
     }
 
