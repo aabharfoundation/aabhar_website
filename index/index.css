@@ -2214,7 +2214,7 @@
     .gallery-button img {
         width: 100%;
         /* Ensures the image spans the button width */
-        height: 15vh;
+        height: 6vh !important; 
         /* Maintains the image aspect ratio */
         border-radius: 6px;
         /* Rounds the image corners */
