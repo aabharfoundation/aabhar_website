@@ -980,24 +980,10 @@
     /* Gallery Section Styling */
     #gallery {
         background-color: #fff;
-        /* Sets the background color to white */
         border-radius: 8px;
-        background-image: url('../thoughts/thoughts_background.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.5;
-        /* Rounds the corners */
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        /* Adds a subtle shadow */
         text-align: center;
-        z-index: 0;
         pointer-events: none;
-        /* Centers the text */
-    }
-
-    /* Gallery background image (use thoughts background as a neutral texture) */
-    #gallery {
         position: relative;
         overflow: hidden;
     }
@@ -2162,9 +2148,26 @@
 
     /* Gallery Section Styling */
     #gallery {
+        background-color: #fff;
         border-radius: 8px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
+        pointer-events: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #gallery::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('../thoughts/thoughts_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: 0;
+        pointer-events: none;
     }
 
     #gallery h2 {
