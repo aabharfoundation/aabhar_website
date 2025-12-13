@@ -2167,7 +2167,6 @@
         background-repeat: no-repeat;
         opacity: 0.5;
         z-index: 0;
-        pointer-events: none;
     }
 
     #gallery h2 {
@@ -2189,6 +2188,7 @@
         gap: 20px;
         /* Adds space between buttons */
         flex-wrap: wrap;
+        z-index: 2;
         /* Wraps buttons to the next line if necessary */
     }
 
