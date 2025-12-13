@@ -2170,6 +2170,7 @@
     }
 
     #gallery h2 {
+        position: relative;
         font-size: 14px;
         /* Sets the heading font size */
         color: #333;
