@@ -1017,6 +1017,7 @@
     }
 
     .gallery-buttons {
+        position: relative;
         display: flex;
         /* Uses flexbox for button layout */
         justify-content: center;
@@ -2179,6 +2180,7 @@
     }
 
     .gallery-buttons {
+        position: relative;
         display: flex;
         /* Uses flexbox for button layout */
         justify-content: center;
