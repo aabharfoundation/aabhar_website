@@ -120,10 +120,54 @@
       font-weight: 400;
     }
 
-    /* Responsive: stack on small screens */
+    /* Responsive: on small screens make the card horizontal (photo left, info right)
+       and add a very-small-screen fallback below */
     @media (max-width: 768px){
       .member{
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: nowrap;
+      }
+      .photo{
+        /* occupy ~35% of the card on mobile */
+        flex: 0 0 36%;
+        min-width: 110px;
+        max-width: 42%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .photo img{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        display: block;
+      }
+      .info{
+        padding: 12px;
+      }
+      .details{
+        /* two-column details when horizontal to utilize width */
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 12px;
+      }
+      .details dt{
+        text-align: left;
+        margin-top: 0;
+      }
+      .details dd{
+        margin-bottom: 0;
+      }
+    }
+
+    /* Very narrow screens: stack vertically to prevent cramped layout */
+    @media (max-width: 420px){
+      .member{
         flex-direction: column;
+        gap: 10px;
       }
       .photo{
         width: 100%;
@@ -131,18 +175,12 @@
         min-width: 0;
         max-width: 100%;
       }
-      .info{
-        padding: 14px;
-      }
       .details{
         grid-template-columns: 1fr;
       }
       .details dt{
         display:block;
         margin-top: 8px;
-      }
-      .details dd{
-        margin-bottom: 6px;
       }
     }
 
