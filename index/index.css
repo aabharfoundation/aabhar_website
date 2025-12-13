@@ -753,7 +753,6 @@
     /* Individual story card */
     .story-card {
         width: 33vw;
-        height: 83vh;
         min-width: 250px;
         margin-right: 1rem;
         background-color: white;
@@ -778,10 +777,6 @@
         color: black;
     }
 
-    .story-desc {
-        display: block;
-    }
-
     .story-card p {
         font-size: 0.875rem;
         color: #4B5563;
@@ -797,11 +792,6 @@
 
     .story-card a:hover {
         text-decoration: underline;
-    }
-
-    /* Hide this specific story description on viewports >= 768px */
-    @media (min-width: 768px) {
-        .story-desc { display: none; }
     }
 
     /* Arrows */
