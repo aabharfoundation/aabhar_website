@@ -779,7 +779,7 @@
     }
 
     .story-card story-desc {
-        display: block;
+        display: none;
     }
 
     .story-card p {
