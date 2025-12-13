@@ -977,6 +977,7 @@
         background-color: #fff;
         /* Sets the background color to white */
         border-radius: 8px;
+        background-image: url('../thoughts/thoughts_background.jpg');
         /* Rounds the corners */
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         /* Adds a subtle shadow */
