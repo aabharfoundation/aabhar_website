@@ -209,3 +209,8 @@ a{color:inherit}
         object-fit: contain;
         /* Ensures the whole logo fits */
     }
+
+/* Large-screen: double the card minimum size (from 280px -> 560px) */
+@media (min-width:1200px){
+  .cards-grid{grid-template-columns:repeat(auto-fit,minmax(560px,1fr));}
+}
