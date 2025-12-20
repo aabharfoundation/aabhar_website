@@ -1,28 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Primary document language set to Marathi for Marathi-first ranking -->
+<html lang="mr">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gallery</title>
+    <!-- Original meta description (kept as comment):
+               आबांचे फोटो आणि आठवणी — आभार फाऊंडेशन (Aabhar Foundation) आणि राजू आबा हारदे (Raju Aaba Harde) यांचा वारसा. | Photo memories — Aabhar Foundation and Raju Aaba Harde's legacy.
+           -->
+    <meta name="description" content="&#8203;">
+    <!-- Canonical to help search engines and AI choose preferred URL -->
+    <!--<link rel="canonical" href="https://aabharfoundation.org/gallery/aaba_gallery.html">-->
     <link rel="stylesheet" href="gallery.css">
+
+    <!-- JSON-LD: NonprofitOrganization + Person with Marathi and English alternateName for bilingual machine understanding -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "NonprofitOrganization",
+                    "name": "आभार फाऊंडेशन",
+                    "alternateName": "Aabhar Foundation",
+                    "url": "https://aabharfoundation.org/",
+                    "logo": "https://aabharfoundation.org/story/BgMainlogo.png",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "अजय राजू हारदे",
+                        "alternateName": "Ajay Raju Harde"
+                    }
+                },
+                {
+                    "@type": "Person",
+                    "name": "राजू आबा हारदे",
+                    "alternateName": "Raju Aaba Harde",
+                    "description": "कृषीमार्गदर्शक व समाजसेवक — ज्यांच्या स्मरणार्थ हा ट्रस्ट आणि गॅलरी आहे."
+                }
+            ]
+        }
+        </script>
+
 </head>
 
 <body>
     <nav class="navbar">
-        <a href="../index.html" class="back-button">⬅मागे</a>
-        <h2>गॅलरी</h2>
+        <a href="../index.html" class="back-button" title="पृष्ठावर परत जा">◀ मागे</a>
+        <!-- Keep only one H1 on the page (Marathi only) as required; keep this H2 for navigation context -->
+        <h2>प्रकल्प</h2>
         <div class="logo-container">
-            <img src="../story/BgMainlogo.png" alt="Logo" class="logo">
+            <!-- Bilingual alt: Marathi first, English transliteration only appears in parentheses for the organization/person names -->
+            <img src="../story/BgMainlogo.png"
+                alt="आभार फाऊंडेशन (Aabhar Foundation) — राजू आबा हारदे (Raju Aaba Harde)" class="logo">
         </div>
+
     </nav>
+    <!-- Page H1: Marathi only (per requirement). Describes the page topic clearly for humans and machines. -->
+    <header class="gallery-header" aria-label="प्रकल्प फोटो">
+    </header>
 
     <main class="gallery-page">
-        <section id="gallery" class="section">
+        <section id="main_gallery" class="section">
             <div class="container">
-                <h2>प्रकल्प</h2>
-
-                <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-grid" id="galleryGrid">                    
                     <figure><img src="ProjectPhotos/Pro_001.png" alt="Project Photo (Pro_001)"></figure>
                     <figure><img src="ProjectPhotos/Pro_002.jpg" alt="Project Photo (Pro_002)"></figure>
                     <figure><img src="ProjectPhotos/Pro_003.jpg" alt="Project Photo (Pro_003)"></figure>
@@ -30,7 +69,7 @@
                     <figure><img src="ProjectPhotos/Pro_005.jpg" alt="Project Photo (Pro_005)"></figure>
                     <figure><img src="ProjectPhotos/Pro_006.jpg" alt="Project Photo (Pro_006)"></figure>
                     <figure><img src="ProjectPhotos/Pro_007.jpg" alt="Project Photo (Pro_007)"></figure>
-                    <figure><img src="ProjectPhotos/Pro_008.jpg" alt="Project Photo (Pro_008)"></figure>
+                    <!--<figure><img src="ProjectPhotos/Pro_008.jpg" alt="Project Photo (Pro_008)"></figure>-->
                     <figure><img src="ProjectPhotos/Pro_009.jpg" alt="Project Photo (Pro_009)"></figure>
                     <figure><img src="ProjectPhotos/Pro_010.jpg" alt="Project Photo (Pro_010)"></figure>
                     <figure><img src="ProjectPhotos/Pro_011.jpg" alt="Project Photo (Pro_011)"></figure>
@@ -44,7 +83,7 @@
                     <figure><img src="ProjectPhotos/Pro_019.jpg" alt="Project Photo (Pro_019)"></figure>
                     <figure><img src="ProjectPhotos/Pro_020.jpg" alt="Project Photo (Pro_020)"></figure>
                     <figure><img src="ProjectPhotos/Pro_021.jpg" alt="Project Photo (Pro_021)"></figure>
-                    <figure><img src="ProjectPhotos/Pro_022.jpg" alt="Project Photo (Pro_022)"></figure>
+                    <figure><img src="ProjectPhotos/Pro_022.png" alt="Project Photo (Pro_022)"></figure>
                     <figure><img src="ProjectPhotos/Pro_023.jpg" alt="Project Photo (Pro_023)"></figure>
                     <figure><img src="ProjectPhotos/Pro_024.jpg" alt="Project Photo (Pro_024)"></figure>
                     <figure><img src="ProjectPhotos/Pro_025.jpg" alt="Project Photo (Pro_025)"></figure>

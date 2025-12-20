@@ -1,4 +1,4 @@
-/* Gallery page styles - responsive grid + lightbox 
+/* AABA Gallery - cloned from gallery.css */
 @import url('../index/index.css'); /* inherit theme variables and some base rules */
 
 /* Page layout */
@@ -48,7 +48,6 @@ body { font-family: 'Poppins', sans-serif; background: var(--bg-page); }
         /* Constrain the width */
         object-fit: contain;
         /* Ensures the whole logo fits */
-        
     }
 }
 
@@ -56,4 +55,3 @@ body { font-family: 'Poppins', sans-serif; background: var(--bg-page); }
     .gallery-grid { grid-template-columns: repeat(8, 1fr); }
     .gallery-grid img{ height:100px; }
 }
-
