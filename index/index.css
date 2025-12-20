@@ -351,43 +351,30 @@
         /* Ensures the whole logo fits */
     }
 
-    /* Section Home */
+    /* Section Home - large screen adjustments to avoid overlaps */
+    body { padding-top: 100px; /* reserve space for fixed navbar */ }
     .section-home {
         position: relative;
-        /* Allows absolute positioning of child elements */
-        top: 15vh;
         background-color: var(--card-bg);
-        /* Sets the background color to white */
         color: var(--text-primary);
-        /* Sets the text color to dark grey */
         opacity: 0;
-        /* Starts with no visibility */
         animation: fadeIn 2s forwards;
-        /* Applies a fade-in animation */
-        height: 85vh;
-        /* Makes the section take up the full viewport height */
+        min-height: 60vh; /* flexible height instead of fixed 85vh */
         display: flex;
-        /* Uses flexbox for layout */
         align-items: flex-start;
-        /* Aligns items to the top of the section */
+        margin: 2rem 0; /* separate from other sections */
+        z-index: 1;
     }
 
     /* Background video */
     .background-video {
         position: absolute;
-        /* Positions the video absolutely within the parent section */
         top: 0;
-        /* Aligns the video to the top of the section */
         left: 0;
-        /* Aligns the video to the left of the section */
         width: 100%;
-        /* Makes the video span the full width of the section */
         height: 100%;
-        /* Makes the video span the full height of the section */
-        object-fit: fill;
-        /* Ensures the video is resized while maintaining its aspect ratio */
-        z-index: 5;
-        /* Keeps the video behind the text and content */
+        object-fit: cover;
+        z-index: 0; /* keep background behind content and other sections */
     }
 
     /* Container flex setup */
@@ -400,28 +387,29 @@
     /* Logo side */
     .logo-container {
         width: 30vw;
-        height: 83vh;
+        max-height: 70vh;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        z-index: 10;
+        z-index: 2; /* above background */
     }
 
     /* Make a perfect circular wrapper */
     .home-logo {
         left: 3vw;
         width: 35vw;
-        height: 83vh;
+        max-height: 70vh;
         overflow: hidden;
     }
 
     /* Video side */
     .video-container {
-        width: 75vw;
-        height: 83vh;
+        width: 70vw;
+        max-height: 70vh;
         overflow: hidden;
         position: relative;
+        z-index: 1;
     }
 
     .navbar p {
