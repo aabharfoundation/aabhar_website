@@ -91,8 +91,29 @@ document.addEventListener("DOMContentLoaded", function () {
             currentIndex = index;
         };
 
-        // Initial centering of the first item (no animation)
-        centerItem(0, false);
+        // Initial centering of the first item (no animation).
+        // Defer to the next animation frame and wait for images to load so measurements are correct.
+        const scheduleInitialCenter = () => requestAnimationFrame(() => centerItem(0, false));
+        scheduleInitialCenter();
+
+        // If there are images inside items, re-center after they finish loading
+        const imgs = Array.from(wrapper.querySelectorAll('img'));
+        if (imgs.length) {
+            let remaining = imgs.filter(i => !i.complete).length;
+            if (remaining === 0) {
+                // already loaded
+                scheduleInitialCenter();
+            } else {
+                imgs.forEach(img => {
+                    if (!img.complete) {
+                        img.addEventListener('load', () => {
+                            remaining -= 1;
+                            if (remaining === 0) scheduleInitialCenter();
+                        }, { once: true });
+                    }
+                });
+            }
+        }
 
         leftButton.addEventListener('click', (e) => {
             e.preventDefault();
