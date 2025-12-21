@@ -2366,6 +2366,7 @@ a:hover { text-decoration: underline; }
 
     /* Individual thought card */
     .thought-card {
+        z-index: 10;
         width: 33vw;
         height: auto;
         min-width: 64vw;
