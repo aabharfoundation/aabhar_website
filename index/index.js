@@ -105,4 +105,36 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Adjust scroll button vertical alignment to match the center of their scroll wrappers
+    function adjustScrollButtons() {
+        const groups = [
+            { left: '.left-btn', right: '.right-btn', wrapper: '.auto-scroll-wrapper' },
+            { left: '.left-btn-thoughts', right: '.right-btn-thoughts', wrapper: '.auto-scroll-wrapper-thoughts' }
+        ];
+
+        groups.forEach(g => {
+            const left = document.querySelector(g.left);
+            const right = document.querySelector(g.right);
+            const wrapper = document.querySelector(g.wrapper);
+            if (!wrapper) return;
+
+            // Parent that buttons are absolutely positioned against
+            const parent = wrapper.parentElement;
+            if (!parent) return;
+
+            const parentRect = parent.getBoundingClientRect();
+            const wrapperRect = wrapper.getBoundingClientRect();
+
+            // Calculate top position in pixels relative to parent
+            const topPx = (wrapperRect.top - parentRect.top) + (wrapperRect.height / 2);
+
+            if (left) left.style.top = `${topPx}px`;
+            if (right) right.style.top = `${topPx}px`;
+        });
+    }
+
+    // Run on load and resize to keep buttons centered on the scroll wrappers
+    adjustScrollButtons();
+    window.addEventListener('resize', adjustScrollButtons);
 });
