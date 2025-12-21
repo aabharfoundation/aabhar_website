@@ -68,27 +68,56 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', updateActiveNav);
 
     // ====== Reusable Scroll Buttons Setup ======
-    function setupScrollButtons(leftSelector, rightSelector, wrapperSelector) {
+    function setupScrollButtons(leftSelector, rightSelector, wrapperSelector, itemSelector) {
         const leftButton = document.querySelector(leftSelector);
         const rightButton = document.querySelector(rightSelector);
         const wrapper = document.querySelector(wrapperSelector);
 
-        if (leftButton && rightButton && wrapper) {
-            leftButton.addEventListener('click', () => {
-                wrapper.scrollLeft -= 300;
-            });
+        if (!(leftButton && rightButton && wrapper)) return;
 
-            rightButton.addEventListener('click', () => {
-                wrapper.scrollLeft += 300;
-            });
-        }
+        const items = Array.from(wrapper.querySelectorAll(itemSelector));
+        if (!items.length) return;
+
+        let currentIndex = 0;
+
+        const clamp = (i) => Math.max(0, Math.min(items.length - 1, i));
+
+        const centerItem = (index, smooth = true) => {
+            index = clamp(index);
+            const item = items[index];
+            // Compute target so the item's center aligns with wrapper's center
+            const target = item.offsetLeft + (item.offsetWidth / 2) - (wrapper.clientWidth / 2);
+            wrapper.scrollTo({ left: target, behavior: smooth ? 'smooth' : 'auto' });
+            currentIndex = index;
+        };
+
+        // Initial centering of the first item (no animation)
+        centerItem(0, false);
+
+        leftButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            centerItem(currentIndex - 1, true);
+        });
+
+        rightButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            centerItem(currentIndex + 1, true);
+        });
+
+        // Clicking an item centers it
+        items.forEach((it, idx) => {
+            it.addEventListener('click', () => centerItem(idx, true));
+        });
+
+        // Re-center current item on resize (no animation)
+        window.addEventListener('resize', () => centerItem(currentIndex, false));
     }
 
-    // Setup scroll buttons for LifeStory Section
-    setupScrollButtons('.left-btn', '.right-btn', '.auto-scroll-wrapper');
+    // Setup scroll buttons for LifeStory Section (cards are `.story-card`)
+    setupScrollButtons('.left-btn', '.right-btn', '.auto-scroll-wrapper', '.story-card');
 
-    // Setup scroll buttons for Thoughts Section
-    setupScrollButtons('.left-btn-thoughts', '.right-btn-thoughts', '.auto-scroll-wrapper-thoughts');
+    // Setup scroll buttons for Thoughts Section (cards are `.thought-card`)
+    setupScrollButtons('.left-btn-thoughts', '.right-btn-thoughts', '.auto-scroll-wrapper-thoughts', '.thought-card');
 
     // Make gallery figures keyboard-focusable and add Enter/Space activation for accessibility
     const galleryFigures = document.querySelectorAll('.gallery-grid figure');
