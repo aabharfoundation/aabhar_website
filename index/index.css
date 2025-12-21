@@ -1184,8 +1184,8 @@ a:hover { text-decoration: underline; }
 
     /* Individual thought card */
     .thought-card {
-        z-index: 9;
         width: 33vw;
+        /*height: 83vh;*/
         min-width: 250px;
         margin-right: 1rem;
         background-color: white;
@@ -1193,11 +1193,12 @@ a:hover { text-decoration: underline; }
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         padding: 1rem;
         flex-shrink: 0;
+        z-index: 9;
     }
 
     .thought-card img {
-        width: 30vw;
-        height: 30vh;
+        /*width: 20vw;*/
+        height: 20vh;
         object-fit: cover;
         border-radius: 0.5rem;
         margin-bottom: 0.75rem;
@@ -2368,7 +2369,7 @@ a:hover { text-decoration: underline; }
     /* Individual thought card */
     .thought-card {
         width: 33vw;
-        height: auto;
+        /*height: auto;*/
         min-width: 64vw;
         margin-right: 10px;
         background-color: white;
@@ -2380,7 +2381,7 @@ a:hover { text-decoration: underline; }
 
 
     .thought-card img {
-        width: 55vw;
+        width: 25vw;
         object-fit: contain;
         border-radius: 0.5rem;
         margin-bottom: 0.75rem;
