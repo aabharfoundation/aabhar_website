@@ -15,11 +15,11 @@
 
 /* Theme variables: NGO-friendly palette (teal primary, warm accent, soft neutrals) */
 :root {
-    --teal-700: #0f766e;
+    --teal-700: #0ea5a4; /* modern teal */
     /* primary */
-    --teal-900: #064e45;
+    --teal-900: #075b58; /* dark teal */
     /* dark */
-    --accent: #ff7a18;
+    --accent: #ffb86b; /* warm soft accent */
     /* warm accent for highlights */
     --bg-page: #f6fbf9;
     /* very light greenish background */
@@ -35,6 +35,38 @@
     /* used by flex/grid containers inside sections */
     --section-bar-color: var(--teal-700);
 }
+
+/* Global visual polish */
+* { transition: background-color .28s ease, color .22s ease, box-shadow .28s ease, transform .22s ease; }
+
+/* Elevation tokens */
+:root {
+    --elev-sm: 0 6px 16px rgba(3, 15, 20, 0.06);
+    --elev-md: 0 10px 30px rgba(3, 15, 20, 0.09);
+    --elev-lg: 0 20px 50px rgba(3, 15, 20, 0.12);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--teal-700) 65%, white 35%);
+    outline-offset: 3px;
+}
+
+/* Buttons and interactive controls */
+.navbutton, .btn, .back-button {
+    box-shadow: var(--elev-sm);
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.navbutton:hover, .btn:hover, .back-button:hover { transform: translateY(-3px); box-shadow: var(--elev-md); }
+.navbutton:active, .btn:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(0,0,0,0.12); }
+.navbutton:focus-visible, .btn:focus-visible, .back-button:focus-visible { outline: 3px solid var(--teal-700); outline-offset: 4px; }
+
+/* subtle text contrast boost */
+body, p, li, dd { color: #07343a; }
+
+/* Make links more prominent */
+a { color: var(--teal-700); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 /* About section background image (50% opacity) */
 .section-about {

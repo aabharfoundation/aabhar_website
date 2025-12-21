@@ -89,4 +89,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Setup scroll buttons for Thoughts Section
     setupScrollButtons('.left-btn-thoughts', '.right-btn-thoughts', '.auto-scroll-wrapper-thoughts');
+
+    // Make gallery figures keyboard-focusable and add Enter/Space activation for accessibility
+    const galleryFigures = document.querySelectorAll('.gallery-grid figure');
+    galleryFigures.forEach(fig => {
+        // add tabindex and role for accessibility without changing markup files
+        if (!fig.hasAttribute('tabindex')) fig.setAttribute('tabindex', '0');
+        if (!fig.hasAttribute('role')) fig.setAttribute('role', 'button');
+
+        fig.addEventListener('keydown', (ev) => {
+            if (ev.key === 'Enter' || ev.key === ' ') {
+                ev.preventDefault();
+                // simulate click so existing handlers (like lightbox) trigger
+                fig.click();
+            }
+        });
+    });
 });
