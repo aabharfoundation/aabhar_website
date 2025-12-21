@@ -866,7 +866,6 @@ a:hover { text-decoration: underline; }
         transform: translateY(-50%);
         background-color: rgba(255, 255, 255, 0.9);
         border: none;
-        font-size: 1.5rem;
         padding: 0.25rem 0.5rem;
         z-index: 10;
         cursor: pointer;
@@ -1225,7 +1224,7 @@ a:hover { text-decoration: underline; }
         text-decoration: underline;
     }
 
-    /* Arrows */
+    /* Arrows 
     .scroll-btn {
         position: absolute;
         top: 50%;
@@ -1238,7 +1237,7 @@ a:hover { text-decoration: underline; }
         cursor: pointer;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
         border-radius: 0.5rem;
-    }
+    }*/
 
     .left-btn-thoughts {
         left: 0.5rem;
