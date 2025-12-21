@@ -817,6 +817,7 @@ a:hover { text-decoration: underline; }
 
     /* Individual story card */
     .story-card {
+        z-index: 9;
         width: 33vw;
         min-width: 250px;
         margin-right: 1rem;
@@ -1328,7 +1329,7 @@ a:hover { text-decoration: underline; }
 }
 
 .section-lifestory>* {
-    position: relative;
+    /*position: relative;*/
     z-index: 1;
 }
 
