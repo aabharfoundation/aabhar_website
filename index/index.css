@@ -627,7 +627,6 @@ a:hover { text-decoration: underline; }
 
     /* Mission Section Styling */
     .mission {
-        height: 17vh;
         width: 100%;
         background-color: var(--card-bg);
         border-radius: 10px;
