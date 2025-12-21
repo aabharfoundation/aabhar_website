@@ -362,6 +362,27 @@ a:hover { text-decoration: underline; }
         }
     }
 
+    /* Gallery preview cards on the index page: large-screen max width, narrower on small screens */
+    .gallery-buttons .gallery-preview {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        max-width: 500px; /* default for larger viewports (applies within min-width media below) */
+    }
+
+}
+
+/* For small screens, reduce the preview max width so it fits comfortably */
+@media only screen and (max-width: 767px) {
+    .gallery-buttons .gallery-preview {
+        max-width: 280px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        justify-self: center;
+    }
+}
+
+
     /* Hamburger Menu */
     .hamburger {
         display: none;
