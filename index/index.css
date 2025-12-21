@@ -1193,6 +1193,7 @@ a:hover { text-decoration: underline; }
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         padding: 1rem;
         flex-shrink: 0;
+        z-index: 9;
     }
 
     .thought-card img {
@@ -2366,9 +2367,8 @@ a:hover { text-decoration: underline; }
 
     /* Individual thought card */
     .thought-card {
-        z-index: 10;
         width: 33vw;
-        height: auto;
+        /*height: auto;*/
         min-width: 64vw;
         margin-right: 10px;
         background-color: white;
