@@ -143,11 +143,11 @@ a:hover { text-decoration: underline; }
 
     /* Floating Social Media Icons */
     .social-icons {
-        position: absolute;
+        position: fixed;
         /* Fixes the position of social icons to the bottom right */
-        top: 32vh;
+        top: 60vh;
         /* Positions the icons at the bottom of the page */
-        right: 10px;
+        right: 40px;
         /* Positions the icons 10px from the right */
         transform: translateY(-90%);
         /* Initially hides the icons outside the view */
