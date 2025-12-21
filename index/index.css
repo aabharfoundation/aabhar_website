@@ -13,6 +13,85 @@
     /* Ensures padding and border are included in element's total width and height */
 }
 
+/* Large-screen gallery card: add two extra pseudo thumbnails (visual only) and blur previews */
+@media (min-width: 769px) {
+    .gallery-button .gallery-preview img { filter: blur(2px); opacity: 0.7; }
+
+    /* project card: add two pseudo thumbnails to visually reach 6 images */
+    .gallery-buttons > .gallery-button:nth-of-type(1)::before {
+        content: '';
+        position: absolute;
+        width: 28%;
+        height: 42px;
+        background-image: url('../gallery/ProjectPhotos/Pro_044.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(3,15,20,0.06);
+        opacity: 0.72;
+        filter: blur(2px);
+        z-index: 2;
+        left: 18px;
+        top: 62px;
+        transform: rotate(-2deg);
+    }
+
+    .gallery-buttons > .gallery-button:nth-of-type(1)::after {
+        content: '';
+        position: absolute;
+        width: 28%;
+        height: 42px;
+        background-image: url('../gallery/ProjectPhotos/Pro_050.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(3,15,20,0.06);
+        opacity: 0.72;
+        filter: blur(2px);
+        z-index: 2;
+        right: 18px;
+        top: 62px;
+        transform: rotate(1.5deg);
+    }
+
+    /* aaba card: add two pseudo thumbnails */
+    .gallery-buttons > .gallery-button:nth-of-type(2)::before {
+        content: '';
+        position: absolute;
+        width: 28%;
+        height: 42px;
+        background-image: url('../gallery/AabaPhotos/Aaba_026.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(3,15,20,0.06);
+        opacity: 0.72;
+        filter: blur(2px);
+        z-index: 2;
+        left: 18px;
+        top: 62px;
+        transform: rotate(-2deg);
+    }
+
+    .gallery-buttons > .gallery-button:nth-of-type(2)::after {
+        content: '';
+        position: absolute;
+        width: 28%;
+        height: 42px;
+        background-image: url('../gallery/AabaPhotos/Aaba_027.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(3,15,20,0.06);
+        opacity: 0.72;
+        filter: blur(2px);
+        z-index: 2;
+        right: 18px;
+        top: 62px;
+        transform: rotate(1.5deg);
+    }
+}
+
 /* Theme variables: NGO-friendly palette (teal primary, warm accent, soft neutrals) */
 :root {
     --teal-700: #0ea5a4; /* modern teal */
@@ -1187,6 +1266,39 @@ a:hover { text-decoration: underline; }
     .gallery-button .gallery-preview img:nth-child(2){ transform: rotate(1.5deg); }
     .gallery-button .gallery-preview img:nth-child(3){ transform: rotate(-1deg); }
     .gallery-button .gallery-preview img:nth-child(4){ transform: rotate(2deg); }
+
+    /* reduce opacity for preview images (visual only) */
+    .gallery-button .gallery-preview img {
+        opacity: 0.78;
+    }
+
+    /* Centered 'View Photos' button inside gallery cards */
+    .gallery-button .view-photos-btn {
+        display: inline-block;
+        margin: 8px auto 0;
+        padding: 8px 14px;
+        background: linear-gradient(180deg, var(--teal-700), var(--teal-900));
+        color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 8px 18px rgba(2,6,23,0.18);
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+        z-index: 4;
+        transition: transform .18s ease, box-shadow .18s ease, opacity .12s ease;
+    }
+
+    .gallery-button .view-photos-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 36px rgba(2,6,23,0.2);
+    }
+
+    .gallery-button .view-photos-btn:active,
+    .gallery-button .view-photos-btn:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 8px 22px rgba(2,6,23,0.22);
+    }
 
     .gallery-button p {
         font-size: 0.95rem;
