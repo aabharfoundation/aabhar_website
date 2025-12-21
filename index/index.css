@@ -1305,8 +1305,8 @@ a:hover { text-decoration: underline; }
 
 .section-thoughts>*,
 .section-thoughts .thought-card {
-    position: relative;
-    z-index: 1;
+    /*position: relative;
+    z-index: 1;*/
 }
 
 /* Story section background using the same thoughts background */
