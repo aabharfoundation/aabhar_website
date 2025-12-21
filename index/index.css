@@ -836,6 +836,22 @@ a:hover { text-decoration: underline; }
         margin-bottom: 0.75rem;
     }
 
+    /* Gallery inside story cards: three equal photos */
+    .story-card .card-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .story-card .card-gallery img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        display: block;
+    }
+
     .story-card h3 {
         font-size: 1.35rem;
         font-weight: 600;
