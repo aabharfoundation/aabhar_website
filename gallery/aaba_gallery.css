@@ -5,7 +5,7 @@
 body { font-family: 'Poppins', sans-serif; background: var(--bg-page); }
 .navbar { display:flex; align-items:center; justify-content:space-between; padding:12px 18px; background: linear-gradient(90deg, var(--teal-700), var(--teal-900)); color: #fff; }
 .navbar .back-button{ color:#fff; text-decoration:none; font-weight:600; }
-.navbar h2{ margin:0; font-size:1.2rem; }
+.navbar h2{ margin:0; font-size:1.44rem; }
 .logo { height:7vh; }
 
 .gallery-page { padding: 6rem 1rem 3rem; }
@@ -61,7 +61,7 @@ body { font-family: 'Poppins', sans-serif; background: var(--bg-page); }
     border-radius: 999px;
     opacity: 0;
     transition: opacity .18s ease, transform .18s ease;
-    font-size: 13px;
+    font-size: 15.6px;
 }
 .gallery-grid figure:hover .view-label{ opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
@@ -74,9 +74,9 @@ body { font-family: 'Poppins', sans-serif; background: var(--bg-page); }
 .lightbox[aria-hidden="false"]{ display:flex; }
 .lb-image-wrap{ max-width:95%; max-height:85%; text-align:center; }
 .lb-image-wrap img{ max-width:100%; max-height:80vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.6); }
-.lb-caption{ color:#fff; margin-top:8px; font-size:14px; }
-.lb-close, .lb-prev, .lb-next{ position: absolute; background:transparent; border:0; color:#fff; font-size:26px; padding:10px; cursor:pointer; }
-.lb-close{ top:18px; right:18px; font-size:22px; }
+.lb-caption{ color:#fff; margin-top:8px; font-size:16.8px; }
+.lb-close, .lb-prev, .lb-next{ position: absolute; background:transparent; border:0; color:#fff; font-size:31.2px; padding:10px; cursor:pointer; }
+.lb-close{ top:18px; right:18px; font-size:26.4px; }
 .lb-prev{ left:18px; top:50%; transform:translateY(-50%); }
 .lb-next{ right:18px; top:50%; transform:translateY(-50%); }
 
