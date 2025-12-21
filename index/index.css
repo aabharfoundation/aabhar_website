@@ -1139,7 +1139,7 @@ a:hover { text-decoration: underline; }
     }
 
     .thought-card img {
-        width: 20vw;
+        /*width: 20vw;*/
         height: 20vh;
         object-fit: cover;
         border-radius: 0.5rem;
