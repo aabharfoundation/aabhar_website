@@ -1185,7 +1185,7 @@ a:hover { text-decoration: underline; }
     /* Individual thought card */
     .thought-card {
         width: 33vw;
-        height: 83vh;
+        /*height: 83vh;*/
         min-width: 250px;
         margin-right: 1rem;
         background-color: white;
