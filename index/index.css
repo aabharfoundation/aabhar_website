@@ -293,14 +293,6 @@ a:hover {
         background: linear-gradient(90deg, var(--teal-700), var(--teal-900));
         /* teal gradient */
         z-index: 2000;
-        /* Ensures navbar stays on top of other content */
-        display: flex;
-        /* Uses flexbox to align items in a row */
-        justify-content: space-between;
-        /* Distributes space between navbar items */
-        align-items: center;
-        /* Centers items vertically */
-        padding: 15px 20px;
         /* Adds padding around navbar */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         /* Adds subtle shadow to navbar */
@@ -760,17 +752,11 @@ a:hover {
     }
 
     .aaba-image-section {
-        width: 20vw;
-        max-width: 100vh;
-        height: 100vh;
-        overflow: hidden;
+        margin-top: 5vh;
     }
 
     /* New crop container */
     .image-crop {
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: box-shadow 0.3s ease;
