@@ -1278,7 +1278,6 @@ a:hover {
     /* Our Project Section */
     #our-projects {
         text-align: center;
-        padding: 40px 20px;
         background: var(--bg-page);
     }
 
