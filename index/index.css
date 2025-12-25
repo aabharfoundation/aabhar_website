@@ -1,3 +1,44 @@
+/* === Section heading highlight (scoped) === */
+/* Targets only headings inside semantic section wrappers so global h2 are unchanged */
+.section-about h2,
+.section-lifestory h2,
+.section-our-projects h2,
+.gallery h2,
+.section-thoughts h2,
+.section-title h2 {
+    position: relative; /* creates stacking context for the pseudo-element without changing layout */
+    z-index: 1;
+    background: transparent;
+    border-bottom: none; /* remove any divider applied specifically to these headings */
+}
+
+.section-about h2::after,
+.section-lifestory h2::after,
+.section-our-projects h2::after,
+.gallery h2::after,
+.section-thoughts h2::after,
+.section-title h2::after {
+    display: none !important; /* hide any existing underline pseudo-element for these headings */
+}
+
+.section-about h2::before,
+.section-lifestory h2::before,
+.section-our-projects h2::before,
+.gallery h2::before,
+.section-thoughts h2::before,
+.section-title h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.6em; /* slightly taller than text so the text sits vertically centered */
+    background: rgba(255, 230, 150, 0.25); /* subtle warm highlight; tweak as needed */
+    z-index: 0; /* sits behind the heading text */
+    pointer-events: none;
+}
+
 /* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Shantell+Sans&display=swap');
 /* Importing Google Fonts for Roboto and Shantell Sans */
