@@ -533,7 +533,6 @@ a:hover {
     }
 
     .section-home .home-logo {
-        max-width: 220px;
         width: 100%;
         height: auto;
         display: block;
@@ -572,7 +571,7 @@ a:hover {
 
     .section-home .logo-container {
         position: absolute;
-        left: 33%;
+        left: 20%;
         top: 50%;
         transform: translate(-50%, -50%);
         margin: 0;
