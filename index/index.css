@@ -15,11 +15,14 @@
 
 /* Theme variables: NGO-friendly palette (teal primary, warm accent, soft neutrals) */
 :root {
-    --teal-700: #0ea5a4; /* modern teal */
+    --teal-700: #0ea5a4;
+    /* modern teal */
     /* primary */
-    --teal-900: #075b58; /* dark teal */
+    --teal-900: #075b58;
+    /* dark teal */
     /* dark */
-    --accent: #ffb86b; /* warm soft accent */
+    --accent: #ffb86b;
+    /* warm soft accent */
     /* warm accent for highlights */
     --bg-page: #f6fbf9;
     /* very light greenish background */
@@ -37,10 +40,14 @@
 }
 
 /* Global visual polish */
-* { transition: background-color .28s ease, color .22s ease, box-shadow .28s ease, transform .22s ease; }
+* {
+    transition: background-color .28s ease, color .22s ease, box-shadow .28s ease, transform .22s ease;
+}
 
 /* Scale typography globally by 20% (non-layout change) */
-html { font-size: 120%; }
+html {
+    font-size: 120%;
+}
 
 /* Elevation tokens */
 :root {
@@ -56,20 +63,50 @@ html { font-size: 120%; }
 }
 
 /* Buttons and interactive controls */
-.navbutton, .btn, .back-button {
+.navbutton,
+.btn,
+.back-button {
     box-shadow: var(--elev-sm);
     transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
 }
-.navbutton:hover, .btn:hover, .back-button:hover { transform: translateY(-3px); box-shadow: var(--elev-md); }
-.navbutton:active, .btn:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(0,0,0,0.12); }
-.navbutton:focus-visible, .btn:focus-visible, .back-button:focus-visible { outline: 3px solid var(--teal-700); outline-offset: 4px; }
+
+.navbutton:hover,
+.btn:hover,
+.back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--elev-md);
+}
+
+.navbutton:active,
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.navbutton:focus-visible,
+.btn:focus-visible,
+.back-button:focus-visible {
+    outline: 3px solid var(--teal-700);
+    outline-offset: 4px;
+}
 
 /* subtle text contrast boost */
-body, p, li, dd { color: #07343a; }
+body,
+p,
+li,
+dd {
+    color: #07343a;
+}
 
 /* Make links more prominent */
-a { color: var(--teal-700); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+    color: var(--teal-700);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 /* About section background image (50% opacity) */
 .section-about {
@@ -101,78 +138,6 @@ a:hover { text-decoration: underline; }
 .section-about .about-container {
     position: relative;
     z-index: 1;
-}
-
-/* === Section Home (hero) === */
-/* Scoped hero styles for the homepage header area. Uses absolute image behind content
-   while preserving heading sizes, alignment, margins and padding. */
-.section-home {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 60vh;
-    padding: 40px 20px;
-    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.01));
-}
-
-.section-home .home-container {
-    position: relative;
-    z-index: 1; /* keep above the background image */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.section-home .logo-container {
-    flex: 0 0 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* place the logo above the background at ~1/3 of the section width */
-    position: absolute;
-    left: 33%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /* above content and background */
-}
-
-.section-home .home-logo {
-    max-width: 220px;
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* The img element used as background (class name `background-video`) is positioned
-   absolutely and sits behind content. Opacity keeps it subtle and it preserves layout. */
-.section-home .background-video {
-    /* make the background media fill the entire section (not just the container)
-       and sit behind all content */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.12;
-    z-index: 0;
-    pointer-events: none;
-    filter: saturate(0.98) contrast(0.98);
-}
-
-.section-home .home-container > * { position: relative; z-index: 1; }
-
-@media (max-width: 768px) {
-    .section-home { min-height: 48vh; padding: 28px 12px; }
-    .section-home .logo-container { flex: 0 0 140px; left: 50%; transform: translate(-50%, -50%); }
-    .section-home .home-logo { max-width: 140px; }
-    .section-home .home-container { gap: 16px; }
-    .section-home .background-video { opacity: 0.08; }
 }
 
 
@@ -419,6 +384,7 @@ a:hover { text-decoration: underline; }
     }
 
     @media (max-width: 768px) {
+
         section h2,
         [class*="section"] h2,
         #gallery h2,
@@ -440,8 +406,10 @@ a:hover { text-decoration: underline; }
         /*display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 6px;*/
-        max-width: 500px; /* default for larger viewports (applies within min-width media below) */
+        max-width: 500px;
+        /* default for larger viewports (applies within min-width media below) */
     }
+
     /* Hamburger Menu */
     .hamburger {
         display: none;
@@ -511,19 +479,91 @@ a:hover { text-decoration: underline; }
     }
 
     /* Section Home - large screen adjustments to avoid overlaps */
-    body { padding-top: 100px; /* reserve space for fixed navbar */ }
+    body {
+        padding-top: 100px;
+        /* reserve space for fixed navbar */
+    }
+
     .section-home {
         /*position: relative;*/
         background-color: var(--card-bg);
         color: var(--text-primary);
         opacity: 0;
         animation: fadeIn 2s forwards;
-        min-height: 60vh; /* flexible height instead of fixed 85vh */
+        min-height: 60vh;
+        /* flexible height instead of fixed 85vh */
         display: flex;
         align-items: flex-start;
-       /*  margin: 2rem 0; separate from other sections */
+        /*  margin: 2rem 0; separate from other sections */
         z-index: 1;
     }
+
+    /* === Section Home (hero) === */
+    /* Scoped hero styles for the homepage header area. Uses absolute image behind content
+   while preserving heading sizes, alignment, margins and padding. */
+    .section-home {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60vh;
+        padding: 40px 20px;
+        background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.01));
+    }
+
+    .section-home .home-container {
+        position: relative;
+        z-index: 1;
+        /* keep above the background image */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .section-home .logo-container {
+        flex: 0 0 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* place the logo above the background at ~1/3 of the section width */
+        position: absolute;
+        left: 33%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        /* above content and background */
+    }
+
+    .section-home .home-logo {
+        max-width: 220px;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* The img element used as background (class name `background-video`) is positioned
+   absolutely and sits behind content. Opacity keeps it subtle and it preserves layout. */
+    .section-home .background-video {
+        /* make the background media fill the entire section (not just the container)
+       and sit behind all content */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: fit-content;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        pointer-events: none;
+        filter: saturate(0.98) contrast(0.98);
+    }
+
+    .section-home .home-container>* {
+        position: relative;
+        z-index: 1;
+    }
+
 
     /* Background video */
     .background-video {
@@ -532,7 +572,8 @@ a:hover { text-decoration: underline; }
         width: 100%;
         height: 100%;
         /*object-fit: cover;*/
-        z-index: 1; /* keep background behind content and other sections */
+        z-index: 1;
+        /* keep background behind content and other sections */
     }
 
     /* Container flex setup */
@@ -550,7 +591,8 @@ a:hover { text-decoration: underline; }
         align-items: center;
         justify-content: center;
         position: relative;
-        z-index: 2; /* above background */
+        z-index: 2;
+        /* above background */
     }
 
     /* Make a perfect circular wrapper */
@@ -1211,10 +1253,10 @@ a:hover { text-decoration: underline; }
         flex: 0 1 300px;
         max-width: 300px;
         padding: 14px 14px 18px;
-        background: linear-gradient(180deg,#ffffff,#fbfbfb);
+        background: linear-gradient(180deg, #ffffff, #fbfbfb);
         border-radius: 12px;
-        border: 1px solid rgba(6,30,24,0.06);
-        box-shadow: 0 10px 28px rgba(3,15,20,0.06);
+        border: 1px solid rgba(6, 30, 24, 0.06);
+        box-shadow: 0 10px 28px rgba(3, 15, 20, 0.06);
         transition: transform .28s ease, box-shadow .28s ease;
         overflow: visible;
     }
@@ -1227,11 +1269,11 @@ a:hover { text-decoration: underline; }
         top: 10px;
         width: calc(100% - 20px);
         height: calc(100% - 20px);
-        background: rgba(255,255,255,0.6);
+        background: rgba(255, 255, 255, 0.6);
         border-radius: 10px;
         transform: rotate(-1.5deg);
         z-index: 0;
-        box-shadow: 0 6px 18px rgba(3,15,20,0.04);
+        box-shadow: 0 6px 18px rgba(3, 15, 20, 0.04);
         pointer-events: none;
     }
 
@@ -1256,7 +1298,7 @@ a:hover { text-decoration: underline; }
         height: 68px;
         object-fit: cover;
         border-radius: 6px;
-        box-shadow: 0 6px 18px rgba(3,15,20,0.06);
+        box-shadow: 0 6px 18px rgba(3, 15, 20, 0.06);
         transition: transform .22s ease;
     }
 
@@ -1269,7 +1311,7 @@ a:hover { text-decoration: underline; }
 
     .gallery-button:hover {
         transform: translateY(-8px) scale(1.01);
-        box-shadow: 0 18px 48px rgba(3,15,20,0.12);
+        box-shadow: 0 18px 48px rgba(3, 15, 20, 0.12);
     }
 
     /* Section for Thoughts */
@@ -1398,6 +1440,7 @@ a:hover { text-decoration: underline; }
     }
 
 }
+
 /* Thoughts section background image (50% opacity) */
 .section-thoughts {
     position: relative;
