@@ -103,6 +103,70 @@ a:hover { text-decoration: underline; }
     z-index: 1;
 }
 
+/* === Section Home (hero) === */
+/* Scoped hero styles for the homepage header area. Uses absolute image behind content
+   while preserving heading sizes, alignment, margins and padding. */
+.section-home {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.01));
+}
+
+.section-home .home-container {
+    position: relative;
+    z-index: 1; /* keep above the background image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.section-home .logo-container {
+    flex: 0 0 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-home .home-logo {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* The img element used as background (class name `background-video`) is positioned
+   absolutely and sits behind content. Opacity keeps it subtle and it preserves layout. */
+.section-home .background-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.12;
+    z-index: 0;
+    pointer-events: none;
+    filter: saturate(0.98) contrast(0.98);
+}
+
+.section-home .home-container > * { position: relative; z-index: 1; }
+
+@media (max-width: 768px) {
+    .section-home { min-height: 48vh; padding: 28px 12px; }
+    .section-home .logo-container { flex: 0 0 140px; }
+    .section-home .home-logo { max-width: 140px; }
+    .section-home .home-container { gap: 16px; }
+    .section-home .background-video { opacity: 0.08; }
+}
+
+
 /* --------------------------------------------------
    COMMON (applies to all viewport sizes)
    Put global section/layout rules here so min/max blocks
