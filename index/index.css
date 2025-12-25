@@ -527,13 +527,10 @@ a:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* place the logo above the background at ~1/3 of the section width */
-        position: absolute;
-        left: 33%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        /* default (small screens): keep logo in flow and centered */
+        position: relative;
+        margin: 0 auto;
         z-index: 2;
-        /* above content and background */
     }
 
     .section-home .home-logo {
@@ -546,14 +543,13 @@ a:hover {
     /* The img element used as background (class name `background-video`) is positioned
    absolutely and sits behind content. Opacity keeps it subtle and it preserves layout. */
     .section-home .background-video {
-        /* make the background media fill the entire section (not just the container)
-       and sit behind all content */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: fit-content;
-        height: 100%;
+        /* default (small screens): background image stays in document flow
+           and scales naturally so it doesn't cover the whole section */
+        position: static;
+        width: 100%;
+        height: auto;
         object-fit: cover;
+        opacity: 0.08;
         z-index: 0;
         pointer-events: none;
         filter: saturate(0.98) contrast(0.98);
@@ -563,6 +559,29 @@ a:hover {
         position: relative;
         z-index: 1;
     }
+
+/* Large-screen overrides: make background media fill the section and position logo at 1/3 */
+@media only screen and (min-width: 768px) {
+    .section-home .background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.12;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .section-home .logo-container {
+        position: absolute;
+        left: 33%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+}
 
 
     /* Background video */
