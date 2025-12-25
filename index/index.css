@@ -960,7 +960,6 @@ a:hover {
     /* Text Section */
     .text-section {
         position: relative;
-        margin-top: 5vh;
         flex: 2;
         padding-left: 10px;
         text-align: left;
@@ -1131,7 +1130,6 @@ a:hover {
     /* Flex container for story cards */
     .auto-scroll-track {
         display: inline-flex;
-        margin-top: 5vh;
 
     }
 
@@ -1505,7 +1503,6 @@ a:hover {
     /* Flex container for story cards */
     #thoughtsScroller {
         display: inline-flex;
-        margin-top: 8vh;
     }
 
     /* Individual thought card */
