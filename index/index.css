@@ -288,8 +288,7 @@ a:hover {
         /* Positions the navbar to the left edge */
         width: 100%;
         /* Makes the navbar span the entire width of the page */
-        height: 100px;
-        /* Sets the height of the navbar */
+    
         background: linear-gradient(90deg, var(--teal-700), var(--teal-900));
         /* teal gradient */
         z-index: 2000;
@@ -780,7 +779,7 @@ a:hover {
     /* Text Section */
     .text-section {
         position: relative;
-        /*top: -50px;*/
+        margin-top: 5vh;
         flex: 2;
         padding-left: 10px;
         text-align: left;
