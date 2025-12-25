@@ -299,6 +299,7 @@ a:hover {
     /* Ensure secnavbar content (heading) is clear and readable */
     .secnavbar h2 {
         margin: 0;
+        font-size: 1.5rem;
         padding: 14px 18px;
         color: var(--heading-color);
         font-weight: 600;
