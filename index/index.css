@@ -281,7 +281,6 @@ a:hover {
 
     /* Secondary section navbar (shared look across sections) */
     .secnavbar {
-        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -531,7 +530,6 @@ a:hover {
     #gallery h2,
     .gallery h2 {
         position: relative;
-        display: inline-block;
         padding: 8px;
         color: var(--heading-color);
     }
@@ -1133,6 +1131,7 @@ a:hover {
     /* Flex container for story cards */
     .auto-scroll-track {
         display: inline-flex;
+        margin-top: 5vh;
 
     }
 
@@ -1506,6 +1505,7 @@ a:hover {
     /* Flex container for story cards */
     #thoughtsScroller {
         display: inline-flex;
+        margin-top: 8vh;
     }
 
     /* Individual thought card */
