@@ -1086,9 +1086,9 @@ a:hover {
         /* Sets the heading font size */
         color: #2c3e50;
         /* Dark blue color for the heading */
-        margin-bottom: 20px;
         /* Adds space below the heading */
         font-weight: bold;
+        padding: 8px;
         /* Makes the heading text bold */
 
     }
