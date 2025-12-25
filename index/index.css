@@ -852,6 +852,37 @@ a:hover {
         /* Moves button further down */
     }
 
+    /* Desktop: stronger glass + larger heading bar */
+    .secnavbar {
+        background: rgba(255,255,255,0.55);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 12px 30px rgba(3,15,20,0.08);
+    }
+
+    .secnavbar::before {
+        height: 2rem;
+        background: linear-gradient(90deg, rgba(8,51,68,0.07), rgba(14,165,164,0.045));
+    }
+
+    /* desktop: make the decorative bar behind section h2 slightly larger and more visible */
+    .section > h2::before,
+    [class*="section-"] > h2::before,
+    .section .section-title h2::before,
+    #gallery > h2::before {
+        height: 1.9em;
+        background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(8,51,68,0.06));
+    }
+
+    /* improve hover affordance on desktop */
+    .section > h2:hover,
+    .section .section-title h2:hover,
+    .secnavbar h2:hover,
+    #gallery > h2:hover {
+        text-shadow: 0 10px 30px rgba(3,15,20,0.06);
+        transform: translateY(-2px);
+    }
+
     /* Section About Styling */
     .section-about {
         padding: 10px;
