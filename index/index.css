@@ -1497,6 +1497,7 @@ a:hover {
         white-space: normal;
         scroll-behavior: smooth;
         padding-bottom: 1rem;
+        padding-left: 50px;
         line-height: 1.2;
     }
 
