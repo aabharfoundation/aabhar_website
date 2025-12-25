@@ -1120,15 +1120,6 @@ a:hover {
         position: relative;
     }
 
-    .section-lifestory h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        color: black;
-        text-align: center;
-        margin-top: 15px;
-    }
-
     /* Wrapper for scrolling area */
     .auto-scroll-wrapper {
         margin: 30px;
@@ -1260,20 +1251,6 @@ a:hover {
         /* Smoothly animates transformations */
     }
 
-    .section h2 {
-        text-align: center;
-        /* Centers the heading text */
-        font-size: 2.5em;
-        /* Sets the heading font size */
-        color: #2c3e50;
-        /* Dark blue color for the heading */
-        /* Adds space below the heading */
-        font-weight: bold;
-        padding: 8px;
-        /* Makes the heading text bold */
-
-    }
-
     .section p {
         font-size: 1.1em;
         /* Sets the paragraph font size */
@@ -1327,12 +1304,6 @@ a:hover {
     #our-projects>* {
         position: relative;
         z-index: 1;
-    }
-
-    #our-projects h2 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-        color: var(--text-primary);
     }
 
     .projects-row {
@@ -1425,16 +1396,6 @@ a:hover {
     #gallery .gallery-buttons {
         position: relative;
         z-index: 1;
-    }
-
-    #gallery h2 {
-        position: relative;
-        font-size: 2rem;
-        /* Sets the heading font size */
-        color: var(--text-primary);
-        /* Dark grey color for the heading */
-        margin-bottom: 15px;
-        /* Adds space below the heading */
     }
 
     .gallery-buttons {
