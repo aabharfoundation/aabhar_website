@@ -1157,8 +1157,6 @@ a:hover {
 
     /* Gallery inside story cards: three equal photos */
     .story-card .card-gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 0.5rem;
         margin-bottom: 0.75rem;
     }
@@ -1406,6 +1404,7 @@ a:hover {
         /* Adds space between buttons */
         flex-wrap: wrap;
         /* Wraps buttons to the next line if necessary */
+        padding: 80px;
     }
 
     /* Photo-album style for gallery buttons */
