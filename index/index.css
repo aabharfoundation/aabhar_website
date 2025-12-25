@@ -133,6 +133,12 @@ a:hover { text-decoration: underline; }
     display: flex;
     align-items: center;
     justify-content: center;
+    /* place the logo above the background at ~1/3 of the section width */
+    position: absolute;
+    left: 33%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* above content and background */
 }
 
 .section-home .home-logo {
@@ -145,8 +151,11 @@ a:hover { text-decoration: underline; }
 /* The img element used as background (class name `background-video`) is positioned
    absolutely and sits behind content. Opacity keeps it subtle and it preserves layout. */
 .section-home .background-video {
+    /* make the background media fill the entire section (not just the container)
+       and sit behind all content */
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -160,7 +169,7 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 768px) {
     .section-home { min-height: 48vh; padding: 28px 12px; }
-    .section-home .logo-container { flex: 0 0 140px; }
+    .section-home .logo-container { flex: 0 0 140px; left: 50%; transform: translate(-50%, -50%); }
     .section-home .home-logo { max-width: 140px; }
     .section-home .home-container { gap: 16px; }
     .section-home .background-video { opacity: 0.08; }
