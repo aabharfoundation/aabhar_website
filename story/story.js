@@ -84,6 +84,39 @@ function openWhatsAppShare(message){
   window.open(whatsappUrl, '_blank');
 }
 
+// Share link to specific lifestory
+function shareLink(anchorId){
+  // Get the full URL to the specific lifestory
+  const baseUrl = window.location.href.split('#')[0]; // Remove any existing hash
+  const lifestoryUrl = baseUrl + anchorId;
+  
+  // Try Web Share API first
+  if(navigator.share){
+    navigator.share({
+      title: 'Lifestory',
+      text: 'Check out this lifestory',
+      url: lifestoryUrl
+    }).catch(err => {
+      // User cancelled or error, fallback to copy to clipboard
+      copyLinkToClipboard(lifestoryUrl);
+    });
+  } else {
+    // No Web Share API, copy to clipboard and show feedback
+    copyLinkToClipboard(lifestoryUrl);
+  }
+}
+
+// Copy link to clipboard with visual feedback
+function copyLinkToClipboard(url){
+  navigator.clipboard.writeText(url).then(() => {
+    // Show temporary success message
+    alert('लिंक कॉपी झाली!'); // "Link copied!" in Marathi
+  }).catch(err => {
+    // Fallback: open in new tab
+    window.open(url, '_blank');
+  });
+}
+
 function init(){
   const search = $('#search');
   if(search){

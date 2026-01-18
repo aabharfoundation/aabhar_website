@@ -55,6 +55,37 @@ body{
 
 .badge{display:inline-block;padding:0.28rem 0.6rem;background:linear-gradient(90deg,#e6f0ff,#f0fafb);color:var(--accent);border-radius:999px;font-weight:600;font-size:0.78rem}
 
+/* Share link button */
+.share-link-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:none;
+  border:none;
+  padding:0.4rem;
+  cursor:pointer;
+  color:#4b7cb8;
+  border-radius:8px;
+  transition:all 0.2s ease;
+  flex-shrink:0;
+}
+.share-link-btn:hover{
+  background:rgba(75,124,184,0.08);
+  color:#2b5a9a;
+  transform:scale(1.1);
+}
+.share-link-btn:active{
+  transform:scale(0.95);
+}
+.share-link-btn:focus{
+  outline:2px solid rgba(75,124,184,0.3);
+  outline-offset:2px;
+}
+.share-link-btn svg{
+  width:20px;
+  height:20px;
+}
+
 .card-desc{margin:0.6rem 0 0.9rem;color:#334155}
 
 /* Video button inside cards */
