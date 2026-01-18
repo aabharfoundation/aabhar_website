@@ -214,3 +214,98 @@ a{color:inherit}
 @media (min-width:1200px){
   .cards-grid{grid-template-columns:repeat(auto-fit,minmax(560px,1fr));}
 }
+
+/* WhatsApp Share Button - Mobile First */
+.whatsapp-share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 56px;
+  padding: 12px 16px;
+  margin: 12px 0 8px 0;
+  background-color: #25D366;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* WhatsApp icon SVG styling */
+.whatsapp-share-btn .whatsapp-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-share-btn .whatsapp-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* Button text styling */
+.whatsapp-share-btn .button-text {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Hover state */
+.whatsapp-share-btn:hover {
+  background-color: #20BA58;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Active/pressed state */
+.whatsapp-share-btn:active {
+  background-color: #1da853;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+/* Focus state for accessibility */
+.whatsapp-share-btn:focus {
+  outline: 3px solid rgba(37, 211, 102, 0.4);
+  outline-offset: 2px;
+}
+
+/* Touch-friendly adjustments for mobile */
+@media (max-width: 640px) {
+  .whatsapp-share-btn {
+    min-height: 52px;
+    font-size: 15px;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+  
+  .whatsapp-share-btn .whatsapp-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Tablet and desktop adjustments */
+@media (min-width: 641px) {
+  .whatsapp-share-btn {
+    max-width: 100%;
+  }
+}
+
+/* Ensure button doesn't get squished when inside flex containers */
+.card-bottom .whatsapp-share-btn {
+  margin-bottom: 8px;
+}

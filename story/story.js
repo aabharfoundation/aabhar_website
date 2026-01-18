@@ -51,6 +51,39 @@ function revealCards(){
   cards.forEach((c,i) => setTimeout(()=> c.classList.add('show'), 70 * i));
 }
 
+// WhatsApp Share Function
+function shareOnWhatsApp(storyTitle){
+  // Get the current page URL
+  const pageUrl = window.location.href;
+  
+  // Marathi message with story title
+  const message = `आबांचे जीवन पाहा: ${storyTitle}\n\n${pageUrl}`;
+  
+  // Try Web Share API first (works on mobile browsers that support it)
+  if(navigator.share){
+    navigator.share({
+      title: storyTitle,
+      text: `आबांचे जीवन: ${storyTitle}`,
+      url: pageUrl
+    }).catch(err => {
+      // User cancelled or error occurred, fallback to WhatsApp direct link
+      openWhatsAppShare(message);
+    });
+  } else {
+    // Fallback: Open WhatsApp Web/App with direct message link
+    openWhatsAppShare(message);
+  }
+}
+
+// Fallback function to open WhatsApp with message
+function openWhatsAppShare(message){
+  // WhatsApp Share URL (works on Android and iOS)
+  const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+  
+  // Try to open WhatsApp app on mobile, fallback to WhatsApp Web
+  window.open(whatsappUrl, '_blank');
+}
+
 function init(){
   const search = $('#search');
   if(search){
