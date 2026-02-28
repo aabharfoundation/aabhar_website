@@ -62,6 +62,15 @@ html {
     outline-offset: 3px;
 }
 
+.section-about .text-section > div img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
 /* Buttons and interactive controls */
 .navbutton,
 .btn,
@@ -996,6 +1005,10 @@ a:hover {
         line-height: 1.6;
         opacity: 0;
         animation: fadeInUp 2s forwards 1s;
+    }
+
+    .section-about .text-section > div img {
+        max-height: 70vh;
     }
 
     /* Mission Section Styling */
@@ -2122,6 +2135,10 @@ a:hover {
         display: none;
     }
 
+    .section-about .text-section > div img {
+        max-height: 50vh;
+    }
+    
     /* New crop container */
     .image-crop {
         display: none;
