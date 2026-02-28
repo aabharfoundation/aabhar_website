@@ -1270,6 +1270,34 @@ a:hover {
         /* Adds a shadow for depth */
     }
 
+    /* Make the final image inside the About text-section fill the section responsively
+       while keeping comfortable padding. Targets: the <div> wrapping the image
+       inside `.section-about .text-section` (see index.html selection). */
+    .section-about .text-section > div img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        padding: 12px;
+    }
+
+    /* Constrain height on narrow viewports so the image doesn't overwhelm content */
+    @media (max-width: 768px) {
+        .section-about .text-section > div img {
+            max-height: 50vh;
+        }
+    }
+
+    /* On larger screens place image comfortably and allow it to use more vertical space */
+    @media (min-width: 769px) {
+        .section-about .text-section > div img {
+            max-height: 70vh;
+        }
+    }
+
     /* Our Project Section */
     #our-projects {
         text-align: center;
