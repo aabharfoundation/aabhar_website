@@ -1300,6 +1300,29 @@ a:hover {
         z-index: 1;
     }
 
+    /* Gate section larger screen optimization */
+    .gate-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .gate-container .text-section > div:first-child {
+        flex: 0 0 45%;
+        padding-right: 20px;
+    }
+
+    .gate-container .text-section {
+        flex-direction: column;
+        flex: 1;
+        gap: 12px;
+    }
+
+    .gate-container .mission {
+        padding-top: 10px;
+    }
+
     .projects-row {
         display: flex;
         justify-content: center;
@@ -2366,6 +2389,36 @@ a:hover {
         text-decoration: underline;
     }
 
+    /* Gate Section Mobile Styling */
+    .section-gate {
+        padding: 20px 10px;
+    }
+
+    .gate-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .gate-container .text-section > div:first-child {
+        width: 100%;
+    }
+
+    .gate-container .text-section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .gate-container .mission h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .gate-container .mission p {
+        font-size: 12px;
+    }
+
     /* Arrows */
     .scroll-btn {
         position: absolute;
@@ -2550,6 +2603,78 @@ a:hover {
 
     .project-info-button .btn:hover {
         background: #005fa3;
+    }
+
+    /* Gate Section Styling */
+    .section-gate {
+        position: relative;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .section-gate::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('../thoughts/thoughts_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .section-gate > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .gate-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .gate-container .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .gate-container .text-section > div:first-child {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gate-container .text-section img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+
+    .gate-container .mission {
+        width: 100%;
+    }
+
+    .gate-container .mission h3 {
+        font-size: 18px;
+        color: #2e3a59;
+        margin-bottom: 12px;
+    }
+
+    .gate-container .mission p {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
     }
 
     /* Gallery Section Styling */
