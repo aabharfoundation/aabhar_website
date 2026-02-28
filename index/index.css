@@ -178,6 +178,19 @@ a:hover {
     gap: var(--section-gap);
 }
 
+.secnavbar h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        padding: 14px 18px;
+        color: var(--heading-color);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        transition: color .22s ease, text-shadow .22s ease, transform .22s ease;
+    }
+
 @media only screen and (min-width: 768px) {
 
     /* Body Setup  */
