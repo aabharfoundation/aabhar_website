@@ -2138,7 +2138,7 @@ a:hover {
     .section-about .text-section > div img {
         max-height: 50vh;
     }
-    
+
     /* New crop container */
     .image-crop {
         display: none;
@@ -2458,15 +2458,6 @@ a:hover {
         /* Centers the paragraph text */
         color: #7f8c8d;
         /* Light grey color for the text */
-    }
-
-    .kamanImg {
-        width: 90vw;
-        /* Ensures the image spans the full width of its container */
-        border-radius: 10px;
-        /* Rounds the corners of the image */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        /* Adds a shadow for depth */
     }
 
     /* Image Styling */
