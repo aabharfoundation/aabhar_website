@@ -2806,6 +2806,8 @@ h5,
 h6 {
     color: var(--heading-color) !important;
     font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 /* Body text */
