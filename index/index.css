@@ -2704,6 +2704,15 @@ a:hover {
         scroll-behavior: smooth;
     }
 
+    /* Wrapper for scrolling area */
+    .auto-scroll-wrapper-projects {
+        margin: 3px;
+        overflow-x: auto;
+        line-height: 1.5;
+        white-space: normal;
+        scroll-behavior: smooth;
+    }
+
     /* Flex container for story cards */
     #thoughtsScroller {
         display: inline-flex;
@@ -2769,6 +2778,17 @@ a:hover {
     }
 
     .auto-scroll-wrapper-thoughts {
+        -ms-overflow-style: none;
+        /* IE 10+ */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+    /* Hide scrollbar */
+    .auto-scroll-wrapper-projects::-webkit-scrollbar {
+        display: none;
+    }
+
+    .auto-scroll-wrapper-projects {
         -ms-overflow-style: none;
         /* IE 10+ */
         scrollbar-width: none;
