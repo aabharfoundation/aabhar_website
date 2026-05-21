@@ -2386,7 +2386,7 @@ a:hover {
     }
 
     /* Individual story card */
-    .story-card {
+    .story-card ,.project-card {
         width: 33vw;
         height: auto;
         min-width: 64vw;
@@ -2399,34 +2399,34 @@ a:hover {
         z-index: 9;
     }
 
-    .story-card img {
+    .story-card, .project-card img {
         width: 55vw;
         object-fit: contain;
         border-radius: 0.5rem;
         margin-bottom: 0.75rem;
     }
 
-    .story-card h3 {
+    .story-card, .project-card h3 {
         font-size: 12px;
         font-weight: 600;
         margin-bottom: 0.5rem;
         color: black;
     }
 
-    .story-card p {
+    .story-card , .project-card p {
         font-size: 10px;
         color: #4B5563;
         margin-bottom: 0.5rem;
     }
 
-    .story-card a {
+    .story-card, .project-card a {
         font-size: 10px;
         color: #2563EB;
         text-decoration: none;
         font-weight: 500;
     }
 
-    .story-card a:hover {
+    .story-card, .project-card a:hover {
         text-decoration: underline;
     }
 
@@ -2902,6 +2902,7 @@ a {
 .mission,
 .legacy,
 .story-card,
+.project-card,
 .gallery-button,
 .project-item {
     /*background: var(--card-bg) !important;*/
