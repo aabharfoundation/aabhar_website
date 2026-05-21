@@ -2419,6 +2419,121 @@ a:hover {
         /* Firefox */
     }
 
+    /* Section for Projects */
+    .section-projects {
+        margin-top: 10px;
+        padding: 10px;
+        /*background-color: #fff;*/
+        /*border-radius: 10px;*/
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .section-projects h2 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: white;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    /* Wrapper for scrolling area */
+    .auto-scroll-wrapper-projects {
+        margin: 3px;
+        overflow-x: auto;
+        line-height: 1.5;
+        white-space: normal;
+        scroll-behavior: smooth;
+    }
+
+    /* Flex container for story cards */
+    .auto-scroll-track-projects {
+        display: inline-flex;
+        margin-left: 14vw;
+        margin-right: 10vw;
+    }
+
+    /* Individual story card */
+    .project-card {
+        width: 33vw;
+        height: auto;
+        min-width: 64vw;
+        margin-right: 10px;
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        flex-shrink: 0;
+        z-index: 9;
+    }
+
+    .project-card img {
+        width: 55vw;
+        object-fit: contain;
+        border-radius: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-card h3 {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: black;
+    }
+
+    .project-card p {
+        font-size: 10px;
+        color: #4B5563;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-card a {
+        font-size: 10px;
+        color: #2563EB;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .project-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Arrows */
+    .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        border: none;
+        padding: 0.25rem 0.5rem;
+        z-index: 10;
+        cursor: pointer;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+
+    .left-btn-projects {
+        left: 0.5rem;
+    }
+
+    .right-btn-projects {
+        right: 0.5rem;
+    }
+
+    /* Hide scrollbar */
+    .auto-scroll-wrapper-projects::-webkit-scrollbar {
+        display: none;
+    }
+
+    .auto-scroll-wrapper-projects {
+        -ms-overflow-style: none;
+        /* IE 10+ */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
     /* Section Styling */
     .section {
         position: relative;
@@ -2704,15 +2819,6 @@ a:hover {
         scroll-behavior: smooth;
     }
 
-    /* Wrapper for scrolling area */
-    .auto-scroll-wrapper-projects {
-        margin: 3px;
-        overflow-x: auto;
-        line-height: 1.5;
-        white-space: normal;
-        scroll-behavior: smooth;
-    }
-
     /* Flex container for story cards */
     #thoughtsScroller {
         display: inline-flex;
@@ -2778,17 +2884,6 @@ a:hover {
     }
 
     .auto-scroll-wrapper-thoughts {
-        -ms-overflow-style: none;
-        /* IE 10+ */
-        scrollbar-width: none;
-        /* Firefox */
-    }
-    /* Hide scrollbar */
-    .auto-scroll-wrapper-projects::-webkit-scrollbar {
-        display: none;
-    }
-
-    .auto-scroll-wrapper-projects {
         -ms-overflow-style: none;
         /* IE 10+ */
         scrollbar-width: none;
