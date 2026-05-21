@@ -2350,7 +2350,7 @@ a:hover {
     }
 
     /* Section for Lifestory */
-    .section-lifestory, section-projects {
+    .section-lifestory, .section-projects {
         margin-top: 10px;
         padding: 10px;
         /*background-color: #fff;*/
@@ -2360,7 +2360,7 @@ a:hover {
         position: relative;
     }
 
-    .section-lifestory, section-projects h2 {
+    .section-lifestory, .section-projects h2 {
         font-size: 16px;
         font-weight: 600;
         margin-bottom: 0.5rem;
