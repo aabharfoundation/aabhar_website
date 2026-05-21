@@ -1798,6 +1798,30 @@ a:hover {
     z-index: 10;
 }
 
+/* Project section background using the same thoughts background */
+.section-projects {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-projects::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../thoughts/thoughts_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.section-projects>* {
+    /*position: relative;*/
+    z-index: 10;
+}
+
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
 
