@@ -1244,6 +1244,129 @@ a:hover {
         /* Firefox */
     }
 
+    /* Section for Lifestory */
+    .section-projects {
+        margin-top: 10px;
+        padding: 10px;
+        padding-top: 0;
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Wrapper for scrolling area */
+    .auto-scroll-wrapper-projects {
+        margin: 30px;
+        overflow-x: auto;
+        line-height: 1.5;
+        white-space: normal;
+        scroll-behavior: smooth;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Flex container for story cards */
+    .auto-scroll-track-projects {
+        display: inline-flex;
+
+    }
+
+
+    /* Individual story card */
+    .project-card {
+        z-index: 9;
+        width: 33vw;
+        min-width: 250px;
+        margin-right: 1rem;
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        flex-shrink: 0;
+    }
+
+    .project-card img {
+        width: 30vw;
+        height: 30vh;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Gallery inside story cards: three equal photos */
+    .project-card .card-gallery {
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-card .card-gallery img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        display: block;
+    }
+
+    .project-card h3 {
+        font-size: 1.35rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: black;
+    }
+
+    .project-card p {
+        font-size: 1.05rem;
+        color: #4B5563;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-card a {
+        font-size: 1.05rem;
+        color: #2563EB;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .project-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Arrows */
+    .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        /*border: none;*/
+        font-size: 1.5rem;
+        padding: 0.25rem 0.5rem;
+        z-index: 10;
+        cursor: pointer;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+
+    .left-btn-projects {
+        left: 0.5rem;
+    }
+
+    .right-btn-projects {
+        right: 0.5rem;
+    }
+
+    /* Hide scrollbar */
+    .auto-scroll-wrapper-projects::-webkit-scrollbar {
+        display: none;
+    }
+
+    .auto-scroll-wrapper-projects {
+        -ms-overflow-style: none;
+        /* IE 10+ */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
     /* Section Styling */
     .section {
         position: relative;
