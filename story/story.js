@@ -94,7 +94,7 @@ function shareLink(anchorId){
   if(navigator.share){
     navigator.share({
       title: 'Lifestory',
-      text: 'Check out this lifestory',
+      text: 'कर्मयोगी राजू आबा हारदे यांच्या जीवनातील एक क्षण वाचा...',
       url: lifestoryUrl
     }).catch(err => {
       // User cancelled or error, fallback to copy to clipboard

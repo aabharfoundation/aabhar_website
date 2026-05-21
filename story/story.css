@@ -109,6 +109,37 @@ body{
 .video-btn:focus{outline:3px solid rgba(122,15,15,0.18);outline-offset:2px}
 .video-btn .video-icon{font-size:1.05rem;line-height:1}
 
+/* Send button for sharing lifestory cards */
+.send-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  padding:0.6rem 0.9rem;
+  margin-top:0.8rem;
+  background:#2b6cb0;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  font-size:0.95rem;
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  box-shadow:0 4px 12px rgba(43,108,176,0.15);
+}
+.send-btn:hover{
+  background:#1f4d7d;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(43,108,176,0.25);
+}
+.send-btn:active{
+  transform:translateY(0);
+  box-shadow:0 2px 6px rgba(43,108,176,0.15);
+}
+.send-btn:focus{
+  outline:2px solid rgba(43,108,176,0.4);
+  outline-offset:2px;
+}
 
 .gallery-wrap{display:flex;align-items:center;gap:0.75rem}
 .gallery{
