@@ -119,6 +119,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Setup scroll buttons for Thoughts Section (cards are `.thought-card`)
     setupScrollButtons('.left-btn-thoughts', '.right-btn-thoughts', '.auto-scroll-wrapper-thoughts', '.thought-card');
 
+    // Setup scroll buttons for Projects Section (cards are `.projects-card`)
+    setupScrollButtons('.left-btn-projects', '.right-btn-projects', '.auto-scroll-wrapper-projects', '.project-card');
+
     // Make gallery figures keyboard-focusable and add Enter/Space activation for accessibility
     const galleryFigures = document.querySelectorAll('.gallery-grid figure');
     galleryFigures.forEach(fig => {
@@ -140,6 +143,34 @@ document.addEventListener("DOMContentLoaded", function () {
         const groups = [
             { left: '.left-btn', right: '.right-btn', wrapper: '.auto-scroll-wrapper' },
             { left: '.left-btn-thoughts', right: '.right-btn-thoughts', wrapper: '.auto-scroll-wrapper-thoughts' }
+        ];
+
+        groups.forEach(g => {
+            const left = document.querySelector(g.left);
+            const right = document.querySelector(g.right);
+            const wrapper = document.querySelector(g.wrapper);
+            if (!wrapper) return;
+
+            // Parent that buttons are absolutely positioned against
+            const parent = wrapper.parentElement;
+            if (!parent) return;
+
+            const parentRect = parent.getBoundingClientRect();
+            const wrapperRect = wrapper.getBoundingClientRect();
+
+            // Calculate top position in pixels relative to parent
+            const topPx = (wrapperRect.top - parentRect.top) + (wrapperRect.height / 2);
+
+            if (left) left.style.top = `${topPx}px`;
+            if (right) right.style.top = `${topPx}px`;
+        });
+    }
+
+    // Adjust scroll button vertical alignment to match the center of their scroll wrappers
+    function adjustScrollButtons() {
+        const groups = [
+            { left: '.left-btn', right: '.right-btn', wrapper: '.auto-scroll-wrapper' },
+            { left: '.left-btn-projects', right: '.right-btn-projects', wrapper: '.auto-scroll-wrapper-projects' }
         ];
 
         groups.forEach(g => {
