@@ -1132,30 +1132,8 @@ a:hover {
         position: relative;
     }
 
-    /* Section for Lifestory */
-    .section-projects {
-        margin-top: 10px;
-        padding: 10px;
-        padding-top: 0;
-        background-color: var(--card-bg);
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        position: relative;
-    }
-
     /* Wrapper for scrolling area */
     .auto-scroll-wrapper {
-        margin: 30px;
-        overflow-x: auto;
-        line-height: 1.5;
-        white-space: normal;
-        scroll-behavior: smooth;
-        padding-bottom: 1.5rem;
-    }
-
-    /* Wrapper for scrolling area */
-    .auto-scroll-wrapper-projects {
         margin: 30px;
         overflow-x: auto;
         line-height: 1.5;
@@ -1172,7 +1150,7 @@ a:hover {
 
 
     /* Individual story card */
-    .story-card .project-card{
+    .story-card {
         z-index: 9;
         width: 33vw;
         min-width: 250px;
@@ -1184,7 +1162,7 @@ a:hover {
         flex-shrink: 0;
     }
 
-    .story-card .project-card img {
+    .story-card img {
         width: 30vw;
         height: 30vh;
         object-fit: cover;
@@ -1193,12 +1171,12 @@ a:hover {
     }
 
     /* Gallery inside story cards: three equal photos */
-    .story-card .card-gallery .project-card {
+    .story-card .card-gallery {
         gap: 0.5rem;
         margin-bottom: 0.75rem;
     }
 
-    .story-card .card-gallery .project-card img {
+    .story-card .card-gallery img {
         width: 100%;
         aspect-ratio: 4 / 3;
         object-fit: cover;
@@ -1206,27 +1184,27 @@ a:hover {
         display: block;
     }
 
-    .story-card .project-card h3 {
+    .story-card h3 {
         font-size: 1.35rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
         color: black;
     }
 
-    .story-card .project-card p {
+    .story-card p {
         font-size: 1.05rem;
         color: #4B5563;
         margin-bottom: 0.5rem;
     }
 
-    .story-card .project-card a {
+    .story-card a {
         font-size: 1.05rem;
         color: #2563EB;
         text-decoration: none;
         font-weight: 500;
     }
 
-    .story-card .project-card a:hover {
+    .story-card a:hover {
         text-decoration: underline;
     }
 
@@ -1245,11 +1223,11 @@ a:hover {
         border-radius: 0.5rem;
     }
 
-    .left-btn .left-btn-projects {
+    .left-btn {
         left: 0.5rem;
     }
 
-    .right-btn .right-btn-projects {
+    .right-btn {
         right: 0.5rem;
     }
 
@@ -1259,13 +1237,6 @@ a:hover {
     }
 
     .auto-scroll-wrapper {
-        -ms-overflow-style: none;
-        /* IE 10+ */
-        scrollbar-width: none;
-        /* Firefox */
-    }
-
-    .auto-scroll-wrapper-projects {
         -ms-overflow-style: none;
         /* IE 10+ */
         scrollbar-width: none;
@@ -2344,17 +2315,7 @@ a:hover {
         position: relative;
     }
 
-    .section-projects {
-        margin-top: 10px;
-        padding: 10px;
-        /*background-color: #fff;*/
-        /*border-radius: 10px;*/
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        position: relative;
-    }
-
-    .section-lifestory .section-projects h2 {
+    .section-lifestory h2 {
         font-size: 16px;
         font-weight: 600;
         margin-bottom: 0.5rem;
@@ -2364,7 +2325,7 @@ a:hover {
     }
 
     /* Wrapper for scrolling area */
-    .auto-scroll-wrapper .auto-scroll-wrapper-projects{
+    .auto-scroll-wrapper {
         margin: 3px;
         overflow-x: auto;
         line-height: 1.5;
@@ -2373,14 +2334,14 @@ a:hover {
     }
 
     /* Flex container for story cards */
-    .auto-scroll-track .auto-scroll-track-projects {
+    .auto-scroll-track {
         display: inline-flex;
         margin-left: 14vw;
         margin-right: 10vw;
     }
 
     /* Individual story card */
-    .story-card .project-card{
+    .story-card {
         width: 33vw;
         height: auto;
         min-width: 64vw;
@@ -2393,34 +2354,34 @@ a:hover {
         z-index: 9;
     }
 
-    .story-card .project-card img {
+    .story-card img {
         width: 55vw;
         object-fit: contain;
         border-radius: 0.5rem;
         margin-bottom: 0.75rem;
     }
 
-    .story-card .project-card h3 {
+    .story-card h3 {
         font-size: 12px;
         font-weight: 600;
         margin-bottom: 0.5rem;
         color: black;
     }
 
-    .story-card .project-card p {
+    .story-card p {
         font-size: 10px;
         color: #4B5563;
         margin-bottom: 0.5rem;
     }
 
-    .story-card .project-card a {
+    .story-card a {
         font-size: 10px;
         color: #2563EB;
         text-decoration: none;
         font-weight: 500;
     }
 
-    .story-card .project-card a:hover {
+    .story-card a:hover {
         text-decoration: underline;
     }
 
@@ -2438,11 +2399,11 @@ a:hover {
         border-radius: 0.5rem;
     }
 
-    .left-btn .left-btn-projects{
+    .left-btn {
         left: 0.5rem;
     }
 
-    .right-btn .right-btn-projects{
+    .right-btn {
         right: 0.5rem;
     }
 
@@ -2452,18 +2413,6 @@ a:hover {
     }
 
     .auto-scroll-wrapper {
-        -ms-overflow-style: none;
-        /* IE 10+ */
-        scrollbar-width: none;
-        /* Firefox */
-    }
-
-    /* Hide scrollbar */
-    .auto-scroll-wrapper-projects::-webkit-scrollbar {
-        display: none;
-    }
-
-    .auto-scroll-wrapper-projects {
         -ms-overflow-style: none;
         /* IE 10+ */
         scrollbar-width: none;
