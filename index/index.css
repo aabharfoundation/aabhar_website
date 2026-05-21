@@ -2379,12 +2379,11 @@ a:hover {
     }
 
     .auto-scroll-wrapper-projects {
-        margin: 30px;
+        margin: 3px;
         overflow-x: auto;
         line-height: 1.5;
         white-space: normal;
         scroll-behavior: smooth;
-        padding-bottom: 1.5rem;
     }
 
     /* Flex container for story cards */
@@ -2911,7 +2910,7 @@ a {
 .mission,
 .legacy,
 .story-card,
-.project-card,
+.p
 .gallery-button,
 .project-item {
     /*background: var(--card-bg) !important;*/
