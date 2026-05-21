@@ -1121,7 +1121,8 @@ a:hover {
     }
 
     /* Section for Lifestory */
-    .section-lifestory {
+    .section-lifestory,
+    .section-projects {
         margin-top: 10px;
         padding: 10px;
         padding-top: 0;
@@ -1142,8 +1143,22 @@ a:hover {
         padding-bottom: 1.5rem;
     }
 
+    .auto-scroll-wrapper-projects {
+        margin: 30px;
+        overflow-x: auto;
+        line-height: 1.5;
+        white-space: normal;
+        scroll-behavior: smooth;
+        padding-bottom: 1.5rem;
+    }
+
     /* Flex container for story cards */
     .auto-scroll-track {
+        display: inline-flex;
+
+    }
+
+    .auto-scroll-track-projects {
         display: inline-flex;
 
     }
@@ -1151,6 +1166,18 @@ a:hover {
 
     /* Individual story card */
     .story-card {
+        z-index: 9;
+        width: 33vw;
+        min-width: 250px;
+        margin-right: 1rem;
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        flex-shrink: 0;
+    }
+
+    .project-card {
         z-index: 9;
         width: 33vw;
         min-width: 250px;
@@ -1170,13 +1197,23 @@ a:hover {
         margin-bottom: 0.75rem;
     }
 
+    .project-card img {
+        width: 30vw;
+        height: 30vh;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
     /* Gallery inside story cards: three equal photos */
-    .story-card .card-gallery {
+    .story-card .card-gallery,
+    .project-card .card-gallery {
         gap: 0.5rem;
         margin-bottom: 0.75rem;
     }
 
-    .story-card .card-gallery img {
+    .story-card .card-gallery img,
+    .project-card .card-gallery img {
         width: 100%;
         aspect-ratio: 4 / 3;
         object-fit: cover;
@@ -1184,27 +1221,31 @@ a:hover {
         display: block;
     }
 
-    .story-card h3 {
+    .story-card h3,
+    .project-card h3 {
         font-size: 1.35rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
         color: black;
     }
 
-    .story-card p {
+    .story-card p,
+    .project-card p {
         font-size: 1.05rem;
         color: #4B5563;
         margin-bottom: 0.5rem;
     }
 
-    .story-card a {
+    .story-card a,
+    .project-card a {
         font-size: 1.05rem;
         color: #2563EB;
         text-decoration: none;
         font-weight: 500;
     }
 
-    .story-card a:hover {
+    .story-card a:hover,
+    .project-card a:hover {
         text-decoration: underline;
     }
 
@@ -1232,11 +1273,13 @@ a:hover {
     }
 
     /* Hide scrollbar */
-    .auto-scroll-wrapper::-webkit-scrollbar {
+    .auto-scroll-wrapper::-webkit-scrollbar,
+    .auto-scroll-wrapper-projects::-webkit-scrollbar {
         display: none;
     }
 
-    .auto-scroll-wrapper {
+    .auto-scroll-wrapper,
+    .auto-scroll-wrapper-projects {
         -ms-overflow-style: none;
         /* IE 10+ */
         scrollbar-width: none;
@@ -1650,12 +1693,14 @@ a:hover {
 }
 
 /* Story section background using the same thoughts background */
-.section-lifestory {
+.section-lifestory,
+.section-projects {
     position: relative;
     overflow: hidden;
 }
 
-.section-lifestory::before {
+.section-lifestory::before,
+.section-projects::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -1668,7 +1713,8 @@ a:hover {
     pointer-events: none;
 }
 
-.section-lifestory>* {
+.section-lifestory>*,
+.section-projects>* {
     /*position: relative;*/
     z-index: 10;
 }
@@ -2408,11 +2454,13 @@ a:hover {
     }
 
     /* Hide scrollbar */
-    .auto-scroll-wrapper::-webkit-scrollbar {
+    .auto-scroll-wrapper::-webkit-scrollbar,
+    .auto-scroll-wrapper-projects::-webkit-scrollbar {
         display: none;
     }
 
-    .auto-scroll-wrapper {
+    .auto-scroll-wrapper,
+    .auto-scroll-wrapper-projects {
         -ms-overflow-style: none;
         /* IE 10+ */
         scrollbar-width: none;

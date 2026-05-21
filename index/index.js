@@ -116,6 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Setup scroll buttons for LifeStory Section (cards are `.story-card`)
     setupScrollButtons('.left-btn', '.right-btn', '.auto-scroll-wrapper', '.story-card');
 
+    // Setup scroll buttons for Project Section (cards are `.project-card`)
+    setupScrollButtons('.left-btn-projects', '.right-btn-projects', '.auto-scroll-wrapper-projects', '.project-card');
+
     // Setup scroll buttons for Thoughts Section (cards are `.thought-card`)
     setupScrollButtons('.left-btn-thoughts', '.right-btn-thoughts', '.auto-scroll-wrapper-thoughts', '.thought-card');
 
@@ -139,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function adjustScrollButtons() {
         const groups = [
             { left: '.left-btn', right: '.right-btn', wrapper: '.auto-scroll-wrapper' },
+            { left: '.left-btn-projects', right: '.right-btn-projects', wrapper: '.auto-scroll-wrapper-projects' },
             { left: '.left-btn-thoughts', right: '.right-btn-thoughts', wrapper: '.auto-scroll-wrapper-thoughts' }
         ];
 
