@@ -1485,6 +1485,7 @@ a:hover {
 
     .project-info-button {
         margin: 30px 0;
+        z-index: 2;
     }
 
     .project-info-button .btn {
